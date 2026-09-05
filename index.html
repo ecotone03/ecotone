@@ -523,7 +523,7 @@ function copyRecord(){let t=$('record');t.select();if(navigator.clipboard)naviga
 const el=id=>document.getElementById(id);
 const SUPABASE_URL="https://dnotfogjgeoqcsoonihw.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY="sb_publishable_zQzaSZHJn_y0_dBeiv6mZw_HmSAxQtG";
-const ECOTONE_REDIRECT_URL="https://nikita0303.github.io/ECOTONE/";
+const ECOTONE_REDIRECT_URL="https://ecotone03.github.io/ecotone/";
 const sb=(window.supabase&&window.supabase.createClient)?window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}):null;
 
 let authSession=null,agencyProfile=null,selectedIntents=[],liveState={floor:[],received:[],sent:[],matches:[]},activeSocialPanel='floor',refreshTimer=null,knownMatchIds=new Set();
