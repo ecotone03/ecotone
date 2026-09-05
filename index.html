@@ -161,6 +161,34 @@ button{min-height:46px;touch-action:manipulation}
   .social-top-actions{grid-template-columns:1fr}.person-name{font-size:26px!important}
 }
 </style>
+
+<style id="ecotone-instagram-share-css">
+.insta-share-card{
+  background:linear-gradient(145deg,#fffaf2,#f1f5ee);
+  border:1px solid #d8d0c0;
+  border-radius:22px;
+  padding:18px;
+}
+.insta-share-top{display:flex;align-items:center;gap:12px}
+.insta-mark{
+  width:44px;height:44px;flex:0 0 44px;border-radius:14px;
+  display:grid;place-items:center;background:#17372b;color:#fff;
+  font:700 27px/1 Georgia,serif
+}
+.insta-share-card h3{margin:2px 0 0;font-size:22px;line-height:1.1}
+.insta-share-card p{margin:13px 0;color:#607067}
+.insta-share-card a{color:#17372b;font-weight:700;text-decoration:none;border-bottom:1px solid #8ca18c}
+.insta-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.insta-actions button{margin:0;text-align:center}
+.insta-primary{background:#17372b!important;color:#fff!important;border-color:#17372b!important;font:800 13px Arial,sans-serif!important}
+.insta-secondary{background:#fff!important;color:#17372b!important;font:800 13px Arial,sans-serif!important}
+.insta-share-status{text-align:center;min-height:17px;margin-top:9px}
+@media(max-width:520px){
+  .insta-share-card{padding:15px;border-radius:18px}
+  .insta-actions{grid-template-columns:1fr}
+  .insta-share-card h3{font-size:20px}
+}
+</style>
 </head><body>
 <main>
 <div class="brand">ECOTONE · WETLAND IDENTITY EXPERIENCE</div>
@@ -192,6 +220,22 @@ button{min-height:46px;touch-action:manipulation}
   <div class="lab">Similar wetland personalities</div>
   <p class="mut" style="margin:7px 0 12px">Your result is not just one identity. These nearby wetland types share parts of your personality pattern.</p>
   <div id="similarTypes" class="similar-types"></div>
+</div>
+<div class="rule"></div>
+<div class="insta-share-card">
+  <div class="insta-share-top">
+    <div class="insta-mark">◎</div>
+    <div>
+      <div class="kick">Share your wetland identity</div>
+      <h3>Found your wild type?</h3>
+    </div>
+  </div>
+  <p>Share it on Instagram and tag <a href="https://www.instagram.com/it.starts.from.me/" target="_blank" rel="noopener noreferrer">@it.starts.from.me</a> so I can see what ECOTONE matched you with.</p>
+  <div class="insta-actions">
+    <button class="insta-primary" type="button" onclick="openEcotoneInstagram()">Open Instagram</button>
+    <button class="insta-secondary" type="button" onclick="copyInstagramCaption()">Copy tag caption</button>
+  </div>
+  <div id="instaShareStatus" class="fine insta-share-status"></div>
 </div>
 <div class="rule"></div>
 <div class="result-fork">
@@ -489,21 +533,44 @@ async function shareWetlandResult(){
   try{
     const name=($('rname')?.textContent||'my wetland identity').trim();
     const nearby=rank4?rank4.slice(1,4).map(x=>x[0]).join(', '):'';
-    const text=`My ECOTONE wetland identity is ${name}.${nearby?` Nearby types: ${nearby}.`:''} Find your wetland identity with ECOTONE — Where wet worlds meet.`;
+    const text=`Apparently, my ECOTONE wetland identity is ${name} 🌿${nearby?`\nNearby types: ${nearby}.`:''}\n\nWhat’s your wetland identity?\nhttps://ecotone03.github.io/ecotone/\n\nTag: @it.starts.from.me #ECOTONE #WetlandIdentity`;
     if(navigator.share){
       await navigator.share({title:'My ECOTONE wetland identity',text});
       if($('shareStatus'))$('shareStatus').textContent='Shared 🌿';
     }else if(navigator.clipboard&&navigator.clipboard.writeText){
       await navigator.clipboard.writeText(text);
-      if($('shareStatus'))$('shareStatus').textContent='Result copied — paste it anywhere 🌿';
+      if($('shareStatus'))$('shareStatus').textContent='Result + tag copied 🌿';
     }else{
       if($('shareStatus'))$('shareStatus').textContent=text;
     }
   }catch(e){
     if(e&&e.name==='AbortError')return;
-    if($('shareStatus'))$('shareStatus').textContent='Your result stays here — you can screenshot this card.';
+    if($('shareStatus'))$('shareStatus').textContent='Screenshot your result and tag @it.starts.from.me';
   }
 }
+
+function ecotoneInstagramCaption(){
+  const name=($('rname')?.textContent||'my wetland identity').trim();
+  return `Apparently, I’m a ${name} 🌿\n\nWhat’s your wetland identity?\nhttps://ecotone03.github.io/ecotone/\n\n@it.starts.from.me #ECOTONE #WetlandIdentity`;
+}
+function openEcotoneInstagram(){
+  window.open('https://www.instagram.com/it.starts.from.me/','_blank','noopener,noreferrer');
+}
+async function copyInstagramCaption(){
+  const text=ecotoneInstagramCaption();
+  const s=$('instaShareStatus');
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      await navigator.clipboard.writeText(text);
+      if(s)s.textContent='Caption copied. Paste it on Instagram and tag me 🌿';
+    }else{
+      if(s)s.textContent=text;
+    }
+  }catch(e){
+    if(s)s.textContent='Tag @it.starts.from.me when you post your result 🌿';
+  }
+}
+
 
 function showRatings(){$('result').classList.add('hidden');$('ratings').classList.remove('hidden');window.scrollTo(0,0)}
 function finish(){
