@@ -189,12 +189,235 @@ button{min-height:46px;touch-action:manipulation}
   .insta-share-card h3{font-size:20px}
 }
 </style>
+
+
+
+<style id="ecotone-ui-finishing">
+#options button{display:flex;align-items:center;gap:11px}
+.option-letter{
+  flex:0 0 28px;width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;background:#edf3ed;color:#315c48;
+  font:800 10px Arial,sans-serif;border:1px solid #d6e2d8
+}
+#options button.selected .option-letter{background:#315c48;color:#fff;border-color:#315c48}
+.symbol-mini{display:grid!important;place-items:center!important;overflow:hidden}
+.symbol-mini svg{width:34px!important;height:34px!important}
+.symbol-mini .symbol-emoji{font-size:27px!important}
+.orb .symbol-emoji{font-size:64px}
+.identity-svg{display:block}
+@media(max-width:420px){
+  #options button{gap:9px}
+  .option-letter{flex-basis:26px;width:26px;height:26px}
+}
+</style>
+
+
+
+<style id="ecotone-classic-restored">
+/* Restore the original ECOTONE visual language. */
+:root{--ink:#17372b;--mut:#68776f;--line:#d8d0c0}
+body{
+  overflow-x:hidden!important;
+  color:var(--ink)!important;
+  background:
+    radial-gradient(circle at 15% 0,#fff 0,transparent 27%),
+    linear-gradient(180deg,#fbf2de,#e5eee8)!important;
+}
+body:before,body:after{display:none!important}
+
+.ecotone-intro{
+  text-align:center!important;
+  position:relative!important;
+  overflow:hidden!important;
+  padding:40px 34px!important;
+  background:#fffffff0!important;
+  border:1px solid var(--line)!important;
+  box-shadow:0 15px 45px #17372b16!important;
+}
+.ecotone-intro:before,.ecotone-intro:after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  border:1px solid rgba(23,55,43,.10)!important;
+  border-radius:50%!important;
+  pointer-events:none!important;
+  background:transparent!important;
+}
+.ecotone-intro:before{
+  width:520px!important;height:130px!important;left:50%!important;bottom:-88px!important;
+  transform:translateX(-50%)!important
+}
+.ecotone-intro:after{
+  width:700px!important;height:175px!important;left:50%!important;bottom:-130px!important;
+  transform:translateX(-50%)!important
+}
+.ecotone-mark{
+  white-space:nowrap!important;
+  overflow-wrap:normal!important;
+  word-break:keep-all!important;
+  font:900 clamp(48px,11vw,86px)/.9 Arial,sans-serif!important;
+  letter-spacing:-4px!important;
+  color:#17372b!important;
+  margin-top:5px!important;
+}
+.ecotone-tagline{
+  margin-top:10px!important;
+  font:italic 19px/1.4 Georgia,serif!important;
+  color:#557065!important;
+  letter-spacing:.15px!important
+}
+.wetline{
+  display:block!important;
+  width:70px!important;height:2px!important;margin:22px auto!important;
+  background:linear-gradient(90deg,transparent,#78947e,transparent)!important
+}
+.ecotone-intro h1{max-width:650px!important;margin:8px auto 16px!important}
+.intro-lead{font-size:18px!important;max-width:640px!important;margin:0 auto 12px!important;line-height:1.55!important}
+.intro-purpose{max-width:650px!important;margin:0 auto 18px!important;font-size:15px!important}
+.micro-worlds{
+  display:inline-block!important;max-width:650px!important;margin:5px auto 20px!important;
+  padding:9px 13px!important;border-radius:999px!important;
+  background:#edf3ed!important;border:1px solid #d6e0d6!important;
+  color:#607267!important;font:11px/1.4 Arial,sans-serif!important;
+  text-transform:none!important;letter-spacing:0!important
+}
+.ecotone-intro .primary{max-width:390px!important;margin:4px auto 14px!important;text-align:center!important}
+.closing-line{font-style:italic!important;font-size:17px!important;margin:5px 0 10px!important;color:#355347!important}
+.classic-terms-link{
+  display:inline!important;width:auto!important;min-height:0!important;
+  margin:0 0 0 4px!important;padding:0!important;border:0!important;
+  background:transparent!important;box-shadow:none!important;
+  color:#52665d!important;text-decoration:underline!important;
+  font:inherit!important
+}
+
+/* Keep wetland-learning features but use the old, soft ECOTONE palette. */
+.learn-wetland{
+  margin:14px 0 2px!important;
+  padding:18px!important;
+  border-radius:18px!important;
+  background:#fffdf8!important;
+  color:#17372b!important;
+  border:1px solid #d8d0c0!important;
+  box-shadow:none!important
+}
+.learn-wetland .learn-kick{
+  color:#6c7c74!important;
+  font:800 9px/1 Arial,sans-serif!important;
+  letter-spacing:1.4px!important;
+  text-transform:uppercase!important
+}
+.learn-wetland h3{color:#17372b!important}
+.learn-location{color:#68776f!important}
+.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
+.learn-cell{
+  padding:12px!important;border-radius:14px!important;
+  background:#edf3e7!important;border:1px solid #d6e0d6!important
+}
+.learn-cell b{color:#52665d!important}
+.learn-cell span{color:#17372b!important}
+.learn-remember{
+  margin-top:10px!important;padding:12px 13px!important;border-radius:14px!important;
+  background:#fbf2de!important;color:#17372b!important;border:1px solid #e6dfd1!important
+}
+.learn-source{color:#52665d!important;border-bottom:1px solid #8ca18c!important}
+.learn-source:hover{color:#17372b!important}
+
+/* Quiz extras stay quiet and consistent with the original design. */
+.quiz-card{position:relative;overflow:visible}
+.quiz-headline-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.q-mood{
+  font:800 10px/1 Arial,sans-serif!important;letter-spacing:.7px!important;
+  color:#52665d!important;background:#edf3e7!important;border:1px solid #d6e0d6!important;
+  border-radius:999px!important;padding:7px 9px!important;white-space:nowrap!important
+}
+.quiz-fact{
+  margin:13px 0!important;padding:12px 14px!important;border-radius:15px!important;
+  background:#fbf2de!important;border:1px solid #e6dfd1!important;
+  font:13px/1.45 Arial,sans-serif!important;color:#52665d!important;
+  animation:none!important
+}
+.quiz-fact:before{content:"Wetland clue · ";font-weight:800;color:#17372b}
+#options button{transition:transform .14s ease,border-color .14s ease,background .14s ease!important}
+#options button:after{display:none!important}
+#options button:hover{box-shadow:none!important}
+.quiznav{
+  position:sticky!important;bottom:max(8px,env(safe-area-inset-bottom));z-index:12;
+  margin-top:16px!important;padding:8px 10px!important;
+  border:1px solid #d8d0c0!important;background:rgba(255,253,248,.96)!important;
+  border-radius:15px!important;box-shadow:0 8px 22px #17372b12!important
+}
+.quiznav .back{min-height:40px!important;padding:8px 6px!important}
+
+.personality-divider{
+  display:flex;align-items:center;gap:10px;margin:24px 0 4px;
+  color:#79857e;font:800 9px/1 Arial,sans-serif;letter-spacing:1.2px;text-transform:uppercase
+}
+.personality-divider:before,.personality-divider:after{content:"";height:1px;background:#ddd6c7;flex:1}
+.edit-answer-btn{
+  margin:12px 0 0!important;padding:10px 4px!important;width:auto!important;min-height:0!important;
+  border:0!important;background:transparent!important;box-shadow:none!important;color:#607267!important;
+  font:700 11px Arial,sans-serif!important;text-decoration:underline!important
+}
+
+/* Share card shell also returns to the old palette. */
+.insta-share-card{
+  background:#fffdf8!important;border:1px solid #d8d0c0!important;
+  box-shadow:none!important
+}
+
+/* Terms modal: plain and neutral, not a new visual theme. */
+.modal-shell{
+  position:fixed;inset:0;z-index:9999;padding:18px;display:grid;place-items:center;
+  background:rgba(23,55,43,.48);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  overflow:auto
+}
+.modal-shell.hidden{display:none}
+.modal-card{
+  position:relative;width:min(720px,100%);max-height:min(90vh,900px);overflow:auto;
+  border-radius:24px;padding:24px;background:#fffdf8;border:1px solid #d8d0c0;
+  box-shadow:0 20px 65px rgba(23,55,43,.18)
+}
+.modal-close{
+  position:absolute;right:12px;top:10px;width:42px!important;height:42px!important;min-height:42px!important;
+  border-radius:50%!important;margin:0!important;padding:0!important;text-align:center!important;font:28px/1 Arial!important
+}
+.terms-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.terms-grid>div{padding:14px;border-radius:15px;background:#edf3e7;border:1px solid #d6e0d6}
+.terms-grid b{font:800 10px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;color:#52665d}
+.terms-grid p{margin:6px 0 0;font:13px/1.5 Arial,sans-serif;color:#596961}
+.share-preview-card img{width:100%;display:block;border-radius:14px;border:1px solid #ded5c5;margin:14px 0;background:#eef3ef}
+
+/* Keep mobile fit fix without changing the old visual style. */
+@media(max-width:700px){
+  main{width:100%;max-width:100%;padding-left:12px!important;padding-right:12px!important}
+  .ecotone-intro{padding:30px 18px!important}
+  .ecotone-mark{
+    font-size:clamp(40px,14.2vw,66px)!important;
+    letter-spacing:-.065em!important
+  }
+  .ecotone-tagline{font-size:17px!important}
+  .micro-worlds{max-width:100%!important;border-radius:17px!important}
+  .quiz-headline-row{align-items:flex-start}
+  .q-mood{font-size:9px!important}
+  #qtext{font-size:24px!important;line-height:1.18!important}
+  #options button{font-size:15px!important;padding:14px!important}
+  .learn-grid,.terms-grid{grid-template-columns:1fr}
+  .learn-wetland{padding:15px!important}
+  .rname{font-size:clamp(34px,12vw,54px)!important;line-height:.94!important}
+  .orb{width:112px!important;height:112px!important}
+}
+@media(max-width:380px){
+  .ecotone-mark{font-size:clamp(38px,13.5vw,54px)!important}
+  .q-mood{max-width:42%;overflow:hidden;text-overflow:ellipsis}
+}
+</style>
 </head><body>
 <main>
 <div class="brand">ECOTONE · WETLAND IDENTITY EXPERIENCE</div>
 <section id="intro" class="card ecotone-intro">
 <div class="ecotone-mark">ECOTONE</div>
-<div class="ecotone-tagline">Where wet worlds meet.</div>
+<div class="ecotone-tagline">Wetlands, made personal.</div>
 <div class="wetline"></div>
 <div class="kick">Find your wild type.</div>
 <h1>What's your wetland identity?</h1>
@@ -204,17 +427,27 @@ button{min-height:46px;touch-action:manipulation}
 <button class="primary" onclick="startQuiz()">Find my wild type</button>
 <button id="returnSocialBtn" class="hidden return-social-btn" type="button" onclick="returnToSocial()">Return to ECOTONE Social</button>
 <p class="closing-line">Come curious. Leave knowing wetlands a little better.</p>
-<p class="fine">16 quick questions · no right answers · playful, not a scientific personality test.</p>
+<p class="fine">16 quick questions · no right answers · playful, not a scientific personality test. <button class="classic-terms-link" type="button" onclick="openTerms()">Terms & safety</button></p>
 </section>
 <section id="quiz" class="hidden">
 <div class="progress"><div id="bar"></div></div>
-<div class="card"><div id="qnum" class="kick"></div><h2 id="qtext"></h2><div class="self-note">Pick the answer that feels most naturally like you.</div><div id="options"></div>
-<div class="quiznav"><button id="backBtn" class="back" onclick="goBack()" disabled>← Previous</button><div id="editNote" class="editnote"></div></div>
+<div class="card quiz-card">
+  <div class="quiz-headline-row"><div id="qnum" class="kick"></div><div id="qMood" class="q-mood"></div></div>
+  <h2 id="qtext"></h2>
+  <div id="qFact" class="quiz-fact hidden"></div>
+  <div class="self-note">Pick what feels most like you. First instinct usually works best.</div>
+  <div id="options"></div>
+  <div class="quiznav"><button id="backBtn" class="back" onclick="goBack()" disabled>← Previous</button><div id="editNote" class="editnote"></div></div>
 </div></section>
 <section id="result" class="hidden result">
-<div class="hero"><div class="file">Your wetland identity</div><div id="glyph" class="orb">🌿</div><div class="kick">Your closest ecological match</div><div id="rname" class="rname"></div><div class="sub">Apparently, your personality has an ecosystem.</div></div>
-<div class="body"><div id="rdef" class="def"></div><div id="punch" class="punch"></div><div class="rel"><div class="lab">Why this fits you</div><div id="relationship"></div></div>
-<div class="flags"><div class="flag green"><div class="lab">Ecological fingerprint</div><span id="green"></span></div><div class="flag red"><div class="lab">When it tips too far</div><span id="red"></span></div></div>
+<div class="hero"><div class="file">Your wetland identity</div><div id="glyph" class="orb wetland-symbol">🌿</div><div class="kick">Your closest ecological match</div><div id="rname" class="rname"></div><div class="sub">Meet the wetland behind your match.</div></div>
+<div class="body">
+<div id="rdef" class="def"></div>
+<div id="learnWetland" class="learn-wetland"></div>
+<div class="personality-divider"><span>and now, the personality part</span></div>
+<div id="punch" class="punch"></div><div class="rel"><div class="lab">Why this fits you</div><div id="relationship"></div></div>
+<div class="flags"><div class="flag green"><div class="lab">3 ecological traits</div><span id="green"></span></div><div class="flag red"><div class="lab">When the same trait goes too far</div><span id="red"></span></div></div>
+<button class="edit-answer-btn" type="button" onclick="editLastAnswerFromResult()">← Edit my last answer</button>
 <div class="rule"></div><div class="lab">Your ecological constellation</div><div id="constellation" class="const"></div><div class="rule"></div>
 <div class="similar-box">
   <div class="lab">Similar wetland personalities</div>
@@ -226,15 +459,16 @@ button{min-height:46px;touch-action:manipulation}
   <div class="insta-share-top">
     <div class="insta-mark">◎</div>
     <div>
-      <div class="kick">Share your wetland identity</div>
-      <h3>Found your wild type?</h3>
+      <div class="kick">Made for sharing</div>
+      <h3>Your ECOTONE identity card</h3>
     </div>
   </div>
-  <p>Share it on Instagram and tag <a href="https://www.instagram.com/it.starts.from.me/" target="_blank" rel="noopener noreferrer">@it.starts.from.me</a> so I can see what ECOTONE matched you with.</p>
+  <p>Your share card includes your identity, three real ecological traits and one wetland fact. Share it from your phone, then tag <b>@it.starts.from.me</b>.</p>
   <div class="insta-actions">
-    <button class="insta-primary" type="button" onclick="openEcotoneInstagram()">Open Instagram</button>
-    <button class="insta-secondary" type="button" onclick="copyInstagramCaption()">Copy tag caption</button>
+    <button class="insta-primary" type="button" onclick="shareWetlandResult()">Share identity card</button>
+    <button class="insta-secondary" type="button" onclick="openInstagramHome()">Open my Instagram</button>
   </div>
+  <button class="caption-copy" type="button" onclick="copyInstagramCaption()">Copy caption + tag</button>
   <div id="instaShareStatus" class="fine insta-share-status"></div>
 </div>
 <div class="rule"></div>
@@ -242,7 +476,6 @@ button{min-height:46px;touch-action:manipulation}
   <div class="kick">Your result can stop here.</div>
   <h2 style="margin:0 0 8px">Or take it social.</h2>
   <p class="mut" style="margin:0 0 14px">ECOTONE works as a wetland identity experience on its own. If you want, you can also meet people through your wetland personality.</p>
-  <button class="primary" type="button" onclick="shareWetlandResult()">Save / share my wetland identity</button>
   <button class="social-cta" type="button" onclick="enterAgency()">👀 Meet people through ECOTONE</button>
   <div id="shareStatus" class="fine" style="text-align:center;min-height:18px;margin-top:8px"></div>
 </div>
@@ -300,7 +533,7 @@ button{min-height:46px;touch-action:manipulation}
       <div class="form-group"><label>One-line bio</label><textarea id="pBio" maxlength="140" placeholder="Something that sounds like you, not a CV."></textarea><div class="field-help">Maximum 140 characters.</div></div>
       <div class="form-group"><label>Instagram handle</label><input id="pInstagram" maxlength="60" autocapitalize="none" autocomplete="off" placeholder="@yourhandle"><div class="field-help">Never shown before mutual match + mutual consent.</div></div>
 
-      <label class="consent-row"><input id="pConsent" type="checkbox"> <span>I confirm I am 18+ and I want to join the optional ECOTONE Social space.</span></label>
+      <label class="consent-row"><input id="pConsent" type="checkbox"> <span>I confirm I am 18+, I want to join the optional ECOTONE Social space, and I agree to the <button type="button" class="inline-terms" onclick="openTerms()">quick terms & safety notes</button>.</span></label>
       <button id="createProfileBtn" class="primary" type="button" onclick="saveAgencyProfile()">Join ECOTONE Social</button>
       <div id="profileStatus" class="fine form-status"></div>
     </div>
@@ -356,17 +589,17 @@ button{min-height:46px;touch-action:manipulation}
 <section id="ratings" class="hidden card"><div class="kick">Optional feedback</div><h2>Did your result feel like you?</h2>
 <div class="rate"><label>Accuracy <b id="av">5</b></label><input id="accuracy" type="range" min="0" max="10" value="5" oninput="av.textContent=this.value"></div>
 <div class="rate"><label>Surprise <b id="sv">5</b></label><input id="surprise" type="range" min="0" max="10" value="5" oninput="sv.textContent=this.value"></div>
-<div class="rate"><label>“WTF, this is me” <b id="wv">5</b></label><input id="wtf" type="range" min="0" max="10" value="5" oninput="wv.textContent=this.value"></div>
+<div class="rate"><label>“That actually feels like me” <b id="rv">5</b></label><input id="resonance" type="range" min="0" max="10" value="5" oninput="rv.textContent=this.value"></div>
 <p><b>Would you share/post this?</b></p><select id="share"><option>Yes</option><option>Maybe</option><option>No</option></select>
 <p><b>One line that felt most true or wrong (optional)</b></p><textarea id="comment"></textarea><button class="primary" onclick="finish()">Generate feedback</button></section>
-<section id="done" class="hidden card"><div class="kick">Pilot record</div><h2>Send this back to the ECOTONE</h2><textarea id="record" class="record" readonly></textarea><button class="primary" onclick="copyRecord()">Copy feedback</button></section>
-<div class="ecotone-footer"><b>ECOTONE</b> is a playful wetland identity experience. Personality matching is interpretive, not a scientific, diagnostic or psychological assessment. ECOTONE Social is optional and 18+.</div></main>
-<script>const DATA={"d":["Social","Bonding","Adaptability","Novelty","Expression","Care","Boundaries","Observation","Groundedness","Intensity"],"i":[["Estuary","Wetland / landscape",[70.0,75.2,72.9,77.2,64.6,72.6,48.8,68.8,66.0,55.6]],["Floodplain","Wetland / landscape",[72.2,72.2,64.7,67.2,68.6,72.3,62.1,67.1,73.3,48.4]],["Mangrove Forest","Wetland / landscape",[54.5,72.3,62.7,60.4,50.2,75.1,73.9,67.0,76.3,57.2]],["Salt Marsh","Wetland / landscape",[64.5,74.6,67.2,67.0,37.6,71.4,66.1,76.2,73.1,55.3]],["Freshwater Marsh","Wetland / landscape",[39.7,63.8,53.2,61.4,52.2,62.0,79.3,78.2,76.8,50.9]],["Peatland","Wetland / landscape",[42.3,69.6,60.6,68.7,58.8,68.8,77.3,68.7,74.9,45.6]],["Seasonal Pond","Wetland / landscape",[51.9,73.9,71.1,77.6,55.7,70.5,61.3,73.8,63.9,60.9]],["Urban Wetland","Wetland / landscape",[63.6,73.5,58.6,45.8,40.5,72.3,69.0,75.8,79.0,51.9]],["High-altitude Wetland","Wetland / landscape",[39.7,71.9,46.2,47.8,59.2,72.9,75.6,72.2,78.2,59.7]],["Mudflat","Wetland / landscape",[69.9,72.9,63.8,69.7,70.9,74.2,52.0,66.5,71.9,61.5]],["Lagoon","Wetland / landscape",[61.2,65.9,70.0,77.9,63.4,61.3,65.7,76.0,67.6,61.9]],["Oxbow Lake","Wetland / landscape",[50.5,74.6,51.4,55.4,48.1,75.2,61.8,73.1,80.4,59.8]],["River Delta","Wetland / landscape",[48.9,58.6,63.9,64.3,48.9,66.9,74.7,76.0,78.9,47.2]],["Swamp","Wetland / landscape",[37.9,71.7,70.6,75.9,65.6,71.0,70.0,70.0,67.7,61.1]],["Vernal Pool","Wetland / landscape",[63.5,71.3,73.1,77.8,43.0,65.7,67.1,76.3,61.4,56.9]],["Flooded Grassland","Wetland / landscape",[41.4,70.4,52.8,48.1,40.7,71.7,74.9,74.7,81.4,48.0]],["Riparian Zone","Wetland / landscape",[64.2,72.0,50.5,60.0,66.0,72.0,69.2,66.0,78.2,47.8]],["Spring","Wetland / landscape",[55.3,74.3,67.0,70.4,61.7,75.6,52.0,67.1,75.3,58.6]],["Backwater","Wetland / landscape",[68.1,68.6,60.8,74.2,70.4,61.5,72.6,70.7,65.1,61.7]],["Wet Meadow","Wetland / landscape",[70.1,73.5,61.3,50.1,66.1,73.7,70.0,70.3,75.1,57.1]],["Lotus","Plant / producer",[35.6,62.9,63.6,64.4,62.4,68.9,77.3,74.3,75.7,59.6]],["Water Lily","Plant / producer",[59.6,75.5,65.3,63.0,66.3,71.3,62.6,71.7,73.3,60.7]],["Cattail / Typha","Plant / producer",[65.7,66.2,68.8,69.7,46.4,66.3,70.4,74.4,73.6,45.8]],["Reed","Plant / producer",[37.9,68.9,64.5,64.3,39.9,71.3,75.8,73.4,76.2,46.2]],["Mangrove Tree","Plant / producer",[36.2,72.7,63.3,70.4,48.2,71.7,73.9,73.8,67.9,62.0]],["Seagrass","Plant / producer",[71.6,77.0,58.6,69.6,54.8,70.7,56.5,74.0,69.1,61.7]],["Duckweed","Plant / producer",[57.2,67.0,68.7,70.5,56.8,69.8,74.1,75.6,66.8,61.4]],["Algae","Plant / producer",[53.7,74.8,51.7,59.6,66.3,76.1,67.4,65.0,74.9,61.1]],["Phytoplankton","Plant / producer",[54.4,64.0,65.2,72.3,43.2,68.5,69.4,76.9,73.9,61.0]],["Wild Rice","Plant / producer",[64.8,72.2,50.7,63.1,64.9,68.9,57.3,72.7,77.6,62.4]],["Saltmarsh Grass","Plant / producer",[67.3,66.4,70.9,75.2,59.8,63.7,71.9,69.4,68.1,48.1]],["Water Chestnut","Plant / producer",[50.3,67.1,71.7,73.6,35.7,70.4,71.1,73.5,72.9,46.7]],["Bladderwort","Plant / producer",[45.6,70.1,49.9,64.5,40.8,68.3,73.2,77.4,74.6,62.6]],["Sundew","Plant / producer",[70.9,77.0,68.8,68.7,51.5,73.3,65.1,68.9,68.4,47.6]],["Sedge","Plant / producer",[45.6,70.8,64.3,72.9,65.1,67.4,77.1,72.0,59.5,63.0]],["Papyrus","Plant / producer",[66.9,74.6,66.4,66.1,57.1,77.8,63.9,65.7,74.2,58.2]],["Floating Fern","Plant / producer",[69.3,70.0,49.5,63.7,54.2,64.1,70.5,75.4,74.3,59.9]],["Pondweed","Plant / producer",[67.3,71.6,47.8,65.0,70.5,67.7,71.7,70.6,71.1,63.4]],["Mangrove Seedling","Plant / producer",[53.3,68.3,71.9,77.3,69.9,72.5,63.5,68.9,68.1,59.9]],["Diatom","Plant / producer",[40.6,72.0,71.1,75.0,44.1,72.5,64.1,73.8,73.3,52.2]],["Sarus Crane","Animal",[65.4,75.1,43.1,46.3,64.2,72.6,67.9,70.4,78.4,62.2]],["Greater Flamingo","Animal",[54.5,73.8,65.5,68.4,51.6,69.2,72.6,72.5,69.7,47.7]],["Painted Stork","Animal",[56.8,69.5,72.1,79.3,63.6,66.2,73.5,70.1,54.4,59.7]],["Purple Swamphen","Animal",[57.1,77.0,58.7,69.3,46.3,73.5,60.6,74.1,71.6,62.6]],["Pheasant-tailed Jacana","Animal",[59.1,67.5,51.9,61.0,46.6,60.4,75.7,77.6,77.0,51.0]],["Kingfisher","Animal",[73.4,76.9,54.0,64.3,69.1,74.2,63.1,66.2,66.8,63.7]],["Heron","Animal",[50.7,67.6,53.8,69.9,56.2,60.0,75.5,75.8,69.3,62.8]],["Egret","Animal",[61.6,66.1,65.4,63.2,51.7,69.6,62.6,77.6,79.6,54.3]],["Spot-billed Pelican","Animal",[58.3,69.6,46.1,46.4,55.1,70.5,73.0,73.7,82.1,47.5]],["Indian Skimmer","Animal",[60.8,74.4,69.6,76.0,64.7,71.2,63.3,66.5,70.3,46.9]],["Bar-headed Goose","Animal",[44.7,68.9,74.6,80.7,50.3,62.6,73.3,73.0,60.5,55.8]],["Common Coot","Animal",[67.8,74.2,64.2,59.3,49.7,71.0,70.9,76.2,72.2,58.7]],["Smooth-coated Otter","Animal",[60.8,72.8,62.6,65.6,65.6,70.6,75.9,67.5,69.4,49.9]],["Fishing Cat","Animal",[63.3,72.9,66.7,68.0,71.1,74.0,70.6,65.0,67.7,61.5]],["Gharial","Animal",[35.5,65.9,56.7,56.7,38.4,69.0,76.8,78.9,76.9,59.8]],["Freshwater Turtle","Animal",[54.2,73.9,64.0,58.5,43.6,74.8,62.6,72.4,79.3,49.3]],["Frog","Animal",[47.0,70.7,49.4,59.5,62.6,70.3,75.6,70.2,78.1,47.9]],["Mudskipper","Animal",[48.9,56.6,72.0,78.1,63.2,65.6,73.8,74.9,67.3,61.8]],["Mahseer","Animal",[57.1,59.1,73.9,78.7,50.0,62.6,69.2,76.6,70.6,53.5]],["Swamp Deer","Animal",[68.2,72.0,62.5,54.8,55.3,71.7,70.9,70.6,78.9,45.5]],["Mangrove Crab","Animal",[46.9,67.1,62.3,60.0,48.7,66.3,76.7,77.8,72.9,58.5]],["Dragonfly","Animal",[66.7,78.0,69.4,76.6,69.4,71.9,63.4,67.5,56.4,61.6]],["Water Beetle","Animal",[60.9,74.1,71.5,75.0,46.2,72.3,51.3,75.2,70.2,54.8]],["Freshwater Mussel","Animal",[51.6,70.8,60.5,44.4,51.4,72.0,74.2,74.3,77.1,55.5]],["Snail","Animal",[49.5,62.3,55.9,69.0,68.1,69.1,75.1,71.2,74.7,61.5]],["Water Filter","Ecological role",[44.5,65.9,64.2,68.2,54.2,70.6,65.5,76.9,76.3,62.5]],["Carbon Keeper","Ecological role",[56.4,71.0,42.4,48.3,46.1,69.6,72.9,75.6,79.4,61.1]],["Nursery","Ecological role",[50.0,70.6,66.3,67.9,61.6,73.0,64.1,71.6,77.8,49.8]],["Flood Buffer","Ecological role",[37.2,63.5,68.0,73.0,36.2,67.1,74.3,79.5,71.5,58.1]],["Pollinator","Ecological role",[73.1,73.9,67.3,66.9,66.0,69.2,67.5,73.9,67.9,61.4]],["Decomposer","Ecological role",[51.8,73.5,65.8,70.4,41.5,70.1,73.2,75.6,61.6,59.8]],["Seed Disperser","Ecological role",[37.5,72.4,62.7,58.3,52.7,76.3,71.1,70.1,76.7,55.3]],["Ecological Engineer","Ecological role",[52.2,68.6,48.0,61.4,55.7,70.6,70.6,73.5,77.9,63.4]],["Nutrient Recycler","Ecological role",[70.0,75.4,65.5,62.9,56.0,74.5,51.0,72.6,76.1,50.5]],["Habitat Builder","Ecological role",[63.4,59.0,68.3,71.7,66.7,70.0,68.5,71.0,74.7,55.5]],["Chilika Lagoon","Wetland site",[69.8,65.2,72.4,79.1,72.9,68.6,66.6,66.9,64.4,59.1]],["Loktak Lake","Wetland site",[49.2,76.9,65.7,68.1,59.3,76.9,68.8,68.3,69.4,60.5]],["Keoladeo Wetland","Wetland site",[59.7,76.5,52.2,64.2,54.1,71.8,71.5,73.4,66.4,64.8]],["Sundarban Wetland","Wetland site",[63.7,67.5,59.1,68.3,59.3,72.9,67.3,72.0,76.0,63.8]],["Sambhar Salt Lake","Wetland site",[58.4,65.5,63.4,64.2,61.9,57.4,75.2,77.0,74.0,57.6]],["Asian Openbill","Animal",[62.3,72.0,51.9,62.3,38.1,70.8,68.3,76.5,75.8,61.7]],["Black-necked Crane","Animal",[55.2,67.5,43.9,56.4,64.6,61.1,78.0,75.3,76.0,58.0]],["Gangetic River Dolphin","Animal",[46.3,67.1,71.3,73.4,54.3,70.9,73.6,67.3,70.5,53.2]],["Mugger Crocodile","Animal",[46.9,67.1,65.5,70.5,38.9,56.3,74.6,79.7,73.0,50.8]],["Black-tailed Godwit","Animal",[63.1,63.7,56.4,69.3,63.2,62.7,72.5,74.3,76.5,45.4]],["Monsoon","Wildcard",[49.6,71.9,62.9,59.7,69.0,70.9,73.8,72.0,71.2,62.0]],["Low Tide","Wildcard",[36.1,62.7,66.4,72.7,51.9,60.7,78.2,79.0,69.3,57.0]],["High Tide","Wildcard",[46.0,72.2,64.9,63.3,36.5,73.1,68.5,76.6,76.3,58.2]],["River Current","Wildcard",[64.7,69.6,62.9,72.5,49.4,59.1,71.3,77.6,66.7,60.7]],["Wetland Mist","Wildcard",[67.5,75.2,63.6,71.3,55.7,73.0,70.0,69.9,61.5,61.6]],["Mud","Wildcard",[39.6,71.4,50.6,65.2,61.9,70.8,75.5,72.4,71.6,63.9]],["Rainwater","Wildcard",[65.2,76.6,59.0,49.2,61.1,75.8,53.5,70.3,80.3,57.0]],["Sediment","Wildcard",[55.7,65.7,61.7,54.8,61.3,70.5,73.0,74.4,79.7,54.1]],["Fallen Log","Wildcard",[55.9,73.2,57.0,71.3,68.0,71.1,66.9,72.3,66.0,66.5]],["Mangrove Root","Wildcard",[66.7,67.6,73.0,77.7,56.1,70.3,61.2,73.5,68.1,59.6]],["Floating Leaf","Wildcard",[53.1,68.7,61.4,59.0,34.6,69.0,73.2,76.7,79.1,45.6]],["Bird Flock","Wildcard",[60.7,73.0,51.9,63.8,48.9,72.2,69.1,71.9,78.1,46.7]],["Fish School","Wildcard",[58.8,73.5,72.1,75.9,51.2,73.3,66.9,66.2,67.8,53.2]],["Frog Chorus","Wildcard",[51.2,67.3,69.6,75.6,68.0,61.3,75.7,69.6,68.1,53.8]],["Water Ripple","Wildcard",[70.8,76.4,48.6,54.8,50.9,75.5,62.6,71.1,76.5,61.9]]],"q":[[1,"surprise",1,"A spontaneous plan appears. You usually…",[["A","Say yes, figure it out later.",[0,0,2,2,0,0,0,0,0,0]],["B","Need the basics first.",[0,0,0,0,0,0,1,1,1,0]],["C","Depends who’s coming.",[1,1,0,0,0,0,0,0,0,0]],["D","Prefer my original plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[2,"surprise",1,"Last-minute invitation. Your first instinct?",[["A","Say yes, figure it out later.",[0,0,2,2,0,0,0,0,0,0]],["B","Need the basics first.",[0,0,0,0,0,0,1,1,1,0]],["C","Depends who’s coming.",[1,1,0,0,0,0,0,0,0,0]],["D","Prefer my original plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[3,"surprise",1,"When plans appear out of nowhere, you…",[["A","Say yes, figure it out later.",[0,0,2,2,0,0,0,0,0,0]],["B","Need the basics first.",[0,0,0,0,0,0,1,1,1,0]],["C","Depends who’s coming.",[1,1,0,0,0,0,0,0,0,0]],["D","Prefer my original plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[4,"surprise",1,"A surprise weekend plan sounds…",[["A","Say yes, figure it out later.",[0,0,2,2,0,0,0,0,0,0]],["B","Need the basics first.",[0,0,0,0,0,0,1,1,1,0]],["C","Depends who’s coming.",[1,1,0,0,0,0,0,0,0,0]],["D","Prefer my original plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[5,"room",1,"In a room of strangers, you usually…",[["A","Start conversations.",[2,0,0,0,1,0,0,0,0,0]],["B","Find one person.",[-1,2,0,0,0,0,0,0,0,0]],["C","Read the room first.",[0,0,0,0,-1,0,0,2,0,0]],["D","Make myself useful.",[0,0,0,0,0,1,0,0,2,0]]]],[6,"room",1,"New group. You naturally…",[["A","Start conversations.",[2,0,0,0,1,0,0,0,0,0]],["B","Find one person.",[-1,2,0,0,0,0,0,0,0,0]],["C","Read the room first.",[0,0,0,0,-1,0,0,2,0,0]],["D","Make myself useful.",[0,0,0,0,0,1,0,0,2,0]]]],[7,"room",1,"When you know nobody, you tend to…",[["A","Start conversations.",[2,0,0,0,1,0,0,0,0,0]],["B","Find one person.",[-1,2,0,0,0,0,0,0,0,0]],["C","Read the room first.",[0,0,0,0,-1,0,0,2,0,0]],["D","Make myself useful.",[0,0,0,0,0,1,0,0,2,0]]]],[8,"room",1,"Around new people, you first…",[["A","Start conversations.",[2,0,0,0,1,0,0,0,0,0]],["B","Find one person.",[-1,2,0,0,0,0,0,0,0,0]],["C","Read the room first.",[0,0,0,0,-1,0,0,2,0,0]],["D","Make myself useful.",[0,0,0,0,0,1,0,0,2,0]]]],[9,"silence",0,"Someone close goes unusually quiet. You…",[["A","Check in directly.",[0,0,0,0,1,2,0,0,0,0]],["B","Give space, stay aware.",[0,0,0,0,0,0,1,2,0,0]],["C","Ask someone close to them.",[1,1,0,0,0,1,0,0,0,0]],["D","Wait for them to tell me.",[0,0,0,0,0,0,2,0,0,-1]]]],[10,"silence",0,"A person you love seems off. You…",[["A","Check in directly.",[0,0,0,0,1,2,0,0,0,0]],["B","Give space, stay aware.",[0,0,0,0,0,0,1,2,0,0]],["C","Ask someone close to them.",[1,1,0,0,0,1,0,0,0,0]],["D","Wait for them to tell me.",[0,0,0,0,0,0,2,0,0,-1]]]],[11,"silence",0,"Someone says “I’m fine,” but feels different. You…",[["A","Check in directly.",[0,0,0,0,1,2,0,0,0,0]],["B","Give space, stay aware.",[0,0,0,0,0,0,1,2,0,0]],["C","Ask someone close to them.",[1,1,0,0,0,1,0,0,0,0]],["D","Wait for them to tell me.",[0,0,0,0,0,0,2,0,0,-1]]]],[12,"silence",0,"A close person pulls back. You…",[["A","Check in directly.",[0,0,0,0,1,2,0,0,0,0]],["B","Give space, stay aware.",[0,0,0,0,0,0,1,2,0,0]],["C","Ask someone close to them.",[1,1,0,0,0,1,0,0,0,0]],["D","Wait for them to tell me.",[0,0,0,0,0,0,2,0,0,-1]]]],[13,"cancel",0,"A plan suddenly collapses. You…",[["A","Make a Plan B.",[0,0,2,0,0,0,0,0,0,0]],["B","Need a minute, then reset.",[0,0,1,0,0,0,0,0,0,1]],["C","My mood drops hard.",[0,0,-1,0,0,0,0,0,0,2]],["D","Enjoy the free time.",[-1,0,0,0,0,0,1,0,1,0]]]],[14,"cancel",0,"Your day gets disrupted. You…",[["A","Make a Plan B.",[0,0,2,0,0,0,0,0,0,0]],["B","Need a minute, then reset.",[0,0,1,0,0,0,0,0,0,1]],["C","My mood drops hard.",[0,0,-1,0,0,0,0,0,0,2]],["D","Enjoy the free time.",[-1,0,0,0,0,0,1,0,1,0]]]],[15,"cancel",0,"A plan you wanted gets cancelled. You…",[["A","Make a Plan B.",[0,0,2,0,0,0,0,0,0,0]],["B","Need a minute, then reset.",[0,0,1,0,0,0,0,0,0,1]],["C","My mood drops hard.",[0,0,-1,0,0,0,0,0,0,2]],["D","Enjoy the free time.",[-1,0,0,0,0,0,1,0,1,0]]]],[16,"cancel",0,"Something you planned falls through. You…",[["A","Make a Plan B.",[0,0,2,0,0,0,0,0,0,0]],["B","Need a minute, then reset.",[0,0,1,0,0,0,0,0,0,1]],["C","My mood drops hard.",[0,0,-1,0,0,0,0,0,0,2]],["D","Enjoy the free time.",[-1,0,0,0,0,0,1,0,1,0]]]],[17,"compliment",1,"Which compliment hits deepest?",[["A","“You make people feel safe.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You notice what others miss.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You make things fun.”",[2,0,0,0,1,0,0,0,0,0]],["D","“You’re refreshingly unpredictable.”",[0,0,1,2,0,0,0,0,0,0]]]],[18,"compliment",1,"Which description would make you happiest?",[["A","“You make people feel safe.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You notice what others miss.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You make things fun.”",[2,0,0,0,1,0,0,0,0,0]],["D","“You’re refreshingly unpredictable.”",[0,0,1,2,0,0,0,0,0,0]]]],[19,"compliment",1,"What do you most want people to notice about you?",[["A","“You make people feel safe.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You notice what others miss.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You make things fun.”",[2,0,0,0,1,0,0,0,0,0]],["D","“You’re refreshingly unpredictable.”",[0,0,1,2,0,0,0,0,0,0]]]],[20,"compliment",1,"Which line feels most meaningful?",[["A","“You make people feel safe.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You notice what others miss.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You make things fun.”",[2,0,0,0,1,0,0,0,0,0]],["D","“You’re refreshingly unpredictable.”",[0,0,1,2,0,0,0,0,0,0]]]],[21,"boundary",1,"Someone crosses a boundary twice. You…",[["A","Say it directly.",[0,0,0,0,1,0,2,0,0,0]],["B","Check if they understood.",[0,0,0,0,0,1,0,1,0,0]],["C","Pull back quietly.",[0,0,0,0,-2,0,1,0,0,0]],["D","Give one more chance.",[0,1,0,0,0,1,-1,0,0,0]]]],[22,"boundary",1,"Someone ignores a clear limit. You…",[["A","Say it directly.",[0,0,0,0,1,0,2,0,0,0]],["B","Check if they understood.",[0,0,0,0,0,1,0,1,0,0]],["C","Pull back quietly.",[0,0,0,0,-2,0,1,0,0,0]],["D","Give one more chance.",[0,1,0,0,0,1,-1,0,0,0]]]],[23,"boundary",1,"When a line is crossed, you usually…",[["A","Say it directly.",[0,0,0,0,1,0,2,0,0,0]],["B","Check if they understood.",[0,0,0,0,0,1,0,1,0,0]],["C","Pull back quietly.",[0,0,0,0,-2,0,1,0,0,0]],["D","Give one more chance.",[0,1,0,0,0,1,-1,0,0,0]]]],[24,"boundary",1,"Someone makes you uncomfortable. You…",[["A","Say it directly.",[0,0,0,0,1,0,2,0,0,0]],["B","Check if they understood.",[0,0,0,0,0,1,0,1,0,0]],["C","Pull back quietly.",[0,0,0,0,-2,0,1,0,0,0]],["D","Give one more chance.",[0,1,0,0,0,1,-1,0,0,0]]]],[25,"chaos",0,"When things get chaotic, you prefer to…",[["A","Improvise and adapt.",[0,0,2,2,0,0,0,0,0,0]],["B","Feed off the energy.",[2,0,1,0,0,0,0,0,0,0]],["C","Keep one calm base.",[0,0,0,0,0,0,1,1,0,1]],["D","Restore some order.",[0,0,0,-1,0,0,0,0,2,0]]]],[26,"chaos",0,"In messy situations, you usually…",[["A","Improvise and adapt.",[0,0,2,2,0,0,0,0,0,0]],["B","Feed off the energy.",[2,0,1,0,0,0,0,0,0,0]],["C","Keep one calm base.",[0,0,0,0,0,0,1,1,0,1]],["D","Restore some order.",[0,0,0,-1,0,0,0,0,2,0]]]],[27,"chaos",0,"When everything is happening at once, you…",[["A","Improvise and adapt.",[0,0,2,2,0,0,0,0,0,0]],["B","Feed off the energy.",[2,0,1,0,0,0,0,0,0,0]],["C","Keep one calm base.",[0,0,0,0,0,0,1,1,0,1]],["D","Restore some order.",[0,0,0,-1,0,0,0,0,2,0]]]],[28,"chaos",0,"Chaos around you makes you want to…",[["A","Improvise and adapt.",[0,0,2,2,0,0,0,0,0,0]],["B","Feed off the energy.",[2,0,1,0,0,0,0,0,0,0]],["C","Keep one calm base.",[0,0,0,0,0,0,1,1,0,1]],["D","Restore some order.",[0,0,0,-1,0,0,0,0,2,0]]]],[29,"role",0,"In a group, you naturally…",[["A","Notice who needs support.",[0,1,0,0,0,2,0,0,0,0]],["B","Track what’s happening.",[0,0,0,0,0,0,0,2,1,0]],["C","Bring unexpected ideas.",[0,0,0,2,1,0,0,0,0,0]],["D","Quietly fix problems.",[0,0,0,0,-1,1,0,0,2,0]]]],[30,"role",0,"People usually rely on you to…",[["A","Notice who needs support.",[0,1,0,0,0,2,0,0,0,0]],["B","Track what’s happening.",[0,0,0,0,0,0,0,2,1,0]],["C","Bring unexpected ideas.",[0,0,0,2,1,0,0,0,0,0]],["D","Quietly fix problems.",[0,0,0,0,-1,1,0,0,2,0]]]],[31,"role",0,"Your default group role is…",[["A","Notice who needs support.",[0,1,0,0,0,2,0,0,0,0]],["B","Track what’s happening.",[0,0,0,0,0,0,0,2,1,0]],["C","Bring unexpected ideas.",[0,0,0,2,1,0,0,0,0,0]],["D","Quietly fix problems.",[0,0,0,0,-1,1,0,0,2,0]]]],[32,"role",0,"When a team gets messy, you…",[["A","Notice who needs support.",[0,1,0,0,0,2,0,0,0,0]],["B","Track what’s happening.",[0,0,0,0,0,0,0,2,1,0]],["C","Bring unexpected ideas.",[0,0,0,2,1,0,0,0,0,0]],["D","Quietly fix problems.",[0,0,0,0,-1,1,0,0,2,0]]]],[33,"alone",0,"Free time usually becomes…",[["A","Protect my alone time.",[-2,0,0,0,0,0,2,0,0,0]],["B","Find someone I like.",[2,1,0,0,0,0,0,0,0,0]],["C","Go somewhere new.",[0,0,1,2,0,0,0,0,0,0]],["D","Finish or build something.",[0,0,0,0,0,0,0,0,2,0]]]],[34,"alone",0,"A free evening makes you want to…",[["A","Protect my alone time.",[-2,0,0,0,0,0,2,0,0,0]],["B","Find someone I like.",[2,1,0,0,0,0,0,0,0,0]],["C","Go somewhere new.",[0,0,1,2,0,0,0,0,0,0]],["D","Finish or build something.",[0,0,0,0,0,0,0,0,2,0]]]],[35,"alone",0,"When nobody needs you, you…",[["A","Protect my alone time.",[-2,0,0,0,0,0,2,0,0,0]],["B","Find someone I like.",[2,1,0,0,0,0,0,0,0,0]],["C","Go somewhere new.",[0,0,1,2,0,0,0,0,0,0]],["D","Finish or build something.",[0,0,0,0,0,0,0,0,2,0]]]],[36,"alone",0,"An empty day sounds best for…",[["A","Protect my alone time.",[-2,0,0,0,0,0,2,0,0,0]],["B","Find someone I like.",[2,1,0,0,0,0,0,0,0,0]],["C","Go somewhere new.",[0,0,1,2,0,0,0,0,0,0]],["D","Finish or build something.",[0,0,0,0,0,0,0,0,2,0]]]],[37,"care",0,"When someone you love struggles, you…",[["A","Help practically.",[0,0,0,0,0,2,0,0,1,0]],["B","Say what I feel.",[0,1,0,0,2,0,0,0,0,0]],["C","Give them space.",[0,0,0,0,0,1,2,0,0,0]],["D","Keep them company.",[0,2,0,1,0,0,0,0,0,0]]]],[38,"care",0,"Your care usually looks like…",[["A","Help practically.",[0,0,0,0,0,2,0,0,1,0]],["B","Say what I feel.",[0,1,0,0,2,0,0,0,0,0]],["C","Give them space.",[0,0,0,0,0,1,2,0,0,0]],["D","Keep them company.",[0,2,0,1,0,0,0,0,0,0]]]],[39,"care",0,"When a close person needs support, you…",[["A","Help practically.",[0,0,0,0,0,2,0,0,1,0]],["B","Say what I feel.",[0,1,0,0,2,0,0,0,0,0]],["C","Give them space.",[0,0,0,0,0,1,2,0,0,0]],["D","Keep them company.",[0,2,0,1,0,0,0,0,0,0]]]],[40,"care",0,"You show love by…",[["A","Help practically.",[0,0,0,0,0,2,0,0,1,0]],["B","Say what I feel.",[0,1,0,0,2,0,0,0,0,0]],["C","Give them space.",[0,0,0,0,0,1,2,0,0,0]],["D","Keep them company.",[0,2,0,1,0,0,0,0,0,0]]]],[41,"notice",1,"You catch something others missed. Your instinct?",[["A","Point it out.",[1,0,0,0,1,0,0,1,0,0]],["B","Keep observing.",[0,0,0,0,0,0,0,2,0,0]],["C","Investigate it.",[0,0,0,1,0,0,0,2,0,0]],["D","Share it with someone.",[0,1,0,0,1,0,0,1,0,0]]]],[42,"notice",1,"You notice a small detail nobody else did. You…",[["A","Point it out.",[1,0,0,0,1,0,0,1,0,0]],["B","Keep observing.",[0,0,0,0,0,0,0,2,0,0]],["C","Investigate it.",[0,0,0,1,0,0,0,2,0,0]],["D","Share it with someone.",[0,1,0,0,1,0,0,1,0,0]]]],[43,"notice",1,"Something feels slightly off. You…",[["A","Point it out.",[1,0,0,0,1,0,0,1,0,0]],["B","Keep observing.",[0,0,0,0,0,0,0,2,0,0]],["C","Investigate it.",[0,0,0,1,0,0,0,2,0,0]],["D","Share it with someone.",[0,1,0,0,1,0,0,1,0,0]]]],[44,"notice",1,"You spot a pattern change. You…",[["A","Point it out.",[1,0,0,0,1,0,0,1,0,0]],["B","Keep observing.",[0,0,0,0,0,0,0,2,0,0]],["C","Investigate it.",[0,0,0,1,0,0,0,2,0,0]],["D","Share it with someone.",[0,1,0,0,1,0,0,1,0,0]]]],[45,"relationship",1,"Closeness feels best when…",[["A","Separate lives, intentional closeness.",[0,1,0,0,0,0,2,0,0,0]],["B","Feel like a team.",[0,2,0,0,0,1,0,0,0,0]],["C","Keep discovering together.",[0,0,1,2,0,0,0,0,0,0]],["D","Low-maintenance, deep understanding.",[0,1,0,0,-1,0,0,0,1,0]]]],[46,"relationship",1,"Your ideal relationship rhythm is…",[["A","Separate lives, intentional closeness.",[0,1,0,0,0,0,2,0,0,0]],["B","Feel like a team.",[0,2,0,0,0,1,0,0,0,0]],["C","Keep discovering together.",[0,0,1,2,0,0,0,0,0,0]],["D","Low-maintenance, deep understanding.",[0,1,0,0,-1,0,0,0,1,0]]]],[47,"relationship",1,"A strong bond should feel like…",[["A","Separate lives, intentional closeness.",[0,1,0,0,0,0,2,0,0,0]],["B","Feel like a team.",[0,2,0,0,0,1,0,0,0,0]],["C","Keep discovering together.",[0,0,1,2,0,0,0,0,0,0]],["D","Low-maintenance, deep understanding.",[0,1,0,0,-1,0,0,0,1,0]]]],[48,"relationship",1,"In close relationships, you value…",[["A","Separate lives, intentional closeness.",[0,1,0,0,0,0,2,0,0,0]],["B","Feel like a team.",[0,2,0,0,0,1,0,0,0,0]],["C","Keep discovering together.",[0,0,1,2,0,0,0,0,0,0]],["D","Low-maintenance, deep understanding.",[0,1,0,0,-1,0,0,0,1,0]]]],[49,"awkward",0,"When a room turns awkward, you…",[["A","Break tension with humour.",[1,0,0,0,2,0,0,0,0,0]],["B","Check in privately.",[0,1,0,0,0,2,0,0,0,0]],["C","Read the room.",[0,0,0,0,-1,0,0,2,0,0]],["D","Name the awkwardness.",[0,0,0,0,2,0,1,0,0,0]]]],[50,"awkward",0,"Tension suddenly fills the room. You…",[["A","Break tension with humour.",[1,0,0,0,2,0,0,0,0,0]],["B","Check in privately.",[0,1,0,0,0,2,0,0,0,0]],["C","Read the room.",[0,0,0,0,-1,0,0,2,0,0]],["D","Name the awkwardness.",[0,0,0,0,2,0,1,0,0,0]]]],[51,"awkward",0,"When everyone feels awkward, you…",[["A","Break tension with humour.",[1,0,0,0,2,0,0,0,0,0]],["B","Check in privately.",[0,1,0,0,0,2,0,0,0,0]],["C","Read the room.",[0,0,0,0,-1,0,0,2,0,0]],["D","Name the awkwardness.",[0,0,0,0,2,0,1,0,0,0]]]],[52,"awkward",0,"An uncomfortable silence appears. You…",[["A","Break tension with humour.",[1,0,0,0,2,0,0,0,0,0]],["B","Check in privately.",[0,1,0,0,0,2,0,0,0,0]],["C","Read the room.",[0,0,0,0,-1,0,0,2,0,0]],["D","Name the awkwardness.",[0,0,0,0,2,0,1,0,0,0]]]],[53,"newplace",0,"In a new place, you first…",[["A","Build a routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Explore freely.",[0,0,1,2,0,0,0,0,0,0]],["C","Find my people.",[1,1,0,0,0,0,0,0,0,0]],["D","Learn how it works.",[0,0,1,1,0,0,0,1,0,0]]]],[54,"newplace",0,"Starting somewhere unfamiliar, you…",[["A","Build a routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Explore freely.",[0,0,1,2,0,0,0,0,0,0]],["C","Find my people.",[1,1,0,0,0,0,0,0,0,0]],["D","Learn how it works.",[0,0,1,1,0,0,0,1,0,0]]]],[55,"newplace",0,"When everything is new, you…",[["A","Build a routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Explore freely.",[0,0,1,2,0,0,0,0,0,0]],["C","Find my people.",[1,1,0,0,0,0,0,0,0,0]],["D","Learn how it works.",[0,0,1,1,0,0,0,1,0,0]]]],[56,"newplace",0,"A new environment makes you want to…",[["A","Build a routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Explore freely.",[0,0,1,2,0,0,0,0,0,0]],["C","Find my people.",[1,1,0,0,0,0,0,0,0,0]],["D","Learn how it works.",[0,0,1,1,0,0,0,1,0,0]]]],[57,"project",0,"When you create something, what matters most?",[["A","Reliable.",[0,0,0,0,0,0,0,0,2,0]],["B","Memorable.",[0,0,0,2,0,0,0,0,0,0]],["C","Easy for people.",[1,0,0,0,0,2,0,0,0,0]],["D","Hard to break.",[0,0,0,0,0,0,2,1,0,0]]]],[58,"project",0,"For something you build, you value…",[["A","Reliable.",[0,0,0,0,0,0,0,0,2,0]],["B","Memorable.",[0,0,0,2,0,0,0,0,0,0]],["C","Easy for people.",[1,0,0,0,0,2,0,0,0,0]],["D","Hard to break.",[0,0,0,0,0,0,2,1,0,0]]]],[59,"project",0,"A good project should be…",[["A","Reliable.",[0,0,0,0,0,0,0,0,2,0]],["B","Memorable.",[0,0,0,2,0,0,0,0,0,0]],["C","Easy for people.",[1,0,0,0,0,2,0,0,0,0]],["D","Hard to break.",[0,0,0,0,0,0,2,1,0,0]]]],[60,"project",0,"If you make something for others, make it…",[["A","Reliable.",[0,0,0,0,0,0,0,0,2,0]],["B","Memorable.",[0,0,0,2,0,0,0,0,0,0]],["C","Easy for people.",[1,0,0,0,0,2,0,0,0,0]],["D","Hard to break.",[0,0,0,0,0,0,2,1,0,0]]]],[61,"horror",0,"What drains you fastest?",[["A","Forced small talk.",[-1,0,0,0,0,0,0,0,0,1]],["B","Unspoken tension.",[0,0,0,0,0,1,0,1,0,1]],["C","Constant plan changes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Unwanted attention.",[-1,0,0,0,-2,0,0,0,0,0]]]],[62,"horror",0,"Which situation tires you most?",[["A","Forced small talk.",[-1,0,0,0,0,0,0,0,0,1]],["B","Unspoken tension.",[0,0,0,0,0,1,0,1,0,1]],["C","Constant plan changes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Unwanted attention.",[-1,0,0,0,-2,0,0,0,0,0]]]],[63,"horror",0,"What makes you want to leave?",[["A","Forced small talk.",[-1,0,0,0,0,0,0,0,0,1]],["B","Unspoken tension.",[0,0,0,0,0,1,0,1,0,1]],["C","Constant plan changes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Unwanted attention.",[-1,0,0,0,-2,0,0,0,0,0]]]],[64,"horror",0,"Which social thing exhausts you quickest?",[["A","Forced small talk.",[-1,0,0,0,0,0,0,0,0,1]],["B","Unspoken tension.",[0,0,0,0,0,1,0,1,0,1]],["C","Constant plan changes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Unwanted attention.",[-1,0,0,0,-2,0,0,0,0,0]]]],[65,"conflict",0,"In conflict, your first instinct is…",[["A","Talk now.",[0,0,0,0,2,0,0,0,0,1]],["B","Think first.",[0,0,0,0,0,0,0,2,1,0]],["C","Protect the relationship.",[0,2,0,0,0,1,0,0,0,0]],["D","Protect the boundary.",[0,0,0,0,0,0,2,0,0,0]]]],[66,"conflict",0,"When someone important upsets you, you…",[["A","Talk now.",[0,0,0,0,2,0,0,0,0,1]],["B","Think first.",[0,0,0,0,0,0,0,2,1,0]],["C","Protect the relationship.",[0,2,0,0,0,1,0,0,0,0]],["D","Protect the boundary.",[0,0,0,0,0,0,2,0,0,0]]]],[67,"conflict",0,"During a real disagreement, you first…",[["A","Talk now.",[0,0,0,0,2,0,0,0,0,1]],["B","Think first.",[0,0,0,0,0,0,0,2,1,0]],["C","Protect the relationship.",[0,2,0,0,0,1,0,0,0,0]],["D","Protect the boundary.",[0,0,0,0,0,0,2,0,0,0]]]],[68,"conflict",0,"When tension gets personal, you…",[["A","Talk now.",[0,0,0,0,2,0,0,0,0,1]],["B","Think first.",[0,0,0,0,0,0,0,2,1,0]],["C","Protect the relationship.",[0,2,0,0,0,1,0,0,0,0]],["D","Protect the boundary.",[0,0,0,0,0,0,2,0,0,0]]]],[69,"energy",0,"What recharges you best?",[["A","People I love.",[1,2,0,0,0,0,0,0,0,0]],["B","Solitude.",[-2,0,0,0,0,0,2,0,0,0]],["C","Something new.",[0,0,1,2,0,0,0,0,0,0]],["D","Something familiar.",[0,0,0,0,0,0,0,0,2,-1]]]],[70,"energy",0,"After a heavy day, you need…",[["A","People I love.",[1,2,0,0,0,0,0,0,0,0]],["B","Solitude.",[-2,0,0,0,0,0,2,0,0,0]],["C","Something new.",[0,0,1,2,0,0,0,0,0,0]],["D","Something familiar.",[0,0,0,0,0,0,0,0,2,-1]]]],[71,"energy",0,"When you’re drained, you want…",[["A","People I love.",[1,2,0,0,0,0,0,0,0,0]],["B","Solitude.",[-2,0,0,0,0,0,2,0,0,0]],["C","Something new.",[0,0,1,2,0,0,0,0,0,0]],["D","Something familiar.",[0,0,0,0,0,0,0,0,2,-1]]]],[72,"energy",0,"To feel like yourself again, you need…",[["A","People I love.",[1,2,0,0,0,0,0,0,0,0]],["B","Solitude.",[-2,0,0,0,0,0,2,0,0,0]],["C","Something new.",[0,0,1,2,0,0,0,0,0,0]],["D","Something familiar.",[0,0,0,0,0,0,0,0,2,-1]]]]],"s":[10.398929319886737,4.5345644774333085,8.13587880932355,8.690184347872028,10.039420501204239,4.547414540153559,6.665254383742603,3.687833510341811,5.6716791164522,5.835917322923621],"f":{"Estuary":"where a river meets the sea and fresh water mixes with salty water","Floodplain":"flat land beside a river that periodically floods","Mangrove Forest":"a coastal wetland dominated by salt-tolerant mangrove trees","Salt Marsh":"a grassy coastal wetland regularly flooded by salty water","Freshwater Marsh":"a shallow wetland dominated by grasses and other soft-stemmed plants","Peatland":"a waterlogged landscape where partly decayed plant material builds up as peat","Seasonal Pond":"a pond that fills during wet periods and may dry out later","Urban Wetland":"a wetland surviving within or beside a city","High-altitude Wetland":"a wetland found high in the mountains, often in cold conditions","Mudflat":"a broad muddy or silty area exposed when water levels drop","Lagoon":"a shallow body of water separated from a larger sea or lake by a barrier","Oxbow Lake":"a curved lake formed when a river leaves behind one of its old bends","River Delta":"land built from sediment where a river spreads into several channels near its mouth","Swamp":"a wetland dominated by trees or woody plants","Vernal Pool":"a temporary seasonal pool that appears during wet periods","Flooded Grassland":"grassland that becomes seasonally or regularly covered by water","Riparian Zone":"the strip of land and vegetation directly alongside a river or stream","Spring":"a place where groundwater naturally emerges at the surface","Backwater":"a slow or still branch of water connected to a larger river or waterbody","Wet Meadow":"a grassy area with waterlogged soil for part of the year","Lotus":"an aquatic flowering plant rooted in mud with leaves and flowers held above the water","Water Lily":"an aquatic flowering plant with floating leaves and flowers at the water surface","Cattail / Typha":"a tall marsh plant with long leaves and a distinctive brown flower spike","Reed":"a tall grass-like wetland plant that often grows in dense stands","Mangrove Tree":"a salt-tolerant coastal tree adapted to waterlogged, low-oxygen mud","Seagrass":"a true flowering plant that grows underwater in shallow coastal seas","Duckweed":"tiny floating plants that can multiply rapidly on still or slow water","Algae":"simple photosynthetic organisms that live in water or damp places","Phytoplankton":"microscopic drifting organisms that photosynthesize in water","Wild Rice":"an aquatic grass that grows in shallow freshwater wetlands","Saltmarsh Grass":"salt-tolerant grass adapted to regularly flooded coastal marshes","Water Chestnut":"an aquatic plant that grows in freshwater ponds, lakes, and slow water","Bladderwort":"an aquatic carnivorous plant that traps tiny organisms in bladder-like structures","Sundew":"a small carnivorous plant with sticky leaves that trap insects","Sedge":"a grass-like wetland plant, often with solid triangular stems","Papyrus":"a tall wetland sedge historically used to make writing material","Floating Fern":"a small fern that floats on the surface of water","Pondweed":"a group of aquatic plants that grow submerged or partly floating in freshwater","Mangrove Seedling":"a young mangrove beginning life in unstable coastal mud","Diatom":"a microscopic photosynthetic organism with a glass-like silica shell","Sarus Crane":"a very tall crane of wetlands and agricultural landscapes, known for strong pair bonds","Greater Flamingo":"a large pink wading bird that feeds in shallow saline or alkaline wetlands","Painted Stork":"a large wading bird that searches shallow water for fish","Purple Swamphen":"a large wetland bird with bright plumage and long toes for moving through marsh vegetation","Pheasant-tailed Jacana":"a wetland bird with extremely long toes that walks across floating vegetation","Kingfisher":"a compact bird that often watches from a perch before diving or darting for prey","Heron":"a long-legged wading bird known for patient, still hunting","Egret":"a slender white heron that feeds in shallow water and wet grasslands","Indian Skimmer":"a river bird that feeds by flying low and slicing its longer lower bill through the water","Bar-headed Goose":"a migratory goose famous for crossing extremely high mountain passes","Common Coot":"a dark waterbird with strong feet that swims, dives, and defends territories","Smooth-coated Otter":"a social semi-aquatic mammal that lives around rivers, lakes, and wetlands","Fishing Cat":"a wetland-adapted wild cat that hunts near water and is an excellent swimmer","Gharial":"a long-snouted crocodilian specialized for life in large rivers","Freshwater Turtle":"a turtle adapted to rivers, ponds, lakes, or marshes","Frog":"an amphibian whose life often links water and land","Mudskipper":"an amphibious fish able to move and feed on exposed mud","Mahseer":"a group of large freshwater fish found in South Asian river systems","Swamp Deer":"a large deer associated with marshes, floodplains, and wet grasslands","Mangrove Crab":"a crab that lives among mangrove mud, roots, and tidal creeks","Dragonfly":"an aerial insect whose juvenile stage lives underwater","Water Beetle":"a beetle adapted to swimming, diving, or living at the water surface","Freshwater Mussel":"a quiet shellfish that lives on river or lake beds and often filters water while feeding","Snail":"a soft-bodied mollusc protected by a shell, with many species living in wetlands","Water Filter":"the ecological function of trapping particles or removing material from water","Carbon Keeper":"an ecosystem role that stores carbon instead of releasing it quickly to the atmosphere","Nursery":"a habitat where young animals can feed, shelter, and grow","Flood Buffer":"a landscape function that stores or slows water during floods","Pollinator":"an organism that moves pollen between flowers and helps plants reproduce","Decomposer":"an organism that breaks down dead material and returns nutrients to the ecosystem","Seed Disperser":"an organism or process that moves seeds away from their parent plants","Ecological Engineer":"an organism that physically changes habitat in ways that affect many other species","Nutrient Recycler":"an ecological role that moves nutrients back into forms organisms can use","Habitat Builder":"an organism or process that creates physical living space for other species","Monsoon":"the seasonal wind-and-rain system that dramatically reshapes water availability","Low Tide":"the stage of the tidal cycle when coastal water is at its lower level","High Tide":"the stage of the tidal cycle when coastal water rises to its higher level","River Current":"the directional movement of water through a river","Wetland Mist":"tiny suspended water droplets that form a low cloud close to wet ground or water","Mud":"water-saturated soil or sediment packed with minerals, organisms, nutrients, and stored seeds","Rainwater":"water delivered directly from the atmosphere by rain","Sediment":"particles such as sand, silt, clay, and organic matter carried and deposited by water","Fallen Log":"dead wood that becomes shelter, food, structure, and habitat for many organisms","Mangrove Root":"a root structure that anchors mangroves and creates complex shelter in tidal mud","Floating Leaf":"a leaf adapted to rest on the water surface while remaining connected to a rooted plant","Bird Flock":"a temporary or persistent group of birds moving, feeding, or resting together","Fish School":"a coordinated group of fish moving together","Frog Chorus":"many frogs calling together, often during breeding periods after rain","Water Ripple":"a small wave spreading outward across the water surface","Spot-billed Pelican":"a large South Asian waterbird that catches fish with its bill pouch, nests colonially, soars on thermals, and may feed alone, in small groups, or cooperatively drive fish into shallow water","Chilika Lagoon":"a large brackish coastal lagoon on India’s east coast shaped by freshwater inflow, tidal exchange and changing salinity, with exceptional bird and aquatic biodiversity","Loktak Lake":"a large freshwater lake in Manipur famous for phumdis—floating masses of vegetation, soil and organic matter that create a shifting wetland landscape","Keoladeo Wetland":"a seasonally flooded and actively water-managed wetland in Rajasthan whose changing water levels support large numbers of waterbirds","Sundarban Wetland":"a vast tidal mangrove wetland of islands, rivers and creeks where salinity, sediment and tides continually reshape habitat","Sambhar Salt Lake":"a large inland saline lake in Rajasthan with strong seasonal water fluctuations and major importance for flamingos and other waterbirds","Asian Openbill":"a wetland stork strongly associated with shallow waters and flooded fields, specialized in aquatic prey such as snails and often nesting in social colonies","Black-necked Crane":"a crane of high-altitude wetlands and river valleys, commonly occurring in bonded pairs or family groups and defending breeding territories","Gangetic River Dolphin":"a river dolphin adapted to turbid water, using acoustic signals and echolocation rather than vision to navigate and find prey","Mugger Crocodile":"a broad-snouted freshwater crocodile of rivers, lakes and marshes that conserves energy through ambush hunting, basks on banks and protects nesting areas","Black-tailed Godwit":"a long-distance migratory shorebird that links networks of wetlands and uses a sensitive long bill to probe mud and wet soils for prey"}};
+<section id="done" class="hidden card"><div class="kick">Feedback record</div><h2>Thanks for helping ECOTONE get better.</h2><textarea id="record" class="record" readonly></textarea><button class="primary" onclick="copyRecord()">Copy feedback</button></section>
+<div class="ecotone-footer"><b>ECOTONE</b> is a playful wetland-learning experience. The identity match is interpretive, not a psychological assessment. ECOTONE Social is optional and 18+. <button type="button" onclick="openTerms()">Terms, privacy & safety</button></div></main>
+<script>const DATA={"d":["Social","Bonding","Adaptability","Novelty","Expression","Care","Boundaries","Observation","Groundedness","Intensity"],"i":[["Estuary","Wetland / landscape",[70.0,75.2,72.9,77.2,64.6,72.6,48.8,68.8,66.0,55.6]],["Floodplain","Wetland / landscape",[72.2,72.2,64.7,67.2,68.6,72.3,62.1,67.1,73.3,48.4]],["Mangrove Forest","Wetland / landscape",[54.5,72.3,62.7,60.4,50.2,75.1,73.9,67.0,76.3,57.2]],["Salt Marsh","Wetland / landscape",[64.5,74.6,67.2,67.0,37.6,71.4,66.1,76.2,73.1,55.3]],["Freshwater Marsh","Wetland / landscape",[39.7,63.8,53.2,61.4,52.2,62.0,79.3,78.2,76.8,50.9]],["Peatland","Wetland / landscape",[42.3,69.6,60.6,68.7,58.8,68.8,77.3,68.7,74.9,45.6]],["Seasonal Pond","Wetland / landscape",[51.9,73.9,71.1,77.6,55.7,70.5,61.3,73.8,63.9,60.9]],["Urban Wetland","Wetland / landscape",[63.6,73.5,58.6,45.8,40.5,72.3,69.0,75.8,79.0,51.9]],["High-altitude Wetland","Wetland / landscape",[39.7,71.9,46.2,47.8,59.2,72.9,75.6,72.2,78.2,59.7]],["Mudflat","Wetland / landscape",[69.9,72.9,63.8,69.7,70.9,74.2,52.0,66.5,71.9,61.5]],["Lagoon","Wetland / landscape",[61.2,65.9,70.0,77.9,63.4,61.3,65.7,76.0,67.6,61.9]],["Oxbow Lake","Wetland / landscape",[50.5,74.6,51.4,55.4,48.1,75.2,61.8,73.1,80.4,59.8]],["River Delta","Wetland / landscape",[48.9,58.6,63.9,64.3,48.9,66.9,74.7,76.0,78.9,47.2]],["Swamp","Wetland / landscape",[37.9,71.7,70.6,75.9,65.6,71.0,70.0,70.0,67.7,61.1]],["Vernal Pool","Wetland / landscape",[63.5,71.3,73.1,77.8,43.0,65.7,67.1,76.3,61.4,56.9]],["Flooded Grassland","Wetland / landscape",[41.4,70.4,52.8,48.1,40.7,71.7,74.9,74.7,81.4,48.0]],["Riparian Zone","Wetland / landscape",[64.2,72.0,50.5,60.0,66.0,72.0,69.2,66.0,78.2,47.8]],["Spring","Wetland / landscape",[55.3,74.3,67.0,70.4,61.7,75.6,52.0,67.1,75.3,58.6]],["Backwater","Wetland / landscape",[68.1,68.6,60.8,74.2,70.4,61.5,72.6,70.7,65.1,61.7]],["Wet Meadow","Wetland / landscape",[70.1,73.5,61.3,50.1,66.1,73.7,70.0,70.3,75.1,57.1]],["Lotus","Plant / producer",[35.6,62.9,63.6,64.4,62.4,68.9,77.3,74.3,75.7,59.6]],["Water Lily","Plant / producer",[59.6,75.5,65.3,63.0,66.3,71.3,62.6,71.7,73.3,60.7]],["Cattail / Typha","Plant / producer",[65.7,66.2,68.8,69.7,46.4,66.3,70.4,74.4,73.6,45.8]],["Reed","Plant / producer",[37.9,68.9,64.5,64.3,39.9,71.3,75.8,73.4,76.2,46.2]],["Mangrove Tree","Plant / producer",[36.2,72.7,63.3,70.4,48.2,71.7,73.9,73.8,67.9,62.0]],["Seagrass","Plant / producer",[71.6,77.0,58.6,69.6,54.8,70.7,56.5,74.0,69.1,61.7]],["Duckweed","Plant / producer",[57.2,67.0,68.7,70.5,56.8,69.8,74.1,75.6,66.8,61.4]],["Algae","Plant / producer",[53.7,74.8,51.7,59.6,66.3,76.1,67.4,65.0,74.9,61.1]],["Phytoplankton","Plant / producer",[54.4,64.0,65.2,72.3,43.2,68.5,69.4,76.9,73.9,61.0]],["Wild Rice","Plant / producer",[64.8,72.2,50.7,63.1,64.9,68.9,57.3,72.7,77.6,62.4]],["Saltmarsh Grass","Plant / producer",[67.3,66.4,70.9,75.2,59.8,63.7,71.9,69.4,68.1,48.1]],["Water Chestnut","Plant / producer",[50.3,67.1,71.7,73.6,35.7,70.4,71.1,73.5,72.9,46.7]],["Bladderwort","Plant / producer",[45.6,70.1,49.9,64.5,40.8,68.3,73.2,77.4,74.6,62.6]],["Sundew","Plant / producer",[70.9,77.0,68.8,68.7,51.5,73.3,65.1,68.9,68.4,47.6]],["Sedge","Plant / producer",[45.6,70.8,64.3,72.9,65.1,67.4,77.1,72.0,59.5,63.0]],["Papyrus","Plant / producer",[66.9,74.6,66.4,66.1,57.1,77.8,63.9,65.7,74.2,58.2]],["Floating Fern","Plant / producer",[69.3,70.0,49.5,63.7,54.2,64.1,70.5,75.4,74.3,59.9]],["Pondweed","Plant / producer",[67.3,71.6,47.8,65.0,70.5,67.7,71.7,70.6,71.1,63.4]],["Mangrove Seedling","Plant / producer",[53.3,68.3,71.9,77.3,69.9,72.5,63.5,68.9,68.1,59.9]],["Diatom","Plant / producer",[40.6,72.0,71.1,75.0,44.1,72.5,64.1,73.8,73.3,52.2]],["Sarus Crane","Animal",[65.4,75.1,43.1,46.3,64.2,72.6,67.9,70.4,78.4,62.2]],["Greater Flamingo","Animal",[54.5,73.8,65.5,68.4,51.6,69.2,72.6,72.5,69.7,47.7]],["Painted Stork","Animal",[56.8,69.5,72.1,79.3,63.6,66.2,73.5,70.1,54.4,59.7]],["Purple Swamphen","Animal",[57.1,77.0,58.7,69.3,46.3,73.5,60.6,74.1,71.6,62.6]],["Pheasant-tailed Jacana","Animal",[59.1,67.5,51.9,61.0,46.6,60.4,75.7,77.6,77.0,51.0]],["Kingfisher","Animal",[73.4,76.9,54.0,64.3,69.1,74.2,63.1,66.2,66.8,63.7]],["Heron","Animal",[50.7,67.6,53.8,69.9,56.2,60.0,75.5,75.8,69.3,62.8]],["Egret","Animal",[61.6,66.1,65.4,63.2,51.7,69.6,62.6,77.6,79.6,54.3]],["Spot-billed Pelican","Animal",[58.3,69.6,46.1,46.4,55.1,70.5,73.0,73.7,82.1,47.5]],["Indian Skimmer","Animal",[60.8,74.4,69.6,76.0,64.7,71.2,63.3,66.5,70.3,46.9]],["Bar-headed Goose","Animal",[44.7,68.9,74.6,80.7,50.3,62.6,73.3,73.0,60.5,55.8]],["Common Coot","Animal",[67.8,74.2,64.2,59.3,49.7,71.0,70.9,76.2,72.2,58.7]],["Smooth-coated Otter","Animal",[60.8,72.8,62.6,65.6,65.6,70.6,75.9,67.5,69.4,49.9]],["Fishing Cat","Animal",[63.3,72.9,66.7,68.0,71.1,74.0,70.6,65.0,67.7,61.5]],["Gharial","Animal",[35.5,65.9,56.7,56.7,38.4,69.0,76.8,78.9,76.9,59.8]],["Freshwater Turtle","Animal",[54.2,73.9,64.0,58.5,43.6,74.8,62.6,72.4,79.3,49.3]],["Frog","Animal",[47.0,70.7,49.4,59.5,62.6,70.3,75.6,70.2,78.1,47.9]],["Mudskipper","Animal",[48.9,56.6,72.0,78.1,63.2,65.6,73.8,74.9,67.3,61.8]],["Mahseer","Animal",[57.1,59.1,73.9,78.7,50.0,62.6,69.2,76.6,70.6,53.5]],["Swamp Deer","Animal",[68.2,72.0,62.5,54.8,55.3,71.7,70.9,70.6,78.9,45.5]],["Mangrove Crab","Animal",[46.9,67.1,62.3,60.0,48.7,66.3,76.7,77.8,72.9,58.5]],["Dragonfly","Animal",[66.7,78.0,69.4,76.6,69.4,71.9,63.4,67.5,56.4,61.6]],["Water Beetle","Animal",[60.9,74.1,71.5,75.0,46.2,72.3,51.3,75.2,70.2,54.8]],["Freshwater Mussel","Animal",[51.6,70.8,60.5,44.4,51.4,72.0,74.2,74.3,77.1,55.5]],["Snail","Animal",[49.5,62.3,55.9,69.0,68.1,69.1,75.1,71.2,74.7,61.5]],["Water Filter","Ecological role",[44.5,65.9,64.2,68.2,54.2,70.6,65.5,76.9,76.3,62.5]],["Carbon Keeper","Ecological role",[56.4,71.0,42.4,48.3,46.1,69.6,72.9,75.6,79.4,61.1]],["Nursery","Ecological role",[50.0,70.6,66.3,67.9,61.6,73.0,64.1,71.6,77.8,49.8]],["Flood Buffer","Ecological role",[37.2,63.5,68.0,73.0,36.2,67.1,74.3,79.5,71.5,58.1]],["Pollinator","Ecological role",[73.1,73.9,67.3,66.9,66.0,69.2,67.5,73.9,67.9,61.4]],["Decomposer","Ecological role",[51.8,73.5,65.8,70.4,41.5,70.1,73.2,75.6,61.6,59.8]],["Seed Disperser","Ecological role",[37.5,72.4,62.7,58.3,52.7,76.3,71.1,70.1,76.7,55.3]],["Ecological Engineer","Ecological role",[52.2,68.6,48.0,61.4,55.7,70.6,70.6,73.5,77.9,63.4]],["Nutrient Recycler","Ecological role",[70.0,75.4,65.5,62.9,56.0,74.5,51.0,72.6,76.1,50.5]],["Habitat Builder","Ecological role",[63.4,59.0,68.3,71.7,66.7,70.0,68.5,71.0,74.7,55.5]],["Chilika Lagoon","Wetland site",[69.8,65.2,72.4,79.1,72.9,68.6,66.6,66.9,64.4,59.1]],["Loktak Lake","Wetland site",[49.2,76.9,65.7,68.1,59.3,76.9,68.8,68.3,69.4,60.5]],["Keoladeo Wetland","Wetland site",[59.7,76.5,52.2,64.2,54.1,71.8,71.5,73.4,66.4,64.8]],["Sundarban Wetland","Wetland site",[63.7,67.5,59.1,68.3,59.3,72.9,67.3,72.0,76.0,63.8]],["Sambhar Salt Lake","Wetland site",[58.4,65.5,63.4,64.2,61.9,57.4,75.2,77.0,74.0,57.6]],["Asian Openbill","Animal",[62.3,72.0,51.9,62.3,38.1,70.8,68.3,76.5,75.8,61.7]],["Black-necked Crane","Animal",[55.2,67.5,43.9,56.4,64.6,61.1,78.0,75.3,76.0,58.0]],["Gangetic River Dolphin","Animal",[46.3,67.1,71.3,73.4,54.3,70.9,73.6,67.3,70.5,53.2]],["Mugger Crocodile","Animal",[46.9,67.1,65.5,70.5,38.9,56.3,74.6,79.7,73.0,50.8]],["Black-tailed Godwit","Animal",[63.1,63.7,56.4,69.3,63.2,62.7,72.5,74.3,76.5,45.4]],["Monsoon","Wildcard",[49.6,71.9,62.9,59.7,69.0,70.9,73.8,72.0,71.2,62.0]],["Low Tide","Wildcard",[36.1,62.7,66.4,72.7,51.9,60.7,78.2,79.0,69.3,57.0]],["High Tide","Wildcard",[46.0,72.2,64.9,63.3,36.5,73.1,68.5,76.6,76.3,58.2]],["River Current","Wildcard",[64.7,69.6,62.9,72.5,49.4,59.1,71.3,77.6,66.7,60.7]],["Wetland Mist","Wildcard",[67.5,75.2,63.6,71.3,55.7,73.0,70.0,69.9,61.5,61.6]],["Mud","Wildcard",[39.6,71.4,50.6,65.2,61.9,70.8,75.5,72.4,71.6,63.9]],["Rainwater","Wildcard",[65.2,76.6,59.0,49.2,61.1,75.8,53.5,70.3,80.3,57.0]],["Sediment","Wildcard",[55.7,65.7,61.7,54.8,61.3,70.5,73.0,74.4,79.7,54.1]],["Fallen Log","Wildcard",[55.9,73.2,57.0,71.3,68.0,71.1,66.9,72.3,66.0,66.5]],["Mangrove Root","Wildcard",[66.7,67.6,73.0,77.7,56.1,70.3,61.2,73.5,68.1,59.6]],["Floating Leaf","Wildcard",[53.1,68.7,61.4,59.0,34.6,69.0,73.2,76.7,79.1,45.6]],["Bird Flock","Wildcard",[60.7,73.0,51.9,63.8,48.9,72.2,69.1,71.9,78.1,46.7]],["Fish School","Wildcard",[58.8,73.5,72.1,75.9,51.2,73.3,66.9,66.2,67.8,53.2]],["Frog Chorus","Wildcard",[51.2,67.3,69.6,75.6,68.0,61.3,75.7,69.6,68.1,53.8]],["Water Ripple","Wildcard",[70.8,76.4,48.6,54.8,50.9,75.5,62.6,71.1,76.5,61.9]]],"q":[[1,"surprise",1,"Your friend texts: “Pack a bag. I’ll explain in 20 mins.” You…",[["A","Already finding my shoes.",[0,0,2,2,0,0,0,0,0,0]],["B","Need place + timing first.",[0,0,0,0,0,0,1,1,1,0]],["C","Who else is coming?",[1,1,0,0,0,0,0,0,0,0]],["D","Nope. I had a plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[2,"surprise",1,"A rainstorm destroys the plan. Your move?",[["A","Invent a new plan on the spot.",[0,0,2,2,0,0,0,0,0,0]],["B","Check what still works.",[0,0,0,0,0,0,1,1,1,0]],["C","See what everyone wants.",[1,1,0,0,0,0,0,0,0,0]],["D","Go home. Fate has spoken.",[0,0,0,-1,0,0,0,0,2,0]]]],[3,"surprise",1,"Someone says, “Trust me, it’ll be fun.” You…",[["A","That is enough information.",[0,0,2,2,0,0,0,0,0,0]],["B","I need at least three details.",[0,0,0,0,0,0,1,1,1,0]],["C","Depends entirely on the person.",[1,1,0,0,0,0,0,0,0,0]],["D","Suspicious. Keeping my original plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[4,"surprise",1,"You get a free ticket for tonight. You…",[["A","Say yes before overthinking.",[0,0,2,2,0,0,0,0,0,0]],["B","Check logistics first.",[0,0,0,0,0,0,1,1,1,0]],["C","Ask who’s going.",[1,1,0,0,0,0,0,0,0,0]],["D","Probably pass. Too sudden.",[0,0,0,-1,0,0,0,0,2,0]]]],[5,"room",1,"You walk into a party where you know nobody. First move?",[["A","Talk to whoever is nearest.",[2,0,0,0,1,0,0,0,0,0]],["B","Find one promising human.",[-1,2,0,0,0,0,0,0,0,0]],["C","Observe before entering orbit.",[0,0,0,0,-1,0,0,2,0,0]],["D","Help with something.",[0,0,0,0,0,1,0,0,2,0]]]],[6,"room",1,"New workshop, zero familiar faces. You…",[["A","Start a conversation.",[2,0,0,0,1,0,0,0,0,0]],["B","Pick one person to know.",[-1,2,0,0,0,0,0,0,0,0]],["C","Read the room first.",[0,0,0,0,-1,0,0,2,0,0]],["D","Become useful somehow.",[0,0,0,0,0,1,0,0,2,0]]]],[7,"room",1,"At a wedding full of strangers, you…",[["A","Collect conversations.",[2,0,0,0,1,0,0,0,0,0]],["B","Find one safe person.",[-1,2,0,0,0,0,0,0,0,0]],["C","Watch the social map.",[0,0,0,0,-1,0,0,2,0,0]],["D","Help fix something.",[0,0,0,0,0,1,0,0,2,0]]]],[8,"room",1,"A new group chat drops you in. You…",[["A","Say hi immediately.",[2,0,0,0,1,0,0,0,0,0]],["B","DM one person.",[-1,2,0,0,0,0,0,0,0,0]],["C","Lurk and decode the vibe.",[0,0,0,0,-1,0,0,2,0,0]],["D","Answer the practical question.",[0,0,0,0,0,1,0,0,2,0]]]],[9,"silence",0,"A close friend says “all good :)” and you know it isn’t. You…",[["A","Ask directly.",[0,0,0,0,1,2,0,0,0,0]],["B","Give space but stay alert.",[0,0,0,0,0,0,1,2,0,0]],["C","Check with someone close to them.",[1,1,0,0,0,1,0,0,0,0]],["D","Wait for them to open up.",[0,0,0,0,0,0,2,0,0,-1]]]],[10,"silence",0,"Someone you love goes weirdly quiet. You…",[["A","Call it out gently.",[0,0,0,0,1,2,0,0,0,0]],["B","Stay nearby without pushing.",[0,0,0,0,0,0,1,2,0,0]],["C","Ask a mutual if they’re okay.",[1,1,0,0,0,1,0,0,0,0]],["D","Let them come to me.",[0,0,0,0,0,0,2,0,0,-1]]]],[11,"silence",0,"A friend disappears from the group chat. You…",[["A","Message them now.",[0,0,0,0,1,2,0,0,0,0]],["B","Give them breathing room.",[0,0,0,0,0,0,1,2,0,0]],["C","Quietly check through someone else.",[1,1,0,0,0,1,0,0,0,0]],["D","Wait. They know I’m here.",[0,0,0,0,0,0,2,0,0,-1]]]],[12,"silence",0,"Their “I’m fine” sounds very not fine. You…",[["A","Ask what’s really going on.",[0,0,0,0,1,2,0,0,0,0]],["B","Don’t push, but notice.",[0,0,0,0,0,0,1,2,0,0]],["C","Check with someone they trust.",[1,1,0,0,0,1,0,0,0,0]],["D","Let them choose the moment.",[0,0,0,0,0,0,2,0,0,-1]]]],[13,"cancel",0,"The plan you were excited about gets cancelled. You…",[["A","Build a Plan B immediately.",[0,0,2,0,0,0,0,0,0,0]],["B","Need a minute, then reset.",[0,0,1,0,0,0,0,0,0,1]],["C","My mood fully crashes.",[0,0,-1,0,0,0,0,0,0,2]],["D","Secretly enjoy the free time.",[-1,0,0,0,0,0,1,0,1,0]]]],[14,"cancel",0,"Your entire day suddenly changes. You…",[["A","Rebuild it on the fly.",[0,0,2,0,0,0,0,0,0,0]],["B","Pause, then adapt.",[0,0,1,0,0,0,0,0,0,1]],["C","This ruins the vibe.",[0,0,-1,0,0,0,0,0,0,2]],["D","Excellent. Unexpected freedom.",[-1,0,0,0,0,0,1,0,1,0]]]],[15,"cancel",0,"The train is cancelled and everyone is annoyed. You…",[["A","Find another route.",[0,0,2,0,0,0,0,0,0,0]],["B","Breathe, then figure it out.",[0,0,1,0,0,0,0,0,0,1]],["C","Become personally offended by logistics.",[0,0,-1,0,0,0,0,0,0,2]],["D","Accept the universe’s day off.",[-1,0,0,0,0,0,1,0,1,0]]]],[16,"cancel",0,"Something you planned for weeks falls through. You…",[["A","Replace it with something else.",[0,0,2,0,0,0,0,0,0,0]],["B","Take time, then move on.",[0,0,1,0,0,0,0,0,0,1]],["C","Need to mourn the plan.",[0,0,-1,0,0,0,0,0,0,2]],["D","Honestly, relief.",[-1,0,0,0,0,0,1,0,1,0]]]],[17,"compliment",1,"Which compliment would stay in your head all week?",[["A","“You make people feel safe.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You notice what others miss.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You make everything more fun.”",[2,0,0,0,1,0,0,0,0,0]],["D","“I never know what you’ll do next.”",[0,0,1,2,0,0,0,0,0,0]]]],[18,"compliment",1,"Pick the compliment you’d secretly screenshot.",[["A","“I feel calmer around you.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You see things nobody else sees.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You make boring things fun.”",[2,0,0,0,1,0,0,0,0,0]],["D","“You are impossible to predict.”",[0,0,1,2,0,0,0,0,0,0]]]],[19,"compliment",1,"Which line feels most like a win?",[["A","“People trust you.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You’re incredibly observant.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You bring the energy.”",[2,0,0,0,1,0,0,0,0,0]],["D","“You always surprise me.”",[0,0,1,2,0,0,0,0,0,0]]]],[20,"compliment",1,"What do you most want people to understand about you?",[["A","I’m safe to be around.",[0,0,0,0,0,2,0,0,1,0]],["B","I notice more than I say.",[0,0,0,0,0,0,0,2,0,0]],["C","I make life lighter.",[2,0,0,0,1,0,0,0,0,0]],["D","I’m not easy to box in.",[0,0,1,2,0,0,0,0,0,0]]]],[21,"boundary",1,"Someone ignores a boundary you already explained. You…",[["A","Say it clearly again.",[0,0,0,0,1,0,2,0,0,0]],["B","Check if they actually understood.",[0,0,0,0,0,1,0,1,0,0]],["C","Quietly reduce access.",[0,0,0,0,-2,0,1,0,0,0]],["D","Give one final chance.",[0,1,0,0,0,1,-1,0,0,0]]]],[22,"boundary",1,"A person keeps pushing after you said no. You…",[["A","Get very direct.",[0,0,0,0,1,0,2,0,0,0]],["B","Clarify the line.",[0,0,0,0,0,1,0,1,0,0]],["C","Step away without a speech.",[0,0,0,0,-2,0,1,0,0,0]],["D","Try once more to make it work.",[0,1,0,0,0,1,-1,0,0,0]]]],[23,"boundary",1,"Someone repeatedly makes you uncomfortable. You…",[["A","Name it plainly.",[0,0,0,0,1,0,2,0,0,0]],["B","Make sure the message landed.",[0,0,0,0,0,1,0,1,0,0]],["C","Pull back quietly.",[0,0,0,0,-2,0,1,0,0,0]],["D","Wait to see if it happens again.",[0,1,0,0,0,1,-1,0,0,0]]]],[24,"boundary",1,"A line gets crossed twice. Your instinct?",[["A","Address it now.",[0,0,0,0,1,0,2,0,0,0]],["B","Explain why it matters.",[0,0,0,0,0,1,0,1,0,0]],["C","Create distance.",[0,0,0,0,-2,0,1,0,0,0]],["D","Offer one more chance.",[0,1,0,0,0,1,-1,0,0,0]]]],[25,"chaos",0,"Everything is going wrong at once. Your operating system?",[["A","Improvise.",[0,0,2,2,0,0,0,0,0,0]],["B","Ride the energy.",[2,0,1,0,0,0,0,0,0,0]],["C","Protect one calm corner.",[0,0,0,0,0,0,1,1,0,1]],["D","Restore order.",[0,0,0,-1,0,0,0,0,2,0]]]],[26,"chaos",0,"Group project enters chaos mode. You…",[["A","Adapt as things change.",[0,0,2,2,0,0,0,0,0,0]],["B","Become weirdly energised.",[2,0,1,0,0,0,0,0,0,0]],["C","Hold one thing steady.",[0,0,0,0,0,0,1,1,0,1]],["D","Make a proper system.",[0,0,0,-1,0,0,0,0,2,0]]]],[27,"chaos",0,"The room is loud, late and disorganised. You…",[["A","Work with the mess.",[0,0,2,2,0,0,0,0,0,0]],["B","Use the momentum.",[2,0,1,0,0,0,0,0,0,0]],["C","Find a calm base.",[0,0,0,0,0,0,1,1,0,1]],["D","Start fixing the structure.",[0,0,0,-1,0,0,0,0,2,0]]]],[28,"chaos",0,"Plans, people, timing: all chaotic. You…",[["A","Make it work somehow.",[0,0,2,2,0,0,0,0,0,0]],["B","Thrive a little.",[2,0,1,0,0,0,0,0,0,0]],["C","Keep one anchor.",[0,0,0,0,0,0,1,1,0,1]],["D","Bring back a plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[29,"role",0,"Your group is falling apart five minutes before something important. You…",[["A","Check who needs help.",[0,1,0,0,0,2,0,0,0,0]],["B","Figure out what’s happening.",[0,0,0,0,0,0,0,2,1,0]],["C","Suggest a wild new solution.",[0,0,0,2,1,0,0,0,0,0]],["D","Quietly fix the broken bit.",[0,0,0,0,-1,1,0,0,2,0]]]],[30,"role",0,"In a team, what role finds you without asking?",[["A","The support person.",[0,1,0,0,0,2,0,0,0,0]],["B","The one tracking everything.",[0,0,0,0,0,0,0,2,1,0]],["C","The idea machine.",[0,0,0,2,1,0,0,0,0,0]],["D","The quiet fixer.",[0,0,0,0,-1,1,0,0,2,0]]]],[31,"role",0,"Everyone is confused. You instinctively…",[["A","Look after people.",[0,1,0,0,0,2,0,0,0,0]],["B","Map the situation.",[0,0,0,0,0,0,0,2,1,0]],["C","Throw out a new angle.",[0,0,0,2,1,0,0,0,0,0]],["D","Solve the practical problem.",[0,0,0,0,-1,1,0,0,2,0]]]],[32,"role",0,"Your friends would cast you as…",[["A","Emotional first aid.",[0,1,0,0,0,2,0,0,0,0]],["B","Human radar.",[0,0,0,0,0,0,0,2,1,0]],["C","Unexpected plot twist.",[0,0,0,2,1,0,0,0,0,0]],["D","Behind-the-scenes repair crew.",[0,0,0,0,-1,1,0,0,2,0]]]],[33,"alone",0,"You suddenly get a completely free evening. Best version?",[["A","Phone on silent. Me time.",[-2,0,0,0,0,0,2,0,0,0]],["B","See one person I actually like.",[2,1,0,0,0,0,0,0,0,0]],["C","Go somewhere I haven’t been.",[0,0,1,2,0,0,0,0,0,0]],["D","Finish or make something.",[0,0,0,0,0,0,0,0,2,0]]]],[34,"alone",0,"Nobody needs anything from you today. You…",[["A","Disappear happily.",[-2,0,0,0,0,0,2,0,0,0]],["B","Find good company.",[2,1,0,0,0,0,0,0,0,0]],["C","Chase something new.",[0,0,1,2,0,0,0,0,0,0]],["D","Build, organise or finish.",[0,0,0,0,0,0,0,0,2,0]]]],[35,"alone",0,"A blank Sunday appears. You choose…",[["A","Solitude.",[-2,0,0,0,0,0,2,0,0,0]],["B","One favourite human.",[2,1,0,0,0,0,0,0,0,0]],["C","A small adventure.",[0,0,1,2,0,0,0,0,0,0]],["D","A satisfying task.",[0,0,0,0,0,0,0,0,2,0]]]],[36,"alone",0,"Your calendar unexpectedly clears. You…",[["A","Protect the empty space.",[-2,0,0,0,0,0,2,0,0,0]],["B","Call someone I miss.",[2,1,0,0,0,0,0,0,0,0]],["C","Explore somewhere.",[0,0,1,2,0,0,0,0,0,0]],["D","Use it to make progress.",[0,0,0,0,0,0,0,0,2,0]]]],[37,"care",0,"Someone you love has had a terrible day. You…",[["A","Fix something practical.",[0,0,0,0,0,2,0,0,1,0]],["B","Tell them what they mean to me.",[0,1,0,0,2,0,0,0,0,0]],["C","Give them room.",[0,0,0,0,0,1,2,0,0,0]],["D","Stay beside them.",[0,2,0,1,0,0,0,0,0,0]]]],[38,"care",0,"Your friend is struggling. Your care looks like…",[["A","Food, logistics, actual help.",[0,0,0,0,0,2,0,0,1,0]],["B","Words and reassurance.",[0,1,0,0,2,0,0,0,0,0]],["C","Respecting their space.",[0,0,0,0,0,1,2,0,0,0]],["D","Just being there.",[0,2,0,1,0,0,0,0,0,0]]]],[39,"care",0,"A close person needs support. You naturally…",[["A","Do something useful.",[0,0,0,0,0,2,0,0,1,0]],["B","Say how I feel.",[0,1,0,0,2,0,0,0,0,0]],["C","Don’t crowd them.",[0,0,0,0,0,1,2,0,0,0]],["D","Keep them company.",[0,2,0,1,0,0,0,0,0,0]]]],[40,"care",0,"When you really care, you tend to…",[["A","Make life easier.",[0,0,0,0,0,2,0,0,1,0]],["B","Say it clearly.",[0,1,0,0,2,0,0,0,0,0]],["C","Give breathing room.",[0,0,0,0,0,1,2,0,0,0]],["D","Show up and stay.",[0,2,0,1,0,0,0,0,0,0]]]],[41,"notice",1,"You spot something nobody else noticed. First instinct?",[["A","Point it out.",[1,0,0,0,1,0,0,1,0,0]],["B","Keep watching.",[0,0,0,0,0,0,0,2,0,0]],["C","Investigate.",[0,0,0,1,0,0,0,2,0,0]],["D","Send it to someone.",[0,1,0,0,1,0,0,1,0,0]]]],[42,"notice",1,"A tiny detail suddenly feels important. You…",[["A","Say something.",[1,0,0,0,1,0,0,1,0,0]],["B","Observe a bit longer.",[0,0,0,0,0,0,0,2,0,0]],["C","Follow the clue.",[0,0,0,1,0,0,0,2,0,0]],["D","Share the discovery.",[0,1,0,0,1,0,0,1,0,0]]]],[43,"notice",1,"Everyone misses a pattern change except you. You…",[["A","Mention it.",[1,0,0,0,1,0,0,1,0,0]],["B","Keep collecting evidence.",[0,0,0,0,0,0,0,2,0,0]],["C","Dig into why.",[0,0,0,1,0,0,0,2,0,0]],["D","Tell someone who’ll get it.",[0,1,0,0,1,0,0,1,0,0]]]],[44,"notice",1,"Something in the room feels slightly off. You…",[["A","Name it.",[1,0,0,0,1,0,0,1,0,0]],["B","Watch quietly.",[0,0,0,0,0,0,0,2,0,0]],["C","Figure it out.",[0,0,0,1,0,0,0,2,0,0]],["D","Text someone about it.",[0,1,0,0,1,0,0,1,0,0]]]],[45,"relationship",1,"Your ideal close relationship has what kind of rhythm?",[["A","Separate lives, chosen closeness.",[0,1,0,0,0,0,2,0,0,0]],["B","Very much a team.",[0,2,0,0,0,1,0,0,0,0]],["C","Always discovering together.",[0,0,1,2,0,0,0,0,0,0]],["D","Low-maintenance but deeply understood.",[0,1,0,0,-1,0,0,0,1,0]]]],[46,"relationship",1,"Best kind of closeness?",[["A","Space + intention.",[0,1,0,0,0,0,2,0,0,0]],["B","Us against the problem.",[0,2,0,0,0,1,0,0,0,0]],["C","Keep surprising each other.",[0,0,1,2,0,0,0,0,0,0]],["D","No constant contact required.",[0,1,0,0,-1,0,0,0,1,0]]]],[47,"relationship",1,"A strong bond should feel like…",[["A","Independent but connected.",[0,1,0,0,0,0,2,0,0,0]],["B","A real partnership.",[0,2,0,0,0,1,0,0,0,0]],["C","Still full of discovery.",[0,0,1,2,0,0,0,0,0,0]],["D","Quietly secure.",[0,1,0,0,-1,0,0,0,1,0]]]],[48,"relationship",1,"In close relationships, what matters most?",[["A","Freedom with commitment.",[0,1,0,0,0,0,2,0,0,0]],["B","Teamwork.",[0,2,0,0,0,1,0,0,0,0]],["C","Growth and novelty.",[0,0,1,2,0,0,0,0,0,0]],["D","Easy, deep understanding.",[0,1,0,0,-1,0,0,0,1,0]]]],[49,"awkward",0,"The room goes painfully awkward. You…",[["A","Make a joke.",[1,0,0,0,2,0,0,0,0,0]],["B","Check on someone privately.",[0,1,0,0,0,2,0,0,0,0]],["C","Wait and read the room.",[0,0,0,0,-1,0,0,2,0,0]],["D","Say, “Well, this is awkward.”",[0,0,0,0,2,0,1,0,0,0]]]],[50,"awkward",0,"A group conversation suddenly dies. Your move?",[["A","Save it with humour.",[1,0,0,0,2,0,0,0,0,0]],["B","Check who got uncomfortable.",[0,1,0,0,0,2,0,0,0,0]],["C","Let the silence tell me something.",[0,0,0,0,-1,0,0,2,0,0]],["D","Name what just happened.",[0,0,0,0,2,0,1,0,0,0]]]],[51,"awkward",0,"Everyone can feel the tension. You…",[["A","Break it with a laugh.",[1,0,0,0,2,0,0,0,0,0]],["B","Talk to someone one-on-one.",[0,1,0,0,0,2,0,0,0,0]],["C","Observe before acting.",[0,0,0,0,-1,0,0,2,0,0]],["D","Address it directly.",[0,0,0,0,2,0,1,0,0,0]]]],[52,"awkward",0,"An uncomfortable silence lands. You…",[["A","Turn it into a joke.",[1,0,0,0,2,0,0,0,0,0]],["B","Check in quietly.",[0,1,0,0,0,2,0,0,0,0]],["C","Study the vibe.",[0,0,0,0,-1,0,0,2,0,0]],["D","Acknowledge it out loud.",[0,0,0,0,2,0,1,0,0,0]]]],[53,"newplace",0,"You arrive in a city you’ve never seen before. First instinct?",[["A","Create a little routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Walk until something looks interesting.",[0,0,1,2,0,0,0,0,0,0]],["C","Find people.",[1,1,0,0,0,0,0,0,0,0]],["D","Understand how the place works.",[0,0,1,1,0,0,0,1,0,0]]]],[54,"newplace",0,"First week somewhere completely new. You…",[["A","Build familiar anchors.",[0,0,0,0,0,0,0,0,2,0]],["B","Explore without a plan.",[0,0,1,2,0,0,0,0,0,0]],["C","Look for my people.",[1,1,0,0,0,0,0,0,0,0]],["D","Learn the system.",[0,0,1,1,0,0,0,1,0,0]]]],[55,"newplace",0,"New environment, zero instructions. You…",[["A","Make a routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Wander and discover.",[0,0,1,2,0,0,0,0,0,0]],["C","Connect with people.",[1,1,0,0,0,0,0,0,0,0]],["D","Figure out the rules.",[0,0,1,1,0,0,0,1,0,0]]]],[56,"newplace",0,"You move somewhere unfamiliar. What settles you fastest?",[["A","A routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Exploring.",[0,0,1,2,0,0,0,0,0,0]],["C","Community.",[1,1,0,0,0,0,0,0,0,0]],["D","Knowing how things work.",[0,0,1,1,0,0,0,1,0,0]]]],[57,"project",0,"You make something people will actually use. What matters most?",[["A","It works every time.",[0,0,0,0,0,0,0,0,2,0]],["B","People remember it.",[0,0,0,2,0,0,0,0,0,0]],["C","It feels easy to use.",[1,0,0,0,0,2,0,0,0,0]],["D","It survives chaos.",[0,0,0,0,0,0,2,1,0,0]]]],[58,"project",0,"Your name is going on the project. You want it to be…",[["A","Reliable.",[0,0,0,0,0,0,0,0,2,0]],["B","Memorable.",[0,0,0,2,0,0,0,0,0,0]],["C","Effortless for people.",[1,0,0,0,0,2,0,0,0,0]],["D","Very hard to break.",[0,0,0,0,0,0,2,1,0,0]]]],[59,"project",0,"A good idea is not enough. The final thing must be…",[["A","Dependable.",[0,0,0,0,0,0,0,0,2,0]],["B","Distinctive.",[0,0,0,2,0,0,0,0,0,0]],["C","Simple for users.",[1,0,0,0,0,2,0,0,0,0]],["D","Built to last.",[0,0,0,0,0,0,2,1,0,0]]]],[60,"project",0,"If you build it, your priority is…",[["A","Consistency.",[0,0,0,0,0,0,0,0,2,0]],["B","Impact.",[0,0,0,2,0,0,0,0,0,0]],["C","Ease.",[1,0,0,0,0,2,0,0,0,0]],["D","Resilience.",[0,0,0,0,0,0,2,1,0,0]]]],[61,"horror",0,"Pick your social nightmare.",[["A","Forced small talk for hours.",[-1,0,0,0,0,0,0,0,0,1]],["B","Everyone pretending nothing is wrong.",[0,0,0,0,0,1,0,1,0,1]],["C","Plans changing every six minutes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Being watched when I want to disappear.",[-1,0,0,0,-2,0,0,0,0,0]]]],[62,"horror",0,"What drains your battery fastest?",[["A","Endless shallow conversation.",[-1,0,0,0,0,0,0,0,0,1]],["B","Unspoken tension.",[0,0,0,0,0,1,0,1,0,1]],["C","Constant last-minute changes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Too much attention.",[-1,0,0,0,-2,0,0,0,0,0]]]],[63,"horror",0,"Which situation makes you mentally leave the room?",[["A","Mandatory networking.",[-1,0,0,0,0,0,0,0,0,1]],["B","A vibe nobody will address.",[0,0,0,0,0,1,0,1,0,1]],["C","No plan staying a plan.",[0,0,-2,0,0,0,0,0,1,0]],["D","People focusing on me.",[-1,0,0,0,-2,0,0,0,0,0]]]],[64,"horror",0,"Your personal ‘please let me go home’ moment?",[["A","Small talk marathon.",[-1,0,0,0,0,0,0,0,0,1]],["B","Silent conflict.",[0,0,0,0,0,1,0,1,0,1]],["C","Chaotic plan changes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Unwanted spotlight.",[-1,0,0,0,-2,0,0,0,0,0]]]],[65,"conflict",0,"Someone important upsets you. First instinct?",[["A","Talk now.",[0,0,0,0,2,0,0,0,0,1]],["B","Think before I speak.",[0,0,0,0,0,0,0,2,1,0]],["C","Protect the relationship.",[0,2,0,0,0,1,0,0,0,0]],["D","Protect the boundary.",[0,0,0,0,0,0,2,0,0,0]]]],[66,"conflict",0,"A real disagreement starts. You…",[["A","Deal with it immediately.",[0,0,0,0,2,0,0,0,0,1]],["B","Take time to process.",[0,0,0,0,0,0,0,2,1,0]],["C","Keep the bond from breaking.",[0,2,0,0,0,1,0,0,0,0]],["D","Make sure my line is respected.",[0,0,0,0,0,0,2,0,0,0]]]],[67,"conflict",0,"Conflict gets personal. What happens first?",[["A","I want the conversation now.",[0,0,0,0,2,0,0,0,0,1]],["B","I need space to think.",[0,0,0,0,0,0,0,2,1,0]],["C","I look for a way back to each other.",[0,2,0,0,0,1,0,0,0,0]],["D","I protect what I won’t compromise.",[0,0,0,0,0,0,2,0,0,0]]]],[68,"conflict",0,"Someone you care about crosses you. You…",[["A","Bring it up.",[0,0,0,0,2,0,0,0,0,1]],["B","Process first.",[0,0,0,0,0,0,0,2,1,0]],["C","Try not to damage the relationship.",[0,2,0,0,0,1,0,0,0,0]],["D","Hold the boundary.",[0,0,0,0,0,0,2,0,0,0]]]],[69,"energy",0,"You’ve had a week. What actually brings you back?",[["A","My people.",[1,2,0,0,0,0,0,0,0,0]],["B","Being completely alone.",[-2,0,0,0,0,0,2,0,0,0]],["C","Something new.",[0,0,1,2,0,0,0,0,0,0]],["D","Something familiar.",[0,0,0,0,0,0,0,0,2,-1]]]],[70,"energy",0,"Battery at 2%. Best recharge?",[["A","People I love.",[1,2,0,0,0,0,0,0,0,0]],["B","Silence and solitude.",[-2,0,0,0,0,0,2,0,0,0]],["C","A change of scene.",[0,0,1,2,0,0,0,0,0,0]],["D","A familiar comfort.",[0,0,0,0,0,0,0,0,2,-1]]]],[71,"energy",0,"After too much everything, you want…",[["A","Good company.",[1,2,0,0,0,0,0,0,0,0]],["B","No company.",[-2,0,0,0,0,0,2,0,0,0]],["C","A new experience.",[0,0,1,2,0,0,0,0,0,0]],["D","My usual safe thing.",[0,0,0,0,0,0,0,0,2,-1]]]],[72,"energy",0,"To feel like yourself again, you reach for…",[["A","Connection.",[1,2,0,0,0,0,0,0,0,0]],["B","Solitude.",[-2,0,0,0,0,0,2,0,0,0]],["C","Novelty.",[0,0,1,2,0,0,0,0,0,0]],["D","Familiarity.",[0,0,0,0,0,0,0,0,2,-1]]]]],"s":[10.398929319886737,4.5345644774333085,8.13587880932355,8.690184347872028,10.039420501204239,4.547414540153559,6.665254383742603,3.687833510341811,5.6716791164522,5.835917322923621],"f":{"Estuary":"where a river meets the sea and fresh water mixes with salty water","Floodplain":"flat land beside a river that periodically floods","Mangrove Forest":"a coastal wetland dominated by salt-tolerant mangrove trees","Salt Marsh":"a grassy coastal wetland regularly flooded by salty water","Freshwater Marsh":"a shallow wetland dominated by grasses and other soft-stemmed plants","Peatland":"a waterlogged landscape where partly decayed plant material builds up as peat","Seasonal Pond":"a pond that fills during wet periods and may dry out later","Urban Wetland":"a wetland surviving within or beside a city","High-altitude Wetland":"a wetland found high in the mountains, often in cold conditions","Mudflat":"a broad muddy or silty area exposed when water levels drop","Lagoon":"a shallow body of water separated from a larger sea or lake by a barrier","Oxbow Lake":"a curved lake formed when a river leaves behind one of its old bends","River Delta":"land built from sediment where a river spreads into several channels near its mouth","Swamp":"a wetland dominated by trees or woody plants","Vernal Pool":"a temporary seasonal pool that appears during wet periods","Flooded Grassland":"grassland that becomes seasonally or regularly covered by water","Riparian Zone":"the strip of land and vegetation directly alongside a river or stream","Spring":"a place where groundwater naturally emerges at the surface","Backwater":"a slow or still branch of water connected to a larger river or waterbody","Wet Meadow":"a grassy area with waterlogged soil for part of the year","Lotus":"an aquatic flowering plant rooted in mud with leaves and flowers held above the water","Water Lily":"an aquatic flowering plant with floating leaves and flowers at the water surface","Cattail / Typha":"a tall marsh plant with long leaves and a distinctive brown flower spike","Reed":"a tall grass-like wetland plant that often grows in dense stands","Mangrove Tree":"a salt-tolerant coastal tree adapted to waterlogged, low-oxygen mud","Seagrass":"a true flowering plant that grows underwater in shallow coastal seas","Duckweed":"tiny floating plants that can multiply rapidly on still or slow water","Algae":"simple photosynthetic organisms that live in water or damp places","Phytoplankton":"microscopic drifting organisms that photosynthesize in water","Wild Rice":"an aquatic grass that grows in shallow freshwater wetlands","Saltmarsh Grass":"salt-tolerant grass adapted to regularly flooded coastal marshes","Water Chestnut":"an aquatic plant that grows in freshwater ponds, lakes, and slow water","Bladderwort":"an aquatic carnivorous plant that traps tiny organisms in bladder-like structures","Sundew":"a small carnivorous plant with sticky leaves that trap insects","Sedge":"a grass-like wetland plant, often with solid triangular stems","Papyrus":"a tall wetland sedge historically used to make writing material","Floating Fern":"a small fern that floats on the surface of water","Pondweed":"a group of aquatic plants that grow submerged or partly floating in freshwater","Mangrove Seedling":"a young mangrove beginning life in unstable coastal mud","Diatom":"a microscopic photosynthetic organism with a glass-like silica shell","Sarus Crane":"a very tall crane of wetlands and agricultural landscapes, known for strong pair bonds","Greater Flamingo":"a large pink wading bird that feeds in shallow saline or alkaline wetlands","Painted Stork":"a large wading bird that searches shallow water for fish","Purple Swamphen":"a large wetland bird with bright plumage and long toes for moving through marsh vegetation","Pheasant-tailed Jacana":"a wetland bird with extremely long toes that walks across floating vegetation","Kingfisher":"a compact bird that often watches from a perch before diving or darting for prey","Heron":"a long-legged wading bird known for patient, still hunting","Egret":"a slender white heron that feeds in shallow water and wet grasslands","Indian Skimmer":"a river bird that feeds by flying low and slicing its longer lower bill through the water","Bar-headed Goose":"a migratory goose famous for crossing extremely high mountain passes","Common Coot":"a dark waterbird with strong feet that swims, dives, and defends territories","Smooth-coated Otter":"a social semi-aquatic mammal that lives around rivers, lakes, and wetlands","Fishing Cat":"a wetland-adapted wild cat that hunts near water and is an excellent swimmer","Gharial":"a long-snouted crocodilian specialized for life in large rivers","Freshwater Turtle":"a turtle adapted to rivers, ponds, lakes, or marshes","Frog":"an amphibian whose life often links water and land","Mudskipper":"an amphibious fish able to move and feed on exposed mud","Mahseer":"a group of large freshwater fish found in South Asian river systems","Swamp Deer":"a large deer associated with marshes, floodplains, and wet grasslands","Mangrove Crab":"a crab that lives among mangrove mud, roots, and tidal creeks","Dragonfly":"an aerial insect whose juvenile stage lives underwater","Water Beetle":"a beetle adapted to swimming, diving, or living at the water surface","Freshwater Mussel":"a quiet shellfish that lives on river or lake beds and often filters water while feeding","Snail":"a soft-bodied mollusc protected by a shell, with many species living in wetlands","Water Filter":"the ecological function of trapping particles or removing material from water","Carbon Keeper":"an ecosystem role that stores carbon instead of releasing it quickly to the atmosphere","Nursery":"a habitat where young animals can feed, shelter, and grow","Flood Buffer":"a landscape function that stores or slows water during floods","Pollinator":"an organism that moves pollen between flowers and helps plants reproduce","Decomposer":"an organism that breaks down dead material and returns nutrients to the ecosystem","Seed Disperser":"an organism or process that moves seeds away from their parent plants","Ecological Engineer":"an organism that physically changes habitat in ways that affect many other species","Nutrient Recycler":"an ecological role that moves nutrients back into forms organisms can use","Habitat Builder":"an organism or process that creates physical living space for other species","Monsoon":"the seasonal wind-and-rain system that dramatically reshapes water availability","Low Tide":"the stage of the tidal cycle when coastal water is at its lower level","High Tide":"the stage of the tidal cycle when coastal water rises to its higher level","River Current":"the directional movement of water through a river","Wetland Mist":"tiny suspended water droplets that form a low cloud close to wet ground or water","Mud":"water-saturated soil or sediment packed with minerals, organisms, nutrients, and stored seeds","Rainwater":"water delivered directly from the atmosphere by rain","Sediment":"particles such as sand, silt, clay, and organic matter carried and deposited by water","Fallen Log":"dead wood that becomes shelter, food, structure, and habitat for many organisms","Mangrove Root":"a root structure that anchors mangroves and creates complex shelter in tidal mud","Floating Leaf":"a leaf adapted to rest on the water surface while remaining connected to a rooted plant","Bird Flock":"a temporary or persistent group of birds moving, feeding, or resting together","Fish School":"a coordinated group of fish moving together","Frog Chorus":"many frogs calling together, often during breeding periods after rain","Water Ripple":"a small wave spreading outward across the water surface","Spot-billed Pelican":"a large South Asian waterbird that catches fish with its bill pouch, nests colonially, soars on thermals, and may feed alone, in small groups, or cooperatively drive fish into shallow water","Chilika Lagoon":"a large brackish coastal lagoon on India’s east coast shaped by freshwater inflow, tidal exchange and changing salinity, with exceptional bird and aquatic biodiversity","Loktak Lake":"a large freshwater lake in Manipur famous for phumdis—floating masses of vegetation, soil and organic matter that create a shifting wetland landscape","Keoladeo Wetland":"a seasonally flooded and actively water-managed wetland in Rajasthan whose changing water levels support large numbers of waterbirds","Sundarban Wetland":"a vast tidal mangrove wetland of islands, rivers and creeks where salinity, sediment and tides continually reshape habitat","Sambhar Salt Lake":"a large inland saline lake in Rajasthan with strong seasonal water fluctuations and major importance for flamingos and other waterbirds","Asian Openbill":"a wetland stork strongly associated with shallow waters and flooded fields, specialized in aquatic prey such as snails and often nesting in social colonies","Black-necked Crane":"a crane of high-altitude wetlands and river valleys, commonly occurring in bonded pairs or family groups and defending breeding territories","Gangetic River Dolphin":"a river dolphin adapted to turbid water, using acoustic signals and echolocation rather than vision to navigate and find prey","Mugger Crocodile":"a broad-snouted freshwater crocodile of rivers, lakes and marshes that conserves energy through ambush hunting, basks on banks and protects nesting areas","Black-tailed Godwit":"a long-distance migratory shorebird that links networks of wetlands and uses a sensitive long bill to probe mud and wet soils for prey"}};
 const D=DATA,dim=D.d,ids=D.i,qs=D.q,sd=D.s,defs=D.f;
 const ECO_PROFILES={"Estuary":{"traits":["mixing","adaptable","boundary-crossing"],"line":"You are at your best where different worlds meet; you do not need everything to be one thing to make it work."},"Floodplain":{"traits":["seasonal","expansive","absorptive"],"line":"You make room for intensity, then reset. Flexibility is part of your structure, not a lack of one."},"Mangrove Forest":{"traits":["rooted","protective","salt-tolerant"],"line":"You can handle rough conditions without becoming unanchored, and people often feel safer around your steadiness."},"Salt Marsh":{"traits":["tidal","resilient","understated"],"line":"You tolerate change in small daily doses and rarely need spectacle to prove you are functioning."},"Freshwater Marsh":{"traits":["productive","nurturing","layered"],"line":"You tend to create conditions where many different kinds of people can exist at once."},"Peatland":{"traits":["slow-building","deep-storage","waterlogged"],"line":"You accumulate meaning slowly; what looks quiet on the surface can hold years of memory underneath."},"Seasonal Pond":{"traits":["temporary","pulse-driven","opportunistic"],"line":"You know not everything has to last forever to be important; you come alive when conditions are right."},"Urban Wetland":{"traits":["adaptive","pressured","multifunctional"],"line":"You keep functioning even when too much is being asked of you—and somehow still make space for others."},"High-altitude Wetland":{"traits":["hardy","sparse","refuge-like"],"line":"You do not need abundance to feel rich; a few dependable things can be enough."},"Mudflat":{"traits":["exposed","nutrient-rich","understated"],"line":"You are comfortable in phases that look unfinished to everyone else; a lot is happening even when it looks bare."},"Lagoon":{"traits":["sheltered","semi-connected","variable"],"line":"You like connection with a little buffer—open enough for exchange, protected enough to remain yourself."},"Oxbow Lake":{"traits":["detached","calm","memory-rich"],"line":"You can move on without pretending the old course meant nothing."},"River Delta":{"traits":["branching","networked","distributive"],"line":"You rarely have just one route forward; you build possibility by spreading energy across several channels."},"Swamp":{"traits":["dense","layered","persistent"],"line":"You are not immediately legible, and that is part of the point; people have to spend time with you to see the layers."},"Vernal Pool":{"traits":["brief","specialist","hidden"],"line":"You may look low-key most of the time, then become astonishingly alive in the right season."},"Flooded Grassland":{"traits":["open","seasonal","renewing"],"line":"You need room to breathe, but change does not scare you when it follows a rhythm you understand."},"Riparian Zone":{"traits":["connecting","buffering","stabilizing"],"line":"You are often the person between worlds—translating, softening edges and keeping things connected."},"Spring":{"traits":["source-like","steady","emergent"],"line":"Your energy is less about being loud and more about being reliably generative."},"Backwater":{"traits":["slow-flowing","sheltered","connected"],"line":"You prefer depth over speed and do not confuse quiet with disconnection."},"Wet Meadow":{"traits":["open","seasonally-saturated","transitional"],"line":"You are grounded but not rigid; you can shift with conditions without losing your basic character."},"Lotus":{"traits":["rooted","surface-bright","resilient"],"line":"You can be visibly composed without pretending the messy substrate underneath does not exist."},"Water Lily":{"traits":["anchored","floating","calm-surfaced"],"line":"You keep a stable base while letting the visible parts of your life move with the water."},"Cattail / Typha":{"traits":["colonizing","filtering","dense-forming"],"line":"Once you find a place that works, you commit hard and can become a whole atmosphere."},"Reed":{"traits":["flexible","rhizomatous","sheltering"],"line":"You bend more easily than you break, and your strength often comes from what is connected below the surface."},"Mangrove Tree":{"traits":["rooted","salt-managing","nursery-forming"],"line":"You are selective about what you let in, deeply rooted, and unexpectedly generous once something is inside your circle."},"Seagrass":{"traits":["submerged","meadow-forming","nursery"],"line":"You do important work without needing to be above the surface; quiet contribution is still contribution."},"Duckweed":{"traits":["tiny","fast-growing","collective"],"line":"You do not enter communities gently; under the right conditions you somehow become the group chat."},"Algae":{"traits":["responsive","productive","fast-changing"],"line":"You react quickly to conditions around you; when the environment shifts, you rarely stay exactly the same."},"Phytoplankton":{"traits":["drifting","foundational","light-responsive"],"line":"You can look small or scattered and still be doing foundational work for the whole system."},"Wild Rice":{"traits":["flood-adapted","seasonal","productive"],"line":"You know how to grow with the water rather than waiting for perfect, dry conditions."},"Saltmarsh Grass":{"traits":["salt-tolerant","sediment-trapping","stabilizing"],"line":"You are good at making unstable edges more livable without making a fuss about it."},"Water Chestnut":{"traits":["floating","anchored","space-filling"],"line":"You like freedom at the surface, but you still want something solid holding you in place."},"Bladderwort":{"traits":["carnivorous","fast-trapping","free-floating"],"line":"You may look delicate, but your decision-making can be startlingly quick and efficient."},"Sundew":{"traits":["patient","sticky-trapping","resourceful"],"line":"You are patient until the right thing arrives; then you are much more decisive than people expect."},"Sedge":{"traits":["clumping","tough","edge-loving"],"line":"You are built for awkward boundaries and tend to become sturdier where conditions are less convenient."},"Papyrus":{"traits":["tall","emergent","dense-forming"],"line":"You are visibly present and structurally useful; people tend to know where you stand."},"Floating Fern":{"traits":["mobile","surface-spreading","quick-growing"],"line":"You travel light and adapt quickly, but you can also take over more space than you meant to."},"Pondweed":{"traits":["submerged","flexible","habitat-forming"],"line":"You are comfortable doing your best work below the obvious surface of things."},"Mangrove Seedling":{"traits":["dispersing","searching","root-ready"],"line":"You can travel for a while without being lost; when the right ground appears, you know how to commit."},"Diatom":{"traits":["silica-shelled","microscopic","indicator-like"],"line":"You are small-detail energy: sensitive to change, structurally precise and more informative than people first realize."},"Sarus Crane":{"traits":["pair-bonded","territorial","expressive"],"line":"You do not do half-hearted closeness; when you choose, you are visible about it."},"Greater Flamingo":{"traits":["highly-social","filter-feeding","synchronized"],"line":"You can be intensely social without losing your own rhythm; moving with a crowd can genuinely energize you."},"Painted Stork":{"traits":["colonial","patient-feeding","soaring"],"line":"You know when to work beside others and when to drop into your own focused hunt."},"Purple Swamphen":{"traits":["bold","territorial","strong-footed"],"line":"You are not subtle about taking up space, especially when you know exactly what belongs to you."},"Pheasant-tailed Jacana":{"traits":["light-footed","role-reversing","floating-leaf adapted"],"line":"You are comfortable with arrangements that do not look conventional, as long as they actually work."},"Kingfisher":{"traits":["solitary","watchful","precision-diving"],"line":"You can wait a long time for the right moment and then move with zero hesitation."},"Heron":{"traits":["still","patient","strike-fast"],"line":"Your quiet is active; you are usually observing more than people realize."},"Egret":{"traits":["opportunistic","mobile","social-roosting"],"line":"You are adaptable enough to work a room without needing to belong to every part of it."},"Spot-billed Pelican":{"traits":["colonial","cooperative-feeding","thermal-soaring"],"line":"You are social when there is a shared purpose: group energy works for you best when it actually helps everyone move."},"Indian Skimmer":{"traits":["specialized","precise","river-dependent"],"line":"You would rather do one thing unusually well than become vaguely competent at everything."},"Bar-headed Goose":{"traits":["enduring","migratory","flock-oriented"],"line":"You can handle difficult journeys better when you know where you are headed and who is travelling with you."},"Common Coot":{"traits":["assertive","territorial","adaptable"],"line":"You may look ordinary until someone tests your boundaries; then the personality becomes very clear."},"Smooth-coated Otter":{"traits":["social","playful","cooperative"],"line":"You bond through doing things together; shared activity is often more convincing to you than endless talking."},"Fishing Cat":{"traits":["solitary","stealthy","water-adapted"],"line":"You are independent, observant and very comfortable entering spaces other people find uncomfortable."},"Gharial":{"traits":["specialized","aquatic","basking-social"],"line":"You are built for a specific kind of life and do not waste much energy pretending otherwise."},"Freshwater Turtle":{"traits":["slow-paced","sheltered","long-lived"],"line":"You are not in a rush to trust, respond or explain yourself; longevity matters more than speed."},"Frog":{"traits":["amphibious","rain-responsive","vocal"],"line":"Your energy changes dramatically with context; the right conditions can turn you from quiet to impossible to ignore."},"Mudskipper":{"traits":["amphibious","territorial","adaptable"],"line":"You are unusually good at functioning between categories and may secretly enjoy proving that the usual rules are optional."},"Mahseer":{"traits":["strong-swimming","migratory","current-facing"],"line":"You are not necessarily attracted to the easy route; movement with purpose can make you feel more alive."},"Swamp Deer":{"traits":["herding","wetland-specialist","cautious"],"line":"You like company that feels safe and open space that lets you see what is coming."},"Mangrove Crab":{"traits":["burrowing","tidal","recycling"],"line":"You work the margins, clean up what others leave behind and somehow improve the whole place while doing it."},"Dragonfly":{"traits":["agile","visual-hunting","two-life-stage"],"line":"You can change form without losing continuity; reinvention does not have to mean becoming a different person."},"Water Beetle":{"traits":["active-swimming","air-carrying","predatory"],"line":"You are practical about survival: take what you need with you and keep moving."},"Freshwater Mussel":{"traits":["filter-feeding","stationary","hidden"],"line":"You change your surroundings quietly; influence does not have to look dramatic."},"Snail":{"traits":["slow","sheltered","moisture-dependent"],"line":"You carry your own retreat with you and are perfectly willing to move at a pace other people find inconvenient."},"Asian Openbill":{"traits":["social-colonial","snail-specialist","co-parenting"],"line":"You are communal without being vague about your niche: you know what you are good at and build around it."},"Black-necked Crane":{"traits":["pair-oriented","territorial","high-altitude"],"line":"You can be deeply bonded and still protective of space; intimacy does not erase territory."},"Gangetic River Dolphin":{"traits":["acoustic","turbid-water adapted","river-dependent"],"line":"You do not need perfect visibility to navigate; you trust signals, patterns and what you can sense beneath the obvious."},"Mugger Crocodile":{"traits":["patient","ambush-oriented","protective"],"line":"You conserve energy until something matters, then become extremely difficult to ignore."},"Black-tailed Godwit":{"traits":["long-distance","wetland-networked","probe-feeding"],"line":"You can travel far without losing your sense of where to refuel; connection for you is a network, not a single place."},"Water Filter":{"traits":["selective","cleansing","continuous"],"line":"You are good at separating signal from noise and tend to improve a space by quietly processing what passes through."},"Carbon Keeper":{"traits":["long-term","storage","slow-release"],"line":"You hold onto value for the long term; not everything important needs to circulate immediately."},"Nursery":{"traits":["protective","growth-enabling","sheltered"],"line":"You are often at your best helping something fragile become strong enough to leave."},"Flood Buffer":{"traits":["absorptive","protective","elastic"],"line":"You can take the edge off other people’s intensity—useful, but only if you remember you are not an infinite sponge."},"Pollinator":{"traits":["connecting","mobile","mutualistic"],"line":"You create value by moving between people or places that might never have connected on their own."},"Decomposer":{"traits":["transformative","patient","recycling"],"line":"You are unusually good at turning endings, mess and leftovers into something usable."},"Seed Disperser":{"traits":["mobile","future-oriented","connecting"],"line":"You rarely keep good things in one place; you help possibilities travel."},"Ecological Engineer":{"traits":["structure-changing","active","system-shaping"],"line":"You do not just adapt to environments; you have a habit of rearranging them."},"Nutrient Recycler":{"traits":["cyclical","redistributive","efficient"],"line":"Waste bothers you mostly because you can see what else it could become."},"Habitat Builder":{"traits":["constructive","supportive","long-lasting"],"line":"You express care by making conditions better, not just by saying you care."},"Chilika Lagoon":{"traits":["brackish","connected","restorable"],"line":"You are defined by exchange—freshwater, seawater, species and people—and you do best when those connections stay open."},"Loktak Lake":{"traits":["floating","layered","shifting"],"line":"You can carry whole worlds on something that looks unstable; your stability is more dynamic than fixed."},"Keoladeo Wetland":{"traits":["seasonal","managed","bird-rich"],"line":"You thrive when timing and attention are right; structure does not make you less natural."},"Sundarban Wetland":{"traits":["tidal","protective","networked"],"line":"You live with pressure from multiple directions and survive by being flexible without giving up your roots."},"Sambhar Salt Lake":{"traits":["saline","seasonal","extreme-adapted"],"line":"You are comfortable with extremes and may become most interesting when conditions are too intense for everyone else."},"Monsoon":{"traits":["seasonal","transformative","abundant"],"line":"You do not arrive quietly; when your energy comes, whole systems reorganize around it."},"Low Tide":{"traits":["revealing","cyclical","spacious"],"line":"You need periods of withdrawal because that is when hidden things become visible."},"High Tide":{"traits":["immersive","expansive","cyclical"],"line":"When you are in, you are fully in; partial presence is not really your style."},"River Current":{"traits":["directional","moving","persistent"],"line":"You are easier to understand once people stop asking you to stand still."},"Wetland Mist":{"traits":["soft","obscuring","temporary"],"line":"You do not always reveal everything at once; ambiguity can be part of your atmosphere."},"Mud":{"traits":["grounded","nutrient-rich","messy"],"line":"Everyone wants the lotus; you are the part actually holding it up."},"Rainwater":{"traits":["fresh","episodic","replenishing"],"line":"You arrive as reset energy: sometimes brief, sometimes exactly what the system was waiting for."},"Sediment":{"traits":["accumulating","shaping","transported"],"line":"You may seem passive, but over time you can literally change the shape of the place."},"Fallen Log":{"traits":["decaying","sheltering","recycling"],"line":"You understand that being finished with one role does not mean being useless."},"Mangrove Root":{"traits":["anchoring","filtering","complex"],"line":"You hold your ground through complexity and make shelter in the spaces other people call tangled."},"Floating Leaf":{"traits":["light","surface-mobile","anchored-below"],"line":"You can look effortless because people do not see what is holding you steady underneath."},"Bird Flock":{"traits":["coordinated","social","responsive"],"line":"You read collective movement quickly and often know when the group is about to turn before anyone says it."},"Fish School":{"traits":["synchronized","protective","responsive"],"line":"You feel safest when people can move together without needing a meeting about every turn."},"Frog Chorus":{"traits":["collective","vocal","rain-triggered"],"line":"You may be quiet alone, but the right group can turn you into an entirely different volume setting."},"Water Ripple":{"traits":["responsive","spreading","subtle"],"line":"You notice how small actions travel; you rarely believe an interaction ends exactly where it started."}};
 const $=id=>document.getElementById(id);
 let asked=[],used=[],rec=[],trace=[],cur=null,rank4=null,started=0,prevLetter=null;
-const CORE=[1,5,21,46,43,18];
+const CORE=[];
 function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
 function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function profile(records){
@@ -391,34 +624,58 @@ function spreadScore(q,ev){
   return score;
 }
 function choose(){
-  if(asked.length<CORE.length)return qs.find(q=>q[0]===CORE[asked.length]);
-  let fams=[...new Set(qs.map(q=>q[1]))].filter(f=>!used.includes(f));
+  const fams=[...new Set(qs.map(q=>q[1]))].filter(f=>!used.includes(f));
   if(!fams.length)return qs.find(q=>!asked.includes(q[0]))||qs[0];
-  let ev=profile(rec).ev,best=null,bscore=-1;
-  fams.forEach(f=>{
-    let q=familyQuestion(f);
-    if(!q)return;
-    let sc=spreadScore(q,ev)+Math.random()*.01;
-    if(sc>bscore){bscore=sc;best=q}
-  });
-  return best||familyQuestion(fams[0]);
+
+  const ev=profile(rec).ev;
+  const candidates=fams.map(f=>{
+    const q=familyQuestion(f);
+    return q?{q,score:spreadScore(q,ev)}:null;
+  }).filter(Boolean).sort((a,b)=>b.score-a.score);
+
+  // Different people get different paths. We choose randomly from the
+  // strongest remaining question families instead of forcing the same sequence.
+  const poolSize=asked.length<4?Math.min(8,candidates.length):Math.min(5,candidates.length);
+  const pool=candidates.slice(0,poolSize);
+  const pick=pool[Math.floor(Math.random()*pool.length)];
+  return (pick&&pick.q)||familyQuestion(fams[0]);
 }
-function startQuiz(){started=Date.now();$('intro').classList.add('hidden');$('quiz').classList.remove('hidden');next()}
+function startQuiz(){
+  asked=[];used=[];rec=[];trace=[];cur=null;rank4=null;started=Date.now();
+  $('intro').classList.add('hidden');$('ratings')?.classList.add('hidden');$('done')?.classList.add('hidden');
+  $('result')?.classList.add('hidden');$('quiz').classList.remove('hidden');next()
+}
 function render(q,sel){
   if(!q){showError('No question available.');return}
   cur=q;
-  $('qnum').textContent=`Question ${asked.length+1} of 16`;
+  const n=asked.length+1;
+  $('qnum').textContent=`Question ${n} of 16`;
   $('qtext').textContent=q[3];
-  $('bar').style.width=(asked.length/16*100)+'%';
+  $('bar').style.width=((n-1)/16*100)+'%';
   $('backBtn').disabled=asked.length===0;
-  $('editNote').textContent=sel?'Previous answer highlighted — tap any option to continue.':'';
+  $('editNote').textContent=sel?'Previous answer highlighted — choose again to continue.':'';
+  if($('qMood'))$('qMood').textContent=QUESTION_MOODS[q[1]]||'🌿 Your turn';
+
+  const qf=$('qFact');
+  if(qf){
+    let fact='';
+    if(n===5)fact=QUIZ_WETLAND_FACTS[Math.floor(Math.random()*QUIZ_WETLAND_FACTS.length)];
+    if(n===9)fact='Seagrass is a flowering plant, not seaweed. It can form whole underwater meadows.';
+    if(n===13)fact='Mudflats may look bare, but worms and shellfish in the mud can feed thousands of migratory birds.';
+    if(n===16)fact='Last one. Your wetland match is almost ready.';
+    qf.textContent=fact;
+    qf.classList.toggle('hidden',!fact);
+  }
+
   let box=$('options');box.innerHTML='';
-  q[4].forEach(a=>{
-    let b=document.createElement('button');b.textContent=a[1];
+  q[4].forEach((a,i)=>{
+    let b=document.createElement('button');
+    b.innerHTML=`<span class="option-letter">${String.fromCharCode(65+i)}</span><span>${a[1]}</span>`;
     if(sel===a[0])b.classList.add('selected');
     b.onclick=()=>{[...box.children].forEach(x=>x.disabled=true);answer(a)};
     box.appendChild(b)
-  })
+  });
+  window.scrollTo({top:0,behavior:'smooth'})
 }
 function next(){
   if(asked.length>=16)return reveal();
@@ -427,8 +684,15 @@ function next(){
 function answer(a){asked.push(cur[0]);used.push(cur[1]);rec.push(a);trace.push(cur[0]+':'+a[0]);next()}
 function goBack(){
   if(!asked.length)return;
-  let id=asked.pop();used.pop();let a=rec.pop();trace.pop();
-  let q=qs.find(x=>x[0]===id);
+  const id=asked.pop();used.pop();const a=rec.pop();trace.pop();
+  const q=qs.find(x=>x[0]===id);
+  render(q,a?a[0]:null)
+}
+function editLastAnswerFromResult(){
+  if(!asked.length)return;
+  $('result').classList.add('hidden');$('quiz').classList.remove('hidden');
+  const id=asked.pop();used.pop();const a=rec.pop();trace.pop();
+  const q=qs.find(x=>x[0]===id);
   render(q,a?a[0]:null)
 }
 function showError(msg){
@@ -466,6 +730,234 @@ function relation(p){
   if(x.Adaptability>58&&x.Boundaries>55)return'You can compromise on plans much more easily than you compromise on respect.';
   return'You seem to want closeness that feels natural rather than performative — enough connection to matter, enough room to remain yourself.'
 }
+
+const EDU_INFO={
+  "Chilika Lagoon":{
+    where:"Coastal Odisha, eastern India",
+    what:"A huge brackish lagoon where freshwater mixes with seawater from the Bay of Bengal.",
+    why:"Its changing salinity creates many habitats at once. It supports fisheries, migratory waterbirds and Irrawaddy dolphins.",
+    remember:"A lagoon is not a closed lake. Chilika depends on both freshwater inflow and an open connection with the sea.",
+    source:"https://www.chilika.com/chilika-at-a-glance.php",
+    sourceLabel:"Chilika Development Authority"
+  },
+  "Loktak Lake":{
+    where:"Manipur, north-east India",
+    what:"A large freshwater lake famous for phumdis — floating masses of vegetation, soil and organic matter.",
+    why:"The lake supports fisheries, water supply and flood regulation. Keibul Lamjao National Park sits on its floating wetland landscape and is linked with the Sangai deer.",
+    remember:"Wetlands can be physically mobile. Loktak’s phumdis shift, grow and shrink with water and seasons.",
+    source:"https://rsis.ramsar.org/RISapp/files/RISrep/IN463RIS.pdf",
+    sourceLabel:"Ramsar Site information"
+  },
+  "Keoladeo Wetland":{
+    where:"Bharatpur, Rajasthan, India",
+    what:"A network of shallow, seasonally flooded lagoons whose water levels are actively managed.",
+    why:"Different water depths create feeding and resting habitat for breeding, wintering and migratory waterbirds.",
+    remember:"Some important wetlands are human-made or heavily managed. Their ecological value can still be extraordinary.",
+    source:"https://rsis.ramsar.org/sites/default/files/rsiswp_search/exports/Ramsar-Sites-annotated-summary-India.pdf",
+    sourceLabel:"Ramsar Site information"
+  },
+  "Sundarban Wetland":{
+    where:"Southern West Bengal, in the Ganga-Brahmaputra delta",
+    what:"A vast tidal mangrove wetland made of islands, rivers, creeks, mud and saline water.",
+    why:"Mangroves soften waves and storm surges, provide nursery habitat for fish and support exceptional biodiversity.",
+    remember:"Tides keep reshaping the Sundarbans. This is a wetland built around movement, sediment and salt.",
+    source:"https://www.ramsar.org/news/indian-sundarbans-named-wetland-international-importance",
+    sourceLabel:"Convention on Wetlands"
+  },
+  "Sambhar Salt Lake":{
+    where:"Rajasthan, India",
+    what:"A large inland saline lake that expands and contracts strongly with the seasons.",
+    why:"Its salty, seasonal conditions support specialised life and important wintering habitat for flamingos and other waterbirds.",
+    remember:"Not all wetlands are freshwater. Salty wetlands have their own food webs, rhythms and specialised species.",
+    source:"https://rsis.ramsar.org/sites/default/files/rsiswp_search/exports/Ramsar-Sites-annotated-summary-India.pdf",
+    sourceLabel:"Ramsar Site information"
+  },
+  "Seagrass":{
+    where:"Shallow coastal seas, lagoons and sheltered bays",
+    what:"A true flowering plant that lives fully underwater and forms meadows on the seabed.",
+    why:"Seagrass meadows shelter young fish, trap sediment, improve water clarity and store carbon in coastal soils.",
+    remember:"Seagrass is not seaweed. It has roots, leaves, flowers and seeds.",
+    source:"",
+    sourceLabel:""
+  },
+  "Mangrove Forest":{
+    where:"Tropical and subtropical coasts, estuaries and deltas",
+    what:"A coastal wetland forest built by trees that can tolerate salt, tides and waterlogged soils.",
+    why:"Mangroves provide nursery habitat, trap sediment, store carbon and reduce wave energy along exposed coasts.",
+    remember:"Those tangled roots are habitat, shoreline support and a living filter at the same time."
+  },
+  "Peatland":{
+    where:"Waterlogged landscapes from the tropics to high latitudes",
+    what:"A wetland where dead plant material decomposes very slowly and builds up as peat.",
+    why:"Peatlands store enormous amounts of carbon and regulate water, but drainage can release stored carbon and damage their ecology.",
+    remember:"A peatland can look quiet on top while holding centuries of plant material below."
+  },
+  "Estuary":{
+    where:"Where a river meets the sea",
+    what:"A coastal wetland where freshwater and seawater mix.",
+    why:"Changing salinity creates nursery and feeding habitat for fish, shellfish and birds.",
+    remember:"An estuary is defined by mixing. Freshwater, tides, sediment and salt are all part of the system."
+  },
+  "Floodplain":{
+    where:"Beside rivers that naturally spread during high flows",
+    what:"Low-lying land connected to a river and periodically covered by floodwater.",
+    why:"Floodplains store water, recharge soils, move nutrients and create seasonal habitat.",
+    remember:"Flooding is not always a wetland failure. In a floodplain, it is often the process that keeps the ecosystem alive."
+  },
+  "Mudflat":{
+    where:"Sheltered coasts, estuaries and tidal lagoons",
+    what:"A flat area of fine sediment exposed at low tide and covered again by water at high tide.",
+    why:"Worms, shellfish and other small animals in the mud feed huge numbers of shorebirds and fish.",
+    remember:"A mudflat can look empty and still be one of the busiest feeding grounds in a wetland."
+  },
+  "Salt Marsh":{
+    where:"Sheltered temperate and subtropical coasts",
+    what:"A tidal wetland covered by salt-tolerant grasses and low plants.",
+    why:"Salt marshes trap sediment, slow waves and support fish, birds and invertebrates.",
+    remember:"The daily rise and fall of tides is part of the habitat, not a disturbance."
+  },
+  "Seasonal Pond":{
+    where:"Landscapes that hold water only during part of the year",
+    what:"A small wetland that fills during wet periods and may dry completely later.",
+    why:"Temporary water can provide breeding habitat for amphibians and specialised plants while keeping some predators out.",
+    remember:"A wetland does not need to stay wet all year to be ecologically important."
+  },
+  "River Delta":{
+    where:"At the lower end of large rivers near seas or lakes",
+    what:"A branching wetland landscape built as a river deposits sediment.",
+    why:"Deltas combine channels, marshes, mudflats and coastal habitats and can support dense human and wildlife populations.",
+    remember:"A delta is built by sediment moving and settling. Blocking that movement can change the whole landscape."
+  },
+  "Spot-billed Pelican":{
+    where:"Freshwater and brackish wetlands across South and South-East Asia",
+    what:"A large waterbird that catches fish with its long bill and expandable throat pouch.",
+    why:"Pelicans depend on productive shallow-water feeding areas and safe nesting sites, often in colonies.",
+    remember:"They may feed alone or in groups, and groups can help drive fish into shallower water."
+  },
+  "Gangetic River Dolphin":{
+    where:"Large rivers of the Ganga-Brahmaputra-Meghna system",
+    what:"A freshwater dolphin adapted to muddy, low-visibility rivers.",
+    why:"It relies on healthy river flow, connected channels and enough fish. Its presence reflects the condition of a river ecosystem.",
+    remember:"It navigates mainly with sound and echolocation, not eyesight."
+  },
+  "Sarus Crane":{
+    where:"Shallow wetlands, flooded fields and marshy landscapes of South Asia",
+    what:"A very tall wetland crane known for strong pair bonds and loud calls.",
+    why:"It needs shallow wetlands and wet agricultural landscapes for feeding and breeding.",
+    remember:"A wetland species can depend on both natural wetlands and human-used landscapes."
+  },
+  "Gharial":{
+    where:"Large, deep rivers of northern South Asia",
+    what:"A highly aquatic crocodilian with a long narrow snout specialised for catching fish.",
+    why:"Gharials need long connected river stretches, sandbanks for basking and nesting, and healthy fish populations.",
+    remember:"Healthy rivers need more than water. Flow, sandbanks, fish and connected habitat all matter."
+  }
+};
+
+const EDU_WHY_BY_CATEGORY={
+  "Wetland / landscape":"Wetlands hold, move or filter water while creating habitat for plants, animals and people.",
+  "Plant / producer":"Wetland plants create food, shelter and structure. Many also trap sediment or influence water quality.",
+  "Animal":"Wetland animals reveal how food, water depth, vegetation and connectivity work together.",
+  "Ecological role":"This is one of the jobs that keeps a wetland functioning as an ecosystem.",
+  "Wildcard":"This process or condition helps set the rhythm of wetland life.",
+  "Wetland site":"This real wetland shows how water, biodiversity and people are connected in one place."
+};
+
+const EDU_WHERE_BY_CATEGORY={
+  "Wetland / landscape":"Wetlands around the world",
+  "Plant / producer":"Aquatic, marshy or waterlogged habitats",
+  "Animal":"Wetlands used for feeding, breeding, shelter or movement",
+  "Ecological role":"Across many kinds of wetlands",
+  "Wildcard":"Wherever water levels, seasons and wetland processes change",
+  "Wetland site":"India"
+};
+
+function wetlandEducation(name,category){
+  if(EDU_INFO[name])return EDU_INFO[name];
+  const def=(defs[name]||'A wetland identity connected to water and ecological processes').replace(/\.$/,'');
+  const ep=ECO_PROFILES[name]||{traits:['connected','adaptive','wetland-linked']};
+  return {
+    where:EDU_WHERE_BY_CATEGORY[category]||'Wetland ecosystems',
+    what:def.charAt(0).toUpperCase()+def.slice(1)+'.',
+    why:EDU_WHY_BY_CATEGORY[category]||'It is part of the web of water, habitat and life that makes wetlands work.',
+    remember:`Look for these three clues: ${ep.traits.slice(0,3).join(', ')}.`,
+    source:"",
+    sourceLabel:""
+  };
+}
+
+const QUESTION_MOODS={
+  surprise:"⚡ Plot twist",room:"👀 New people",silence:"… Read the silence",cancel:"🌧️ Plan B",
+  compliment:"✨ Compliment check",boundary:"🚧 Boundary",chaos:"🌪️ Chaos mode",role:"🧩 Group role",
+  alone:"🌙 Free time",care:"🫶 Care language",notice:"🔎 Tiny detail",relationship:"🪢 Close bonds",
+  awkward:"😶 Awkward energy",newplace:"🧭 New territory",project:"🛠️ Make something",
+  horror:"🫠 Energy drain",conflict:"⚖️ Tension",energy:"🔋 Recharge"
+};
+
+const QUIZ_WETLAND_FACTS=[
+  "A wetland does not have to stay wet all year. Seasonal wetlands can be incredibly important.",
+  "Seagrass is a flowering plant, not seaweed. Entire underwater meadows can grow from it.",
+  "Mudflats can look empty, but the mud can be packed with food for migratory birds.",
+  "Mangrove roots slow water, trap sediment and create nursery space for young fish.",
+  "Peat forms because waterlogged conditions slow decomposition. That is why peatlands can store carbon for centuries.",
+  "An estuary is a mixing zone where river water meets the sea — and that changing salinity creates many niches."
+];
+
+function symbolMarkup(name,category){
+  const n=String(name||'').toLowerCase();
+  if(n.includes('seagrass')){
+    return `<svg class="identity-svg" viewBox="0 0 100 100" aria-label="Seagrass meadow symbol">
+      <defs><linearGradient id="sgw" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e8f7f5"/><stop offset="1" stop-color="#a9d4cf"/></linearGradient></defs>
+      <circle cx="50" cy="50" r="46" fill="url(#sgw)"/>
+      <path d="M14 31 Q30 25 48 31 T86 31" fill="none" stroke="#5a9a91" stroke-width="3" opacity=".65"/>
+      <path d="M22 74 C23 54 22 41 32 28 M38 76 C35 55 44 47 44 27 M54 76 C58 55 55 45 66 25 M70 76 C66 56 76 46 80 31" fill="none" stroke="#2d765c" stroke-width="5" stroke-linecap="round"/>
+      <path d="M17 78 Q50 70 84 78" fill="none" stroke="#8c7656" stroke-width="4" opacity=".55"/>
+    </svg>`;
+  }
+  if(n.includes('mangrove')){
+    return `<svg class="identity-svg" viewBox="0 0 100 100" aria-label="Mangrove symbol">
+      <circle cx="50" cy="50" r="46" fill="#e9f2e8"/>
+      <path d="M50 44 V66 M50 56 L31 79 M50 56 L42 82 M50 56 L58 82 M50 56 L70 79" stroke="#6d543b" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="39" cy="36" r="16" fill="#5b8b64"/><circle cx="57" cy="31" r="18" fill="#47795a"/><circle cx="68" cy="41" r="14" fill="#70946b"/>
+      <path d="M17 82 Q50 76 84 82" fill="none" stroke="#6ea59a" stroke-width="3"/>
+    </svg>`;
+  }
+  if(n.includes('papyrus')||n.includes('cattail')||n==='reed'||n.includes('sedge')||n.includes('wild rice')||n.includes('saltmarsh grass')){
+    return `<svg class="identity-svg" viewBox="0 0 100 100" aria-label="Wetland reeds symbol">
+      <circle cx="50" cy="50" r="46" fill="#edf4e9"/>
+      <path d="M22 80 C24 61 24 43 28 24 M40 80 C39 57 43 42 43 20 M58 80 C55 58 59 40 63 25 M76 80 C70 61 74 47 79 31" fill="none" stroke="#477759" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="28" cy="24" rx="5" ry="11" fill="#826f4e"/><ellipse cx="43" cy="20" rx="5" ry="12" fill="#756346"/>
+      <path d="M14 82 Q50 75 86 82" fill="none" stroke="#6ba19a" stroke-width="3"/>
+    </svg>`;
+  }
+  if(n.includes('duckweed')){
+    return `<svg class="identity-svg" viewBox="0 0 100 100" aria-label="Duckweed symbol">
+      <circle cx="50" cy="50" r="46" fill="#e6f3ef"/>
+      <g fill="#6da26e"><ellipse cx="32" cy="39" rx="13" ry="8"/><ellipse cx="55" cy="31" rx="11" ry="7"/><ellipse cx="69" cy="50" rx="14" ry="9"/><ellipse cx="42" cy="61" rx="12" ry="8"/><ellipse cx="63" cy="70" rx="10" ry="6"/></g>
+      <path d="M13 80 Q50 73 87 80" fill="none" stroke="#5a9b91" stroke-width="3"/>
+    </svg>`;
+  }
+  if(n.includes('chilika')||n.includes('loktak')||n.includes('keoladeo')||n.includes('sundarban')||n.includes('sambhar')||category==='Wetland site'){
+    return `<svg class="identity-svg" viewBox="0 0 100 100" aria-label="Wetland site symbol">
+      <circle cx="50" cy="50" r="46" fill="#eaf4f1"/>
+      <circle cx="70" cy="28" r="8" fill="#e7c58f"/>
+      <path d="M14 55 Q30 47 46 55 T86 55 M14 66 Q30 58 46 66 T86 66 M14 77 Q30 69 46 77 T86 77" fill="none" stroke="#4d9189" stroke-width="4" stroke-linecap="round"/>
+      <path d="M28 42 Q34 35 40 42 M40 42 Q46 35 52 42" fill="none" stroke="#3f6859" stroke-width="2.5"/>
+    </svg>`;
+  }
+  const birds=['pelican','crane','stork','jacana','kingfisher','heron','egret','skimmer','goose','coot','openbill','godwit','flamingo'];
+  if(birds.some(x=>n.includes(x))){
+    return `<svg class="identity-svg" viewBox="0 0 100 100" aria-label="Wetland bird symbol">
+      <circle cx="50" cy="50" r="46" fill="#f0f4eb"/>
+      <path d="M28 57 C40 39 56 39 67 50 C61 50 56 53 52 58 C63 56 73 59 79 66 C60 65 43 65 28 57Z" fill="#426a59"/>
+      <path d="M65 50 L87 45 L68 56" fill="#c79661"/>
+      <path d="M47 64 L43 80 M57 64 L61 80" stroke="#426a59" stroke-width="3" stroke-linecap="round"/>
+      <path d="M42 81 H34 M61 81 H69" stroke="#426a59" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>`;
+  }
+  return `<span class="symbol-emoji">${glyph(name,category)}</span>`;
+}
+
 function glyph(n,c){
   n=n.toLowerCase();
   if(n.includes('flamingo'))return'🦩';if(n.includes('frog'))return'🐸';if(n.includes('turtle'))return'🐢';
@@ -493,7 +985,7 @@ function identityFit(name,p){
   const ex=extremes(p).slice(0,2);
   const a=ex[0][2]>=50?DIM_HI[ex[0][1]]:DIM_LO[ex[0][1]];
   const b=ex[1][2]>=50?DIM_HI[ex[1][1]]:DIM_LO[ex[1][1]];
-  return `Your answers leaned toward ${a} and ${b}. ECOTONE is matching that pattern with the ${ep.traits[0]} and ${ep.traits[1]} strategy of ${name}.`;
+  return `Your answers suggest ${a} and ${b}. In nature, ${name} works through ${ep.traits[0]} and ${ep.traits[1]}. That is the connection ECOTONE is making — playful, not scientific.`;
 }
 function identityWatch(ep){
   const t=ep.traits.join(' ').toLowerCase();
@@ -509,81 +1001,221 @@ function identityWatch(ep){
 
 function reveal(){
   $('quiz').classList.add('hidden');$('result').classList.remove('hidden');window.scrollTo(0,0);
-  let p=profile(rec).p,r=ranked(p),t=r[0],e=extremes(p);rank4=r.slice(0,4);
-  $('glyph').textContent=glyph(t[0],t[1]);$('rname').textContent=t[0].toUpperCase();
-  const ep=ECO_PROFILES[t[0]];
-  $('rdef').innerHTML='<b>In nature:</b> '+(defs[t[0]]||'an ecological identity connected to wetlands and water')+'.'
+  const p=profile(rec).p,r=ranked(p),t=r[0];rank4=r.slice(0,4);
+  const name=t[0],category=t[1],ep=ECO_PROFILES[name],edu=wetlandEducation(name,category);
+
+  $('glyph').innerHTML=symbolMarkup(name,category);
+  $('rname').textContent=name.toUpperCase();
+  $('rdef').innerHTML='<b>What it is:</b> '+(defs[name]||'an ecological identity connected to wetlands and water')+'.'
     +'<div class="trait-row">'+ep.traits.map(x=>'<span class="trait-chip">'+x+'</span>').join('')+'</div>';
+
+  const learn=$('learnWetland');
+  if(learn){
+    learn.innerHTML=`
+      <div class="learn-title-row">
+        <div><div class="learn-kick">Know your wetland</div><h3>${escapeHtmlCore(name)}</h3>
+        <div class="learn-location">⌖ ${escapeHtmlCore(edu.where||'Wetland habitat')}</div></div>
+      </div>
+      <div class="learn-grid">
+        <div class="learn-cell"><b>What makes it special</b><span>${escapeHtmlCore(edu.what)}</span></div>
+        <div class="learn-cell"><b>Why it matters</b><span>${escapeHtmlCore(edu.why)}</span></div>
+      </div>
+      <div class="learn-remember"><b>Remember this:</b> ${escapeHtmlCore(edu.remember)}</div>
+      ${edu.source?`<a class="learn-source" href="${edu.source}" target="_blank" rel="noopener noreferrer">Learn more · ${escapeHtmlCore(edu.sourceLabel||'source')} ↗</a>`:''}`;
+  }
+
   $('punch').textContent=ep.line;
-  $('relationship').textContent=identityFit(t[0],p);
+  $('relationship').textContent=identityFit(name,p);
   $('green').textContent=ep.traits.join(' · ');
   $('red').textContent=identityWatch(ep);
+
   $('constellation').innerHTML='';
   rank4.forEach((x,i)=>$('constellation').insertAdjacentHTML('beforeend',
-  `<div class="mini"><div class="lab">${i?'match #'+(i+1):'closest match'}</div><div class="mn">${x[0]}</div><div class="mc">${x[1]}</div><div class="mg">${glyph(x[0],x[1])}</div></div>`));
+    `<div class="mini"><div class="lab">${i?'match #'+(i+1):'closest match'}</div><div class="mn">${escapeHtmlCore(x[0])}</div><div class="mc">${escapeHtmlCore(x[1])}</div><div class="mg symbol-mini">${symbolMarkup(x[0],x[1])}</div></div>`));
+
   const sim=$('similarTypes');
   if(sim){
     sim.innerHTML='';
     rank4.slice(1,4).forEach((x,i)=>sim.insertAdjacentHTML('beforeend',
-      `<div class="similar-type"><div class="st-rank">nearby type #${i+1}</div><div class="st-name">${x[0]}</div><div class="st-cat">${x[1]}</div><div class="st-glyph">${glyph(x[0],x[1])}</div></div>`));
+      `<div class="similar-type"><div class="st-rank">nearby type #${i+1}</div><div class="st-name">${escapeHtmlCore(x[0])}</div><div class="st-cat">${escapeHtmlCore(x[1])}</div><div class="st-glyph symbol-mini">${symbolMarkup(x[0],x[1])}</div></div>`));
   }
 }
+function escapeHtmlCore(v){return String(v??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
 
-async function shareWetlandResult(){
-  try{
-    const name=($('rname')?.textContent||'my wetland identity').trim();
-    const nearby=rank4?rank4.slice(1,4).map(x=>x[0]).join(', '):'';
-    const text=`Apparently, my ECOTONE wetland identity is ${name} 🌿${nearby?`\nNearby types: ${nearby}.`:''}\n\nWhat’s your wetland identity?\nhttps://ecotone03.github.io/ecotone/\n\nTag: @it.starts.from.me #ECOTONE #WetlandIdentity`;
-    if(navigator.share){
-      await navigator.share({title:'My ECOTONE wetland identity',text});
-      if($('shareStatus'))$('shareStatus').textContent='Shared 🌿';
-    }else if(navigator.clipboard&&navigator.clipboard.writeText){
-      await navigator.clipboard.writeText(text);
-      if($('shareStatus'))$('shareStatus').textContent='Result + tag copied 🌿';
-    }else{
-      if($('shareStatus'))$('shareStatus').textContent=text;
-    }
-  }catch(e){
-    if(e&&e.name==='AbortError')return;
-    if($('shareStatus'))$('shareStatus').textContent='Screenshot your result and tag @it.starts.from.me';
-  }
-}
 
 function ecotoneInstagramCaption(){
-  const name=($('rname')?.textContent||'my wetland identity').trim();
-  return `Apparently, I’m a ${name} 🌿\n\nWhat’s your wetland identity?\nhttps://ecotone03.github.io/ecotone/\n\n@it.starts.from.me #ECOTONE #WetlandIdentity`;
-}
-function openEcotoneInstagram(){
-  window.open('https://www.instagram.com/it.starts.from.me/','_blank','noopener,noreferrer');
-}
-async function copyInstagramCaption(){
-  const text=ecotoneInstagramCaption();
-  const s=$('instaShareStatus');
-  try{
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      await navigator.clipboard.writeText(text);
-      if(s)s.textContent='Caption copied. Paste it on Instagram and tag me 🌿';
-    }else{
-      if(s)s.textContent=text;
-    }
-  }catch(e){
-    if(s)s.textContent='Tag @it.starts.from.me when you post your result 🌿';
-  }
+  const name=(rank4&&rank4[0]?rank4[0][0]:($('rname')?.textContent||'my wetland identity')).trim();
+  const category=rank4&&rank4[0]?rank4[0][1]:'Wetland / landscape';
+  const edu=wetlandEducation(name,category);
+  return `My ECOTONE wetland identity: ${name} 🌿
+
+One thing I learned: ${edu.remember}
+
+Find yours:
+https://ecotone03.github.io/ecotone/
+
+@it.starts.from.me #ECOTONE #WetlandIdentity #Wetlands`;
 }
 
+function roundRectPath(ctx,x,y,w,h,r){
+  const rr=Math.min(r,w/2,h/2);
+  ctx.beginPath();ctx.moveTo(x+rr,y);ctx.arcTo(x+w,y,x+w,y+h,rr);ctx.arcTo(x+w,y+h,x,y+h,rr);ctx.arcTo(x,y+h,x,y,rr);ctx.arcTo(x,y,x+w,y,rr);ctx.closePath();
+}
+function canvasWrap(ctx,text,x,y,maxWidth,lineHeight,maxLines=10){
+  const words=String(text||'').split(/\s+/);let line='',lines=[];
+  for(const word of words){
+    const test=line?line+' '+word:word;
+    if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=word}else line=test;
+  }
+  if(line)lines.push(line);
+  if(lines.length>maxLines){lines=lines.slice(0,maxLines);lines[maxLines-1]=lines[maxLines-1].replace(/[.,;:]?$/,'')+'…'}
+  lines.forEach((ln,i)=>ctx.fillText(ln,x,y+i*lineHeight));
+  return y+lines.length*lineHeight;
+}
+function fitCanvasFont(ctx,text,maxWidth,startSize,minSize=34,weight='800',family='Arial'){
+  let size=startSize;
+  do{ctx.font=`${weight} ${size}px ${family}`;if(ctx.measureText(text).width<=maxWidth)return size;size-=2}while(size>minSize);
+  return size;
+}
+function drawShareMotif(ctx,name,category,cx,cy,r){
+  ctx.save();
+  ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.clip();
+  const g=ctx.createLinearGradient(cx,cy-r,cx,cy+r);g.addColorStop(0,'#edf8f5');g.addColorStop(1,'#badbd5');ctx.fillStyle=g;ctx.fillRect(cx-r,cy-r,r*2,r*2);
+  const n=String(name||'').toLowerCase();
+
+  if(n.includes('seagrass')){
+    ctx.strokeStyle='rgba(70,139,127,.55)';ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(cx-r,cy-r*.15);ctx.quadraticCurveTo(cx-r*.35,cy-r*.28,cx,cy-r*.15);ctx.quadraticCurveTo(cx+r*.38,cy-r*.02,cx+r,cy-r*.15);ctx.stroke();
+    ctx.strokeStyle='#2f765e';ctx.lineWidth=14;ctx.lineCap='round';
+    [[-.55,.55,-.48,-.55],[-.22,.62,-.08,-.68],[.12,.62,.22,-.48],[.46,.60,.60,-.48]].forEach(v=>{ctx.beginPath();ctx.moveTo(cx+r*v[0],cy+r*v[1]);ctx.quadraticCurveTo(cx+r*(v[0]-.1),cy, cx+r*v[2],cy+r*v[3]);ctx.stroke()});
+  }else if(n.includes('mangrove')){
+    ctx.fillStyle='#4e7f5f';ctx.beginPath();ctx.arc(cx-r*.18,cy-r*.25,r*.34,0,Math.PI*2);ctx.arc(cx+r*.18,cy-r*.30,r*.30,0,Math.PI*2);ctx.arc(cx+r*.36,cy-r*.12,r*.26,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#71533d';ctx.lineWidth=12;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(cx,cy-r*.05);ctx.lineTo(cx,cy+r*.35);ctx.stroke();
+    ctx.lineWidth=8;[[-.55,.65],[-.25,.78],[.25,.78],[.55,.65]].forEach(v=>{ctx.beginPath();ctx.moveTo(cx,cy+r*.28);ctx.lineTo(cx+r*v[0],cy+r*v[1]);ctx.stroke()});
+  }else if(n.includes('papyrus')||n.includes('cattail')||n==='reed'||n.includes('sedge')||n.includes('wild rice')||n.includes('saltmarsh grass')){
+    ctx.strokeStyle='#477759';ctx.lineWidth=10;ctx.lineCap='round';
+    [-.55,-.18,.18,.53].forEach((xv,i)=>{ctx.beginPath();ctx.moveTo(cx+r*xv,cy+r*.62);ctx.quadraticCurveTo(cx+r*(xv-.05),cy, cx+r*(xv+.03),cy-r*(.55-.08*i));ctx.stroke()});
+    ctx.fillStyle='#806d4d';[-.52,-.15].forEach((xv,i)=>{ctx.beginPath();ctx.ellipse(cx+r*xv,cy-r*(.55-.08*i),r*.07,r*.16,0,0,Math.PI*2);ctx.fill()});
+  }else if(category==='Wetland site'||category==='Wetland / landscape'){
+    ctx.strokeStyle='#4c9189';ctx.lineWidth=9;ctx.lineCap='round';
+    [-.18,.12,.42].forEach(yoff=>{ctx.beginPath();ctx.moveTo(cx-r*.72,cy+r*yoff);ctx.bezierCurveTo(cx-r*.28,cy+r*(yoff-.18),cx+r*.25,cy+r*(yoff+.18),cx+r*.72,cy+r*yoff);ctx.stroke()});
+    ctx.fillStyle='#e8c58d';ctx.beginPath();ctx.arc(cx+r*.38,cy-r*.42,r*.12,0,Math.PI*2);ctx.fill();
+  }else{
+    ctx.fillStyle='#315f4c';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`${Math.round(r*.82)}px Arial`;ctx.fillText(glyph(name,category),cx,cy);
+  }
+  ctx.restore();
+  ctx.strokeStyle='rgba(48,86,70,.18)';ctx.lineWidth=3;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke();
+}
+
+async function buildShareCardBlob(){
+  const name=(rank4&&rank4[0]?rank4[0][0]:($('rname')?.textContent||'WETLAND')).trim();
+  const category=rank4&&rank4[0]?rank4[0][1]:'Wetland / landscape';
+  const ep=ECO_PROFILES[name]||{traits:['wetland','water','life']};
+  const edu=wetlandEducation(name,category);
+
+  const canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1350;
+  const ctx=canvas.getContext('2d');
+
+  const bg=ctx.createLinearGradient(0,0,1080,1350);bg.addColorStop(0,'#fff9ec');bg.addColorStop(.54,'#edf5ef');bg.addColorStop(1,'#dceae6');ctx.fillStyle=bg;ctx.fillRect(0,0,1080,1350);
+
+  ctx.globalAlpha=.22;ctx.fillStyle='#9cc2b4';ctx.beginPath();ctx.arc(1030,160,270,0,Math.PI*2);ctx.fill();ctx.fillStyle='#e6bfa4';ctx.beginPath();ctx.arc(70,1220,250,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;
+
+  ctx.fillStyle='#17372b';ctx.textAlign='left';ctx.textBaseline='alphabetic';
+  ctx.font='900 42px Arial';ctx.fillText('ECOTONE',76,96);
+  ctx.font='italic 25px Georgia';ctx.fillStyle='#5a7066';ctx.fillText('Wetlands, made personal.',76,136);
+  ctx.textAlign='right';ctx.font='800 18px Arial';ctx.fillStyle='#668077';ctx.fillText('MY WETLAND IDENTITY',1004,100);
+
+  drawShareMotif(ctx,name,category,540,335,145);
+
+  ctx.textAlign='center';ctx.fillStyle='#17372b';
+  const caps=name.toUpperCase();
+  fitCanvasFont(ctx,caps,900,86,48,'800','Arial');
+  const nameY=575;
+  canvasWrap(ctx,caps,540,nameY,900,88,2);
+
+  ctx.font='700 20px Arial';ctx.fillStyle='#718178';ctx.fillText(category.toUpperCase(),540,735);
+
+  const traits=ep.traits.slice(0,3).map(x=>String(x).replace(/-/g,' '));
+  ctx.font='800 19px Arial';
+  let widths=traits.map(t=>ctx.measureText(t.toUpperCase()).width+46);
+  const total=widths.reduce((a,b)=>a+b,0)+(traits.length-1)*14;
+  let x=540-total/2;
+  traits.forEach((t,i)=>{const w=widths[i];ctx.fillStyle='rgba(255,255,255,.78)';roundRectPath(ctx,x,775,w,54,27);ctx.fill();ctx.strokeStyle='rgba(70,106,88,.20)';ctx.stroke();ctx.fillStyle='#355c49';ctx.textAlign='center';ctx.fillText(t.toUpperCase(),x+w/2,810);x+=w+14});
+
+  ctx.textAlign='left';ctx.fillStyle='#17372b';ctx.font='900 18px Arial';ctx.fillText('ONE THING TO KNOW',76,905);
+  ctx.fillStyle='#3f5f52';ctx.font='32px Georgia';
+  canvasWrap(ctx,edu.remember,76,955,928,44,4);
+
+  ctx.fillStyle='#315b49';ctx.font='800 17px Arial';ctx.fillText('WHY WETLANDS MATTER',76,1150);
+  ctx.fillStyle='#5c7067';ctx.font='24px Arial';
+  canvasWrap(ctx,edu.why,76,1190,928,33,3);
+
+  ctx.strokeStyle='rgba(50,88,72,.18)';ctx.beginPath();ctx.moveTo(76,1280);ctx.lineTo(1004,1280);ctx.stroke();
+  ctx.fillStyle='#17372b';ctx.textAlign='left';ctx.font='800 18px Arial';ctx.fillText('ecotone03.github.io/ecotone',76,1322);
+  ctx.textAlign='right';ctx.fillStyle='#61756c';ctx.fillText('tag @it.starts.from.me',1004,1322);
+
+  return await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('Could not create share card.')),'image/png',.95));
+}
+async function shareWetlandResult(){
+  const status=$('instaShareStatus')||$('shareStatus');
+  try{
+    if(status)status.textContent='Making your identity card…';
+    const blob=await buildShareCardBlob();
+    const name=(rank4&&rank4[0]?rank4[0][0]:'wetland').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+    const file=new File([blob],`ecotone-${name}.png`,{type:'image/png'});
+    const caption=ecotoneInstagramCaption();
+
+    if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+      await navigator.share({title:'My ECOTONE wetland identity',text:caption,files:[file]});
+      if(status)status.textContent='Shared 🌿';
+      return;
+    }
+    showSharePreview(URL.createObjectURL(blob));
+    if(status)status.textContent='Your share card is ready.';
+  }catch(e){
+    if(e&&e.name==='AbortError'){if(status)status.textContent='';return}
+    if(status)status.textContent='I made the card, but your browser could not share it directly. Try the preview.';
+    try{const blob=await buildShareCardBlob();showSharePreview(URL.createObjectURL(blob))}catch(_){}
+  }
+}
+function showSharePreview(url){
+  const img=$('sharePreviewImage'),modal=$('sharePreviewModal');
+  if(img)img.src=url;if(modal)modal.classList.remove('hidden');
+}
+function closeSharePreview(){$('sharePreviewModal')?.classList.add('hidden')}
+function openInstagramHome(){
+  // Opens Instagram itself, so the person taking the quiz lands in their own logged-in Instagram experience.
+  window.open('https://www.instagram.com/','_blank','noopener,noreferrer');
+}
+async function copyInstagramCaption(){
+  const text=ecotoneInstagramCaption(),s=$('instaShareStatus');
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(text);if(s)s.textContent='Caption copied. Paste it on Instagram and tag @it.starts.from.me 🌿'}
+    else if(s)s.textContent=text;
+  }catch(e){if(s)s.textContent='Tag @it.starts.from.me when you post your result 🌿'}
+}
+
+function openTerms(){$('termsModal')?.classList.remove('hidden')}
+function closeTerms(){$('termsModal')?.classList.add('hidden')}
 
 function showRatings(){$('result').classList.add('hidden');$('ratings').classList.remove('hidden');window.scrollTo(0,0)}
 function finish(){
-  let sec=started?Math.round((Date.now()-started)/1000):'';
+  const sec=started?Math.round((Date.now()-started)/1000):'';
   $('record').value=[
-  'WETLAND DATING AGENCY — PILOT V4.3',
-  `Top result: ${rank4[0][0]}`,`Constellation: ${rank4.map(x=>x[0]).join(' / ')}`,
-  `Accuracy: ${$('accuracy').value}/10`,`Surprise: ${$('surprise').value}/10`,
-  `WTF factor: ${$('wtf').value}/10`,`Would share: ${$('share').value}`,
-  `Comment: ${$('comment').value||'(none)'}`,`Time: ${sec}s`,`Path: ${trace.join(',')}`].join('\n');
+    'ECOTONE — FEEDBACK',
+    `Top result: ${rank4[0][0]}`,
+    `Constellation: ${rank4.map(x=>x[0]).join(' / ')}`,
+    `Accuracy: ${$('accuracy').value}/10`,
+    `Surprise: ${$('surprise').value}/10`,
+    `Feels like me: ${$('resonance').value}/10`,
+    `Would share: ${$('share').value}`,
+    `Comment: ${$('comment').value||'(none)'}`,
+    `Time: ${sec}s`,
+    `Path: ${trace.join(',')}`
+  ].join('\n');
   $('ratings').classList.add('hidden');$('done').classList.remove('hidden')
 }
-function copyRecord(){let t=$('record');t.select();if(navigator.clipboard)navigator.clipboard.writeText(t.value);else document.execCommand('copy')}
+function copyRecord(){const t=$('record');t.select();if(navigator.clipboard)navigator.clipboard.writeText(t.value);else document.execCommand('copy')}
+
 </script>
 
 <script id="ecotone-social-final">
@@ -731,4 +1363,37 @@ function escapeFinal(v){return String(v??'').replace(/[&<>"']/g,ch=>({'&':'&amp;
 function jsFinal(v){return String(v??'').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\n/g,' ')}
 document.addEventListener('DOMContentLoaded',()=>{initAuth().catch(console.error)});
 </script>
+
+
+<div id="termsModal" class="modal-shell hidden" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+  <div class="modal-card">
+    <button class="modal-close" type="button" onclick="closeTerms()" aria-label="Close">×</button>
+    <div class="kick">Quick terms, privacy & safety</div>
+    <h2 id="termsTitle">Before you use ECOTONE</h2>
+    <div class="terms-grid">
+      <div><b>The quiz</b><p>The identity match is playful and interpretive. It is not a scientific, medical or psychological assessment.</p></div>
+      <div><b>The wetland facts</b><p>ECOTONE uses short, easy-to-read ecological summaries to build awareness. Named wetland sites include source links so you can learn more.</p></div>
+      <div><b>Your data</b><p>You can take the quiz without an account. If you join ECOTONE Social, your profile information is stored in Supabase so other users can discover and interact with you.</p></div>
+      <div><b>Social is 18+</b><p>Only adults should join ECOTONE Social. Compatibility scores are for fun and do not guarantee safety, friendship or romantic compatibility.</p></div>
+      <div><b>Contact sharing</b><p>Your Instagram stays private until there is a mutual match and both people separately choose to share it.</p></div>
+      <div><b>Use it safely</b><p>Do not post sensitive personal information. Use Hide or Report if a profile makes you uncomfortable. Meet new people with normal online-safety precautions.</p></div>
+    </div>
+    <button class="primary" type="button" onclick="closeTerms()">Got it</button>
+  </div>
+</div>
+
+<div id="sharePreviewModal" class="modal-shell hidden" role="dialog" aria-modal="true" aria-labelledby="sharePreviewTitle">
+  <div class="modal-card share-preview-card">
+    <button class="modal-close" type="button" onclick="closeSharePreview()" aria-label="Close">×</button>
+    <div class="kick">Your share card</div>
+    <h2 id="sharePreviewTitle">Ready for Instagram</h2>
+    <img id="sharePreviewImage" alt="ECOTONE wetland identity share card">
+    <p class="mut">If your browser cannot share the image directly, press and hold the card to save it, then post it on Instagram.</p>
+    <div class="insta-actions">
+      <button class="insta-primary" type="button" onclick="openInstagramHome()">Open my Instagram</button>
+      <button class="insta-secondary" type="button" onclick="copyInstagramCaption()">Copy caption</button>
+    </div>
+  </div>
+</div>
+
 </body></html>
