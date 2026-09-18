@@ -1273,7 +1273,57 @@ body:after{
 }
 .identity-local-art{display:none!important}
 </style>
-</head><body data-ecotone-build="V9-QUIZ-BOOT-FIX">
+
+<style id="ecotone-curator-credit-style">
+.ecotone-curator-credit{
+  width:min(920px,calc(100% - 32px));
+  margin:26px auto 30px;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  color:#7b756e;
+  font:600 11px/1.4 Arial,sans-serif;
+  letter-spacing:.15px;
+  text-align:center;
+}
+.ecotone-curator-credit b{
+  color:#344247;
+  font-weight:700;
+}
+.ecotone-curator-credit a{
+  color:#8a6544;
+  text-decoration:none;
+  border-bottom:1px solid rgba(138,101,68,.28);
+}
+.ecotone-curator-credit a:hover{
+  border-bottom-color:#8a6544;
+}
+@media(max-width:520px){
+  .ecotone-curator-credit{
+    flex-wrap:wrap;
+    gap:5px;
+    margin-top:18px;
+    margin-bottom:22px;
+    font-size:10px;
+  }
+}
+</style>
+
+<style id="ecotone-intro-curator-style">
+.intro-curator-note{
+  margin:12px auto 2px;
+  color:#8a8178;
+  font:600 10px/1.4 Arial,sans-serif;
+  letter-spacing:.1px;
+}
+.intro-curator-note a{
+  color:#8a6544;
+  text-decoration:none;
+}
+</style>
+</head><body data-ecotone-build="V10-CURATED-BY-NIKITA">
 <main>
 <div class="brand">ECOTONE · WETLAND IDENTITY EXPERIENCE</div>
 <section id="intro" class="card ecotone-intro">
@@ -1286,6 +1336,10 @@ body:after{
 <p class="mut intro-purpose">Get your identity. Learn what it is and why it matters.</p>
 <div class="micro-worlds">Chilika · Seagrass · Flamingo · Peatland · Mangrove · Dolphin · and more</div>
 <button class="primary" onclick="startQuiz()">Find my wild type</button>
+<div class="intro-curator-note">
+  Curated by Nikita Mishra · <a href="https://www.instagram.com/it.starts.from.me/" target="_blank" rel="noopener noreferrer">@it.starts.from.me</a>
+</div>
+
 <button id="reviewUniverseBtn" class="review-universe-btn hidden" type="button" onclick="openIdentityUniverse()">Review all 100 identities</button>
 <button id="existingSocialBtn" class="member-login-btn" type="button" onclick="openSocialLogin()">Already in ECOTONE Social? Log in</button>
 <button id="returnSocialBtn" class="hidden return-social-btn" type="button" onclick="returnToSocial()">Open ECOTONE Social</button>
@@ -3160,7 +3214,7 @@ async function buildShareCardBlob(){
 
   ctx.strokeStyle='rgba(226,202,165,.24)';ctx.beginPath();ctx.moveTo(110,1245);ctx.lineTo(970,1245);ctx.stroke();
   ctx.fillStyle='#9aa9a4';ctx.font='700 14px Arial';
-  ctx.fillText('ecotone03.github.io/ecotone  ·  @it.starts.from.me',540,1294);
+  ctx.fillText('Curated by Nikita Mishra  ·  @it.starts.from.me',540,1294);
   return await new Promise(res=>c.toBlob(res,'image/png',0.95));
 }
 </script><script id="ecotone-hero-traits">
@@ -3191,4 +3245,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   }
 });
-</script></body></html>
+</script>
+<footer class="ecotone-curator-credit">
+  <span>Curated by <b>Nikita Mishra</b></span>
+  <span class="curator-dot">·</span>
+  <a href="https://www.instagram.com/it.starts.from.me/" target="_blank" rel="noopener noreferrer">@it.starts.from.me</a>
+</footer>
+</body></html>
