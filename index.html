@@ -412,6 +412,684 @@ body:before,body:after{display:none!important}
   .q-mood{max-width:42%;overflow:hidden;text-overflow:ellipsis}
 }
 </style>
+
+<style id="ecotone-feedback-v2-theme">
+:root{
+  --ink:#17372b;--mut:#68776f;--line:#ddd4c7;
+  --cream:#fff8ec;--paper:#fffdf8;
+  --coral:#f26b5b;--blue:#4f86d9;--sun:#eebd3e;--violet:#8c6ccf;--aqua:#31a99a;--rose:#d85c91;
+}
+body{background:radial-gradient(circle at 12% 0,#fff 0,transparent 28%),linear-gradient(180deg,#fff7e8,#edf4ef)!important}
+.wetline{width:94px!important;height:3px!important;background:linear-gradient(90deg,var(--coral),var(--sun),var(--aqua),var(--blue),var(--violet))!important;border-radius:99px!important}
+.progress{height:8px!important;background:#eee5d9!important}.progress #bar{background:linear-gradient(90deg,var(--coral),var(--sun),var(--aqua),var(--blue),var(--violet))!important}
+.member-login-btn{max-width:390px;margin:0 auto 8px!important;text-align:center!important;background:transparent!important;border:0!important;box-shadow:none!important;color:#52665d!important;text-decoration:underline;font:700 12px Arial!important}
+.intro-fine{margin-top:10px!important}.ecotone-intro .primary{box-shadow:0 9px 0 rgba(242,107,91,.18)!important}
+
+/* Quiz: zero clutter */
+body.quiz-mode .ecotone-footer{display:none!important}
+.minimal-quiz{padding-top:28px!important}.quiz-count{margin-bottom:9px!important}.minimal-quiz #qtext{margin-bottom:18px!important}
+.minimal-quiz .quiznav{justify-content:flex-start!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;position:static!important}
+.minimal-quiz .back{font-size:12px!important}
+#options button{display:flex!important;align-items:center!important;gap:12px!important;min-height:58px!important;box-shadow:none!important}
+.option-letter{width:30px;height:30px;flex:0 0 30px;border-radius:50%;display:grid;place-items:center;color:#fff;font:900 11px Arial}
+#options button:nth-child(1) .option-letter{background:var(--coral)}#options button:nth-child(2) .option-letter{background:var(--blue)}#options button:nth-child(3) .option-letter{background:var(--sun);color:#403319}#options button:nth-child(4) .option-letter{background:var(--violet)}
+#options button.selected{background:#fff2dd!important;border-color:#dbbd8a!important}
+
+/* Result gets colour from the identity itself */
+.identity-hero{background:linear-gradient(145deg,var(--accent-soft,#edf3e7),#fffaf2)!important;border-bottom:5px solid var(--accent,#31a99a)}
+.result-category{font:800 10px Arial;letter-spacing:1.4px;text-transform:uppercase;color:#68776f;margin-top:8px}
+.identity-pictogram{width:100%;height:100%;display:grid;place-items:center;border-radius:50%;background:var(--accent-soft,#edf3e7);border:3px solid color-mix(in srgb,var(--accent,#31a99a) 45%,white);box-shadow:inset 0 0 0 8px rgba(255,255,255,.45)}
+.identity-emoji{font-size:58px;line-height:1;filter:saturate(1.08)}
+.symbol-mini .identity-pictogram{width:38px;height:38px;border-width:2px;box-shadow:none}.symbol-mini .identity-emoji{font-size:23px}
+.compact-def{font-size:14px!important}.trait-row{margin-top:10px!important}.trait-chip:nth-child(1){background:#fee3dc!important;color:#944334!important;border-color:#f5c4b8!important}.trait-chip:nth-child(2){background:#e4efff!important;color:#365e9c!important;border-color:#c8dcf7!important}.trait-chip:nth-child(3){background:#eee7ff!important;color:#654d99!important;border-color:#d9cdf6!important}
+.learn-wetland{border-top:4px solid var(--accent,#31a99a)!important}.learn-grid{grid-template-columns:1fr 1fr!important}.learn-cell:nth-child(1){background:#fff1df!important}.learn-cell:nth-child(2){background:#e9f3ff!important}.learn-remember{background:#f1eaff!important}
+.personality-divider{margin-top:20px!important}.punch{font-size:25px!important;margin:20px 4px!important}.fit-rel{border-left:4px solid var(--accent,#31a99a)!important}
+.identity-notes .flag{min-height:132px!important}.identity-notes .edge{background:#e7f0ff!important}.identity-notes .watch{background:#ffe8e1!important}.identity-notes .edge .lab{color:#3f67a4!important}.identity-notes .watch .lab{color:#9c4b3d!important}
+.concise-similar{background:#fffaf1!important}.similar-type{border-top:4px solid var(--card-accent,#31a99a)!important}.similar-type .st-name{font-size:18px!important}
+
+/* Social */
+.person-card{overflow:hidden!important;border-top:5px solid var(--card-accent,#31a99a)!important}.social-avatar{position:absolute;right:14px;top:12px;width:54px;height:54px}.social-avatar .identity-pictogram{width:54px;height:54px}.social-avatar .identity-emoji{font-size:31px}
+.match-icon{width:62px;height:62px}.match-icon .identity-pictogram{width:62px;height:62px}.match-icon .identity-emoji{font-size:35px}
+.person-name,.match-title{padding-right:66px!important}.compat-bar span{background:var(--card-accent,var(--aqua))!important}.wink-source{color:var(--card-accent,var(--aqua))!important}.social-login-card{max-width:520px!important}
+.invalid-profile-note{padding:13px 14px;border-radius:14px;background:#fff0e9;border:1px solid #f1c9ba;color:#8d4b3b;font:13px/1.45 Arial;margin:12px 0}
+
+/* Share */
+.insta-share-card{border-top:4px solid var(--accent,var(--rose))!important}.insta-mark{background:var(--accent,var(--rose))!important}.insta-primary{background:var(--accent,var(--rose))!important;border-color:var(--accent,var(--rose))!important}
+
+@media(max-width:640px){
+  .learn-grid{grid-template-columns:1fr!important}.identity-notes{grid-template-columns:1fr!important}.identity-emoji{font-size:52px}.minimal-quiz{padding:22px 16px!important}
+}
+</style>
+
+<style id="ecotone-identity-readability-v3">
+/* Keep the identity page easy to scan. One idea per block. */
+#rdef{
+  font-size:15px!important;
+  line-height:1.55!important;
+  padding:15px 16px!important;
+}
+#rdef>b{
+  display:block!important;
+  margin-bottom:7px!important;
+  font:800 10px/1 Arial,sans-serif!important;
+  letter-spacing:1px!important;
+  text-transform:uppercase!important;
+}
+#rdef .trait-row{margin-top:12px!important}
+
+.learn-wetland{
+  padding:17px!important;
+}
+.learn-wetland .learn-kick{
+  margin-bottom:13px!important;
+}
+.learn-simple-row{
+  display:grid!important;
+  grid-template-columns:118px 1fr!important;
+  gap:14px!important;
+  align-items:start!important;
+  padding:12px 0!important;
+  border-top:1px solid rgba(23,55,43,.10)!important;
+}
+.learn-simple-row:first-of-type{
+  border-top:0!important;
+  padding-top:2px!important;
+}
+.learn-simple-row b{
+  display:block!important;
+  color:#52665d!important;
+  font:800 11px/1.25 Arial,sans-serif!important;
+}
+.learn-simple-row span{
+  display:block!important;
+  color:#17372b!important;
+  font:14px/1.5 Arial,sans-serif!important;
+}
+.learn-memory-row{
+  margin-top:3px!important;
+}
+.learn-source{
+  display:inline-block!important;
+  margin-top:10px!important;
+  font:700 11px/1.3 Arial,sans-serif!important;
+}
+.learn-title-row,.learn-grid,.learn-cell,.learn-remember{
+  /* Old layout is no longer used by the active result renderer. */
+}
+
+.personality-divider{
+  margin-top:22px!important;
+}
+.fit-rel{
+  line-height:1.55!important;
+}
+.identity-notes .flag{
+  min-height:0!important;
+}
+.identity-notes .flag span{
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+
+@media(max-width:560px){
+  .learn-simple-row{
+    grid-template-columns:1fr!important;
+    gap:5px!important;
+    padding:11px 0!important;
+  }
+  .learn-simple-row b{
+    margin-bottom:1px!important;
+  }
+  #rdef{
+    font-size:14px!important;
+  }
+}
+</style>
+
+<style id="ecotone-golden-hour-theme">
+:root{
+  --ink-warm:#26333a;
+  --mut-warm:#6f7474;
+  --paper-warm:#fffaf3;
+  --sand:#f3e9dc;
+  --amber:#c88a3d;
+  --amber-soft:#f5e2c5;
+  --water-mist:#dfe8e8;
+  --line-warm:#dfd5c8;
+}
+
+/* One cohesive palette, not rainbow colours */
+body{
+  color:var(--ink-warm)!important;
+  background:
+    radial-gradient(circle at 78% 8%, rgba(244,188,112,.34) 0 8%, rgba(244,188,112,.15) 18%, transparent 34%),
+    radial-gradient(circle at 18% 26%, rgba(255,248,231,.96) 0 10%, transparent 35%),
+    radial-gradient(circle at 50% 105%, rgba(168,193,194,.30) 0 20%, transparent 52%),
+    linear-gradient(180deg,#f8efe3 0%,#f7f3eb 48%,#edf1ee 100%)!important;
+  background-attachment:fixed!important;
+}
+body:before{
+  content:""!important;
+  display:block!important;
+  position:fixed!important;
+  inset:auto -12vw 8vh auto!important;
+  width:46vw!important;
+  height:46vw!important;
+  max-width:520px!important;
+  max-height:520px!important;
+  border-radius:50%!important;
+  background:rgba(246,188,105,.12)!important;
+  filter:blur(34px)!important;
+  pointer-events:none!important;
+  z-index:-1!important;
+}
+body:after{
+  content:""!important;
+  display:block!important;
+  position:fixed!important;
+  left:-12vw!important;
+  bottom:-18vw!important;
+  width:55vw!important;
+  height:38vw!important;
+  border-radius:50%!important;
+  background:rgba(150,180,183,.13)!important;
+  filter:blur(42px)!important;
+  pointer-events:none!important;
+  z-index:-1!important;
+}
+
+/* Frosted warm cards */
+.card,.result,.social-onboard-card{
+  background:rgba(255,250,243,.90)!important;
+  border:1px solid rgba(201,185,166,.66)!important;
+  box-shadow:
+    0 18px 55px rgba(87,66,42,.10),
+    inset 0 1px 0 rgba(255,255,255,.78)!important;
+  backdrop-filter:blur(10px)!important;
+  -webkit-backdrop-filter:blur(10px)!important;
+}
+
+/* Brand */
+.ecotone-mark{
+  color:#24343a!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.6)!important;
+}
+.ecotone-tagline{color:#8b6948!important}
+.wetline{
+  background:linear-gradient(90deg,transparent,var(--amber),transparent)!important
+}
+.kick,.lab{color:#806f60!important}
+.mut,.fine,.intro-purpose{color:var(--mut-warm)!important}
+.micro-worlds{
+  background:rgba(255,250,243,.72)!important;
+  border:1px solid rgba(200,138,61,.22)!important;
+  color:#6d645d!important;
+}
+
+/* Main actions */
+.primary{
+  background:#2c393f!important;
+  color:#fff!important;
+  border-color:#2c393f!important;
+  box-shadow:0 9px 22px rgba(44,57,63,.13)!important;
+}
+.primary:hover{background:#202b30!important}
+.social-cta,.return-social-btn,.small-ghost{
+  background:rgba(255,250,243,.9)!important;
+  color:#2d3b40!important;
+  border-color:#c9baa9!important;
+}
+
+/* Quiz: calm, warm and consistent */
+.progress{background:rgba(208,193,176,.38)!important}
+#bar{background:var(--amber)!important}
+
+.quiz-card{
+  background:rgba(255,251,246,.94)!important;
+  box-shadow:0 18px 48px rgba(83,64,42,.09)!important;
+}
+.quiz-card h2,#qtext{
+  color:#25343a!important;
+}
+#options{
+  display:grid!important;
+  gap:10px!important;
+}
+#options button{
+  background:rgba(255,255,255,.78)!important;
+  color:#2c393f!important;
+  border:1px solid rgba(190,174,157,.64)!important;
+  border-radius:17px!important;
+  box-shadow:0 5px 16px rgba(80,62,43,.035)!important;
+  transition:transform .14s ease,border-color .14s ease,background .14s ease,box-shadow .14s ease!important;
+}
+#options button:hover{
+  background:#fffaf3!important;
+  border-color:#cda772!important;
+  box-shadow:0 8px 20px rgba(114,82,45,.07)!important;
+}
+#options button.selected{
+  background:#f9ead5!important;
+  border-color:var(--amber)!important;
+  box-shadow:0 8px 22px rgba(200,138,61,.12)!important;
+}
+.option-letter{
+  background:#f3e3cd!important;
+  color:#805727!important;
+  border:1px solid #e3c69f!important;
+}
+#options button.selected .option-letter{
+  background:var(--amber)!important;
+  color:#fff!important;
+  border-color:var(--amber)!important;
+}
+.quiznav{
+  background:rgba(255,250,243,.92)!important;
+  border-color:rgba(202,187,170,.75)!important;
+  box-shadow:0 8px 24px rgba(87,66,42,.08)!important
+}
+
+/* Result + learning */
+.hero{
+  background:
+    radial-gradient(circle at 50% 0,rgba(255,255,255,.94),transparent 36%),
+    linear-gradient(180deg,#f6eadb,#edf0eb)!important;
+}
+.orb{
+  box-shadow:
+    0 18px 42px rgba(90,66,39,.13),
+    0 0 0 10px rgba(255,255,255,.35)!important
+}
+.def,.rel,.similar-type,.person-card,.match-card{
+  background:rgba(255,252,247,.86)!important;
+  border-color:var(--line-warm)!important;
+}
+.learn-wetland{
+  background:rgba(255,251,246,.90)!important;
+  border-color:#e2d4c3!important;
+}
+.learn-simple-row{
+  border-top-color:rgba(115,95,74,.11)!important;
+}
+.learn-simple-row b{color:#8a633c!important}
+.learn-simple-row span{color:#354248!important}
+.trait-chip{
+  background:#f4e5d3!important;
+  border-color:#e5cab0!important;
+  color:#765638!important;
+}
+.green,.red{
+  background:#f5eee5!important;
+}
+.similar-box,.result-fork{
+  background:rgba(246,239,230,.84)!important;
+  border-color:#e1d5c8!important;
+}
+
+/* Instagram + social */
+.insta-share-card,.social-note,.consent-box,.signed-in-strip{
+  background:rgba(255,250,244,.88)!important;
+  border-color:#e1d4c6!important;
+}
+.insta-mark{
+  background:var(--amber)!important;
+  color:#fff!important;
+}
+.insta-primary{
+  background:#2c393f!important;
+  border-color:#2c393f!important;
+}
+.insta-secondary{
+  background:#f3e6d7!important;
+  color:#2d393f!important;
+  border-color:#dfcbb4!important;
+}
+.mode-badge.live{
+  background:#f2e2cc!important;
+  color:#75532d!important;
+}
+.social-nav{
+  background:rgba(255,250,243,.91)!important;
+  border-color:#ded1c3!important;
+}
+.social-nav button.active{
+  background:#2c393f!important;
+  color:#fff!important;
+  border-color:#2c393f!important;
+}
+.compat-bar{background:#e6ddd3!important}
+.compat-bar span{background:var(--amber)!important}
+.compat-reason{
+  background:#f7eee4!important;
+  color:#625c57!important;
+}
+
+/* subtle atmospheric edge behind the landing card */
+.ecotone-intro{
+  position:relative!important;
+  isolation:isolate!important;
+}
+.ecotone-intro:before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  width:220px!important;
+  height:220px!important;
+  right:-75px!important;
+  top:-80px!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle,rgba(244,186,103,.25),rgba(244,186,103,.04) 62%,transparent 72%)!important;
+  transform:none!important;
+  z-index:-1!important;
+}
+.ecotone-intro:after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  width:280px!important;
+  height:160px!important;
+  left:-90px!important;
+  bottom:-95px!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:radial-gradient(ellipse,rgba(143,174,178,.18),transparent 70%)!important;
+  transform:none!important;
+  z-index:-1!important;
+}
+
+/* Mobile refinement */
+@media(max-width:700px){
+  body{
+    background:
+      radial-gradient(circle at 86% 4%,rgba(244,188,112,.28),transparent 27%),
+      radial-gradient(circle at 12% 42%,rgba(255,248,231,.90),transparent 35%),
+      linear-gradient(180deg,#f8efe3 0%,#f5f1ea 58%,#edf1ee 100%)!important;
+  }
+  .card,.result{border-radius:22px!important}
+  #options button{
+    padding:14px 14px!important;
+    border-radius:15px!important;
+  }
+  .option-letter{
+    flex-basis:27px!important;
+    width:27px!important;
+    height:27px!important;
+  }
+}
+</style>
+
+<style id="ecotone-accurate-identity-art">
+.identity-pictogram.art-pictogram{
+  width:100%!important;height:100%!important;
+  display:grid!important;place-items:center!important;
+  border-radius:50%!important;
+  overflow:hidden!important;
+  background:var(--accent-soft,#f3eee5)!important;
+  border:2px solid color-mix(in srgb,var(--accent,#9a7654) 32%, white)!important;
+  box-shadow:
+    inset 0 0 0 8px rgba(255,255,255,.42),
+    0 9px 24px rgba(61,50,40,.08)!important;
+}
+.identity-pictogram.art-pictogram svg{
+  width:88%!important;height:88%!important;display:block!important
+}
+.symbol-mini .identity-pictogram.art-pictogram{
+  width:40px!important;height:40px!important;border-width:1px!important;box-shadow:none!important
+}
+.symbol-mini .identity-pictogram.art-pictogram svg{
+  width:90%!important;height:90%!important
+}
+.social-avatar .identity-pictogram.art-pictogram{
+  width:54px!important;height:54px!important
+}
+.match-icon .identity-pictogram.art-pictogram{
+  width:62px!important;height:62px!important
+}
+.identity-emoji{display:none!important}
+.orb.wetland-symbol{
+  padding:9px!important;
+  background:rgba(255,250,243,.74)!important
+}
+</style>
+
+<style id="ecotone-full-100-review-css">
+.review-universe-btn{
+  width:auto!important;
+  margin:2px auto 12px!important;
+  padding:9px 13px!important;
+  min-height:0!important;
+  background:transparent!important;
+  color:#6d746f!important;
+  border:1px solid #d5cdc1!important;
+  border-radius:999px!important;
+  box-shadow:none!important;
+  font:700 11px/1 Arial,sans-serif!important;
+}
+.result-hook{
+  min-height:20px;
+  margin:6px auto 0;
+  max-width:560px;
+  font:italic 17px/1.35 Georgia,serif;
+  color:#746a61;
+}
+.identity-universe-modal{
+  width:min(1040px,100%)!important;
+  max-height:92vh!important;
+}
+.universe-intro{max-width:760px}
+.universe-tools{
+  display:grid;
+  grid-template-columns:minmax(220px,1fr) minmax(180px,240px) auto;
+  gap:9px;
+  align-items:center;
+  margin:18px 0;
+}
+.universe-tools input,.universe-tools select{
+  width:100%;
+  min-height:44px;
+}
+.universe-count{
+  white-space:nowrap;
+  color:#7b756f;
+  font:700 11px/1.2 Arial,sans-serif;
+  text-align:right;
+}
+.identity-universe-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:11px;
+}
+.universe-card{
+  min-width:0;
+  padding:15px;
+  border:1px solid #ddd5ca;
+  border-radius:17px;
+  background:#fffdf9;
+}
+.universe-card h3{
+  margin:5px 0 6px;
+  font:700 21px/1.05 Georgia,serif;
+  color:#26363a;
+}
+.universe-cat{
+  font:800 9px/1 Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#8b8177;
+}
+.universe-hook{
+  margin:4px 0 8px;
+  font:italic 13px/1.35 Georgia,serif;
+  color:#8a6544;
+}
+.universe-traits{
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
+  margin:8px 0 9px;
+}
+.universe-traits span{
+  padding:5px 7px;
+  border-radius:999px;
+  background:#f2ebe2;
+  color:#715f4f;
+  font:800 8px/1 Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+.universe-card p{
+  margin:0;
+  color:#68706c;
+  font:12px/1.45 Arial,sans-serif;
+}
+@media(max-width:760px){
+  .identity-universe-grid{grid-template-columns:1fr 1fr}
+  .universe-tools{grid-template-columns:1fr}
+  .universe-count{text-align:left}
+}
+@media(max-width:480px){
+  .identity-universe-grid{grid-template-columns:1fr}
+  .identity-universe-modal{padding:18px!important}
+}
+</style>
+
+<style id="ecotone-result-readability-v4">
+#rdef{display:none!important}
+.concise-similar{display:none!important}
+.identity-hero{padding-bottom:24px!important}
+.result-category{
+  margin-top:8px!important;
+  font:800 10px/1 Arial,sans-serif!important;
+  letter-spacing:1.2px!important;
+  text-transform:uppercase!important;
+  color:#84786d!important;
+}
+.result-hook{
+  margin-top:9px!important;
+  color:#765f4c!important;
+  font:italic 18px/1.35 Georgia,serif!important;
+}
+.learn-wetland{
+  margin-top:2px!important;
+  padding:18px!important;
+  border:1px solid #e1d6ca!important;
+  border-top:0!important;
+  border-radius:19px!important;
+  background:rgba(255,252,247,.92)!important;
+}
+.learning-title{
+  margin-bottom:7px;
+  color:#856a50;
+  font:800 10px/1 Arial,sans-serif;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+.learning-row{
+  display:grid;
+  grid-template-columns:110px 1fr;
+  gap:16px;
+  padding:12px 0;
+  border-top:1px solid rgba(72,63,54,.10);
+}
+.learning-title + .learning-row{border-top:0}
+.learning-row b{
+  font:800 11px/1.35 Arial,sans-serif;
+  color:#796b60;
+}
+.learning-row span{
+  font:14px/1.55 Arial,sans-serif;
+  color:#29383b;
+}
+.remember-row{
+  margin-top:3px;
+  padding:13px 12px;
+  border:0;
+  border-radius:13px;
+  background:#f3eadf;
+}
+.personality-divider{margin:27px 0 3px!important}
+.personality-divider span{color:#7d7268!important}
+.punch{
+  max-width:650px;
+  margin:18px auto!important;
+  font-size:clamp(22px,5vw,29px)!important;
+}
+.fit-rel{padding:15px 16px!important;background:#fffdf9!important}
+.identity-notes{margin-top:10px!important}
+.identity-notes .flag{
+  min-height:0!important;
+  padding:14px!important;
+  background:#f7f1e9!important;
+  border:1px solid #e4d9cd!important;
+}
+.identity-notes .flag .lab{color:#806b57!important}
+.identity-notes .flag span{color:#334043!important}
+.edit-answer-btn{margin-top:13px!important;font-size:11px!important;opacity:.72}
+.result-fork h2{font-size:21px!important}
+@media(max-width:560px){
+  .learning-row{grid-template-columns:1fr;gap:5px}
+  .learning-row b{margin-bottom:1px}
+  .identity-notes{grid-template-columns:1fr!important}
+}
+</style>
+
+<style id="ecotone-review-preview-v4">
+.universe-card{
+  cursor:pointer;
+  transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease;
+}
+.universe-card:hover{
+  transform:translateY(-2px);
+  border-color:#c9ae8d;
+  box-shadow:0 10px 26px rgba(76,58,39,.08);
+}
+.art-review-slot{
+  width:100%;
+  height:100%;
+  min-height:118px;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:13px;
+  background:
+    radial-gradient(circle at 70% 20%,rgba(224,175,111,.18),transparent 34%),
+    linear-gradient(145deg,#f5eee4,#e6eeeb);
+  color:#314145;
+}
+.art-review-slot span{
+  font:800 7px/1 Arial,sans-serif;
+  letter-spacing:1.2px;
+  color:#8a7663;
+}
+.art-review-slot b{
+  margin-top:6px;
+  font:700 15px/1.05 Georgia,serif;
+}
+.art-review-slot small{
+  margin-top:5px;
+  font:700 7px/1.2 Arial,sans-serif;
+  color:#7c817e;
+}
+</style>
+
+<style id="ecotone-final-image-system">
+.orb.wetland-symbol{
+  width:min(560px,94%)!important;height:auto!important;aspect-ratio:3/2!important;
+  margin:18px auto 22px!important;border-radius:30px!important;padding:0!important;
+  overflow:hidden!important;background:#080d0d!important;border:1px solid rgba(212,190,151,.34)!important;
+  box-shadow:0 20px 52px rgba(38,30,20,.18)!important;
+}
+.identity-local-art{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;border-radius:inherit!important}
+.symbol-mini .identity-local-art,.social-avatar .identity-local-art,.match-icon .identity-local-art{
+  width:100%!important;height:100%!important;object-fit:cover!important;border-radius:50%!important
+}
+.symbol-mini,.social-avatar,.match-icon{overflow:hidden!important;border-radius:50%!important;background:#081010!important}
+.identity-fallback{width:100%;height:100%;display:grid;place-items:center;background:#101716;color:#e9d8b6;font:800 15px/1 Arial,sans-serif}
+</style>
 </head><body>
 <main>
 <div class="brand">ECOTONE · WETLAND IDENTITY EXPERIENCE</div>
@@ -421,65 +1099,70 @@ body:before,body:after{display:none!important}
 <div class="wetline"></div>
 <div class="kick">Find your wild type.</div>
 <h1>What's your wetland identity?</h1>
-<p class="intro-lead">A playful wetland identity experience that connects your personality with wetlands, wetland species and ecological roles.</p>
-<p class="mut intro-purpose">Built to help people understand the <b>character and ecological traits of wetlands through the language of our own personalities.</b></p>
-<div class="micro-worlds">Mangrove · Mudskipper · Peatland · Low Tide · Lotus · Gharial · and more</div>
+<p class="intro-lead">A playful quiz that matches you with a wetland, wetland species or ecological role.</p>
+<p class="mut intro-purpose">Get your identity. Learn what it is and why it matters.</p>
+<div class="micro-worlds">Chilika · Seagrass · Flamingo · Peatland · Mangrove · Dolphin · and more</div>
 <button class="primary" onclick="startQuiz()">Find my wild type</button>
-<button id="returnSocialBtn" class="hidden return-social-btn" type="button" onclick="returnToSocial()">Return to ECOTONE Social</button>
-<p class="closing-line">Come curious. Leave knowing wetlands a little better.</p>
-<p class="fine">16 quick questions · no right answers · playful, not a scientific personality test. <button class="classic-terms-link" type="button" onclick="openTerms()">Terms & safety</button></p>
+<button id="reviewUniverseBtn" class="review-universe-btn hidden" type="button" onclick="openIdentityUniverse()">Review all 100 identities</button>
+<button id="existingSocialBtn" class="member-login-btn" type="button" onclick="openSocialLogin()">Already in ECOTONE Social? Log in</button>
+<button id="returnSocialBtn" class="hidden return-social-btn" type="button" onclick="returnToSocial()">Open ECOTONE Social</button>
+<p class="fine intro-fine">16 quick questions · different paths for different people · <button class="classic-terms-link" type="button" onclick="openTerms()">terms & safety</button></p>
 </section>
 <section id="quiz" class="hidden">
 <div class="progress"><div id="bar"></div></div>
-<div class="card quiz-card">
-  <div class="quiz-headline-row"><div id="qnum" class="kick"></div><div id="qMood" class="q-mood"></div></div>
+<div class="card quiz-card minimal-quiz">
+  <div id="qnum" class="kick quiz-count"></div>
   <h2 id="qtext"></h2>
-  <div id="qFact" class="quiz-fact hidden"></div>
-  <div class="self-note">Pick what feels most like you. First instinct usually works best.</div>
   <div id="options"></div>
-  <div class="quiznav"><button id="backBtn" class="back" onclick="goBack()" disabled>← Previous</button><div id="editNote" class="editnote"></div></div>
+  <div class="quiznav"><button id="backBtn" class="back" onclick="goBack()" disabled>← Previous</button></div>
 </div></section>
 <section id="result" class="hidden result">
-<div class="hero"><div class="file">Your wetland identity</div><div id="glyph" class="orb wetland-symbol">🌿</div><div class="kick">Your closest ecological match</div><div id="rname" class="rname"></div><div class="sub">Meet the wetland behind your match.</div></div>
+<div class="hero identity-hero">
+  <div class="file">Your wetland identity</div>
+  <div id="glyph" class="orb wetland-symbol">🌿</div>
+  <div id="rname" class="rname"></div>
+  <div id="resultCategory" class="result-category"></div><div id="resultHook" class="result-hook"></div>
+</div>
 <div class="body">
-<div id="rdef" class="def"></div>
-<div id="learnWetland" class="learn-wetland"></div>
-<div class="personality-divider"><span>and now, the personality part</span></div>
-<div id="punch" class="punch"></div><div class="rel"><div class="lab">Why this fits you</div><div id="relationship"></div></div>
-<div class="flags"><div class="flag green"><div class="lab">3 ecological traits</div><span id="green"></span></div><div class="flag red"><div class="lab">When the same trait goes too far</div><span id="red"></span></div></div>
-<button class="edit-answer-btn" type="button" onclick="editLastAnswerFromResult()">← Edit my last answer</button>
-<div class="rule"></div><div class="lab">Your ecological constellation</div><div id="constellation" class="const"></div><div class="rule"></div>
-<div class="similar-box">
-  <div class="lab">Similar wetland personalities</div>
-  <p class="mut" style="margin:7px 0 12px">Your result is not just one identity. These nearby wetland types share parts of your personality pattern.</p>
-  <div id="similarTypes" class="similar-types"></div>
-</div>
-<div class="rule"></div>
-<div class="insta-share-card">
-  <div class="insta-share-top">
-    <div class="insta-mark">◎</div>
-    <div>
-      <div class="kick">Made for sharing</div>
-      <h3>Your ECOTONE identity card</h3>
+  <div id="rdef" class="def compact-def"></div>
+  <div id="learnWetland" class="learn-wetland"></div>
+
+  <div class="personality-divider"><span>Your match</span></div>
+  <div id="punch" class="punch"></div>
+  <div class="rel fit-rel"><div class="lab">Why you got this</div><div id="relationship"></div></div>
+  <div class="flags identity-notes">
+    <div class="flag edge"><div class="lab">Your edge</div><span id="green"></span></div>
+    <div class="flag watch"><div class="lab">Watch-out</div><span id="red"></span></div>
+  </div>
+  <button class="edit-answer-btn" type="button" onclick="editLastAnswerFromResult()">← Change my last answer</button>
+
+  <div id="constellation" class="hidden"></div>
+  <div class="rule"></div>
+  <div class="similar-box concise-similar">
+    <div class="lab">Your nearby identities</div>
+    <div id="similarTypes" class="similar-types"></div>
+  </div>
+
+  <div class="rule"></div>
+  <div class="insta-share-card">
+    <div class="insta-share-top"><div class="insta-mark">✦</div><div><div class="kick">Share it</div><h3>Your identity card</h3></div></div>
+    <p>Post your identity card and tag <b>@it.starts.from.me</b>.</p>
+    <div class="insta-actions">
+      <button class="insta-primary" type="button" onclick="shareWetlandResult()">Share identity card</button>
+      <button class="insta-secondary" type="button" onclick="openInstagramHome()">Open Instagram</button>
     </div>
+    <button class="caption-copy" type="button" onclick="copyInstagramCaption()">Copy caption + tag</button>
+    <div id="instaShareStatus" class="fine insta-share-status"></div>
   </div>
-  <p>Your share card includes your identity, three real ecological traits and one wetland fact. Share it from your phone, then tag <b>@it.starts.from.me</b>.</p>
-  <div class="insta-actions">
-    <button class="insta-primary" type="button" onclick="shareWetlandResult()">Share identity card</button>
-    <button class="insta-secondary" type="button" onclick="openInstagramHome()">Open my Instagram</button>
+
+  <div class="rule"></div>
+  <div class="result-fork">
+    <h2 style="margin:0 0 8px">Take your identity social.</h2>
+    <button class="social-cta" type="button" onclick="enterAgency()">👀 Enter ECOTONE Social</button>
+    <div id="shareStatus" class="fine" style="text-align:center;min-height:18px;margin-top:8px"></div>
   </div>
-  <button class="caption-copy" type="button" onclick="copyInstagramCaption()">Copy caption + tag</button>
-  <div id="instaShareStatus" class="fine insta-share-status"></div>
-</div>
-<div class="rule"></div>
-<div class="result-fork">
-  <div class="kick">Your result can stop here.</div>
-  <h2 style="margin:0 0 8px">Or take it social.</h2>
-  <p class="mut" style="margin:0 0 14px">ECOTONE works as a wetland identity experience on its own. If you want, you can also meet people through your wetland personality.</p>
-  <button class="social-cta" type="button" onclick="enterAgency()">👀 Meet people through ECOTONE</button>
-  <div id="shareStatus" class="fine" style="text-align:center;min-height:18px;margin-top:8px"></div>
-</div>
-<button onclick="showRatings()" style="text-align:center;margin-top:8px">Rate this result</button></div></section>
+  <button onclick="showRatings()" style="text-align:center;margin-top:8px">Rate this result</button>
+</div></section>
 
 
 <section id="profileSetup" class="hidden">
@@ -596,7 +1279,17 @@ body:before,body:after{display:none!important}
 <div class="ecotone-footer"><b>ECOTONE</b> is a playful wetland-learning experience. The identity match is interpretive, not a psychological assessment. ECOTONE Social is optional and 18+. <button type="button" onclick="openTerms()">Terms, privacy & safety</button></div></main>
 <script>const DATA={"d":["Social","Bonding","Adaptability","Novelty","Expression","Care","Boundaries","Observation","Groundedness","Intensity"],"i":[["Estuary","Wetland / landscape",[70.0,75.2,72.9,77.2,64.6,72.6,48.8,68.8,66.0,55.6]],["Floodplain","Wetland / landscape",[72.2,72.2,64.7,67.2,68.6,72.3,62.1,67.1,73.3,48.4]],["Mangrove Forest","Wetland / landscape",[54.5,72.3,62.7,60.4,50.2,75.1,73.9,67.0,76.3,57.2]],["Salt Marsh","Wetland / landscape",[64.5,74.6,67.2,67.0,37.6,71.4,66.1,76.2,73.1,55.3]],["Freshwater Marsh","Wetland / landscape",[39.7,63.8,53.2,61.4,52.2,62.0,79.3,78.2,76.8,50.9]],["Peatland","Wetland / landscape",[42.3,69.6,60.6,68.7,58.8,68.8,77.3,68.7,74.9,45.6]],["Seasonal Pond","Wetland / landscape",[51.9,73.9,71.1,77.6,55.7,70.5,61.3,73.8,63.9,60.9]],["Urban Wetland","Wetland / landscape",[63.6,73.5,58.6,45.8,40.5,72.3,69.0,75.8,79.0,51.9]],["High-altitude Wetland","Wetland / landscape",[39.7,71.9,46.2,47.8,59.2,72.9,75.6,72.2,78.2,59.7]],["Mudflat","Wetland / landscape",[69.9,72.9,63.8,69.7,70.9,74.2,52.0,66.5,71.9,61.5]],["Lagoon","Wetland / landscape",[61.2,65.9,70.0,77.9,63.4,61.3,65.7,76.0,67.6,61.9]],["Oxbow Lake","Wetland / landscape",[50.5,74.6,51.4,55.4,48.1,75.2,61.8,73.1,80.4,59.8]],["River Delta","Wetland / landscape",[48.9,58.6,63.9,64.3,48.9,66.9,74.7,76.0,78.9,47.2]],["Swamp","Wetland / landscape",[37.9,71.7,70.6,75.9,65.6,71.0,70.0,70.0,67.7,61.1]],["Vernal Pool","Wetland / landscape",[63.5,71.3,73.1,77.8,43.0,65.7,67.1,76.3,61.4,56.9]],["Flooded Grassland","Wetland / landscape",[41.4,70.4,52.8,48.1,40.7,71.7,74.9,74.7,81.4,48.0]],["Riparian Zone","Wetland / landscape",[64.2,72.0,50.5,60.0,66.0,72.0,69.2,66.0,78.2,47.8]],["Spring","Wetland / landscape",[55.3,74.3,67.0,70.4,61.7,75.6,52.0,67.1,75.3,58.6]],["Backwater","Wetland / landscape",[68.1,68.6,60.8,74.2,70.4,61.5,72.6,70.7,65.1,61.7]],["Wet Meadow","Wetland / landscape",[70.1,73.5,61.3,50.1,66.1,73.7,70.0,70.3,75.1,57.1]],["Lotus","Plant / producer",[35.6,62.9,63.6,64.4,62.4,68.9,77.3,74.3,75.7,59.6]],["Water Lily","Plant / producer",[59.6,75.5,65.3,63.0,66.3,71.3,62.6,71.7,73.3,60.7]],["Cattail / Typha","Plant / producer",[65.7,66.2,68.8,69.7,46.4,66.3,70.4,74.4,73.6,45.8]],["Reed","Plant / producer",[37.9,68.9,64.5,64.3,39.9,71.3,75.8,73.4,76.2,46.2]],["Mangrove Tree","Plant / producer",[36.2,72.7,63.3,70.4,48.2,71.7,73.9,73.8,67.9,62.0]],["Seagrass","Plant / producer",[71.6,77.0,58.6,69.6,54.8,70.7,56.5,74.0,69.1,61.7]],["Duckweed","Plant / producer",[57.2,67.0,68.7,70.5,56.8,69.8,74.1,75.6,66.8,61.4]],["Algae","Plant / producer",[53.7,74.8,51.7,59.6,66.3,76.1,67.4,65.0,74.9,61.1]],["Phytoplankton","Plant / producer",[54.4,64.0,65.2,72.3,43.2,68.5,69.4,76.9,73.9,61.0]],["Wild Rice","Plant / producer",[64.8,72.2,50.7,63.1,64.9,68.9,57.3,72.7,77.6,62.4]],["Saltmarsh Grass","Plant / producer",[67.3,66.4,70.9,75.2,59.8,63.7,71.9,69.4,68.1,48.1]],["Water Chestnut","Plant / producer",[50.3,67.1,71.7,73.6,35.7,70.4,71.1,73.5,72.9,46.7]],["Bladderwort","Plant / producer",[45.6,70.1,49.9,64.5,40.8,68.3,73.2,77.4,74.6,62.6]],["Sundew","Plant / producer",[70.9,77.0,68.8,68.7,51.5,73.3,65.1,68.9,68.4,47.6]],["Sedge","Plant / producer",[45.6,70.8,64.3,72.9,65.1,67.4,77.1,72.0,59.5,63.0]],["Papyrus","Plant / producer",[66.9,74.6,66.4,66.1,57.1,77.8,63.9,65.7,74.2,58.2]],["Floating Fern","Plant / producer",[69.3,70.0,49.5,63.7,54.2,64.1,70.5,75.4,74.3,59.9]],["Pondweed","Plant / producer",[67.3,71.6,47.8,65.0,70.5,67.7,71.7,70.6,71.1,63.4]],["Mangrove Seedling","Plant / producer",[53.3,68.3,71.9,77.3,69.9,72.5,63.5,68.9,68.1,59.9]],["Diatom","Plant / producer",[40.6,72.0,71.1,75.0,44.1,72.5,64.1,73.8,73.3,52.2]],["Sarus Crane","Animal",[65.4,75.1,43.1,46.3,64.2,72.6,67.9,70.4,78.4,62.2]],["Greater Flamingo","Animal",[54.5,73.8,65.5,68.4,51.6,69.2,72.6,72.5,69.7,47.7]],["Painted Stork","Animal",[56.8,69.5,72.1,79.3,63.6,66.2,73.5,70.1,54.4,59.7]],["Purple Swamphen","Animal",[57.1,77.0,58.7,69.3,46.3,73.5,60.6,74.1,71.6,62.6]],["Pheasant-tailed Jacana","Animal",[59.1,67.5,51.9,61.0,46.6,60.4,75.7,77.6,77.0,51.0]],["Kingfisher","Animal",[73.4,76.9,54.0,64.3,69.1,74.2,63.1,66.2,66.8,63.7]],["Heron","Animal",[50.7,67.6,53.8,69.9,56.2,60.0,75.5,75.8,69.3,62.8]],["Egret","Animal",[61.6,66.1,65.4,63.2,51.7,69.6,62.6,77.6,79.6,54.3]],["Spot-billed Pelican","Animal",[58.3,69.6,46.1,46.4,55.1,70.5,73.0,73.7,82.1,47.5]],["Indian Skimmer","Animal",[60.8,74.4,69.6,76.0,64.7,71.2,63.3,66.5,70.3,46.9]],["Bar-headed Goose","Animal",[44.7,68.9,74.6,80.7,50.3,62.6,73.3,73.0,60.5,55.8]],["Common Coot","Animal",[67.8,74.2,64.2,59.3,49.7,71.0,70.9,76.2,72.2,58.7]],["Smooth-coated Otter","Animal",[60.8,72.8,62.6,65.6,65.6,70.6,75.9,67.5,69.4,49.9]],["Fishing Cat","Animal",[63.3,72.9,66.7,68.0,71.1,74.0,70.6,65.0,67.7,61.5]],["Gharial","Animal",[35.5,65.9,56.7,56.7,38.4,69.0,76.8,78.9,76.9,59.8]],["Freshwater Turtle","Animal",[54.2,73.9,64.0,58.5,43.6,74.8,62.6,72.4,79.3,49.3]],["Frog","Animal",[47.0,70.7,49.4,59.5,62.6,70.3,75.6,70.2,78.1,47.9]],["Mudskipper","Animal",[48.9,56.6,72.0,78.1,63.2,65.6,73.8,74.9,67.3,61.8]],["Mahseer","Animal",[57.1,59.1,73.9,78.7,50.0,62.6,69.2,76.6,70.6,53.5]],["Swamp Deer","Animal",[68.2,72.0,62.5,54.8,55.3,71.7,70.9,70.6,78.9,45.5]],["Mangrove Crab","Animal",[46.9,67.1,62.3,60.0,48.7,66.3,76.7,77.8,72.9,58.5]],["Dragonfly","Animal",[66.7,78.0,69.4,76.6,69.4,71.9,63.4,67.5,56.4,61.6]],["Water Beetle","Animal",[60.9,74.1,71.5,75.0,46.2,72.3,51.3,75.2,70.2,54.8]],["Freshwater Mussel","Animal",[51.6,70.8,60.5,44.4,51.4,72.0,74.2,74.3,77.1,55.5]],["Snail","Animal",[49.5,62.3,55.9,69.0,68.1,69.1,75.1,71.2,74.7,61.5]],["Water Filter","Ecological role",[44.5,65.9,64.2,68.2,54.2,70.6,65.5,76.9,76.3,62.5]],["Carbon Keeper","Ecological role",[56.4,71.0,42.4,48.3,46.1,69.6,72.9,75.6,79.4,61.1]],["Nursery","Ecological role",[50.0,70.6,66.3,67.9,61.6,73.0,64.1,71.6,77.8,49.8]],["Flood Buffer","Ecological role",[37.2,63.5,68.0,73.0,36.2,67.1,74.3,79.5,71.5,58.1]],["Pollinator","Ecological role",[73.1,73.9,67.3,66.9,66.0,69.2,67.5,73.9,67.9,61.4]],["Decomposer","Ecological role",[51.8,73.5,65.8,70.4,41.5,70.1,73.2,75.6,61.6,59.8]],["Seed Disperser","Ecological role",[37.5,72.4,62.7,58.3,52.7,76.3,71.1,70.1,76.7,55.3]],["Ecological Engineer","Ecological role",[52.2,68.6,48.0,61.4,55.7,70.6,70.6,73.5,77.9,63.4]],["Nutrient Recycler","Ecological role",[70.0,75.4,65.5,62.9,56.0,74.5,51.0,72.6,76.1,50.5]],["Habitat Builder","Ecological role",[63.4,59.0,68.3,71.7,66.7,70.0,68.5,71.0,74.7,55.5]],["Chilika Lagoon","Wetland site",[69.8,65.2,72.4,79.1,72.9,68.6,66.6,66.9,64.4,59.1]],["Loktak Lake","Wetland site",[49.2,76.9,65.7,68.1,59.3,76.9,68.8,68.3,69.4,60.5]],["Keoladeo Wetland","Wetland site",[59.7,76.5,52.2,64.2,54.1,71.8,71.5,73.4,66.4,64.8]],["Sundarban Wetland","Wetland site",[63.7,67.5,59.1,68.3,59.3,72.9,67.3,72.0,76.0,63.8]],["Sambhar Salt Lake","Wetland site",[58.4,65.5,63.4,64.2,61.9,57.4,75.2,77.0,74.0,57.6]],["Asian Openbill","Animal",[62.3,72.0,51.9,62.3,38.1,70.8,68.3,76.5,75.8,61.7]],["Black-necked Crane","Animal",[55.2,67.5,43.9,56.4,64.6,61.1,78.0,75.3,76.0,58.0]],["Gangetic River Dolphin","Animal",[46.3,67.1,71.3,73.4,54.3,70.9,73.6,67.3,70.5,53.2]],["Mugger Crocodile","Animal",[46.9,67.1,65.5,70.5,38.9,56.3,74.6,79.7,73.0,50.8]],["Black-tailed Godwit","Animal",[63.1,63.7,56.4,69.3,63.2,62.7,72.5,74.3,76.5,45.4]],["Monsoon","Wildcard",[49.6,71.9,62.9,59.7,69.0,70.9,73.8,72.0,71.2,62.0]],["Low Tide","Wildcard",[36.1,62.7,66.4,72.7,51.9,60.7,78.2,79.0,69.3,57.0]],["High Tide","Wildcard",[46.0,72.2,64.9,63.3,36.5,73.1,68.5,76.6,76.3,58.2]],["River Current","Wildcard",[64.7,69.6,62.9,72.5,49.4,59.1,71.3,77.6,66.7,60.7]],["Wetland Mist","Wildcard",[67.5,75.2,63.6,71.3,55.7,73.0,70.0,69.9,61.5,61.6]],["Mud","Wildcard",[39.6,71.4,50.6,65.2,61.9,70.8,75.5,72.4,71.6,63.9]],["Rainwater","Wildcard",[65.2,76.6,59.0,49.2,61.1,75.8,53.5,70.3,80.3,57.0]],["Sediment","Wildcard",[55.7,65.7,61.7,54.8,61.3,70.5,73.0,74.4,79.7,54.1]],["Fallen Log","Wildcard",[55.9,73.2,57.0,71.3,68.0,71.1,66.9,72.3,66.0,66.5]],["Mangrove Root","Wildcard",[66.7,67.6,73.0,77.7,56.1,70.3,61.2,73.5,68.1,59.6]],["Floating Leaf","Wildcard",[53.1,68.7,61.4,59.0,34.6,69.0,73.2,76.7,79.1,45.6]],["Bird Flock","Wildcard",[60.7,73.0,51.9,63.8,48.9,72.2,69.1,71.9,78.1,46.7]],["Fish School","Wildcard",[58.8,73.5,72.1,75.9,51.2,73.3,66.9,66.2,67.8,53.2]],["Frog Chorus","Wildcard",[51.2,67.3,69.6,75.6,68.0,61.3,75.7,69.6,68.1,53.8]],["Water Ripple","Wildcard",[70.8,76.4,48.6,54.8,50.9,75.5,62.6,71.1,76.5,61.9]]],"q":[[1,"surprise",1,"Your friend texts: “Pack a bag. I’ll explain in 20 mins.” You…",[["A","Already finding my shoes.",[0,0,2,2,0,0,0,0,0,0]],["B","Need place + timing first.",[0,0,0,0,0,0,1,1,1,0]],["C","Who else is coming?",[1,1,0,0,0,0,0,0,0,0]],["D","Nope. I had a plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[2,"surprise",1,"A rainstorm destroys the plan. Your move?",[["A","Invent a new plan on the spot.",[0,0,2,2,0,0,0,0,0,0]],["B","Check what still works.",[0,0,0,0,0,0,1,1,1,0]],["C","See what everyone wants.",[1,1,0,0,0,0,0,0,0,0]],["D","Go home. Fate has spoken.",[0,0,0,-1,0,0,0,0,2,0]]]],[3,"surprise",1,"Someone says, “Trust me, it’ll be fun.” You…",[["A","That is enough information.",[0,0,2,2,0,0,0,0,0,0]],["B","I need at least three details.",[0,0,0,0,0,0,1,1,1,0]],["C","Depends entirely on the person.",[1,1,0,0,0,0,0,0,0,0]],["D","Suspicious. Keeping my original plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[4,"surprise",1,"You get a free ticket for tonight. You…",[["A","Say yes before overthinking.",[0,0,2,2,0,0,0,0,0,0]],["B","Check logistics first.",[0,0,0,0,0,0,1,1,1,0]],["C","Ask who’s going.",[1,1,0,0,0,0,0,0,0,0]],["D","Probably pass. Too sudden.",[0,0,0,-1,0,0,0,0,2,0]]]],[5,"room",1,"You walk into a party where you know nobody. First move?",[["A","Talk to whoever is nearest.",[2,0,0,0,1,0,0,0,0,0]],["B","Find one promising human.",[-1,2,0,0,0,0,0,0,0,0]],["C","Observe before entering orbit.",[0,0,0,0,-1,0,0,2,0,0]],["D","Help with something.",[0,0,0,0,0,1,0,0,2,0]]]],[6,"room",1,"New workshop, zero familiar faces. You…",[["A","Start a conversation.",[2,0,0,0,1,0,0,0,0,0]],["B","Pick one person to know.",[-1,2,0,0,0,0,0,0,0,0]],["C","Read the room first.",[0,0,0,0,-1,0,0,2,0,0]],["D","Become useful somehow.",[0,0,0,0,0,1,0,0,2,0]]]],[7,"room",1,"At a wedding full of strangers, you…",[["A","Collect conversations.",[2,0,0,0,1,0,0,0,0,0]],["B","Find one safe person.",[-1,2,0,0,0,0,0,0,0,0]],["C","Watch the social map.",[0,0,0,0,-1,0,0,2,0,0]],["D","Help fix something.",[0,0,0,0,0,1,0,0,2,0]]]],[8,"room",1,"A new group chat drops you in. You…",[["A","Say hi immediately.",[2,0,0,0,1,0,0,0,0,0]],["B","DM one person.",[-1,2,0,0,0,0,0,0,0,0]],["C","Lurk and decode the vibe.",[0,0,0,0,-1,0,0,2,0,0]],["D","Answer the practical question.",[0,0,0,0,0,1,0,0,2,0]]]],[9,"silence",0,"A close friend says “all good :)” and you know it isn’t. You…",[["A","Ask directly.",[0,0,0,0,1,2,0,0,0,0]],["B","Give space but stay alert.",[0,0,0,0,0,0,1,2,0,0]],["C","Check with someone close to them.",[1,1,0,0,0,1,0,0,0,0]],["D","Wait for them to open up.",[0,0,0,0,0,0,2,0,0,-1]]]],[10,"silence",0,"Someone you love goes weirdly quiet. You…",[["A","Call it out gently.",[0,0,0,0,1,2,0,0,0,0]],["B","Stay nearby without pushing.",[0,0,0,0,0,0,1,2,0,0]],["C","Ask a mutual if they’re okay.",[1,1,0,0,0,1,0,0,0,0]],["D","Let them come to me.",[0,0,0,0,0,0,2,0,0,-1]]]],[11,"silence",0,"A friend disappears from the group chat. You…",[["A","Message them now.",[0,0,0,0,1,2,0,0,0,0]],["B","Give them breathing room.",[0,0,0,0,0,0,1,2,0,0]],["C","Quietly check through someone else.",[1,1,0,0,0,1,0,0,0,0]],["D","Wait. They know I’m here.",[0,0,0,0,0,0,2,0,0,-1]]]],[12,"silence",0,"Their “I’m fine” sounds very not fine. You…",[["A","Ask what’s really going on.",[0,0,0,0,1,2,0,0,0,0]],["B","Don’t push, but notice.",[0,0,0,0,0,0,1,2,0,0]],["C","Check with someone they trust.",[1,1,0,0,0,1,0,0,0,0]],["D","Let them choose the moment.",[0,0,0,0,0,0,2,0,0,-1]]]],[13,"cancel",0,"The plan you were excited about gets cancelled. You…",[["A","Build a Plan B immediately.",[0,0,2,0,0,0,0,0,0,0]],["B","Need a minute, then reset.",[0,0,1,0,0,0,0,0,0,1]],["C","My mood fully crashes.",[0,0,-1,0,0,0,0,0,0,2]],["D","Secretly enjoy the free time.",[-1,0,0,0,0,0,1,0,1,0]]]],[14,"cancel",0,"Your entire day suddenly changes. You…",[["A","Rebuild it on the fly.",[0,0,2,0,0,0,0,0,0,0]],["B","Pause, then adapt.",[0,0,1,0,0,0,0,0,0,1]],["C","This ruins the vibe.",[0,0,-1,0,0,0,0,0,0,2]],["D","Excellent. Unexpected freedom.",[-1,0,0,0,0,0,1,0,1,0]]]],[15,"cancel",0,"The train is cancelled and everyone is annoyed. You…",[["A","Find another route.",[0,0,2,0,0,0,0,0,0,0]],["B","Breathe, then figure it out.",[0,0,1,0,0,0,0,0,0,1]],["C","Become personally offended by logistics.",[0,0,-1,0,0,0,0,0,0,2]],["D","Accept the universe’s day off.",[-1,0,0,0,0,0,1,0,1,0]]]],[16,"cancel",0,"Something you planned for weeks falls through. You…",[["A","Replace it with something else.",[0,0,2,0,0,0,0,0,0,0]],["B","Take time, then move on.",[0,0,1,0,0,0,0,0,0,1]],["C","Need to mourn the plan.",[0,0,-1,0,0,0,0,0,0,2]],["D","Honestly, relief.",[-1,0,0,0,0,0,1,0,1,0]]]],[17,"compliment",1,"Which compliment would stay in your head all week?",[["A","“You make people feel safe.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You notice what others miss.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You make everything more fun.”",[2,0,0,0,1,0,0,0,0,0]],["D","“I never know what you’ll do next.”",[0,0,1,2,0,0,0,0,0,0]]]],[18,"compliment",1,"Pick the compliment you’d secretly screenshot.",[["A","“I feel calmer around you.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You see things nobody else sees.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You make boring things fun.”",[2,0,0,0,1,0,0,0,0,0]],["D","“You are impossible to predict.”",[0,0,1,2,0,0,0,0,0,0]]]],[19,"compliment",1,"Which line feels most like a win?",[["A","“People trust you.”",[0,0,0,0,0,2,0,0,1,0]],["B","“You’re incredibly observant.”",[0,0,0,0,0,0,0,2,0,0]],["C","“You bring the energy.”",[2,0,0,0,1,0,0,0,0,0]],["D","“You always surprise me.”",[0,0,1,2,0,0,0,0,0,0]]]],[20,"compliment",1,"What do you most want people to understand about you?",[["A","I’m safe to be around.",[0,0,0,0,0,2,0,0,1,0]],["B","I notice more than I say.",[0,0,0,0,0,0,0,2,0,0]],["C","I make life lighter.",[2,0,0,0,1,0,0,0,0,0]],["D","I’m not easy to box in.",[0,0,1,2,0,0,0,0,0,0]]]],[21,"boundary",1,"Someone ignores a boundary you already explained. You…",[["A","Say it clearly again.",[0,0,0,0,1,0,2,0,0,0]],["B","Check if they actually understood.",[0,0,0,0,0,1,0,1,0,0]],["C","Quietly reduce access.",[0,0,0,0,-2,0,1,0,0,0]],["D","Give one final chance.",[0,1,0,0,0,1,-1,0,0,0]]]],[22,"boundary",1,"A person keeps pushing after you said no. You…",[["A","Get very direct.",[0,0,0,0,1,0,2,0,0,0]],["B","Clarify the line.",[0,0,0,0,0,1,0,1,0,0]],["C","Step away without a speech.",[0,0,0,0,-2,0,1,0,0,0]],["D","Try once more to make it work.",[0,1,0,0,0,1,-1,0,0,0]]]],[23,"boundary",1,"Someone repeatedly makes you uncomfortable. You…",[["A","Name it plainly.",[0,0,0,0,1,0,2,0,0,0]],["B","Make sure the message landed.",[0,0,0,0,0,1,0,1,0,0]],["C","Pull back quietly.",[0,0,0,0,-2,0,1,0,0,0]],["D","Wait to see if it happens again.",[0,1,0,0,0,1,-1,0,0,0]]]],[24,"boundary",1,"A line gets crossed twice. Your instinct?",[["A","Address it now.",[0,0,0,0,1,0,2,0,0,0]],["B","Explain why it matters.",[0,0,0,0,0,1,0,1,0,0]],["C","Create distance.",[0,0,0,0,-2,0,1,0,0,0]],["D","Offer one more chance.",[0,1,0,0,0,1,-1,0,0,0]]]],[25,"chaos",0,"Everything is going wrong at once. Your operating system?",[["A","Improvise.",[0,0,2,2,0,0,0,0,0,0]],["B","Ride the energy.",[2,0,1,0,0,0,0,0,0,0]],["C","Protect one calm corner.",[0,0,0,0,0,0,1,1,0,1]],["D","Restore order.",[0,0,0,-1,0,0,0,0,2,0]]]],[26,"chaos",0,"Group project enters chaos mode. You…",[["A","Adapt as things change.",[0,0,2,2,0,0,0,0,0,0]],["B","Become weirdly energised.",[2,0,1,0,0,0,0,0,0,0]],["C","Hold one thing steady.",[0,0,0,0,0,0,1,1,0,1]],["D","Make a proper system.",[0,0,0,-1,0,0,0,0,2,0]]]],[27,"chaos",0,"The room is loud, late and disorganised. You…",[["A","Work with the mess.",[0,0,2,2,0,0,0,0,0,0]],["B","Use the momentum.",[2,0,1,0,0,0,0,0,0,0]],["C","Find a calm base.",[0,0,0,0,0,0,1,1,0,1]],["D","Start fixing the structure.",[0,0,0,-1,0,0,0,0,2,0]]]],[28,"chaos",0,"Plans, people, timing: all chaotic. You…",[["A","Make it work somehow.",[0,0,2,2,0,0,0,0,0,0]],["B","Thrive a little.",[2,0,1,0,0,0,0,0,0,0]],["C","Keep one anchor.",[0,0,0,0,0,0,1,1,0,1]],["D","Bring back a plan.",[0,0,0,-1,0,0,0,0,2,0]]]],[29,"role",0,"Your group is falling apart five minutes before something important. You…",[["A","Check who needs help.",[0,1,0,0,0,2,0,0,0,0]],["B","Figure out what’s happening.",[0,0,0,0,0,0,0,2,1,0]],["C","Suggest a wild new solution.",[0,0,0,2,1,0,0,0,0,0]],["D","Quietly fix the broken bit.",[0,0,0,0,-1,1,0,0,2,0]]]],[30,"role",0,"In a team, what role finds you without asking?",[["A","The support person.",[0,1,0,0,0,2,0,0,0,0]],["B","The one tracking everything.",[0,0,0,0,0,0,0,2,1,0]],["C","The idea machine.",[0,0,0,2,1,0,0,0,0,0]],["D","The quiet fixer.",[0,0,0,0,-1,1,0,0,2,0]]]],[31,"role",0,"Everyone is confused. You instinctively…",[["A","Look after people.",[0,1,0,0,0,2,0,0,0,0]],["B","Map the situation.",[0,0,0,0,0,0,0,2,1,0]],["C","Throw out a new angle.",[0,0,0,2,1,0,0,0,0,0]],["D","Solve the practical problem.",[0,0,0,0,-1,1,0,0,2,0]]]],[32,"role",0,"Your friends would cast you as…",[["A","Emotional first aid.",[0,1,0,0,0,2,0,0,0,0]],["B","Human radar.",[0,0,0,0,0,0,0,2,1,0]],["C","Unexpected plot twist.",[0,0,0,2,1,0,0,0,0,0]],["D","Behind-the-scenes repair crew.",[0,0,0,0,-1,1,0,0,2,0]]]],[33,"alone",0,"You suddenly get a completely free evening. Best version?",[["A","Phone on silent. Me time.",[-2,0,0,0,0,0,2,0,0,0]],["B","See one person I actually like.",[2,1,0,0,0,0,0,0,0,0]],["C","Go somewhere I haven’t been.",[0,0,1,2,0,0,0,0,0,0]],["D","Finish or make something.",[0,0,0,0,0,0,0,0,2,0]]]],[34,"alone",0,"Nobody needs anything from you today. You…",[["A","Disappear happily.",[-2,0,0,0,0,0,2,0,0,0]],["B","Find good company.",[2,1,0,0,0,0,0,0,0,0]],["C","Chase something new.",[0,0,1,2,0,0,0,0,0,0]],["D","Build, organise or finish.",[0,0,0,0,0,0,0,0,2,0]]]],[35,"alone",0,"A blank Sunday appears. You choose…",[["A","Solitude.",[-2,0,0,0,0,0,2,0,0,0]],["B","One favourite human.",[2,1,0,0,0,0,0,0,0,0]],["C","A small adventure.",[0,0,1,2,0,0,0,0,0,0]],["D","A satisfying task.",[0,0,0,0,0,0,0,0,2,0]]]],[36,"alone",0,"Your calendar unexpectedly clears. You…",[["A","Protect the empty space.",[-2,0,0,0,0,0,2,0,0,0]],["B","Call someone I miss.",[2,1,0,0,0,0,0,0,0,0]],["C","Explore somewhere.",[0,0,1,2,0,0,0,0,0,0]],["D","Use it to make progress.",[0,0,0,0,0,0,0,0,2,0]]]],[37,"care",0,"Someone you love has had a terrible day. You…",[["A","Fix something practical.",[0,0,0,0,0,2,0,0,1,0]],["B","Tell them what they mean to me.",[0,1,0,0,2,0,0,0,0,0]],["C","Give them room.",[0,0,0,0,0,1,2,0,0,0]],["D","Stay beside them.",[0,2,0,1,0,0,0,0,0,0]]]],[38,"care",0,"Your friend is struggling. Your care looks like…",[["A","Food, logistics, actual help.",[0,0,0,0,0,2,0,0,1,0]],["B","Words and reassurance.",[0,1,0,0,2,0,0,0,0,0]],["C","Respecting their space.",[0,0,0,0,0,1,2,0,0,0]],["D","Just being there.",[0,2,0,1,0,0,0,0,0,0]]]],[39,"care",0,"A close person needs support. You naturally…",[["A","Do something useful.",[0,0,0,0,0,2,0,0,1,0]],["B","Say how I feel.",[0,1,0,0,2,0,0,0,0,0]],["C","Don’t crowd them.",[0,0,0,0,0,1,2,0,0,0]],["D","Keep them company.",[0,2,0,1,0,0,0,0,0,0]]]],[40,"care",0,"When you really care, you tend to…",[["A","Make life easier.",[0,0,0,0,0,2,0,0,1,0]],["B","Say it clearly.",[0,1,0,0,2,0,0,0,0,0]],["C","Give breathing room.",[0,0,0,0,0,1,2,0,0,0]],["D","Show up and stay.",[0,2,0,1,0,0,0,0,0,0]]]],[41,"notice",1,"You spot something nobody else noticed. First instinct?",[["A","Point it out.",[1,0,0,0,1,0,0,1,0,0]],["B","Keep watching.",[0,0,0,0,0,0,0,2,0,0]],["C","Investigate.",[0,0,0,1,0,0,0,2,0,0]],["D","Send it to someone.",[0,1,0,0,1,0,0,1,0,0]]]],[42,"notice",1,"A tiny detail suddenly feels important. You…",[["A","Say something.",[1,0,0,0,1,0,0,1,0,0]],["B","Observe a bit longer.",[0,0,0,0,0,0,0,2,0,0]],["C","Follow the clue.",[0,0,0,1,0,0,0,2,0,0]],["D","Share the discovery.",[0,1,0,0,1,0,0,1,0,0]]]],[43,"notice",1,"Everyone misses a pattern change except you. You…",[["A","Mention it.",[1,0,0,0,1,0,0,1,0,0]],["B","Keep collecting evidence.",[0,0,0,0,0,0,0,2,0,0]],["C","Dig into why.",[0,0,0,1,0,0,0,2,0,0]],["D","Tell someone who’ll get it.",[0,1,0,0,1,0,0,1,0,0]]]],[44,"notice",1,"Something in the room feels slightly off. You…",[["A","Name it.",[1,0,0,0,1,0,0,1,0,0]],["B","Watch quietly.",[0,0,0,0,0,0,0,2,0,0]],["C","Figure it out.",[0,0,0,1,0,0,0,2,0,0]],["D","Text someone about it.",[0,1,0,0,1,0,0,1,0,0]]]],[45,"relationship",1,"Your ideal close relationship has what kind of rhythm?",[["A","Separate lives, chosen closeness.",[0,1,0,0,0,0,2,0,0,0]],["B","Very much a team.",[0,2,0,0,0,1,0,0,0,0]],["C","Always discovering together.",[0,0,1,2,0,0,0,0,0,0]],["D","Low-maintenance but deeply understood.",[0,1,0,0,-1,0,0,0,1,0]]]],[46,"relationship",1,"Best kind of closeness?",[["A","Space + intention.",[0,1,0,0,0,0,2,0,0,0]],["B","Us against the problem.",[0,2,0,0,0,1,0,0,0,0]],["C","Keep surprising each other.",[0,0,1,2,0,0,0,0,0,0]],["D","No constant contact required.",[0,1,0,0,-1,0,0,0,1,0]]]],[47,"relationship",1,"A strong bond should feel like…",[["A","Independent but connected.",[0,1,0,0,0,0,2,0,0,0]],["B","A real partnership.",[0,2,0,0,0,1,0,0,0,0]],["C","Still full of discovery.",[0,0,1,2,0,0,0,0,0,0]],["D","Quietly secure.",[0,1,0,0,-1,0,0,0,1,0]]]],[48,"relationship",1,"In close relationships, what matters most?",[["A","Freedom with commitment.",[0,1,0,0,0,0,2,0,0,0]],["B","Teamwork.",[0,2,0,0,0,1,0,0,0,0]],["C","Growth and novelty.",[0,0,1,2,0,0,0,0,0,0]],["D","Easy, deep understanding.",[0,1,0,0,-1,0,0,0,1,0]]]],[49,"awkward",0,"The room goes painfully awkward. You…",[["A","Make a joke.",[1,0,0,0,2,0,0,0,0,0]],["B","Check on someone privately.",[0,1,0,0,0,2,0,0,0,0]],["C","Wait and read the room.",[0,0,0,0,-1,0,0,2,0,0]],["D","Say, “Well, this is awkward.”",[0,0,0,0,2,0,1,0,0,0]]]],[50,"awkward",0,"A group conversation suddenly dies. Your move?",[["A","Save it with humour.",[1,0,0,0,2,0,0,0,0,0]],["B","Check who got uncomfortable.",[0,1,0,0,0,2,0,0,0,0]],["C","Let the silence tell me something.",[0,0,0,0,-1,0,0,2,0,0]],["D","Name what just happened.",[0,0,0,0,2,0,1,0,0,0]]]],[51,"awkward",0,"Everyone can feel the tension. You…",[["A","Break it with a laugh.",[1,0,0,0,2,0,0,0,0,0]],["B","Talk to someone one-on-one.",[0,1,0,0,0,2,0,0,0,0]],["C","Observe before acting.",[0,0,0,0,-1,0,0,2,0,0]],["D","Address it directly.",[0,0,0,0,2,0,1,0,0,0]]]],[52,"awkward",0,"An uncomfortable silence lands. You…",[["A","Turn it into a joke.",[1,0,0,0,2,0,0,0,0,0]],["B","Check in quietly.",[0,1,0,0,0,2,0,0,0,0]],["C","Study the vibe.",[0,0,0,0,-1,0,0,2,0,0]],["D","Acknowledge it out loud.",[0,0,0,0,2,0,1,0,0,0]]]],[53,"newplace",0,"You arrive in a city you’ve never seen before. First instinct?",[["A","Create a little routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Walk until something looks interesting.",[0,0,1,2,0,0,0,0,0,0]],["C","Find people.",[1,1,0,0,0,0,0,0,0,0]],["D","Understand how the place works.",[0,0,1,1,0,0,0,1,0,0]]]],[54,"newplace",0,"First week somewhere completely new. You…",[["A","Build familiar anchors.",[0,0,0,0,0,0,0,0,2,0]],["B","Explore without a plan.",[0,0,1,2,0,0,0,0,0,0]],["C","Look for my people.",[1,1,0,0,0,0,0,0,0,0]],["D","Learn the system.",[0,0,1,1,0,0,0,1,0,0]]]],[55,"newplace",0,"New environment, zero instructions. You…",[["A","Make a routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Wander and discover.",[0,0,1,2,0,0,0,0,0,0]],["C","Connect with people.",[1,1,0,0,0,0,0,0,0,0]],["D","Figure out the rules.",[0,0,1,1,0,0,0,1,0,0]]]],[56,"newplace",0,"You move somewhere unfamiliar. What settles you fastest?",[["A","A routine.",[0,0,0,0,0,0,0,0,2,0]],["B","Exploring.",[0,0,1,2,0,0,0,0,0,0]],["C","Community.",[1,1,0,0,0,0,0,0,0,0]],["D","Knowing how things work.",[0,0,1,1,0,0,0,1,0,0]]]],[57,"project",0,"You make something people will actually use. What matters most?",[["A","It works every time.",[0,0,0,0,0,0,0,0,2,0]],["B","People remember it.",[0,0,0,2,0,0,0,0,0,0]],["C","It feels easy to use.",[1,0,0,0,0,2,0,0,0,0]],["D","It survives chaos.",[0,0,0,0,0,0,2,1,0,0]]]],[58,"project",0,"Your name is going on the project. You want it to be…",[["A","Reliable.",[0,0,0,0,0,0,0,0,2,0]],["B","Memorable.",[0,0,0,2,0,0,0,0,0,0]],["C","Effortless for people.",[1,0,0,0,0,2,0,0,0,0]],["D","Very hard to break.",[0,0,0,0,0,0,2,1,0,0]]]],[59,"project",0,"A good idea is not enough. The final thing must be…",[["A","Dependable.",[0,0,0,0,0,0,0,0,2,0]],["B","Distinctive.",[0,0,0,2,0,0,0,0,0,0]],["C","Simple for users.",[1,0,0,0,0,2,0,0,0,0]],["D","Built to last.",[0,0,0,0,0,0,2,1,0,0]]]],[60,"project",0,"If you build it, your priority is…",[["A","Consistency.",[0,0,0,0,0,0,0,0,2,0]],["B","Impact.",[0,0,0,2,0,0,0,0,0,0]],["C","Ease.",[1,0,0,0,0,2,0,0,0,0]],["D","Resilience.",[0,0,0,0,0,0,2,1,0,0]]]],[61,"horror",0,"Pick your social nightmare.",[["A","Forced small talk for hours.",[-1,0,0,0,0,0,0,0,0,1]],["B","Everyone pretending nothing is wrong.",[0,0,0,0,0,1,0,1,0,1]],["C","Plans changing every six minutes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Being watched when I want to disappear.",[-1,0,0,0,-2,0,0,0,0,0]]]],[62,"horror",0,"What drains your battery fastest?",[["A","Endless shallow conversation.",[-1,0,0,0,0,0,0,0,0,1]],["B","Unspoken tension.",[0,0,0,0,0,1,0,1,0,1]],["C","Constant last-minute changes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Too much attention.",[-1,0,0,0,-2,0,0,0,0,0]]]],[63,"horror",0,"Which situation makes you mentally leave the room?",[["A","Mandatory networking.",[-1,0,0,0,0,0,0,0,0,1]],["B","A vibe nobody will address.",[0,0,0,0,0,1,0,1,0,1]],["C","No plan staying a plan.",[0,0,-2,0,0,0,0,0,1,0]],["D","People focusing on me.",[-1,0,0,0,-2,0,0,0,0,0]]]],[64,"horror",0,"Your personal ‘please let me go home’ moment?",[["A","Small talk marathon.",[-1,0,0,0,0,0,0,0,0,1]],["B","Silent conflict.",[0,0,0,0,0,1,0,1,0,1]],["C","Chaotic plan changes.",[0,0,-2,0,0,0,0,0,1,0]],["D","Unwanted spotlight.",[-1,0,0,0,-2,0,0,0,0,0]]]],[65,"conflict",0,"Someone important upsets you. First instinct?",[["A","Talk now.",[0,0,0,0,2,0,0,0,0,1]],["B","Think before I speak.",[0,0,0,0,0,0,0,2,1,0]],["C","Protect the relationship.",[0,2,0,0,0,1,0,0,0,0]],["D","Protect the boundary.",[0,0,0,0,0,0,2,0,0,0]]]],[66,"conflict",0,"A real disagreement starts. You…",[["A","Deal with it immediately.",[0,0,0,0,2,0,0,0,0,1]],["B","Take time to process.",[0,0,0,0,0,0,0,2,1,0]],["C","Keep the bond from breaking.",[0,2,0,0,0,1,0,0,0,0]],["D","Make sure my line is respected.",[0,0,0,0,0,0,2,0,0,0]]]],[67,"conflict",0,"Conflict gets personal. What happens first?",[["A","I want the conversation now.",[0,0,0,0,2,0,0,0,0,1]],["B","I need space to think.",[0,0,0,0,0,0,0,2,1,0]],["C","I look for a way back to each other.",[0,2,0,0,0,1,0,0,0,0]],["D","I protect what I won’t compromise.",[0,0,0,0,0,0,2,0,0,0]]]],[68,"conflict",0,"Someone you care about crosses you. You…",[["A","Bring it up.",[0,0,0,0,2,0,0,0,0,1]],["B","Process first.",[0,0,0,0,0,0,0,2,1,0]],["C","Try not to damage the relationship.",[0,2,0,0,0,1,0,0,0,0]],["D","Hold the boundary.",[0,0,0,0,0,0,2,0,0,0]]]],[69,"energy",0,"You’ve had a week. What actually brings you back?",[["A","My people.",[1,2,0,0,0,0,0,0,0,0]],["B","Being completely alone.",[-2,0,0,0,0,0,2,0,0,0]],["C","Something new.",[0,0,1,2,0,0,0,0,0,0]],["D","Something familiar.",[0,0,0,0,0,0,0,0,2,-1]]]],[70,"energy",0,"Battery at 2%. Best recharge?",[["A","People I love.",[1,2,0,0,0,0,0,0,0,0]],["B","Silence and solitude.",[-2,0,0,0,0,0,2,0,0,0]],["C","A change of scene.",[0,0,1,2,0,0,0,0,0,0]],["D","A familiar comfort.",[0,0,0,0,0,0,0,0,2,-1]]]],[71,"energy",0,"After too much everything, you want…",[["A","Good company.",[1,2,0,0,0,0,0,0,0,0]],["B","No company.",[-2,0,0,0,0,0,2,0,0,0]],["C","A new experience.",[0,0,1,2,0,0,0,0,0,0]],["D","My usual safe thing.",[0,0,0,0,0,0,0,0,2,-1]]]],[72,"energy",0,"To feel like yourself again, you reach for…",[["A","Connection.",[1,2,0,0,0,0,0,0,0,0]],["B","Solitude.",[-2,0,0,0,0,0,2,0,0,0]],["C","Novelty.",[0,0,1,2,0,0,0,0,0,0]],["D","Familiarity.",[0,0,0,0,0,0,0,0,2,-1]]]]],"s":[10.398929319886737,4.5345644774333085,8.13587880932355,8.690184347872028,10.039420501204239,4.547414540153559,6.665254383742603,3.687833510341811,5.6716791164522,5.835917322923621],"f":{"Estuary":"where a river meets the sea and fresh water mixes with salty water","Floodplain":"flat land beside a river that periodically floods","Mangrove Forest":"a coastal wetland dominated by salt-tolerant mangrove trees","Salt Marsh":"a grassy coastal wetland regularly flooded by salty water","Freshwater Marsh":"a shallow wetland dominated by grasses and other soft-stemmed plants","Peatland":"a waterlogged landscape where partly decayed plant material builds up as peat","Seasonal Pond":"a pond that fills during wet periods and may dry out later","Urban Wetland":"a wetland surviving within or beside a city","High-altitude Wetland":"a wetland found high in the mountains, often in cold conditions","Mudflat":"a broad muddy or silty area exposed when water levels drop","Lagoon":"a shallow body of water separated from a larger sea or lake by a barrier","Oxbow Lake":"a curved lake formed when a river leaves behind one of its old bends","River Delta":"land built from sediment where a river spreads into several channels near its mouth","Swamp":"a wetland dominated by trees or woody plants","Vernal Pool":"a temporary seasonal pool that appears during wet periods","Flooded Grassland":"grassland that becomes seasonally or regularly covered by water","Riparian Zone":"the strip of land and vegetation directly alongside a river or stream","Spring":"a place where groundwater naturally emerges at the surface","Backwater":"a slow or still branch of water connected to a larger river or waterbody","Wet Meadow":"a grassy area with waterlogged soil for part of the year","Lotus":"an aquatic flowering plant rooted in mud with leaves and flowers held above the water","Water Lily":"an aquatic flowering plant with floating leaves and flowers at the water surface","Cattail / Typha":"a tall marsh plant with long leaves and a distinctive brown flower spike","Reed":"a tall grass-like wetland plant that often grows in dense stands","Mangrove Tree":"a salt-tolerant coastal tree adapted to waterlogged, low-oxygen mud","Seagrass":"a true flowering plant that grows underwater in shallow coastal seas","Duckweed":"tiny floating plants that can multiply rapidly on still or slow water","Algae":"simple photosynthetic organisms that live in water or damp places","Phytoplankton":"microscopic drifting organisms that photosynthesize in water","Wild Rice":"an aquatic grass that grows in shallow freshwater wetlands","Saltmarsh Grass":"salt-tolerant grass adapted to regularly flooded coastal marshes","Water Chestnut":"an aquatic plant that grows in freshwater ponds, lakes, and slow water","Bladderwort":"an aquatic carnivorous plant that traps tiny organisms in bladder-like structures","Sundew":"a small carnivorous plant with sticky leaves that trap insects","Sedge":"a grass-like wetland plant, often with solid triangular stems","Papyrus":"a tall wetland sedge historically used to make writing material","Floating Fern":"a small fern that floats on the surface of water","Pondweed":"a group of aquatic plants that grow submerged or partly floating in freshwater","Mangrove Seedling":"a young mangrove beginning life in unstable coastal mud","Diatom":"a microscopic photosynthetic organism with a glass-like silica shell","Sarus Crane":"a very tall crane of wetlands and agricultural landscapes, known for strong pair bonds","Greater Flamingo":"a large pink wading bird that feeds in shallow saline or alkaline wetlands","Painted Stork":"a large wading bird that searches shallow water for fish","Purple Swamphen":"a large wetland bird with bright plumage and long toes for moving through marsh vegetation","Pheasant-tailed Jacana":"a wetland bird with extremely long toes that walks across floating vegetation","Kingfisher":"a compact bird that often watches from a perch before diving or darting for prey","Heron":"a long-legged wading bird known for patient, still hunting","Egret":"a slender white heron that feeds in shallow water and wet grasslands","Indian Skimmer":"a river bird that feeds by flying low and slicing its longer lower bill through the water","Bar-headed Goose":"a migratory goose famous for crossing extremely high mountain passes","Common Coot":"a dark waterbird with strong feet that swims, dives, and defends territories","Smooth-coated Otter":"a social semi-aquatic mammal that lives around rivers, lakes, and wetlands","Fishing Cat":"a wetland-adapted wild cat that hunts near water and is an excellent swimmer","Gharial":"a long-snouted crocodilian specialized for life in large rivers","Freshwater Turtle":"a turtle adapted to rivers, ponds, lakes, or marshes","Frog":"an amphibian whose life often links water and land","Mudskipper":"an amphibious fish able to move and feed on exposed mud","Mahseer":"a group of large freshwater fish found in South Asian river systems","Swamp Deer":"a large deer associated with marshes, floodplains, and wet grasslands","Mangrove Crab":"a crab that lives among mangrove mud, roots, and tidal creeks","Dragonfly":"an aerial insect whose juvenile stage lives underwater","Water Beetle":"a beetle adapted to swimming, diving, or living at the water surface","Freshwater Mussel":"a quiet shellfish that lives on river or lake beds and often filters water while feeding","Snail":"a soft-bodied mollusc protected by a shell, with many species living in wetlands","Water Filter":"the ecological function of trapping particles or removing material from water","Carbon Keeper":"an ecosystem role that stores carbon instead of releasing it quickly to the atmosphere","Nursery":"a habitat where young animals can feed, shelter, and grow","Flood Buffer":"a landscape function that stores or slows water during floods","Pollinator":"an organism that moves pollen between flowers and helps plants reproduce","Decomposer":"an organism that breaks down dead material and returns nutrients to the ecosystem","Seed Disperser":"an organism or process that moves seeds away from their parent plants","Ecological Engineer":"an organism that physically changes habitat in ways that affect many other species","Nutrient Recycler":"an ecological role that moves nutrients back into forms organisms can use","Habitat Builder":"an organism or process that creates physical living space for other species","Monsoon":"the seasonal wind-and-rain system that dramatically reshapes water availability","Low Tide":"the stage of the tidal cycle when coastal water is at its lower level","High Tide":"the stage of the tidal cycle when coastal water rises to its higher level","River Current":"the directional movement of water through a river","Wetland Mist":"tiny suspended water droplets that form a low cloud close to wet ground or water","Mud":"water-saturated soil or sediment packed with minerals, organisms, nutrients, and stored seeds","Rainwater":"water delivered directly from the atmosphere by rain","Sediment":"particles such as sand, silt, clay, and organic matter carried and deposited by water","Fallen Log":"dead wood that becomes shelter, food, structure, and habitat for many organisms","Mangrove Root":"a root structure that anchors mangroves and creates complex shelter in tidal mud","Floating Leaf":"a leaf adapted to rest on the water surface while remaining connected to a rooted plant","Bird Flock":"a temporary or persistent group of birds moving, feeding, or resting together","Fish School":"a coordinated group of fish moving together","Frog Chorus":"many frogs calling together, often during breeding periods after rain","Water Ripple":"a small wave spreading outward across the water surface","Spot-billed Pelican":"a large South Asian waterbird that catches fish with its bill pouch, nests colonially, soars on thermals, and may feed alone, in small groups, or cooperatively drive fish into shallow water","Chilika Lagoon":"a large brackish coastal lagoon on India’s east coast shaped by freshwater inflow, tidal exchange and changing salinity, with exceptional bird and aquatic biodiversity","Loktak Lake":"a large freshwater lake in Manipur famous for phumdis—floating masses of vegetation, soil and organic matter that create a shifting wetland landscape","Keoladeo Wetland":"a seasonally flooded and actively water-managed wetland in Rajasthan whose changing water levels support large numbers of waterbirds","Sundarban Wetland":"a vast tidal mangrove wetland of islands, rivers and creeks where salinity, sediment and tides continually reshape habitat","Sambhar Salt Lake":"a large inland saline lake in Rajasthan with strong seasonal water fluctuations and major importance for flamingos and other waterbirds","Asian Openbill":"a wetland stork strongly associated with shallow waters and flooded fields, specialized in aquatic prey such as snails and often nesting in social colonies","Black-necked Crane":"a crane of high-altitude wetlands and river valleys, commonly occurring in bonded pairs or family groups and defending breeding territories","Gangetic River Dolphin":"a river dolphin adapted to turbid water, using acoustic signals and echolocation rather than vision to navigate and find prey","Mugger Crocodile":"a broad-snouted freshwater crocodile of rivers, lakes and marshes that conserves energy through ambush hunting, basks on banks and protects nesting areas","Black-tailed Godwit":"a long-distance migratory shorebird that links networks of wetlands and uses a sensitive long bill to probe mud and wet soils for prey"}};
 const D=DATA,dim=D.d,ids=D.i,qs=D.q,sd=D.s,defs=D.f;
+const FINAL_IDENTITY_RENAMES={"Wet Meadow": {"name": "Fen", "category": "Wetland / landscape"}, "Water Filter": {"name": "Wild Water Buffalo", "category": "Animal"}, "Nursery": {"name": "Cotton Pygmy Goose", "category": "Animal"}, "Flood Buffer": {"name": "Pied Avocet", "category": "Animal"}, "Seed Disperser": {"name": "Water Hyacinth", "category": "Plant / producer"}, "Monsoon": {"name": "Little Cormorant", "category": "Animal"}, "Low Tide": {"name": "Spoonbill", "category": "Animal"}, "High Tide": {"name": "Black-winged Stilt", "category": "Animal"}, "River Current": {"name": "Black-headed Ibis", "category": "Animal"}, "Wetland Mist": {"name": "Phumdi", "category": "Wetland / landscape"}, "Mud": {"name": "Irrawaddy Dolphin", "category": "Animal"}, "Rainwater": {"name": "Oriental Darter", "category": "Animal"}, "Sediment": {"name": "Lesser Whistling Duck", "category": "Animal"}, "Fallen Log": {"name": "Marsh Harrier", "category": "Animal"}, "Mangrove Root": {"name": "Small Pratincole", "category": "Animal"}, "Floating Leaf": {"name": "Purple Heron", "category": "Animal"}, "Bird Flock": {"name": "Makhana (Foxnut)", "category": "Plant / producer"}, "Fish School": {"name": "Deepor Beel", "category": "Wetland site"}, "Frog Chorus": {"name": "Vembanad Lake", "category": "Wetland site"}, "Water Ripple": {"name": "River Tern", "category": "Animal"}};
+ids.forEach(row=>{
+  const hit=FINAL_IDENTITY_RENAMES[row[0]];
+  if(hit){row[0]=hit.name;row[1]=hit.category;}
+});
+
 const ECO_PROFILES={"Estuary":{"traits":["mixing","adaptable","boundary-crossing"],"line":"You are at your best where different worlds meet; you do not need everything to be one thing to make it work."},"Floodplain":{"traits":["seasonal","expansive","absorptive"],"line":"You make room for intensity, then reset. Flexibility is part of your structure, not a lack of one."},"Mangrove Forest":{"traits":["rooted","protective","salt-tolerant"],"line":"You can handle rough conditions without becoming unanchored, and people often feel safer around your steadiness."},"Salt Marsh":{"traits":["tidal","resilient","understated"],"line":"You tolerate change in small daily doses and rarely need spectacle to prove you are functioning."},"Freshwater Marsh":{"traits":["productive","nurturing","layered"],"line":"You tend to create conditions where many different kinds of people can exist at once."},"Peatland":{"traits":["slow-building","deep-storage","waterlogged"],"line":"You accumulate meaning slowly; what looks quiet on the surface can hold years of memory underneath."},"Seasonal Pond":{"traits":["temporary","pulse-driven","opportunistic"],"line":"You know not everything has to last forever to be important; you come alive when conditions are right."},"Urban Wetland":{"traits":["adaptive","pressured","multifunctional"],"line":"You keep functioning even when too much is being asked of you—and somehow still make space for others."},"High-altitude Wetland":{"traits":["hardy","sparse","refuge-like"],"line":"You do not need abundance to feel rich; a few dependable things can be enough."},"Mudflat":{"traits":["exposed","nutrient-rich","understated"],"line":"You are comfortable in phases that look unfinished to everyone else; a lot is happening even when it looks bare."},"Lagoon":{"traits":["sheltered","semi-connected","variable"],"line":"You like connection with a little buffer—open enough for exchange, protected enough to remain yourself."},"Oxbow Lake":{"traits":["detached","calm","memory-rich"],"line":"You can move on without pretending the old course meant nothing."},"River Delta":{"traits":["branching","networked","distributive"],"line":"You rarely have just one route forward; you build possibility by spreading energy across several channels."},"Swamp":{"traits":["dense","layered","persistent"],"line":"You are not immediately legible, and that is part of the point; people have to spend time with you to see the layers."},"Vernal Pool":{"traits":["brief","specialist","hidden"],"line":"You may look low-key most of the time, then become astonishingly alive in the right season."},"Flooded Grassland":{"traits":["open","seasonal","renewing"],"line":"You need room to breathe, but change does not scare you when it follows a rhythm you understand."},"Riparian Zone":{"traits":["connecting","buffering","stabilizing"],"line":"You are often the person between worlds—translating, softening edges and keeping things connected."},"Spring":{"traits":["source-like","steady","emergent"],"line":"Your energy is less about being loud and more about being reliably generative."},"Backwater":{"traits":["slow-flowing","sheltered","connected"],"line":"You prefer depth over speed and do not confuse quiet with disconnection."},"Wet Meadow":{"traits":["open","seasonally-saturated","transitional"],"line":"You are grounded but not rigid; you can shift with conditions without losing your basic character."},"Lotus":{"traits":["rooted","surface-bright","resilient"],"line":"You can be visibly composed without pretending the messy substrate underneath does not exist."},"Water Lily":{"traits":["anchored","floating","calm-surfaced"],"line":"You keep a stable base while letting the visible parts of your life move with the water."},"Cattail / Typha":{"traits":["colonizing","filtering","dense-forming"],"line":"Once you find a place that works, you commit hard and can become a whole atmosphere."},"Reed":{"traits":["flexible","rhizomatous","sheltering"],"line":"You bend more easily than you break, and your strength often comes from what is connected below the surface."},"Mangrove Tree":{"traits":["rooted","salt-managing","nursery-forming"],"line":"You are selective about what you let in, deeply rooted, and unexpectedly generous once something is inside your circle."},"Seagrass":{"traits":["submerged","meadow-forming","nursery"],"line":"You do important work without needing to be above the surface; quiet contribution is still contribution."},"Duckweed":{"traits":["tiny","fast-growing","collective"],"line":"You do not enter communities gently; under the right conditions you somehow become the group chat."},"Algae":{"traits":["responsive","productive","fast-changing"],"line":"You react quickly to conditions around you; when the environment shifts, you rarely stay exactly the same."},"Phytoplankton":{"traits":["drifting","foundational","light-responsive"],"line":"You can look small or scattered and still be doing foundational work for the whole system."},"Wild Rice":{"traits":["flood-adapted","seasonal","productive"],"line":"You know how to grow with the water rather than waiting for perfect, dry conditions."},"Saltmarsh Grass":{"traits":["salt-tolerant","sediment-trapping","stabilizing"],"line":"You are good at making unstable edges more livable without making a fuss about it."},"Water Chestnut":{"traits":["floating","anchored","space-filling"],"line":"You like freedom at the surface, but you still want something solid holding you in place."},"Bladderwort":{"traits":["carnivorous","fast-trapping","free-floating"],"line":"You may look delicate, but your decision-making can be startlingly quick and efficient."},"Sundew":{"traits":["patient","sticky-trapping","resourceful"],"line":"You are patient until the right thing arrives; then you are much more decisive than people expect."},"Sedge":{"traits":["clumping","tough","edge-loving"],"line":"You are built for awkward boundaries and tend to become sturdier where conditions are less convenient."},"Papyrus":{"traits":["tall","emergent","dense-forming"],"line":"You are visibly present and structurally useful; people tend to know where you stand."},"Floating Fern":{"traits":["mobile","surface-spreading","quick-growing"],"line":"You travel light and adapt quickly, but you can also take over more space than you meant to."},"Pondweed":{"traits":["submerged","flexible","habitat-forming"],"line":"You are comfortable doing your best work below the obvious surface of things."},"Mangrove Seedling":{"traits":["dispersing","searching","root-ready"],"line":"You can travel for a while without being lost; when the right ground appears, you know how to commit."},"Diatom":{"traits":["silica-shelled","microscopic","indicator-like"],"line":"You are small-detail energy: sensitive to change, structurally precise and more informative than people first realize."},"Sarus Crane":{"traits":["pair-bonded","territorial","expressive"],"line":"You do not do half-hearted closeness; when you choose, you are visible about it."},"Greater Flamingo":{"traits":["highly-social","filter-feeding","synchronized"],"line":"You can be intensely social without losing your own rhythm; moving with a crowd can genuinely energize you."},"Painted Stork":{"traits":["colonial","patient-feeding","soaring"],"line":"You know when to work beside others and when to drop into your own focused hunt."},"Purple Swamphen":{"traits":["bold","territorial","strong-footed"],"line":"You are not subtle about taking up space, especially when you know exactly what belongs to you."},"Pheasant-tailed Jacana":{"traits":["light-footed","role-reversing","floating-leaf adapted"],"line":"You are comfortable with arrangements that do not look conventional, as long as they actually work."},"Kingfisher":{"traits":["solitary","watchful","precision-diving"],"line":"You can wait a long time for the right moment and then move with zero hesitation."},"Heron":{"traits":["still","patient","strike-fast"],"line":"Your quiet is active; you are usually observing more than people realize."},"Egret":{"traits":["opportunistic","mobile","social-roosting"],"line":"You are adaptable enough to work a room without needing to belong to every part of it."},"Spot-billed Pelican":{"traits":["colonial","cooperative-feeding","thermal-soaring"],"line":"You are social when there is a shared purpose: group energy works for you best when it actually helps everyone move."},"Indian Skimmer":{"traits":["specialized","precise","river-dependent"],"line":"You would rather do one thing unusually well than become vaguely competent at everything."},"Bar-headed Goose":{"traits":["enduring","migratory","flock-oriented"],"line":"You can handle difficult journeys better when you know where you are headed and who is travelling with you."},"Common Coot":{"traits":["assertive","territorial","adaptable"],"line":"You may look ordinary until someone tests your boundaries; then the personality becomes very clear."},"Smooth-coated Otter":{"traits":["social","playful","cooperative"],"line":"You bond through doing things together; shared activity is often more convincing to you than endless talking."},"Fishing Cat":{"traits":["solitary","stealthy","water-adapted"],"line":"You are independent, observant and very comfortable entering spaces other people find uncomfortable."},"Gharial":{"traits":["specialized","aquatic","basking-social"],"line":"You are built for a specific kind of life and do not waste much energy pretending otherwise."},"Freshwater Turtle":{"traits":["slow-paced","sheltered","long-lived"],"line":"You are not in a rush to trust, respond or explain yourself; longevity matters more than speed."},"Frog":{"traits":["amphibious","rain-responsive","vocal"],"line":"Your energy changes dramatically with context; the right conditions can turn you from quiet to impossible to ignore."},"Mudskipper":{"traits":["amphibious","territorial","adaptable"],"line":"You are unusually good at functioning between categories and may secretly enjoy proving that the usual rules are optional."},"Mahseer":{"traits":["strong-swimming","migratory","current-facing"],"line":"You are not necessarily attracted to the easy route; movement with purpose can make you feel more alive."},"Swamp Deer":{"traits":["herding","wetland-specialist","cautious"],"line":"You like company that feels safe and open space that lets you see what is coming."},"Mangrove Crab":{"traits":["burrowing","tidal","recycling"],"line":"You work the margins, clean up what others leave behind and somehow improve the whole place while doing it."},"Dragonfly":{"traits":["agile","visual-hunting","two-life-stage"],"line":"You can change form without losing continuity; reinvention does not have to mean becoming a different person."},"Water Beetle":{"traits":["active-swimming","air-carrying","predatory"],"line":"You are practical about survival: take what you need with you and keep moving."},"Freshwater Mussel":{"traits":["filter-feeding","stationary","hidden"],"line":"You change your surroundings quietly; influence does not have to look dramatic."},"Snail":{"traits":["slow","sheltered","moisture-dependent"],"line":"You carry your own retreat with you and are perfectly willing to move at a pace other people find inconvenient."},"Asian Openbill":{"traits":["social-colonial","snail-specialist","co-parenting"],"line":"You are communal without being vague about your niche: you know what you are good at and build around it."},"Black-necked Crane":{"traits":["pair-oriented","territorial","high-altitude"],"line":"You can be deeply bonded and still protective of space; intimacy does not erase territory."},"Gangetic River Dolphin":{"traits":["acoustic","turbid-water adapted","river-dependent"],"line":"You do not need perfect visibility to navigate; you trust signals, patterns and what you can sense beneath the obvious."},"Mugger Crocodile":{"traits":["patient","ambush-oriented","protective"],"line":"You conserve energy until something matters, then become extremely difficult to ignore."},"Black-tailed Godwit":{"traits":["long-distance","wetland-networked","probe-feeding"],"line":"You can travel far without losing your sense of where to refuel; connection for you is a network, not a single place."},"Water Filter":{"traits":["selective","cleansing","continuous"],"line":"You are good at separating signal from noise and tend to improve a space by quietly processing what passes through."},"Carbon Keeper":{"traits":["long-term","storage","slow-release"],"line":"You hold onto value for the long term; not everything important needs to circulate immediately."},"Nursery":{"traits":["protective","growth-enabling","sheltered"],"line":"You are often at your best helping something fragile become strong enough to leave."},"Flood Buffer":{"traits":["absorptive","protective","elastic"],"line":"You can take the edge off other people’s intensity—useful, but only if you remember you are not an infinite sponge."},"Pollinator":{"traits":["connecting","mobile","mutualistic"],"line":"You create value by moving between people or places that might never have connected on their own."},"Decomposer":{"traits":["transformative","patient","recycling"],"line":"You are unusually good at turning endings, mess and leftovers into something usable."},"Seed Disperser":{"traits":["mobile","future-oriented","connecting"],"line":"You rarely keep good things in one place; you help possibilities travel."},"Ecological Engineer":{"traits":["structure-changing","active","system-shaping"],"line":"You do not just adapt to environments; you have a habit of rearranging them."},"Nutrient Recycler":{"traits":["cyclical","redistributive","efficient"],"line":"Waste bothers you mostly because you can see what else it could become."},"Habitat Builder":{"traits":["constructive","supportive","long-lasting"],"line":"You express care by making conditions better, not just by saying you care."},"Chilika Lagoon":{"traits":["brackish","connected","restorable"],"line":"You are defined by exchange—freshwater, seawater, species and people—and you do best when those connections stay open."},"Loktak Lake":{"traits":["floating","layered","shifting"],"line":"You can carry whole worlds on something that looks unstable; your stability is more dynamic than fixed."},"Keoladeo Wetland":{"traits":["seasonal","managed","bird-rich"],"line":"You thrive when timing and attention are right; structure does not make you less natural."},"Sundarban Wetland":{"traits":["tidal","protective","networked"],"line":"You live with pressure from multiple directions and survive by being flexible without giving up your roots."},"Sambhar Salt Lake":{"traits":["saline","seasonal","extreme-adapted"],"line":"You are comfortable with extremes and may become most interesting when conditions are too intense for everyone else."},"Monsoon":{"traits":["seasonal","transformative","abundant"],"line":"You do not arrive quietly; when your energy comes, whole systems reorganize around it."},"Low Tide":{"traits":["revealing","cyclical","spacious"],"line":"You need periods of withdrawal because that is when hidden things become visible."},"High Tide":{"traits":["immersive","expansive","cyclical"],"line":"When you are in, you are fully in; partial presence is not really your style."},"River Current":{"traits":["directional","moving","persistent"],"line":"You are easier to understand once people stop asking you to stand still."},"Wetland Mist":{"traits":["soft","obscuring","temporary"],"line":"You do not always reveal everything at once; ambiguity can be part of your atmosphere."},"Mud":{"traits":["grounded","nutrient-rich","messy"],"line":"Everyone wants the lotus; you are the part actually holding it up."},"Rainwater":{"traits":["fresh","episodic","replenishing"],"line":"You arrive as reset energy: sometimes brief, sometimes exactly what the system was waiting for."},"Sediment":{"traits":["accumulating","shaping","transported"],"line":"You may seem passive, but over time you can literally change the shape of the place."},"Fallen Log":{"traits":["decaying","sheltering","recycling"],"line":"You understand that being finished with one role does not mean being useless."},"Mangrove Root":{"traits":["anchoring","filtering","complex"],"line":"You hold your ground through complexity and make shelter in the spaces other people call tangled."},"Floating Leaf":{"traits":["light","surface-mobile","anchored-below"],"line":"You can look effortless because people do not see what is holding you steady underneath."},"Bird Flock":{"traits":["coordinated","social","responsive"],"line":"You read collective movement quickly and often know when the group is about to turn before anyone says it."},"Fish School":{"traits":["synchronized","protective","responsive"],"line":"You feel safest when people can move together without needing a meeting about every turn."},"Frog Chorus":{"traits":["collective","vocal","rain-triggered"],"line":"You may be quiet alone, but the right group can turn you into an entirely different volume setting."},"Water Ripple":{"traits":["responsive","spreading","subtle"],"line":"You notice how small actions travel; you rarely believe an interaction ends exactly where it started."}};
+const FINAL_IDENTITY_PROFILES={"Fen": {"traits": ["groundwater-fed", "peat-forming", "sedge-rich"], "line": "You do well with a steady source beneath the surface. Quiet conditions can still produce something rare."}, "Wild Water Buffalo": {"traits": ["marsh-grazing", "wide-horned", "water-dependent"], "line": "You have a strong presence and prefer room to move. Calm does not mean small."}, "Cotton Pygmy Goose": {"traits": ["tiny-waterfowl", "tree-nesting", "floating-plant associated"], "line": "You are compact, social on your own terms, and surprisingly comfortable moving between water and trees."}, "Pied Avocet": {"traits": ["upcurved-billed", "sweep-feeding", "shallow-wading"], "line": "You get results by moving differently from everyone else. Precision can look graceful."}, "Water Hyacinth": {"traits": ["free-floating", "bulbous-petioled", "fast-spreading"], "line": "You can grow fast when conditions favour you. The challenge is knowing when enough becomes too much."}, "Little Cormorant": {"traits": ["plunge-diving", "fish-eating", "wing-drying"], "line": "You are comfortable going under the surface for what you need, then taking time to reset in the open."}, "Spoonbill": {"traits": ["spatulate-billed", "sweep-feeding", "colonial-roosting"], "line": "You find what you need by feeling your way through the shallows rather than forcing a straight line."}, "Black-winged Stilt": {"traits": ["long-legged", "shallow-wading", "fine-billed"], "line": "You move lightly through difficult ground and make balance look easier than it is."}, "Black-headed Ibis": {"traits": ["bare-headed", "probing-feeder", "wetland-forager"], "line": "You are practical, observant and not especially interested in performing elegance when useful work will do."}, "Phumdi": {"traits": ["floating-biomass", "lake-drifting", "seasonally-shifting"], "line": "Your stability is dynamic. You can move, reshape and still carry an entire world."}, "Irrawaddy Dolphin": {"traits": ["round-headed", "estuarine", "subtle-surfacing"], "line": "You do not need to be loud to be present. You read changing waters and surface when it matters."}, "Oriental Darter": {"traits": ["snake-necked", "underwater-hunting", "wing-drying"], "line": "You move quietly below the obvious surface and reveal your full shape only when the work is done."}, "Lesser Whistling Duck": {"traits": ["whistling-call", "flocking", "tree-roosting"], "line": "You like company, but you also know when to rise above the crowd and find your own perch."}, "Marsh Harrier": {"traits": ["low-quartering", "reedland-hunting", "broad-winged"], "line": "You scan widely before committing. Your strength is noticing movement other people miss."}, "Small Pratincole": {"traits": ["sandbar-nesting", "ground-running", "aerial-feeding"], "line": "You are comfortable where land and water keep changing the rules. Quick movement is part of your advantage."}, "Purple Heron": {"traits": ["reed-stalking", "long-necked", "cryptic-plumage"], "line": "You can disappear into the background when you want to, then become extremely precise when opportunity appears."}, "Makhana (Foxnut)": {"traits": ["prickly-floating", "seed-bearing", "pond-cultivated"], "line": "You protect a valuable centre behind a tougher exterior. What you produce can matter to an entire community."}, "Deepor Beel": {"traits": ["floodplain-lake", "bird-rich", "urban-edge"], "line": "You hold biodiversity and city pressure in the same frame. Connection is both your strength and your challenge."}, "Vembanad Lake": {"traits": ["backwater-connected", "salinity-gradient", "livelihood-rich"], "line": "You are built from connections. Different waters, people and rhythms can coexist without becoming identical."}, "River Tern": {"traits": ["inland-tern", "plunge-feeding", "sand-island-nesting"], "line": "You see an opening and move fast. Flowing water suits you better than standing still."}};
+const FINAL_IDENTITY_DEFS={"Fen": "A peat-forming wetland fed mainly by groundwater or surface water, often rich in sedges and specialised plants", "Wild Water Buffalo": "A large wild bovine strongly associated with floodplains, marshes and wet grasslands", "Cotton Pygmy Goose": "A very small Asian waterbird often found on ponds and wetlands with abundant floating vegetation", "Pied Avocet": "A black-and-white wader with a distinctive upcurved bill used to sweep through shallow water", "Water Hyacinth": "A free-floating aquatic plant with swollen leaf stalks and showy purple flowers that can spread rapidly", "Little Cormorant": "A small dark cormorant of South Asian freshwater wetlands that dives to catch fish", "Spoonbill": "A large wading bird with a broad spoon-shaped bill used to sweep for food in shallow water", "Black-winged Stilt": "A slender black-and-white wader with extremely long pink legs adapted to shallow wetlands", "Black-headed Ibis": "A large white ibis with a bare dark head and long downcurved bill used for probing wet ground", "Phumdi": "A floating mass of vegetation, soil and organic matter characteristic of Loktak Lake", "Irrawaddy Dolphin": "A round-headed dolphin that lives in coastal, estuarine and some river waters of South and Southeast Asia", "Oriental Darter": "A long-necked waterbird that swims with much of its body submerged and hunts fish underwater", "Lesser Whistling Duck": "A small chestnut-coloured whistling duck common in vegetated freshwater wetlands across South Asia", "Marsh Harrier": "A broad-winged raptor that hunts low over marshes, reedbeds and other open wetlands", "Small Pratincole": "A small ground-nesting bird of exposed riverbanks and sandbars that also catches insects in flight", "Purple Heron": "A tall, slender heron that stalks prey among dense reeds and wetland vegetation", "Makhana (Foxnut)": "The seed of Euryale ferox, a large prickly-leaved aquatic plant cultivated in ponds and wetlands", "Deepor Beel": "A large floodplain wetland near Guwahati, Assam, important for waterbirds, fisheries and urban flood storage", "Vembanad Lake": "A vast lake and backwater system in Kerala connected to rivers, wetlands and the Arabian Sea", "River Tern": "A South Asian inland tern associated with rivers, lakes and exposed sandy islands"};
+Object.assign(ECO_PROFILES,FINAL_IDENTITY_PROFILES);
+Object.assign(defs,FINAL_IDENTITY_DEFS);
 const $=id=>document.getElementById(id);
 let asked=[],used=[],rec=[],trace=[],cur=null,rank4=null,started=0,prevLetter=null;
 const CORE=[];
@@ -863,6 +1556,60 @@ const EDU_WHY_BY_CATEGORY={
   "Wetland site":"This real wetland shows how water, biodiversity and people are connected in one place."
 };
 
+
+Object.assign(EDU_INFO,{"Fen": {"where": "Groundwater-fed wetlands in cool and temperate regions", "why": "Fens support specialised plants, store carbon in wet soils and can hold unusually high biodiversity.", "remember": "A fen is not the same as a bog: it receives mineral-rich water from outside the wetland."}, "Wild Water Buffalo": {"where": "Floodplains, marshes and wet grasslands of South and Southeast Asia", "why": "Large grazers influence wetland vegetation and depend on extensive connected wet habitats.", "remember": "Wild Water Buffalo are not simply feral domestic buffalo; they are a distinct wild species."}, "Cotton Pygmy Goose": {"where": "Ponds, lakes and marshes with floating vegetation across South and Southeast Asia", "why": "It uses vegetated freshwater wetlands for feeding, nesting and shelter.", "remember": "Despite its name, it is one of the smallest ducks, not a true goose."}, "Pied Avocet": {"where": "Shallow saline and freshwater wetlands, mudflats and lagoons", "why": "Its specialised feeding method depends on shallow water and productive wetland edges.", "remember": "The bill curves upward and is swept side-to-side through the water."}, "Water Hyacinth": {"where": "Slow freshwater, ponds, lakes and canals in many tropical regions", "why": "It is a strong example of how an attractive aquatic plant can become invasive and alter oxygen, light and access to water.", "remember": "Beautiful flowers do not mean harmless ecology; Water Hyacinth can form dense floating mats."}, "Little Cormorant": {"where": "Lakes, ponds, reservoirs, rivers and marshes across South Asia", "why": "It is a fish-eating wetland bird and a familiar part of many inland waterbird communities.", "remember": "Cormorants often spread their wings after diving."}, "Spoonbill": {"where": "Shallow marshes, lakes, floodplains and coastal wetlands", "why": "It depends on shallow productive water where its specialised bill can sweep for aquatic prey.", "remember": "A spoonbill feeds by sweeping its open bill from side to side."}, "Black-winged Stilt": {"where": "Shallow lakes, marshes, saltpans and flooded fields", "why": "Its very long legs let it forage in shallow water that many smaller waders cannot use in the same way.", "remember": "Its pink legs can be longer than the depth of much of the water it feeds in."}, "Black-headed Ibis": {"where": "Marshes, floodplains, lakes, flooded fields and other shallow wetlands", "why": "It links wetland food webs by feeding on aquatic and soil-dwelling animals.", "remember": "Adults have a bare dark head and neck rather than black feathers on the head."}, "Phumdi": {"where": "Loktak Lake, Manipur, India", "why": "Phumdis create floating habitat and support distinctive ecological and livelihood systems.", "remember": "A phumdi contains vegetation, soil and decomposing organic matter, not just floating plants."}, "Irrawaddy Dolphin": {"where": "Estuaries, coastal waters and a few major rivers in South and Southeast Asia", "why": "Its presence highlights the need for connected, productive aquatic habitats and safer fisheries.", "remember": "Irrawaddy Dolphins have a rounded forehead and no prominent beak."}, "Oriental Darter": {"where": "Freshwater lakes, rivers, reservoirs and marshes across South and Southeast Asia", "why": "It depends on fish-rich waters and suitable places for resting and breeding.", "remember": "Its submerged body and long visible neck give it the 'snakebird' look."}, "Lesser Whistling Duck": {"where": "Vegetated ponds, marshes, lakes and rice-growing landscapes", "why": "It uses both natural and human-shaped freshwater habitats.", "remember": "Its soft whistling calls often reveal a flock before you notice the birds."}, "Marsh Harrier": {"where": "Large marshes, reedbeds, lakeshores and wet grasslands", "why": "As a wetland raptor, it depends on open marsh habitat and the prey supported there.", "remember": "Marsh harriers often hunt by flying low and slowly over vegetation."}, "Small Pratincole": {"where": "Open sandy and gravelly riverbanks, islands and large river channels", "why": "Its nesting depends on exposed river surfaces that are sensitive to changing flows and disturbance.", "remember": "It looks like a shorebird on the ground but catches many insects in flight."}, "Purple Heron": {"where": "Freshwater marshes, reedbeds, lakes and slow waterways", "why": "Dense wetland vegetation gives it feeding cover and nesting habitat.", "remember": "Its long striped neck helps it blend surprisingly well into reeds."}, "Makhana (Foxnut)": {"where": "Shallow ponds and wetlands, especially in eastern and northern India", "why": "Euryale ferox links wetland ecology with food, farming and local livelihoods.", "remember": "Makhana is the processed seed of a large aquatic plant with prickly leaves."}, "Deepor Beel": {"where": "Guwahati, Assam, India", "why": "It supports waterbirds, fisheries and flood storage while facing intense pressure from a growing city.", "remember": "Deepor Beel is part of the wider Brahmaputra floodplain landscape."}, "Vembanad Lake": {"where": "Kerala, south-west India", "why": "The lake-backwater system supports fisheries, transport, farming, tourism and wetland biodiversity.", "remember": "Vembanad is influenced by both freshwater inflow and coastal processes."}, "River Tern": {"where": "Large rivers, freshwater lakes and reservoirs across South Asia", "why": "It needs fish-rich water and safe exposed sandbars or islands for breeding.", "remember": "River Terns are inland terns; many nest directly on sandy river islands."}});
+const ROLE_EDU_INFO={
+  "Water Filter":{
+    why:"Wetland plants, soils and microbes can trap sediment and remove some excess nutrients as water passes through.",
+    remember:"Wetlands can improve water quality, but they are not a substitute for stopping pollution at its source."
+  },
+  "Carbon Keeper":{
+    why:"Waterlogged wetland soils can hold carbon for a long time instead of releasing it quickly to the atmosphere.",
+    remember:"Peatlands and mangroves are especially important places for long-term carbon storage."
+  },
+  "Nursery":{
+    why:"Shallow, sheltered wetland areas give young fish and other animals food, cover and space to grow.",
+    remember:"A wetland can be important even if animals use it only during the early part of their life."
+  },
+  "Flood Buffer":{
+    why:"Wetlands can spread, slow and temporarily store water, which can reduce the speed and height of floods.",
+    remember:"Giving water room to spread can sometimes be safer than forcing it through one narrow channel."
+  },
+  "Pollinator":{
+    why:"Pollination helps flowering wetland plants make seeds and reproduce. Those plants then support food and habitat for other species.",
+    remember:"Wetland plants also depend on pollinators such as insects, birds and other animals."
+  },
+  "Decomposer":{
+    why:"Decomposers break down dead plants and animals and return nutrients to the wetland food web.",
+    remember:"Without decomposition, nutrients would stay locked inside dead material."
+  },
+  "Seed Disperser":{
+    why:"Moving seeds helps wetland plants spread, recover after disturbance and reach new suitable places.",
+    remember:"Seeds can travel through water, wind, mud, fur, feathers and animal droppings."
+  },
+  "Ecological Engineer":{
+    why:"Some organisms physically change their surroundings, creating new shelter, channels or surfaces that other species can use.",
+    remember:"One species can change the shape of habitat for many others."
+  },
+  "Nutrient Recycler":{
+    why:"Nutrients such as nitrogen and phosphorus move between water, soil, plants, animals and microbes instead of staying in one place.",
+    remember:"A healthy wetland keeps nutrients moving without letting too much build up in the water."
+  },
+  "Habitat Builder":{
+    why:"Some organisms create the physical structure that other wetland species use for feeding, shelter or breeding.",
+    remember:"Roots, stems, shells and plant beds can all become living space for other species."
+  }
+};
+
+const GENERIC_REMEMBER_BY_CATEGORY={
+  "Wetland / landscape":"Water level and timing strongly influence which plants and animals can live here.",
+  "Plant / producer":"Wetland plants do more than look green: they create food, shelter and physical structure.",
+  "Animal":"Many wetland animals need the right water depth and season, not simply the presence of water.",
+  "Ecological role":"Wetlands work because many small ecological jobs happen at the same time.",
+  "Wildcard":"Change is part of wetland ecology. Water, seasons and tides constantly reshape conditions.",
+  "Wetland site":"Every wetland site has its own mix of water, species, people and pressures."
+};
+
 const EDU_WHERE_BY_CATEGORY={
   "Wetland / landscape":"Wetlands around the world",
   "Plant / producer":"Aquatic, marshy or waterlogged habitats",
@@ -873,19 +1620,25 @@ const EDU_WHERE_BY_CATEGORY={
 };
 
 function wetlandEducation(name,category){
+  if(PILOT_IDENTITY_CONTENT?.[name]){
+    const p=PILOT_IDENTITY_CONTENT[name];
+    const existing=EDU_INFO[name]||{};
+    return {where:p.where,what:p.what,why:p.why,remember:p.remember,source:existing.source||"",sourceLabel:existing.sourceLabel||""};
+  }
   if(EDU_INFO[name])return EDU_INFO[name];
   const def=(defs[name]||'A wetland identity connected to water and ecological processes').replace(/\.$/,'');
-  const ep=ECO_PROFILES[name]||{traits:['connected','adaptive','wetland-linked']};
+  const role=ROLE_EDU_INFO[name];
   return {
     where:EDU_WHERE_BY_CATEGORY[category]||'Wetland ecosystems',
     what:def.charAt(0).toUpperCase()+def.slice(1)+'.',
-    why:EDU_WHY_BY_CATEGORY[category]||'It is part of the web of water, habitat and life that makes wetlands work.',
-    remember:`Look for these three clues: ${ep.traits.slice(0,3).join(', ')}.`,
+    why:role?.why || EDU_WHY_BY_CATEGORY[category] || 'It helps the wetland support water, habitat and life.',
+    remember:role?.remember || GENERIC_REMEMBER_BY_CATEGORY[category] || 'Wetlands are shaped by water, timing and living things working together.',
     source:"",
     sourceLabel:""
   };
 }
 
+const PILOT_IDENTITY_CONTENT={"Mangrove Forest": {"hook": "Built for the edge.", "what": "A coastal wetland forest of salt-tolerant trees and shrubs growing in the tidal zone.", "where": "Tropical and subtropical coasts, estuaries and sheltered shorelines.", "why": "Mangrove roots protect shorelines, trap sediment and create shelter for fish, crabs and other wetland life.", "remember": "Many mangroves have exposed prop roots that slow tidal water and help sediment settle.", "traits": ["tide-rooted", "salt-tolerant", "shoreline-buffering"], "line": "You do well where two worlds meet. Pressure does not make you static; you hold your ground by adapting to it.", "edge": "Stays useful under pressure without losing structure.", "watch": "Holding every boundary can become rigidity."}, "Peatland": {"hook": "Quiet surface. Deep storage.", "what": "A wetland where waterlogged conditions slow decay, so partly decomposed plant material builds up as peat.", "where": "Boreal, temperate and tropical regions where soils stay wet for long periods.", "why": "Peatlands hold large stores of carbon and support specialised wetland biodiversity when their soils stay wet.", "remember": "Peat forms very slowly. When peatlands are drained, stored carbon can be released.", "traits": ["waterlogged", "carbon-accumulating", "slow-forming"], "line": "You build depth slowly. You may look quiet, but you store a lot and dislike being rushed.", "edge": "Carries long memory and builds value slowly.", "watch": "Depth can turn into carrying old things too long."}, "Estuary": {"hook": "Where different waters learn to mix.", "what": "A coastal water body where freshwater from rivers mixes with seawater.", "where": "River mouths, coastal bays and sheltered coasts connected to the sea.", "why": "Estuaries are highly productive habitats and often provide nursery, feeding and migration areas for fish, birds and other wildlife.", "remember": "Estuary water is often brackish: neither fully fresh nor fully salty, and it changes with tides and river flow.", "traits": ["brackish-mixing", "tide-responsive", "nursery-rich"], "line": "You are good at bringing different people, ideas or moods into the same space without needing them to become identical.", "edge": "Makes different inputs work together.", "watch": "Constantly adapting to everyone can blur your own preference."}, "Duckweed": {"hook": "Tiny plant. Fast response.", "what": "A tiny free-floating aquatic flowering plant made of small fronds, often with fine roots hanging below.", "where": "Still or slow-moving freshwater such as ponds, ditches, backwaters and sheltered lake edges.", "why": "Duckweed is part of the wetland food web and can provide food and cover for small animals and waterbirds.", "remember": "A duckweed 'leaf' is actually a frond. In Lemna, a small root usually hangs below each frond.", "traits": ["free-floating", "tiny-fronded", "fast-multiplying"], "line": "You are small-scale but quick to occupy space when conditions suit you. You notice opportunity fast.", "edge": "Spots good conditions and responds immediately.", "watch": "Fast growth can spread you too thin."}, "Seagrass": {"hook": "A meadow under water.", "what": "A submerged flowering plant that forms meadows in shallow coastal water.", "where": "Protected bays, estuaries, lagoons and other shallow nearshore areas.", "why": "Seagrass meadows provide shelter and nursery habitat, help stabilise sediment and support coastal food webs.", "remember": "Seagrass is a flowering plant, not seaweed.", "traits": ["submerged-flowering", "meadow-forming", "sediment-stabilising"], "line": "You work best below the surface, building stability around you without needing attention.", "edge": "Creates stability quietly, from below.", "watch": "Working unseen can make your contribution easy to miss."}, "Lotus": {"hook": "Rooted in mud. Visible above it.", "what": "A rooted aquatic flowering plant with rhizomes in the mud and large leaves and flowers held at or above the water surface.", "where": "Shallow ponds, lakes, marshes, lagoons, floodplains and flooded fields in warm regions.", "why": "Lotus adds structure to shallow wetlands and its flowers, leaves, seeds and rhizomes connect with wildlife and people.", "remember": "Lotus is not a water lily. Its leaves and flowers often rise above the water surface.", "traits": ["mud-anchored", "water-repellent", "emergent-blooming"], "line": "You can grow from messy conditions without letting the mess define your visible self.", "edge": "Keeps a clear surface even when roots are in mud.", "watch": "Looking composed can hide when you actually need help."}, "Sarus Crane": {"hook": "Tall, deliberate, deeply committed.", "what": "A very large crane of South Asian wetlands, recognised by its grey body, long legs and red bare head and upper neck.", "where": "Shallow wetlands, marshes, wet grasslands, ponds, canals and wet agricultural landscapes.", "why": "Sarus cranes depend strongly on shallow wet habitats for feeding, roosting and breeding.", "remember": "The Sarus Crane is the tallest living flying bird, and pairs often use the same wetland landscapes year after year.", "traits": ["shallow-wading", "pair-bonded", "wetland-dependent"], "line": "You are deliberate, loyal and comfortable moving through open spaces without needing a crowd.", "edge": "Commits deeply and moves with intention.", "watch": "Strong loyalty can make change harder than it needs to be."}, "Fishing Cat": {"hook": "Quiet hunter. Wetland specialist.", "what": "A medium-sized wild cat strongly associated with wetlands and often found close to water.", "where": "Marshes, swamps, oxbow lakes, mangroves, riverbanks, fishponds and wet agricultural mosaics.", "why": "Protecting Fishing Cat habitat also protects marshes, mangroves and other wetland areas that support many species.", "remember": "Fishing cats occur in several human-shaped wetland landscapes too, including fishponds and rice-growing areas.", "traits": ["semi-aquatic", "fish-hunting", "reed-edge"], "line": "You are independent, observant and practical; you move toward what you need instead of making noise about it.", "edge": "Reads the environment before acting.", "watch": "Independence can become disappearing when support would help."}, "River Tern": {"hook": "See the opening. Take the dive.", "what": "A slender inland tern of South Asia that feeds over rivers and freshwater lakes and breeds on exposed sandy islands.", "where": "Large rivers, freshwater lakes, reservoirs and nearby sandy river islands.", "why": "River Terns need fish-rich inland waters and safe exposed nesting places, linking their life cycle closely to river flow and sandbar habitat.", "remember": "River Terns spend much of their time fishing and commonly breed on sandy islands in rivers.", "traits": ["surface-diving", "sandbar-nesting", "river-linked"], "line": "You like movement, clear openings and quick decisions. Too much stagnation frustrates you.", "edge": "Sees an opening and commits fast.", "watch": "Movement can become impatience."}, "Pollinator": {"hook": "Small movement. Big consequence.", "what": "An animal that moves pollen between flowers and helps flowering plants make seeds.", "where": "Flower-rich wetland edges, wet meadows, floodplains, riparian zones, fens, seeps and springs.", "why": "Pollination allows many wetland and riparian flowering plants to reproduce, supporting the plants that provide food and habitat for other life.", "remember": "Wetland wildflowers need pollinators too; bees, moths, butterflies, flies and some birds can all move pollen.", "traits": ["pollen-carrying", "flower-seeking", "reproduction-enabling"], "line": "You connect people and ideas and often leave places more productive than you found them.", "edge": "Creates connection that helps other things grow.", "watch": "Connecting everyone can leave your own needs last."}, "Flood Buffer": {"hook": "Give water room. Reduce the force.", "what": "The role wetlands play when they store, spread and slow floodwater instead of letting it move downstream all at once.", "where": "Floodplains, marshes, swamps, riverine wetlands and other low areas connected to flowing water.", "why": "By holding water and slowing its movement, wetlands can reduce flood peaks and erosion in some landscapes.", "remember": "A wetland does not stop every flood; it helps by giving water more space and time.", "traits": ["water-storing", "flow-slowing", "peak-reducing"], "line": "You absorb pressure before it reaches everyone else. People may not notice until you stop doing it.", "edge": "Takes the force out of pressure.", "watch": "Absorbing everyone’s pressure can exhaust you."}, "Chilika Lagoon": {"hook": "One lagoon. Many worlds.", "what": "A large brackish lagoon on the Odisha coast, connected to the Bay of Bengal through a sea mouth.", "where": "Eastern India, along the Odisha coast beside the Bay of Bengal.", "why": "Chilika supports large numbers of waterbirds, fish and Irrawaddy dolphins, and its connection with the sea helps shape the lagoon's ecology.", "remember": "Chilika's water is shaped by both freshwater inflow and exchange with the sea.", "traits": ["sea-connected", "salinity-shifting", "migration-supporting"], "line": "You contain several worlds at once. Your strength comes from keeping connections open.", "edge": "Keeps multiple systems connected at once.", "watch": "Too many connections can become too much noise."}};
 const QUESTION_MOODS={
   surprise:"⚡ Plot twist",room:"👀 New people",silence:"… Read the silence",cancel:"🌧️ Plan B",
   compliment:"✨ Compliment check",boundary:"🚧 Boundary",chaos:"🌪️ Chaos mode",role:"🧩 Group role",
@@ -1005,7 +1758,7 @@ function reveal(){
   const name=t[0],category=t[1],ep=ECO_PROFILES[name],edu=wetlandEducation(name,category);
 
   $('glyph').innerHTML=symbolMarkup(name,category);
-  $('rname').textContent=name.toUpperCase();
+  $('rname').textContent=name.toUpperCase();if($('resultCategory'))$('resultCategory').textContent=category;if($('resultHook'))$('resultHook').textContent=identityHook(name);
   $('rdef').innerHTML='<b>What it is:</b> '+(defs[name]||'an ecological identity connected to wetlands and water')+'.'
     +'<div class="trait-row">'+ep.traits.map(x=>'<span class="trait-chip">'+x+'</span>').join('')+'</div>';
 
@@ -1017,17 +1770,17 @@ function reveal(){
         <div class="learn-location">⌖ ${escapeHtmlCore(edu.where||'Wetland habitat')}</div></div>
       </div>
       <div class="learn-grid">
-        <div class="learn-cell"><b>What makes it special</b><span>${escapeHtmlCore(edu.what)}</span></div>
+        <div class="learn-cell"><b>About it</b><span>${escapeHtmlCore(edu.what)}</span></div>
         <div class="learn-cell"><b>Why it matters</b><span>${escapeHtmlCore(edu.why)}</span></div>
       </div>
       <div class="learn-remember"><b>Remember this:</b> ${escapeHtmlCore(edu.remember)}</div>
       ${edu.source?`<a class="learn-source" href="${edu.source}" target="_blank" rel="noopener noreferrer">Learn more · ${escapeHtmlCore(edu.sourceLabel||'source')} ↗</a>`:''}`;
   }
 
-  $('punch').textContent=ep.line;
-  $('relationship').textContent=identityFit(name,p);
-  $('green').textContent=ep.traits.join(' · ');
-  $('red').textContent=identityWatch(ep);
+  $('punch').textContent=PILOT_IDENTITY_CONTENT?.[name]?.line||ep.line;
+  $('relationship').textContent=cleanWhyYouGotThis(name,p);
+  $('green').textContent=displayEdge(name,ep);
+  $('red').textContent=displayWatch(name,ep);
 
   $('constellation').innerHTML='';
   rank4.forEach((x,i)=>$('constellation').insertAdjacentHTML('beforeend',
@@ -1080,30 +1833,54 @@ function fitCanvasFont(ctx,text,maxWidth,startSize,minSize=34,weight='800',famil
 function drawShareMotif(ctx,name,category,cx,cy,r){
   ctx.save();
   ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.clip();
-  const g=ctx.createLinearGradient(cx,cy-r,cx,cy+r);g.addColorStop(0,'#edf8f5');g.addColorStop(1,'#badbd5');ctx.fillStyle=g;ctx.fillRect(cx-r,cy-r,r*2,r*2);
+  const g=ctx.createLinearGradient(cx,cy-r,cx,cy+r);
+  g.addColorStop(0,'#f5efe5');g.addColorStop(1,'#dbe7e5');
+  ctx.fillStyle=g;ctx.fillRect(cx-r,cy-r,r*2,r*2);
   const n=String(name||'').toLowerCase();
 
-  if(n.includes('seagrass')){
-    ctx.strokeStyle='rgba(70,139,127,.55)';ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(cx-r,cy-r*.15);ctx.quadraticCurveTo(cx-r*.35,cy-r*.28,cx,cy-r*.15);ctx.quadraticCurveTo(cx+r*.38,cy-r*.02,cx+r,cy-r*.15);ctx.stroke();
-    ctx.strokeStyle='#2f765e';ctx.lineWidth=14;ctx.lineCap='round';
-    [[-.55,.55,-.48,-.55],[-.22,.62,-.08,-.68],[.12,.62,.22,-.48],[.46,.60,.60,-.48]].forEach(v=>{ctx.beginPath();ctx.moveTo(cx+r*v[0],cy+r*v[1]);ctx.quadraticCurveTo(cx+r*(v[0]-.1),cy, cx+r*v[2],cy+r*v[3]);ctx.stroke()});
+  function wave(y,alpha=.45){
+    ctx.strokeStyle=`rgba(91,133,132,${alpha})`;ctx.lineWidth=5;ctx.lineCap='round';
+    ctx.beginPath();ctx.moveTo(cx-r*.82,cy+r*y);
+    ctx.bezierCurveTo(cx-r*.35,cy+r*(y-.12),cx+r*.28,cy+r*(y+.12),cx+r*.82,cy+r*y);ctx.stroke();
+  }
+
+  if(n==='duckweed'){
+    wave(-.05,.46);
+    const fronds=[[-.48,-.20,.16,.11,-.15],[-.22,-.25,.15,.10,.10],[.05,-.14,.17,.12,-.05],[.32,-.25,.13,.09,.18],[.48,-.06,.12,.09,-.10]];
+    ctx.fillStyle='#67a75d';ctx.strokeStyle='#427d45';ctx.lineWidth=2;
+    for(const [x,y,rx,ry,rot] of fronds){
+      ctx.save();ctx.translate(cx+r*x,cy+r*y);ctx.rotate(rot);ctx.beginPath();ctx.ellipse(0,0,r*rx,r*ry,0,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.restore();
+      ctx.strokeStyle='#698a63';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(cx+r*x,cy+r*(y+.08));ctx.quadraticCurveTo(cx+r*(x-.02),cy+r*.30,cx+r*(x-.04),cy+r*.60);ctx.stroke();
+      ctx.strokeStyle='#427d45';ctx.lineWidth=2;
+    }
+  }else if(n.includes('seagrass')){
+    wave(-.2,.5);
+    ctx.strokeStyle='#3c7863';ctx.lineWidth=12;ctx.lineCap='round';
+    [[-.55,.62,-.48,-.54],[-.22,.65,-.08,-.68],[.12,.62,.22,-.50],[.47,.60,.62,-.46]].forEach(v=>{
+      ctx.beginPath();ctx.moveTo(cx+r*v[0],cy+r*v[1]);ctx.quadraticCurveTo(cx+r*(v[0]-.08),cy,cx+r*v[2],cy+r*v[3]);ctx.stroke()
+    });
   }else if(n.includes('mangrove')){
-    ctx.fillStyle='#4e7f5f';ctx.beginPath();ctx.arc(cx-r*.18,cy-r*.25,r*.34,0,Math.PI*2);ctx.arc(cx+r*.18,cy-r*.30,r*.30,0,Math.PI*2);ctx.arc(cx+r*.36,cy-r*.12,r*.26,0,Math.PI*2);ctx.fill();
-    ctx.strokeStyle='#71533d';ctx.lineWidth=12;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(cx,cy-r*.05);ctx.lineTo(cx,cy+r*.35);ctx.stroke();
-    ctx.lineWidth=8;[[-.55,.65],[-.25,.78],[.25,.78],[.55,.65]].forEach(v=>{ctx.beginPath();ctx.moveTo(cx,cy+r*.28);ctx.lineTo(cx+r*v[0],cy+r*v[1]);ctx.stroke()});
-  }else if(n.includes('papyrus')||n.includes('cattail')||n==='reed'||n.includes('sedge')||n.includes('wild rice')||n.includes('saltmarsh grass')){
-    ctx.strokeStyle='#477759';ctx.lineWidth=10;ctx.lineCap='round';
-    [-.55,-.18,.18,.53].forEach((xv,i)=>{ctx.beginPath();ctx.moveTo(cx+r*xv,cy+r*.62);ctx.quadraticCurveTo(cx+r*(xv-.05),cy, cx+r*(xv+.03),cy-r*(.55-.08*i));ctx.stroke()});
-    ctx.fillStyle='#806d4d';[-.52,-.15].forEach((xv,i)=>{ctx.beginPath();ctx.ellipse(cx+r*xv,cy-r*(.55-.08*i),r*.07,r*.16,0,0,Math.PI*2);ctx.fill()});
+    ctx.fillStyle='#789a70';ctx.beginPath();ctx.arc(cx-r*.18,cy-r*.27,r*.34,0,Math.PI*2);ctx.arc(cx+r*.20,cy-r*.28,r*.35,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#765b45';ctx.lineWidth=11;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(cx,cy-r*.02);ctx.lineTo(cx,cy+r*.35);ctx.stroke();
+    ctx.lineWidth=7;[[-.58,.73],[-.26,.82],[.26,.82],[.58,.73]].forEach(v=>{ctx.beginPath();ctx.moveTo(cx,cy+r*.30);ctx.lineTo(cx+r*v[0],cy+r*v[1]);ctx.stroke()});wave(.62,.42);
+  }else if(n.includes('lotus')||n.includes('water lily')){
+    wave(.38,.42);ctx.fillStyle='#7fa879';ctx.beginPath();ctx.ellipse(cx-r*.16,cy+r*.2,r*.36,r*.16,0,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#df9eb1';[-.35,-.15,.05,.25,.45].forEach((v,i)=>{ctx.save();ctx.translate(cx+r*.28,cy-r*.18);ctx.rotate(v);ctx.beginPath();ctx.ellipse(0,-r*.12,r*.10,r*.22,0,0,Math.PI*2);ctx.fill();ctx.restore()});
+    ctx.fillStyle='#d3a246';ctx.beginPath();ctx.arc(cx+r*.28,cy-r*.18,r*.055,0,Math.PI*2);ctx.fill();
+  }else if(n.includes('dolphin')){
+    wave(.45,.42);ctx.fillStyle='#668896';ctx.beginPath();ctx.moveTo(cx-r*.62,cy+r*.04);ctx.bezierCurveTo(cx-r*.2,cy-r*.35,cx+r*.33,cy-r*.35,cx+r*.62,cy-r*.03);ctx.lineTo(cx+r*.80,cy-r*.14);ctx.lineTo(cx+r*.68,cy+r*.10);ctx.bezierCurveTo(cx+r*.25,cy+r*.36,cx-r*.26,cy+r*.30,cx-r*.62,cy+r*.04);ctx.fill();
   }else if(category==='Wetland site'||category==='Wetland / landscape'){
-    ctx.strokeStyle='#4c9189';ctx.lineWidth=9;ctx.lineCap='round';
-    [-.18,.12,.42].forEach(yoff=>{ctx.beginPath();ctx.moveTo(cx-r*.72,cy+r*yoff);ctx.bezierCurveTo(cx-r*.28,cy+r*(yoff-.18),cx+r*.25,cy+r*(yoff+.18),cx+r*.72,cy+r*yoff);ctx.stroke()});
-    ctx.fillStyle='#e8c58d';ctx.beginPath();ctx.arc(cx+r*.38,cy-r*.42,r*.12,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#6e8f8d';ctx.lineWidth=8;ctx.lineCap='round';[-.16,.10,.36].forEach(y=>{ctx.beginPath();ctx.moveTo(cx-r*.75,cy+r*y);ctx.bezierCurveTo(cx-r*.28,cy+r*(y-.16),cx+r*.22,cy+r*(y+.16),cx+r*.75,cy+r*y);ctx.stroke()});
+    ctx.fillStyle='#d2a25f';ctx.beginPath();ctx.arc(cx+r*.36,cy-r*.42,r*.11,0,Math.PI*2);ctx.fill();
   }else{
-    ctx.fillStyle='#315f4c';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`${Math.round(r*.82)}px Arial`;ctx.fillText(glyph(name,category),cx,cy);
+    // Deliberately abstract rather than a misleading emoji.
+    ctx.strokeStyle=identityAccent(name);ctx.lineWidth=8;ctx.lineCap='round';
+    ctx.beginPath();ctx.arc(cx,cy,r*.45,0,Math.PI*2);ctx.stroke();
+    ctx.fillStyle=identityAccent(name);ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`800 ${Math.round(r*.34)}px Arial`;
+    ctx.fillText(initialsFor(name),cx,cy);
   }
   ctx.restore();
-  ctx.strokeStyle='rgba(48,86,70,.18)';ctx.lineWidth=3;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke();
+  ctx.strokeStyle='rgba(48,62,61,.15)';ctx.lineWidth=3;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke();
 }
 
 async function buildShareCardBlob(){
@@ -1365,6 +2142,548 @@ document.addEventListener('DOMContentLoaded',()=>{initAuth().catch(console.error
 </script>
 
 
+
+<script id="ecotone-feedback-v2-js">
+/* Curate the identity universe without changing the calibrated vectors. */
+const IDENTITY_RENAMES={
+  'Mud':'Irrawaddy Dolphin',
+  'Rainwater':'Oriental Darter',
+  'Sediment':'Lesser Whistling Duck',
+  'Fallen Log':'Marsh Harrier',
+  'Floating Leaf':'Purple Heron',
+  'Water Ripple':'River Tern'
+};
+ids.forEach(row=>{if(IDENTITY_RENAMES[row[0]])row[0]=IDENTITY_RENAMES[row[0]]});
+Object.assign(ECO_PROFILES,{
+  'Irrawaddy Dolphin':{traits:['social','echolocating','coastal-riverine'],line:'You read the room through signals other people miss, and you work best when connection still leaves room to move.'},
+  'Oriental Darter':{traits:['patient','underwater-hunting','wing-drying'],line:'You can disappear into a task, come back up with exactly what you needed, and then take your own time to reset.'},
+  'Lesser Whistling Duck':{traits:['social','nocturnal-feeding','wetland-dependent'],line:'You like company without needing to be the loudest person in it, and your best energy often appears when the setting feels relaxed.'},
+  'Marsh Harrier':{traits:['low-flying','watchful','opportunistic'],line:'You scan before you commit. When the opening is real, you move quickly and with very little wasted motion.'},
+  'Purple Heron':{traits:['reed-hidden','patient','precise'],line:'You are comfortable being hard to read. Observation comes first, and your moves usually have a reason.'},
+  'River Tern':{traits:['agile','river-dependent','surface-diving'],line:'You like movement, clean decisions and enough open space to change direction without explaining every turn.'}
+});
+Object.assign(defs,{
+  'Irrawaddy Dolphin':'a coastal and river dolphin found in shallow estuaries, lagoons and river mouths in parts of Asia',
+  'Oriental Darter':'a fish-eating waterbird that swims with much of its body submerged and often dries its wings after diving',
+  'Lesser Whistling Duck':'a social wetland duck commonly found on ponds, lakes, marshes and flooded fields across South Asia',
+  'Marsh Harrier':'a wetland raptor that hunts low over reeds, marshes and open water',
+  'Purple Heron':'a long-legged heron that often stays partly hidden in reedbeds and shallow wetlands',
+  'River Tern':'an agile tern associated with rivers, reservoirs and other inland waters in South Asia'
+});
+
+
+
+Object.entries(PILOT_IDENTITY_CONTENT).forEach(([name,p])=>{
+  if(ECO_PROFILES[name]){
+    ECO_PROFILES[name]={...ECO_PROFILES[name],traits:[...p.traits],line:p.line};
+  }
+  if(p.what)defs[name]=p.what.replace(/[.]$/,'');
+});
+const IDENTITY_COLORS=['#c98143','#5f7887','#b86b58','#7c725f','#a88a4f','#667a72'];
+function hashIdentity(s){let h=0;for(const ch of String(s||''))h=((h<<5)-h)+ch.charCodeAt(0),h|=0;return Math.abs(h)}
+function identityAccent(name){return IDENTITY_COLORS[hashIdentity(name)%IDENTITY_COLORS.length]}
+function identitySoft(name){
+  const c=identityAccent(name).replace('#','');
+  const r=parseInt(c.slice(0,2),16),g=parseInt(c.slice(2,4),16),b=parseInt(c.slice(4,6),16);
+  return `rgb(${Math.round(r*.14+255*.86)},${Math.round(g*.14+255*.86)},${Math.round(b*.14+255*.86)})`
+}
+function initialsFor(name){
+  const parts=String(name||'').replace(/[\/\-]/g,' ').split(/\s+/).filter(Boolean);
+  if(!parts.length)return'WT';
+  return (parts.length===1?parts[0].slice(0,2):parts[0][0]+parts[parts.length-1][0]).toUpperCase()
+}
+function svgWrap(inner,a,soft,label='Ecological identity'){
+  return `<span class="identity-pictogram art-pictogram" style="--accent:${a};--accent-soft:${soft}">
+    <svg viewBox="0 0 120 120" role="img" aria-label="${label}" xmlns="http://www.w3.org/2000/svg">
+      ${inner}
+    </svg>
+  </span>`
+}
+function waterBase(a){
+  return `<path d="M10 72 C28 65 46 80 64 72 C82 64 96 78 110 70" fill="none" stroke="${a}" stroke-width="3.5" opacity=".48" stroke-linecap="round"/>
+          <path d="M16 84 C34 78 49 89 67 83 C86 76 99 88 108 83" fill="none" stroke="${a}" stroke-width="2.2" opacity=".28" stroke-linecap="round"/>`
+}
+function abstractIdentityArt(name,category,a,soft){
+  const ini=initialsFor(name);
+  const motif=category==='Ecological role'
+    ? `<circle cx="60" cy="60" r="27" fill="none" stroke="${a}" stroke-width="5"/><path d="M60 26 V42 M60 78 V94 M26 60 H42 M78 60 H94" stroke="${a}" stroke-width="5" stroke-linecap="round"/>`
+    : category==='Wetland site'||category==='Wetland / landscape'
+      ? `${waterBase(a)}<path d="M18 63 C34 52 46 55 60 46 C78 35 92 41 105 32" fill="none" stroke="${a}" stroke-width="4.5" opacity=".75" stroke-linecap="round"/>`
+      : `<circle cx="60" cy="60" r="31" fill="${soft}"/><path d="M27 76 C43 64 52 73 65 61 C78 49 92 57 101 46" fill="none" stroke="${a}" stroke-width="4" stroke-linecap="round"/>`;
+  return svgWrap(`${motif}<text x="60" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="${a}">${ini}</text>`,a,soft,`${name} visual`);
+}
+function symbolMarkup(name,category){
+  const a=identityAccent(name),soft=identitySoft(name),n=String(name||'').toLowerCase();
+
+  /* Floating plants */
+  if(n==='duckweed'){
+    return svgWrap(`
+      <rect x="7" y="18" width="106" height="84" rx="42" fill="#eef5f1"/>
+      <path d="M10 61 C35 56 52 67 75 60 C91 56 102 62 111 59" fill="none" stroke="#7aa49c" stroke-width="3" opacity=".55"/>
+      <g fill="#67a75d" stroke="#427d45" stroke-width="1.4">
+        <ellipse cx="37" cy="52" rx="11" ry="8" transform="rotate(-18 37 52)"/>
+        <ellipse cx="51" cy="49" rx="10" ry="7" transform="rotate(12 51 49)"/>
+        <ellipse cx="67" cy="55" rx="11" ry="8" transform="rotate(-6 67 55)"/>
+        <ellipse cx="79" cy="48" rx="8" ry="6" transform="rotate(18 79 48)"/>
+        <ellipse cx="89" cy="58" rx="8" ry="6" transform="rotate(-10 89 58)"/>
+      </g>
+      <g stroke="#6b8b64" stroke-width="1.5" stroke-linecap="round" opacity=".9">
+        <path d="M38 59 C38 70 34 79 35 91"/><path d="M52 55 C52 67 49 77 50 88"/>
+        <path d="M67 62 C66 72 64 81 65 94"/><path d="M80 54 C80 65 77 74 78 84"/>
+        <path d="M90 64 C90 72 88 79 88 87"/>
+      </g>
+    `,a,soft,'Duckweed: small floating fronds with roots');
+  }
+
+  if(n==='seagrass'){
+    return svgWrap(`
+      <rect x="8" y="18" width="104" height="84" rx="42" fill="#e9f1ef"/>
+      ${waterBase('#6c9992')}
+      <path d="M26 96 C24 73 30 56 35 31 M45 96 C43 70 49 49 54 24 M63 96 C61 71 68 50 73 34 M81 96 C78 73 83 59 91 39"
+        fill="none" stroke="#3c7863" stroke-width="7" stroke-linecap="round"/>
+    `,a,soft,'Seagrass meadow underwater');
+  }
+
+  if(n.includes('lotus')||n.includes('water lily')){
+    return svgWrap(`
+      <ellipse cx="48" cy="71" rx="28" ry="14" fill="#7fa879" opacity=".9"/>
+      <path d="M48 71 L62 58" stroke="#5f815f" stroke-width="3"/>
+      <g transform="translate(69 48)">
+        <ellipse cx="0" cy="-12" rx="8" ry="16" fill="#d98da2"/>
+        <ellipse cx="-10" cy="-2" rx="8" ry="16" transform="rotate(-55 -10 -2)" fill="#e7a9b8"/>
+        <ellipse cx="10" cy="-2" rx="8" ry="16" transform="rotate(55 10 -2)" fill="#e7a9b8"/>
+        <ellipse cx="0" cy="5" rx="7" ry="13" fill="#f0bdc8"/>
+        <circle cx="0" cy="-2" r="4" fill="#d7a43c"/>
+      </g>
+      ${waterBase('#799e98')}
+    `,a,soft,`${name} floating aquatic plant`);
+  }
+
+  if(n.includes('mangrove')){
+    return svgWrap(`
+      <circle cx="47" cy="39" r="19" fill="#789a70"/><circle cx="69" cy="36" r="22" fill="#6f8e68"/><circle cx="82" cy="49" r="15" fill="#84a276"/>
+      <path d="M61 49 V72" stroke="#765b45" stroke-width="7" stroke-linecap="round"/>
+      <g stroke="#765b45" stroke-width="5" stroke-linecap="round">
+        <path d="M61 68 L28 101"/><path d="M61 68 L46 104"/><path d="M61 68 L72 104"/><path d="M61 68 L96 100"/>
+      </g>
+      <path d="M10 90 C30 84 47 95 65 89 C83 83 98 93 110 89" fill="none" stroke="#719a96" stroke-width="3" opacity=".55"/>
+    `,a,soft,'Mangrove with prop roots');
+  }
+
+  if(n.includes('cattail')||n==='reed'||n.includes('papyrus')||n.includes('sedge')||n.includes('wild rice')||n.includes('saltmarsh grass')||n.includes('pondweed')){
+    const heads=n.includes('cattail')?`<g fill="#7b5a3c"><rect x="33" y="27" width="8" height="24" rx="4"/><rect x="70" y="22" width="8" height="26" rx="4"/></g>`:'';
+    return svgWrap(`
+      ${waterBase('#7b9a96')}
+      <g fill="none" stroke="#688265" stroke-width="5" stroke-linecap="round">
+        <path d="M28 97 C28 73 31 50 37 28"/><path d="M49 97 C48 72 53 50 57 20"/>
+        <path d="M70 97 C69 71 73 48 76 24"/><path d="M89 97 C86 73 91 56 96 38"/>
+      </g>${heads}
+    `,a,soft,`${name} wetland plant`);
+  }
+
+  if(n==='algae'||n==='phytoplankton'||n==='diatom'){
+    const cells=n==='diatom'
+      ? `<g fill="none" stroke="${a}" stroke-width="3"><ellipse cx="42" cy="45" rx="13" ry="24"/><ellipse cx="76" cy="68" rx="11" ry="21" transform="rotate(35 76 68)"/><path d="M42 27 V63 M31 45 H53 M66 54 L86 82"/></g>`
+      : `<g fill="${a}" opacity=".82"><circle cx="35" cy="44" r="9"/><circle cx="55" cy="62" r="12"/><circle cx="80" cy="42" r="8"/><circle cx="83" cy="76" r="10"/><circle cx="34" cy="82" r="6"/></g>`;
+    return svgWrap(`<rect x="10" y="18" width="100" height="84" rx="42" fill="#edf2ee"/>${cells}`,a,soft,`${name} microscopic aquatic life`);
+  }
+
+  /* Animals with clear silhouettes */
+  if(n.includes('flamingo')){
+    return svgWrap(`
+      <path d="M50 91 C54 72 53 60 58 49 C61 42 69 37 76 39 C85 42 87 51 82 58 C77 65 66 65 61 58"
+        fill="none" stroke="#d17884" stroke-width="6" stroke-linecap="round"/>
+      <path d="M78 44 C91 44 98 50 101 56" fill="none" stroke="#34343a" stroke-width="4" stroke-linecap="round"/>
+      <path d="M55 90 V105 M67 89 V105" stroke="#8a5f61" stroke-width="3"/>
+      ${waterBase('#789a96')}
+    `,a,soft,'Flamingo silhouette');
+  }
+  if(n.includes('dolphin')){
+    return svgWrap(`
+      ${waterBase('#6d9694')}
+      <path d="M25 68 C43 49 65 45 84 54 C91 57 96 61 103 60 C97 67 91 69 84 68 C67 83 46 83 31 73 Z" fill="#668896"/>
+      <path d="M61 54 L68 38 L74 56" fill="#668896"/>
+      <path d="M86 57 L103 47 L98 64" fill="#668896"/>
+    `,a,soft,'Dolphin swimming');
+  }
+  if(n.includes('gharial')||n.includes('crocodile')||n.includes('mugger')){
+    return svgWrap(`
+      <path d="M18 66 C36 52 63 49 88 56 L108 63 L89 68 C63 77 37 76 18 66 Z" fill="#748268"/>
+      <circle cx="81" cy="58" r="2.7" fill="#1e2928"/>
+      <path d="M88 56 L108 63 L88 64" fill="#69765f"/>
+      ${waterBase('#759995')}
+    `,a,soft,'Crocodilian in water');
+  }
+  if(n.includes('turtle')){
+    return svgWrap(`
+      <ellipse cx="57" cy="61" rx="28" ry="21" fill="#78856d"/><circle cx="90" cy="59" r="8" fill="#78856d"/>
+      <path d="M35 47 L22 37 M35 75 L22 84 M75 47 L86 35 M75 75 L86 87" stroke="#78856d" stroke-width="7" stroke-linecap="round"/>
+      <path d="M42 50 Q58 39 73 50 Q76 65 68 75 Q52 80 40 69 Z" fill="none" stroke="#596650" stroke-width="3"/>
+    `,a,soft,'Freshwater turtle');
+  }
+  if(n.includes('frog')){
+    return svgWrap(`
+      <ellipse cx="60" cy="64" rx="27" ry="21" fill="#769267"/><circle cx="48" cy="44" r="10" fill="#7f9c70"/><circle cx="72" cy="44" r="10" fill="#7f9c70"/>
+      <circle cx="48" cy="42" r="3" fill="#202725"/><circle cx="72" cy="42" r="3" fill="#202725"/>
+      <path d="M41 78 L25 95 M79 78 L96 95" stroke="#66825b" stroke-width="7" stroke-linecap="round"/>
+    `,a,soft,'Frog');
+  }
+  if(n.includes('crab')){
+    return svgWrap(`
+      <ellipse cx="60" cy="65" rx="24" ry="18" fill="#b66b52"/>
+      <path d="M38 58 L23 46 M36 68 L20 70 M82 58 L97 46 M84 68 L101 70 M45 79 L34 94 M75 79 L86 94" stroke="#9d5945" stroke-width="6" stroke-linecap="round"/>
+      <path d="M25 46 C15 41 14 31 22 29 M95 46 C105 41 106 31 98 29" fill="none" stroke="#9d5945" stroke-width="6" stroke-linecap="round"/>
+    `,a,soft,'Mangrove crab');
+  }
+  if(n.includes('snail')){
+    return svgWrap(`
+      <path d="M28 78 C42 78 53 72 64 72 C77 72 84 78 95 78" stroke="#8c7358" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="60" cy="57" r="22" fill="#b58d63"/><path d="M60 57 C60 45 76 45 76 57 C76 70 57 72 49 61 C41 49 49 37 62 36" fill="none" stroke="#84684f" stroke-width="3"/>
+      <path d="M88 72 L96 58 M94 72 L105 60" stroke="#8c7358" stroke-width="2"/>
+    `,a,soft,'Freshwater snail');
+  }
+  if(n.includes('fish')||n.includes('mahseer')||n.includes('mudskipper')){
+    return svgWrap(`
+      <ellipse cx="59" cy="62" rx="30" ry="18" fill="#668a91"/><path d="M88 62 L106 48 V76 Z" fill="#668a91"/>
+      <circle cx="47" cy="57" r="2.7" fill="#152326"/><path d="M57 46 L69 32 L73 50" fill="#5c7d82"/>
+      ${waterBase('#799b98')}
+    `,a,soft,'Wetland fish');
+  }
+
+  /* Bird silhouettes - ecological portrait, not species emoji */
+  if(category==='Animal' && /(crane|stork|heron|egret|openbill|godwit|darter|duck|goose|coot|jacana|skimmer|tern|pelican|kingfisher|harrier)/.test(n)){
+    const longLeg=/(crane|stork|heron|egret|openbill|godwit)/.test(n);
+    return svgWrap(`
+      <ellipse cx="58" cy="59" rx="24" ry="15" fill="#66767a"/>
+      <path d="M71 54 C79 43 87 39 95 42" fill="none" stroke="#66767a" stroke-width="7" stroke-linecap="round"/>
+      <path d="M95 42 L109 39" stroke="#9a6d43" stroke-width="3" stroke-linecap="round"/>
+      <path d="M42 58 L25 48 L34 64" fill="#66767a"/>
+      ${longLeg?`<path d="M53 73 L48 103 M66 73 L71 103" stroke="#7c674f" stroke-width="3"/>`:''}
+      ${waterBase('#7b9996')}
+    `,a,soft,`${name} bird silhouette`);
+  }
+
+  if(category==='Wetland site'||category==='Wetland / landscape'){
+    return svgWrap(`
+      <rect x="9" y="18" width="102" height="84" rx="42" fill="#edf1ed"/>
+      <path d="M16 72 C31 60 43 65 58 54 C73 43 89 48 104 37" fill="none" stroke="${a}" stroke-width="5" opacity=".72" stroke-linecap="round"/>
+      ${waterBase('#769997')}
+      <circle cx="84" cy="35" r="8" fill="#d7aa69" opacity=".75"/>
+    `,a,soft,`${name} wetland landscape`);
+  }
+
+  if(category==='Ecological role'){
+    const role=n.includes('pollinator')?'✦':n.includes('filter')?'≈':n.includes('carbon')?'C':n.includes('flood')?'↔':n.includes('nursery')?'○':n.includes('decomposer')?'↻':n.includes('seed')?'•':n.includes('engineer')?'⌁':n.includes('nutrient')?'↺':'▦';
+    return svgWrap(`
+      <circle cx="60" cy="57" r="31" fill="${soft}" stroke="${a}" stroke-width="3"/>
+      <text x="60" y="68" text-anchor="middle" font-family="Georgia,serif" font-size="33" font-weight="700" fill="${a}">${role}</text>
+      <path d="M27 93 H93" stroke="${a}" stroke-width="3" opacity=".35"/>
+    `,a,soft,`${name} ecological role`);
+  }
+
+  if(category==='Wildcard'){
+    return svgWrap(`
+      <rect x="9" y="18" width="102" height="84" rx="42" fill="#eef1ef"/>
+      ${waterBase(a)}
+      <path d="M31 35 C39 29 44 30 51 36 M69 33 C77 27 84 29 91 35" fill="none" stroke="${a}" stroke-width="3" opacity=".62" stroke-linecap="round"/>
+    `,a,soft,`${name} wetland process`);
+  }
+
+  return abstractIdentityArt(name,category,a,soft)
+}
+function identityIcon(name,category){return initialsFor(name)}
+function glyphSocial(name){const hit=ids.find(x=>x[0]===name);return initialsFor(name)}
+
+
+
+const ECOTONE_REVIEW_REFINEMENT_V4 = true;
+
+function identityShortToken(name){
+  const stop=new Set(['forest','wetland','lake','lagoon','zone','grass','tree','seedling','river']);
+  const bits=String(name||'wetland').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().split(/\s+/).filter(Boolean);
+  return (bits.find(x=>!stop.has(x))||bits[0]||'wetland').slice(0,13);
+}
+
+function strictUniqueEcologyTraits(){
+  const occurrences={};
+  ids.forEach(row=>{
+    const name=row[0],ep=ECO_PROFILES[name];
+    (ep?.traits||[]).forEach(t=>{
+      const key=String(t).toLowerCase();
+      (occurrences[key]??=[]).push(name);
+    });
+  });
+
+  ids.forEach(row=>{
+    const name=row[0],ep=ECO_PROFILES[name];
+    if(!ep)return;
+    const token=identityShortToken(name);
+    ep.traits=(ep.traits||[]).slice(0,3).map((trait,i)=>{
+      const key=String(trait).toLowerCase();
+      if((occurrences[key]||[]).length<=1)return trait;
+      return `${token}-${trait}`;
+    });
+  });
+}
+
+const RESULT_COPY_TEMPLATES=[
+  (n,t)=>`Your ${t[0]} side is strongest when you can use it without forcing the pace.`,
+  (n,t)=>`You stand out through ${t[0]}; the useful part is how it works with ${t[1]}.`,
+  (n,t)=>`${n} energy works best when ${t[0]} does the leading and ${t[2]} keeps it grounded.`,
+  (n,t)=>`Your advantage is not one loud trait. It is the mix of ${t[0]} and ${t[1]}.`,
+  (n,t)=>`You tend to be most effective when ${t[1]} has enough room to work.`,
+  (n,t)=>`The strongest part of this match is ${t[0]} with a little ${t[2]}.`,
+  (n,t)=>`You are good at using ${t[0]} without needing everyone else to work the same way.`,
+  (n,t)=>`${t[1]} is useful for you because it gives your ${t[0]} somewhere to go.`,
+  (n,t)=>`Your edge is knowing when to lean into ${t[0]} and when to let ${t[2]} take over.`,
+  (n,t)=>`You make ${t[0]} feel practical rather than performative.`,
+  (n,t)=>`When things get complicated, your ${t[1]} side often becomes the useful one.`,
+  (n,t)=>`${n} fits because your strengths work together rather than competing for attention.`
+];
+
+const WATCH_COPY_TEMPLATES=[
+  (n,t)=>`Watch when ${t[0]} becomes the only response you trust.`,
+  (n,t)=>`${t[1]} helps until it starts crowding out a different way of handling things.`,
+  (n,t)=>`The risk is overusing ${t[0]} after the situation has already changed.`,
+  (n,t)=>`${t[2]} is a strength, but not every moment needs the full version of it.`,
+  (n,t)=>`Be careful not to turn ${t[1]} into a rule for every situation.`,
+  (n,t)=>`Your usual strength can become tiring when you keep carrying it after it is needed.`,
+  (n,t)=>`The same ${t[0]} instinct that protects you can also make a new option harder to notice.`,
+  (n,t)=>`If ${t[1]} takes over, you may miss the value of slowing down or changing direction.`,
+  (n,t)=>`A good trait becomes limiting when it leaves no room for the opposite response.`,
+  (n,t)=>`This match works best when ${t[2]} stays flexible rather than automatic.`,
+  (n,t)=>`Do not let the part of you that is good at ${t[0]} become the part that must do everything.`,
+  (n,t)=>`The watch-out is simple: one useful pattern should not become your whole personality.`
+];
+
+function identityHook(name){
+  const p=PILOT_IDENTITY_CONTENT?.[name]?.hook;
+  if(p)return p;
+  const ep=ECO_PROFILES[name];
+  const trait=ep?.traits?.[0]||'wetland-linked';
+  const hooks=[
+    `Built around ${trait}.`,
+    `${name}, in one line.`,
+    `A different way to work with water.`,
+    `Small ecological clue. Strong identity.`,
+    `Your wetland match, decoded.`,
+    `The ${trait} side of you.`
+  ];
+  return hooks[hashIdentity(name)%hooks.length];
+}
+
+function displayEdge(name,ep){
+  const custom=PILOT_IDENTITY_CONTENT?.[name]?.edge;
+  if(custom)return custom;
+  const t=ep?.traits||['adaptable','observant','steady'];
+  return RESULT_COPY_TEMPLATES[hashIdentity(name)%RESULT_COPY_TEMPLATES.length](name,t);
+}
+function displayWatch(name,ep){
+  const custom=PILOT_IDENTITY_CONTENT?.[name]?.watch;
+  if(custom)return custom;
+  const t=ep?.traits||['adaptable','observant','steady'];
+  return WATCH_COPY_TEMPLATES[(hashIdentity(name)+3)%WATCH_COPY_TEMPLATES.length](name,t);
+}
+
+function allIdentityEducation(name,category){
+  const p=PILOT_IDENTITY_CONTENT?.[name];
+  if(p)return {what:p.what,where:p.where,why:p.why,remember:p.remember,source:"",sourceLabel:""};
+  const e=wetlandEducation(name,category);
+  return {
+    what:(e.what||defs[name]||'A wetland-linked ecological identity').replace(/\.$/,'')+'.',
+    where:e.where||'Wetland ecosystems',
+    why:e.why||'It is part of the ecological processes that keep wetlands functioning.',
+    remember:e.remember||'Water level, timing and habitat structure shape how this identity works.',
+    source:e.source||"",
+    sourceLabel:e.sourceLabel||""
+  };
+}
+
+function renderSimpleLearningCard(name,category){
+  const e=allIdentityEducation(name,category);
+  return `
+    <div class="learning-title">Know this identity</div>
+    <div class="learning-row"><b>What it is</b><span>${escapeHtmlCore(e.what)}</span></div>
+    <div class="learning-row"><b>Found in</b><span>${escapeHtmlCore(e.where)}</span></div>
+    <div class="learning-row"><b>Why it matters</b><span>${escapeHtmlCore(e.why)}</span></div>
+    <div class="learning-row remember-row"><b>Remember this</b><span>${escapeHtmlCore(e.remember)}</span></div>
+    ${e.source?`<a class="learn-source" href="${e.source}" target="_blank" rel="noopener noreferrer">Learn more ↗</a>`:''}`;
+}
+
+function cleanWhyYouGotThis(name,p){
+  const ep=ECO_PROFILES[name];
+  const ex=extremes(p).slice(0,2);
+  const a=ex[0][2]>=50?DIM_HI[ex[0][1]]:DIM_LO[ex[0][1]];
+  const b=ex[1][2]>=50?DIM_HI[ex[1][1]]:DIM_LO[ex[1][1]];
+  return `Your answers leaned toward ${a} and ${b}. That sits closest to the ${ep.traits[0]} and ${ep.traits[1]} side of ${name}.`;
+}
+
+strictUniqueEcologyTraits();
+
+/* Remember the quiz result across the email-login redirect. */
+const QUIZ_RESULT_KEY='ecotoneQuizResultV3';
+function savedQuizResult(){try{return JSON.parse(localStorage.getItem(QUIZ_RESULT_KEY)||'null')}catch(e){return null}}
+function saveQuizResultSnapshot(name,category,vec,rank){try{localStorage.setItem(QUIZ_RESULT_KEY,JSON.stringify({identity:name,category,vec,constellation:(rank||[]).map(x=>x[0]),savedAt:Date.now()}))}catch(e){}}
+function isValidIdentityName(name){return !!name && name!=='WETLAND' && ids.some(x=>x[0]===name)}
+function currentVecFinal(){const s=savedQuizResult();try{if(typeof rec!=='undefined'&&rec.length&&typeof profile==='function')return profile(rec).p}catch(e){}return s?.vec||agencyProfile?.vec||Array(10).fill(50)}
+function currentIdentityFinal(){const n=el('rname');const dom=n&&n.textContent.trim();const s=savedQuizResult();return isValidIdentityName(dom)?dom:(isValidIdentityName(s?.identity)?s.identity:(isValidIdentityName(agencyProfile?.identity)?agencyProfile.identity:'WETLAND'))}
+function currentConstellationFinal(){const s=savedQuizResult();if(s?.constellation?.length)return s.constellation;if(rank4?.length)return rank4.map(x=>x[0]);return agencyProfile?.constellation||[currentIdentityFinal()]}
+function currentResultReady(){return isValidIdentityName((el('rname')?.textContent||'').trim())||isValidIdentityName(savedQuizResult()?.identity)}
+
+/* Quiz: question + answers + Previous. Nothing else. */
+function startQuiz(){asked=[];used=[];rec=[];trace=[];cur=null;rank4=null;started=Date.now();document.body.classList.add('quiz-mode');$('intro').classList.add('hidden');$('ratings')?.classList.add('hidden');$('done')?.classList.add('hidden');$('result')?.classList.add('hidden');$('quiz').classList.remove('hidden');next()}
+function render(q,sel){if(!q){showError('No question available.');return}cur=q;const n=asked.length+1;$('qnum').textContent=`${n} / 16`;$('qtext').textContent=q[3];$('bar').style.width=(n/16*100)+'%';$('backBtn').disabled=asked.length===0;const box=$('options');box.innerHTML='';q[4].forEach((a,i)=>{const b=document.createElement('button');b.innerHTML=`<span class="option-letter">${String.fromCharCode(65+i)}</span><span>${a[1]}</span>`;if(sel===a[0])b.classList.add('selected');b.onclick=()=>{[...box.children].forEach(x=>x.disabled=true);answer(a)};box.appendChild(b)});window.scrollTo({top:0,behavior:'smooth'})}
+function next(){if(asked.length>=16)return reveal();try{render(choose(),null)}catch(e){console.error(e);showError('The quiz hit a glitch. Tap retry.') }}
+function answer(a){asked.push(cur[0]);used.push(cur[1]);rec.push(a);trace.push(cur[0]+':'+a[0]);next()}
+function goBack(){if(!asked.length)return;const id=asked.pop();used.pop();const a=rec.pop();trace.pop();const q=qs.find(x=>x[0]===id);render(q,a?a[0]:null)}
+function editLastAnswerFromResult(){if(!asked.length)return;document.body.classList.add('quiz-mode');$('result').classList.add('hidden');$('quiz').classList.remove('hidden');const id=asked.pop();used.pop();const a=rec.pop();trace.pop();const q=qs.find(x=>x[0]===id);render(q,a?a[0]:null)}
+
+/* Identity-specific personality copy. Every identity's main line is already unique. */
+const SHADOWS={
+  social:'over-reading the group',collective:'letting the group drown out your own preference',colonial:'staying in a crowd that no longer fits',
+  patient:'waiting past the useful moment',slow:'holding on longer than necessary',rooted:'treating every change like a threat',protective:'guarding even when nobody is attacking',
+  adaptable:'changing direction before anything has time to deepen',mobile:'mistaking movement for progress',migratory:'finding it difficult to stay once things become ordinary',
+  precise:'becoming too exacting',specialized:'discounting approaches outside your niche',hidden:'expecting people to understand needs you never show',
+  watchful:'watching so long that the moment passes',intense:'taking up more space than the situation needs',expansive:'spreading yourself too thin',
+  resilient:'normalising pressure that should actually be addressed',nurturing:'carrying more than your share',stable:'staying with a structure after it stops helping'
+};
+function traitShadow(t){const x=String(t||'').toLowerCase();for(const [k,v] of Object.entries(SHADOWS))if(x.includes(k))return v;return 'leaning on the same strength in every situation'}
+function uniqueEdge(name,ep){
+  const t1=ep.traits[0],t2=ep.traits[1],m=hashIdentity(name)%6;
+  const lines=[
+    `Your ${t1} side helps you stay effective without needing to perform it. ${t2} is what gives ${name} its particular shape.`,
+    `${name}'s advantage is the combination of ${t1} and ${t2}; in you, that looks like knowing when to lean in and when to hold your ground.`,
+    `The strongest part of this match is ${t1}: it gives you a clear instinct, while ${t2} keeps that instinct useful rather than rigid.`,
+    `You share ${name}'s ${t1} quality most strongly. Paired with ${t2}, it gives your style a very specific rhythm.`,
+    `Your edge here is not a generic strength: it is the ${t1} + ${t2} combination that makes ${name} work.`,
+    `${name} gets its character from ${t1}; your version of that trait works best when ${t2} stays beside it.`
+  ];return lines[m]
+}
+function uniqueWatch(name,ep){const t1=ep.traits[0],t2=ep.traits[1],shadow=traitShadow(t1),m=hashIdentity(name)%6;const lines=[
+  `${name} works because of ${t1}. In you, the watch-out is ${shadow}; keep the ${t2} without making it your only mode.`,
+  `Your ${t1} side is useful, but it can tip into ${shadow}. ${name}'s ${t2} quality is the reminder to adjust, not just repeat.`,
+  `The risk in this match is ${shadow}. The better version of ${name} keeps ${t1} and ${t2} in balance.`,
+  `${t1} gives ${name} its edge. Overused, that same instinct can become ${shadow}; your cue is to make room for another response.`,
+  `Watch the ${t1} instinct when it becomes ${shadow}. ${name} is strongest when ${t2} stays flexible rather than automatic.`,
+  `For ${name}, ${t1} is an advantage, not a rule. If it turns into ${shadow}, the trait has gone too far.`
+];return lines[m]}
+const HUMAN_DIM_HI=['easy social energy','deep attachment','comfort with change','curiosity','open expression','protective care','clear boundaries','observation','structure','all-in energy'];
+const HUMAN_DIM_LO=['selective social energy','independence','stability','familiarity','private expression','self-contained care','soft boundaries','action-first instinct','spontaneity','easygoing energy'];
+function identityFit(name,p){const e=extremes(p).slice(0,2);const a=e[0][2]>=50?HUMAN_DIM_HI[e[0][1]]:HUMAN_DIM_LO[e[0][1]],b=e[1][2]>=50?HUMAN_DIM_HI[e[1][1]]:HUMAN_DIM_LO[e[1][1]];return `Your answers leaned most toward ${a} and ${b}. That combination brought ${name} closest to you.`}
+
+function reveal(){
+  document.body.classList.remove('quiz-mode');$('quiz').classList.add('hidden');$('result').classList.remove('hidden');window.scrollTo(0,0);
+  const p=profile(rec).p,r=ranked(p),t=r[0];rank4=r.slice(0,4);const name=t[0],category=t[1],ep=ECO_PROFILES[name],edu=wetlandEducation(name,category);
+  saveQuizResultSnapshot(name,category,p,rank4);
+  const result=$('result');result.style.setProperty('--accent',identityAccent(name));result.style.setProperty('--accent-soft',identitySoft(name));
+  $('glyph').innerHTML=symbolMarkup(name,category);$('rname').textContent=name;$('resultCategory').textContent=category;
+  $('rdef').innerHTML='<b>What it is:</b> '+(defs[name]||'a wetland-linked ecological identity')+'.<div class="trait-row">'+ep.traits.slice(0,3).map(x=>'<span class="trait-chip">'+escapeHtmlCore(x)+'</span>').join('')+'</div>';
+  const learn=$('learnWetland');if(learn)learn.innerHTML=renderSimpleLearningCard(name,category);$('punch').textContent=PILOT_IDENTITY_CONTENT?.[name]?.line||ep.line;$('relationship').textContent=cleanWhyYouGotThis(name,p);$('green').textContent=uniqueEdge(name,ep);$('red').textContent=uniqueWatch(name,ep);
+  $('constellation').innerHTML='';
+  const sim=$('similarTypes');if(sim){sim.innerHTML='';rank4.slice(1,4).forEach((x,i)=>sim.insertAdjacentHTML('beforeend',`<div class="similar-type" style="--card-accent:${identityAccent(x[0])}"><div class="st-rank">#${i+2}</div><div class="st-name">${escapeHtmlCore(x[0])}</div><div class="st-cat">${escapeHtmlCore(x[1])}</div><div class="st-glyph symbol-mini">${symbolMarkup(x[0],x[1])}</div></div>`))}
+}
+
+/* Social login for registered identities. */
+function openSocialLogin(){
+  if(authSession&&isValidIdentityName(agencyProfile?.identity)){returnToSocial();return}
+  el('socialLoginModal')?.classList.remove('hidden');const st=el('returnAuthStatus');if(st)st.textContent='';
+}
+function closeSocialLogin(){el('socialLoginModal')?.classList.add('hidden')}
+async function sendReturnMagicLink(){
+  const email=(el('returnAuthEmail')?.value||'').trim(),status=el('returnAuthStatus'),btn=el('returnAuthBtn');if(!email||!email.includes('@')){if(status)status.textContent='Enter a valid email.';return}
+  if(btn){btn.disabled=true;btn.textContent='Sending…'};try{localStorage.setItem('ecotoneAuthIntent','return');const {error}=await sb.auth.signInWithOtp({email,options:{emailRedirectTo:ECOTONE_REDIRECT_URL,shouldCreateUser:true}});if(error)throw error;if(status)status.textContent='Login link sent. Open it from your email.'}catch(e){if(status)status.textContent=e.message||'Could not send login link.'}finally{if(btn){btn.disabled=false;btn.textContent='Send login link'}}
+}
+async function sendMagicLink(){
+  const email=(el('authEmail')?.value||'').trim(),status=el('authStatus'),btn=el('authSendBtn');if(!email||!email.includes('@')){if(status)status.textContent='Please enter a valid email address.';return}
+  if(!isValidIdentityName(savedQuizResult()?.identity)){if(status)status.textContent='Your quiz identity is missing. Please take the quiz again first.';return}
+  if(btn){btn.disabled=true;btn.textContent='Sending…'};if(status)status.textContent='';try{localStorage.setItem('ecotoneAuthIntent','join');const {error}=await sb.auth.signInWithOtp({email,options:{emailRedirectTo:ECOTONE_REDIRECT_URL,shouldCreateUser:true}});if(error)throw error;if(status)status.textContent='Sign-in link sent. Open your email and tap the ECOTONE link.'}catch(e){if(status)status.textContent=e.message||'Could not send the sign-in email.'}finally{if(btn){btn.disabled=false;btn.textContent='Email me a sign-in link'}}
+}
+function updateMemberButton(){const b=el('existingSocialBtn');if(!b)return;b.textContent=authSession&&isValidIdentityName(agencyProfile?.identity)?'Open ECOTONE Social':'Already in ECOTONE Social? Log in'}
+async function initAuth(){
+  if(!sb){return}const {data,error}=await sb.auth.getSession();if(!error)authSession=data.session||null;setBackendMode();
+  if(authSession)await loadOwnProfile().catch(()=>{});updateAuthGate();updateMemberButton();
+  const intent=localStorage.getItem('ecotoneAuthIntent');
+  if(authSession&&intent==='return'){
+    if(isValidIdentityName(agencyProfile?.identity)){localStorage.removeItem('ecotoneAuthIntent');closeSocialLogin();await refreshLiveState(true);showSocialShell();showFloor()}
+    else{const st=el('returnAuthStatus');el('socialLoginModal')?.classList.remove('hidden');if(st)st.innerHTML='No registered ECOTONE Social identity was found for this email. <b>Take the quiz first</b>, then join Social.'}
+  }else if(authSession&&intent==='join'&&isValidIdentityName(savedQuizResult()?.identity)){
+    localStorage.removeItem('ecotoneAuthIntent');enterAgency();
+  }
+  sb.auth.onAuthStateChange(async(event,session)=>{authSession=session||null;setBackendMode();if(authSession)await loadOwnProfile().catch(()=>{});else{agencyProfile=null;stopPolling()}updateAuthGate();updateMemberButton()});
+}
+async function loadOwnProfile(){
+  if(!authSession?.user?.id)return null;const uid=authSession.user.id;const {data:pr,error:pe}=await sb.from('profiles').select('*').eq('user_id',uid).maybeSingle();if(pe)throw pe;let instagram='';const {data:ct,error:ce}=await sb.from('contacts').select('instagram_handle').eq('user_id',uid).maybeSingle();if(!ce&&ct)instagram=ct.instagram_handle||'';agencyProfile=pr?fromDbProfile(pr,instagram):null;
+  /* Repair a legacy WETLAND profile only when this browser still has the real quiz result. */
+  const snap=savedQuizResult();if(agencyProfile&&!isValidIdentityName(agencyProfile.identity)&&isValidIdentityName(snap?.identity)){const row={user_id:uid,wetland_identity:snap.identity,constellation:snap.constellation||[],trait_vector:snap.vec||agencyProfile.vec,updated_at:new Date().toISOString()};const {error}=await sb.from('profiles').update(row).eq('user_id',uid);if(!error){agencyProfile.identity=snap.identity;agencyProfile.constellation=snap.constellation||[];agencyProfile.vec=snap.vec||agencyProfile.vec}}
+  return agencyProfile
+}
+function collectProfileForm(){
+  const p={nickname:el('pNick').value.trim(),age:Number(el('pAge').value),city:el('pCity').value.trim(),org:el('pOrg').value.trim(),gender:el('pGender').value,interested:el('pInterested').value,intents:[...selectedIntents],bio:el('pBio').value.trim(),instagram:el('pInstagram').value.trim(),identity:currentIdentityFinal(),constellation:currentConstellationFinal(),vec:currentVecFinal()};
+  const missing=[];if(!isValidIdentityName(p.identity))missing.push('a valid quiz identity');if(!p.nickname)missing.push('nickname');if(!p.age||p.age<18)missing.push('age 18+');if(!p.city)missing.push('city');if(!p.gender)missing.push('gender');if(!p.interested)missing.push('who you want to meet');if(!p.intents.length)missing.push('what you are here for');if(!el('pConsent').checked)missing.push('18+ Social consent');return {p,missing}
+}
+async function returnToSocial(){if(!authSession){openSocialLogin();return}await loadOwnProfile().catch(()=>{});if(isValidIdentityName(agencyProfile?.identity)){await refreshLiveState(true);showSocialShell();showFloor()}else if(isValidIdentityName(savedQuizResult()?.identity))enterAgency();else openSocialLogin()}
+function leaveSocial(){stopPolling();el('agencyFloor')?.classList.add('hidden');el('intro')?.classList.remove('hidden');updateMemberButton();window.scrollTo(0,0)}
+async function signOutEcotone(){if(sb)await sb.auth.signOut();authSession=null;agencyProfile=null;liveState={floor:[],received:[],sent:[],matches:[]};stopPolling();setBackendMode();updateAuthGate();updateMemberButton();el('agencyFloor')?.classList.add('hidden');el('profileSetup')?.classList.add('hidden');el('intro')?.classList.remove('hidden');window.scrollTo(0,0)}
+
+/* Never show legacy placeholder identities in Discover. */
+async function refreshLiveState(silent=false){
+  if(!authSession?.user?.id||!agencyProfile||!isValidIdentityName(agencyProfile.identity))return;const uid=authSession.user.id;
+  const [profilesRes,winksRes,blocks]=await Promise.all([sb.from('profiles').select('*').eq('visible',true).neq('user_id',uid),sb.from('winks').select('*').or(`sender_id.eq.${uid},receiver_id.eq.${uid}`).order('created_at',{ascending:false}),fetchMyBlocks()]);if(profilesRes.error)throw profilesRes.error;if(winksRes.error)throw winksRes.error;
+  const blocked=new Set(blocks),allProfiles=(profilesRes.data||[]).map(fromDbProfile).filter(p=>!blocked.has(p.id)&&isValidIdentityName(p.identity)),winks=winksRes.data||[],otherIds=[...new Set(winks.map(w=>w.sender_id===uid?w.receiver_id:w.sender_id).filter(Boolean))],otherMap=await fetchProfiles(otherIds),sent=[],received=[],matches=[];
+  for(const w of winks){const otherId=w.sender_id===uid?w.receiver_id:w.sender_id,other=otherMap[otherId]||allProfiles.find(p=>p.id===otherId);if(!other||!isValidIdentityName(other.identity))continue;const score=compatibilityFinal(agencyProfile.vec,other.vec),reason=compatibilityReasonFinal(agencyProfile.vec,other.vec);if(w.sender_id===uid)sent.push({id:w.id,status:w.status==='accepted'?'matched':w.status,other,score,reason});if(w.receiver_id===uid&&w.status==='pending')received.push({id:w.id,status:w.status,other,score,reason});if(w.status==='accepted')matches.push({id:w.id,other,score,reason,myShare:false,otherShare:false,contactUnlocked:false})}
+  if(matches.length){const mids=matches.map(m=>m.id),{data:cons,error:coErr}=await sb.from('contact_consents').select('*').in('wink_id',mids);if(!coErr){for(const m of matches){const rows=(cons||[]).filter(c=>c.wink_id===m.id);m.myShare=!!rows.find(c=>c.user_id===uid&&c.share_contact);const otherRow=rows.find(c=>c.user_id===m.other.id);m.otherShare=!!(otherRow&&otherRow.share_contact);if(m.myShare&&m.otherShare){const {data:contact,error:ctErr}=await sb.from('contacts').select('instagram_handle').eq('user_id',m.other.id).maybeSingle();if(!ctErr&&contact){m.contactUnlocked=true;m.otherInstagram=contact.instagram_handle||''}}}}}
+  const sentTo=new Set(sent.filter(x=>x.status!=='closed'&&x.status!=='withdrawn').map(x=>x.other.id)),matchedIds=new Set(matches.map(x=>x.other.id));const floor=allProfiles.filter(p=>!sentTo.has(p.id)&&!matchedIds.has(p.id)).map(p=>({...p,score:compatibilityFinal(agencyProfile.vec,p.vec),reason:compatibilityReasonFinal(agencyProfile.vec,p.vec),publicCode:publicCode(p)})).sort((a,b)=>b.score-a.score);
+  const old=new Set(liveState.matches.map(x=>x.id));liveState={floor,received,sent,matches};const fresh=matches.filter(m=>!old.has(m.id)&&knownMatchIds.size>0);matches.forEach(m=>knownMatchIds.add(m.id));if(fresh.length&&!silent)showNotice('IT’S A WETLAND MATCH ✦');updateBadgesFinal();rerenderActivePanel()
+}
+function personCardFinal(p){const id=p.id,code=p.publicCode||publicCode(p),a=identityAccent(p.identity);return `<div class="person-card" style="--card-accent:${a}"><div class="person-id">${escapeFinal(code)}</div><div class="social-avatar">${symbolMarkup(p.identity,'')}</div><div class="person-name">${escapeFinal(p.identity)}</div><div class="person-nick">${escapeFinal(p.nickname||'')}</div><div class="person-meta">${escapeFinal(p.city||'')} · ${escapeFinal(String(p.age||''))}${p.org?' · '+escapeFinal(p.org):''}</div><div class="person-bio">“${escapeFinal(p.bio||'')}”</div><div class="compat"><div class="compat-bar"><span style="width:${Number(p.score||50)}%"></span></div><div class="compat-num">${Number(p.score||50)}%</div></div><div class="compat-reason">${escapeFinal(p.reason||'')}</div><div class="person-meta">Here for: ${escapeFinal((p.intents||[]).join(' + '))}</div><div class="card-actions" style="margin-top:12px"><button type="button" onclick="sendWinkFinal('${jsFinal(id)}')">💧 Send Wink</button></div><div class="card-menu"><button class="linkish" type="button" onclick="hideProfileFinal('${jsFinal(id)}')">Hide</button><button class="linkish" type="button" onclick="reportProfileFinal('${jsFinal(id)}')">Report</button></div></div>`}
+function receivedCardFinal(winkId,p,score,reason){if(!p)return'';const a=identityAccent(p.identity);return `<div class="person-card" style="--card-accent:${a}"><div class="wink-source">Wink received</div><div class="social-avatar">${symbolMarkup(p.identity,'')}</div><div class="person-name">${escapeFinal(p.identity)}</div><div class="person-nick">${escapeFinal(p.nickname||'')}</div><div class="person-meta">${escapeFinal(p.city||'')} · ${escapeFinal(String(p.age||''))}${p.org?' · '+escapeFinal(p.org):''}</div><div class="person-bio">“${escapeFinal(p.bio||'')}”</div><div class="compat"><div class="compat-bar"><span style="width:${Number(score||50)}%"></span></div><div class="compat-num">${Number(score||50)}%</div></div><div class="compat-reason">${escapeFinal(reason||'')}</div><div class="action-row"><button type="button" onclick="respondWinkFinal('${jsFinal(winkId)}','accept')">✦ Wink Back</button><button type="button" onclick="respondWinkFinal('${jsFinal(winkId)}','pass')">Pass</button></div></div>`}
+function renderMatchesFinal(){const grid=el('matchesGrid');if(!grid)return;const rows=liveState.matches||[];if(!rows.length){grid.innerHTML='<div class="empty-state"><h3>No mutual matches yet</h3><p class="mut">When someone Winks Back, the match appears here.</p></div>';return}grid.innerHTML=rows.map(m=>{const p=m.other||{},unlocked=!!m.contactUnlocked,myShare=!!m.myShare,otherShare=!!m.otherShare,a=identityAccent(p.identity);return `<div class="match-card" style="--card-accent:${a};border-top:5px solid ${a}"><div class="match-head"><div><div class="wink-source">Mutual Wink ✦</div><div class="match-title">${escapeFinal(p.identity||'')}</div><div class="match-meta">${escapeFinal(publicCode(p))} · ${escapeFinal(p.city||'')} · ${escapeFinal(String(p.age||''))} · ${Number(m.score||50)}% compatibility</div></div><div class="match-icon">${symbolMarkup(p.identity,'')}</div></div><div class="match-reason"><b>Why you may click:</b><br>${escapeFinal(m.reason||'')}</div><div class="consent-box"><b>Contact consent</b><p style="margin:7px 0 10px">Instagram unlocks only if both of you choose to share it.</p><div class="action-row"><button type="button" class="${myShare?'winked':''}" onclick="toggleContactFinal('${jsFinal(m.id)}',${!myShare})">${myShare?'✓ You agreed to share':'Share my Instagram'}</button></div><div class="fine" style="margin-top:8px">${otherShare?'✓ They agreed to share':'Waiting for them'}</div></div>${unlocked?`<div class="contact-unlocked"><div class="wink-source">Contact unlocked</div><div class="contact-handle">${escapeFinal(m.otherInstagram||'')}</div></div>`:'<div class="locked-contact" style="margin-top:12px">🔒 Contact locked</div>'}</div>`}).join('')}
+
+/* A brighter, simpler share card. */
+async function buildShareCardBlob(){
+  const snap=savedQuizResult(),name=(rank4&&rank4[0]?rank4[0][0]:snap?.identity||'WETLAND'),hit=ids.find(x=>x[0]===name),category=hit?hit[1]:(snap?.category||'Wetland / landscape'),ep=ECO_PROFILES[name]||{traits:['wetland','water','life']},edu=wetlandEducation(name,category),accent=identityAccent(name),soft=identitySoft(name),icon=identityIcon(name,category);
+  const canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1350;const ctx=canvas.getContext('2d');ctx.fillStyle='#fff8ec';ctx.fillRect(0,0,1080,1350);ctx.fillStyle=accent;ctx.fillRect(0,0,1080,28);ctx.fillStyle=soft;roundRectPath(ctx,62,175,956,520,42);ctx.fill();
+  ctx.textAlign='left';ctx.fillStyle='#17372b';ctx.font='900 42px Arial';ctx.fillText('ECOTONE',70,94);ctx.font='italic 24px Georgia';ctx.fillStyle='#5b6d66';ctx.fillText('Wetlands, made personal.',70,132);
+  drawShareMotif(ctx,name,category,540,360,132);ctx.textAlign='center';ctx.fillStyle='#17372b';fitCanvasFont(ctx,name.toUpperCase(),870,82,44,'900','Arial');canvasWrap(ctx,name.toUpperCase(),540,505,870,86,2);ctx.font='800 18px Arial';ctx.fillStyle='#6c7772';ctx.fillText(category.toUpperCase(),540,645);
+  const chips=ep.traits.slice(0,3);ctx.font='800 18px Arial';let widths=chips.map(t=>ctx.measureText(t.toUpperCase()).width+42),total=widths.reduce((a,b)=>a+b,0)+(chips.length-1)*12,x=540-total/2;chips.forEach((t,i)=>{const colors=['#fee3dc','#e4efff','#eee7ff'],texts=['#934636','#365e9c','#654d99'],w=widths[i];ctx.fillStyle=colors[i];roundRectPath(ctx,x,735,w,54,27);ctx.fill();ctx.fillStyle=texts[i];ctx.textAlign='center';ctx.fillText(t.toUpperCase(),x+w/2,770);x+=w+12});
+  ctx.textAlign='left';ctx.fillStyle=accent;ctx.font='900 18px Arial';ctx.fillText('KNOW THIS',70,895);ctx.fillStyle='#17372b';ctx.font='31px Georgia';canvasWrap(ctx,edu.remember,70,945,940,43,4);ctx.fillStyle='#17372b';ctx.font='900 18px Arial';ctx.fillText('WHY IT MATTERS',70,1135);ctx.fillStyle='#5c6e67';ctx.font='24px Arial';canvasWrap(ctx,edu.why,70,1178,940,33,3);ctx.strokeStyle='#ddd4c7';ctx.beginPath();ctx.moveTo(70,1278);ctx.lineTo(1010,1278);ctx.stroke();ctx.fillStyle='#17372b';ctx.font='800 17px Arial';ctx.fillText('ecotone03.github.io/ecotone',70,1320);ctx.textAlign='right';ctx.fillStyle=accent;ctx.fillText('@it.starts.from.me',1010,1320);
+  return await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('Could not create share card.')),'image/png',.95));
+}
+</script>
+<div id="socialLoginModal" class="modal-shell hidden" role="dialog" aria-modal="true" aria-labelledby="socialLoginTitle">
+  <div class="modal-card social-login-card">
+    <button class="modal-close" type="button" onclick="closeSocialLogin()" aria-label="Close">×</button>
+    <div class="kick">Already registered?</div>
+    <h2 id="socialLoginTitle">Back to ECOTONE Social</h2>
+    <p class="mut">Use the same email you registered with. We’ll send you a secure sign-in link.</p>
+    <div class="auth-row">
+      <input id="returnAuthEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
+      <button id="returnAuthBtn" class="primary" type="button" onclick="sendReturnMagicLink()">Send login link</button>
+    </div>
+    <div id="returnAuthStatus" class="fine form-status"></div>
+  </div>
+</div>
+
+
+<div id="identityUniverseModal" class="modal-shell hidden" role="dialog" aria-modal="true" aria-labelledby="identityUniverseTitle">
+  <div class="modal-card identity-universe-modal">
+    <button class="modal-close" type="button" onclick="closeIdentityUniverse()" aria-label="Close">×</button>
+    <div class="kick">Review mode</div>
+    <h2 id="identityUniverseTitle">ECOTONE identity universe</h2>
+    <p class="mut universe-intro">All identities currently available in the quiz. This review panel is only shown when the URL contains <b>?review=1</b>.</p>
+
+    <div class="universe-tools">
+      <input id="identitySearch" type="search" placeholder="Search identity…" oninput="renderIdentityUniverse()">
+      <select id="identityCategoryFilter" onchange="renderIdentityUniverse()">
+        <option value="">All categories</option>
+      </select>
+      <div id="identityUniverseCount" class="universe-count"></div>
+    </div>
+
+    <div id="identityUniverseGrid" class="identity-universe-grid"></div>
+  </div>
+</div>
+
 <div id="termsModal" class="modal-shell hidden" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
   <div class="modal-card">
     <button class="modal-close" type="button" onclick="closeTerms()" aria-label="Close">×</button>
@@ -1390,10 +2709,159 @@ document.addEventListener('DOMContentLoaded',()=>{initAuth().catch(console.error
     <img id="sharePreviewImage" alt="ECOTONE wetland identity share card">
     <p class="mut">If your browser cannot share the image directly, press and hold the card to save it, then post it on Instagram.</p>
     <div class="insta-actions">
-      <button class="insta-primary" type="button" onclick="openInstagramHome()">Open my Instagram</button>
+      <button class="insta-primary" type="button" onclick="openInstagramHome()">Open Instagram</button>
       <button class="insta-secondary" type="button" onclick="copyInstagramCaption()">Copy caption</button>
     </div>
   </div>
 </div>
 
-</body></html>
+<script id="ecotone-review-mode">
+
+function ecotoneIdentityQACheck(){
+  const all=[];
+  ids.forEach(row=>(ECO_PROFILES[row[0]]?.traits||[]).forEach(t=>all.push(String(t).toLowerCase())));
+  const dupe=all.filter((t,i)=>all.indexOf(t)!==i);
+  return {identities:ids.length,traits:all.length,duplicateTraitLabels:[...new Set(dupe)]};
+}
+
+function reviewModeEnabled(){
+  try{return new URLSearchParams(location.search).get('review')==='1'}catch(e){return false}
+}
+function reviewIdentityRows(){
+  return ids.map(row=>({name:row[0],category:row[1],vec:row[2]}));
+}
+function openIdentityUniverse(){
+  renderIdentityUniverse(true);
+  $('identityUniverseModal')?.classList.remove('hidden');
+  document.body.style.overflow='hidden';
+}
+function closeIdentityUniverse(){
+  $('identityUniverseModal')?.classList.add('hidden');
+  document.body.style.overflow='';
+}
+function setupIdentityUniverseReview(){
+  if(!reviewModeEnabled())return;
+  $('reviewUniverseBtn')?.classList.remove('hidden');
+  const sel=$('identityCategoryFilter');
+  if(sel){
+    const cats=[...new Set(reviewIdentityRows().map(x=>x.category))].sort();
+    cats.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o)});
+  }
+}
+function renderIdentityUniverse(){
+  const grid=$('identityUniverseGrid'),count=$('identityUniverseCount');
+  if(!grid)return;
+  const q=($('identitySearch')?.value||'').trim().toLowerCase();
+  const cat=$('identityCategoryFilter')?.value||'';
+  const rows=reviewIdentityRows()
+    .filter(x=>(!cat||x.category===cat)&&(!q||x.name.toLowerCase().includes(q)||x.category.toLowerCase().includes(q)));
+  if(count)count.textContent=`${rows.length} of ${reviewIdentityRows().length} identities`;
+  grid.innerHTML=rows.map(x=>{
+    const ep=ECO_PROFILES[x.name];
+    const p=PILOT_IDENTITY_CONTENT?.[x.name];
+    const traits=(p?.traits||ep?.traits||[]).slice(0,3);
+    return `<article class="universe-card" role="button" tabindex="0" onclick="previewIdentityFromReview(x.name)">
+      <div class="universe-cat">${escapeHtmlCore(x.category)}</div>
+      <h3>${escapeHtmlCore(x.name)}</h3>
+      ${p?.hook?`<div class="universe-hook">${escapeHtmlCore(p.hook)}</div>`:''}
+      <div class="universe-traits">${traits.map(t=>`<span>${escapeHtmlCore(t)}</span>`).join('')}</div>
+      <p>${escapeHtmlCore((p?.what||defs[x.name]||'Wetland identity').replace(/[.]$/,'')+'.')}</p>
+    </article>`
+  }).join('');
+}
+
+function previewIdentityFromReview(name){
+  const row=ids.find(x=>x[0]===name);
+  if(!row)return;
+  const category=row[1],p=row[2],ep=ECO_PROFILES[name];
+
+  closeIdentityUniverse();
+  ['intro','quiz','ratings','done','profileSetup','agencyFloor'].forEach(id=>$(id)?.classList.add('hidden'));
+  $('result')?.classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'instant'});
+
+  $('rname').textContent=name.toUpperCase();
+  if($('resultCategory'))$('resultCategory').textContent=category;
+  if($('resultHook'))$('resultHook').textContent=identityHook(name);
+  if($('learnWetland'))$('learnWetland').innerHTML=renderSimpleLearningCard(name,category);
+  $('punch').textContent=PILOT_IDENTITY_CONTENT?.[name]?.line||ep.line;
+  $('relationship').textContent=cleanWhyYouGotThis(name,p);
+  $('green').textContent=displayEdge(name,ep);
+  $('red').textContent=displayWatch(name,ep);
+
+  const glyph=$('glyph');
+  if(glyph){
+    glyph.innerHTML=`<div class="art-review-slot"><span>FIELD-GUIDE ARTWORK</span><b>${escapeHtmlCore(name)}</b><small>${escapeHtmlCore(category)}</small></div>`;
+  }
+
+  rank4=ranked(p).slice(0,4);
+}
+
+document.addEventListener('DOMContentLoaded',setupIdentityUniverseReview);
+</script><script id="ecotone-final-images">
+const IDENTITY_IMAGES={"Estuary": "assets/identities/estuary.webp", "Floodplain": "assets/identities/floodplain.webp", "Mangrove Forest": "assets/identities/mangrove-forest.webp", "Salt Marsh": "assets/identities/salt-marsh.webp", "Freshwater Marsh": "assets/identities/freshwater-marsh.webp", "Peatland": "assets/identities/peatland.webp", "Seasonal Pond": "assets/identities/seasonal-pond.webp", "Urban Wetland": "assets/identities/urban-wetland.webp", "High-altitude Wetland": "assets/identities/high-altitude-wetland.webp", "Mudflat": "assets/identities/mudflat.webp", "Lagoon": "assets/identities/lagoon.webp", "Oxbow Lake": "assets/identities/oxbow-lake.webp", "River Delta": "assets/identities/river-delta.webp", "Swamp": "assets/identities/swamp.webp", "Vernal Pool": "assets/identities/vernal-pool.webp", "Flooded Grassland": "assets/identities/flooded-grassland.webp", "Riparian Zone": "assets/identities/riparian-zone.webp", "Spring": "assets/identities/spring.webp", "Backwater": "assets/identities/backwater.webp", "Fen": "assets/identities/fen.webp", "Lotus": "assets/identities/lotus.webp", "Water Lily": "assets/identities/water-lily.webp", "Cattail / Typha": "assets/identities/cattail-typha.webp", "Reed": "assets/identities/reed.webp", "Mangrove Tree": "assets/identities/mangrove-tree.webp", "Seagrass": "assets/identities/seagrass.webp", "Duckweed": "assets/identities/duckweed.webp", "Algae": "assets/identities/algae.webp", "Phytoplankton": "assets/identities/phytoplankton.webp", "Wild Rice": "assets/identities/wild-rice.webp", "Saltmarsh Grass": "assets/identities/saltmarsh-grass.webp", "Water Chestnut": "assets/identities/water-chestnut.webp", "Bladderwort": "assets/identities/bladderwort.webp", "Sundew": "assets/identities/sundew.webp", "Sedge": "assets/identities/sedge.webp", "Papyrus": "assets/identities/papyrus.webp", "Floating Fern": "assets/identities/floating-fern.webp", "Pondweed": "assets/identities/pondweed.webp", "Mangrove Seedling": "assets/identities/mangrove-seedling.webp", "Diatom": "assets/identities/diatom.webp", "Sarus Crane": "assets/identities/sarus-crane.webp", "Greater Flamingo": "assets/identities/greater-flamingo.webp", "Painted Stork": "assets/identities/painted-stork.webp", "Purple Swamphen": "assets/identities/purple-swamphen.webp", "Pheasant-tailed Jacana": "assets/identities/pheasant-tailed-jacana.webp", "Kingfisher": "assets/identities/kingfisher.webp", "Heron": "assets/identities/heron.webp", "Egret": "assets/identities/egret.webp", "Spot-billed Pelican": "assets/identities/spot-billed-pelican.webp", "Indian Skimmer": "assets/identities/indian-skimmer.webp", "Bar-headed Goose": "assets/identities/bar-headed-goose.webp", "Common Coot": "assets/identities/common-coot.webp", "Smooth-coated Otter": "assets/identities/smooth-coated-otter.webp", "Fishing Cat": "assets/identities/fishing-cat.webp", "Gharial": "assets/identities/gharial.webp", "Freshwater Turtle": "assets/identities/freshwater-turtle.webp", "Frog": "assets/identities/frog.webp", "Mudskipper": "assets/identities/mudskipper.webp", "Mahseer": "assets/identities/mahseer.webp", "Swamp Deer": "assets/identities/swamp-deer.webp", "Mangrove Crab": "assets/identities/mangrove-crab.webp", "Dragonfly": "assets/identities/dragonfly.webp", "Water Beetle": "assets/identities/water-beetle.webp", "Freshwater Mussel": "assets/identities/freshwater-mussel.webp", "Snail": "assets/identities/snail.webp", "Wild Water Buffalo": "assets/identities/wild-water-buffalo.webp", "Carbon Keeper": "assets/identities/carbon-keeper.webp", "Cotton Pygmy Goose": "assets/identities/cotton-pygmy-goose.webp", "Pied Avocet": "assets/identities/pied-avocet.webp", "Pollinator": "assets/identities/pollinator.webp", "Decomposer": "assets/identities/decomposer.webp", "Water Hyacinth": "assets/identities/water-hyacinth.webp", "Ecological Engineer": "assets/identities/ecological-engineer.webp", "Nutrient Recycler": "assets/identities/nutrient-recycler.webp", "Habitat Builder": "assets/identities/habitat-builder.webp", "Chilika Lagoon": "assets/identities/chilika-lagoon.webp", "Loktak Lake": "assets/identities/loktak-lake.webp", "Keoladeo Wetland": "assets/identities/keoladeo-wetland.webp", "Sundarban Wetland": "assets/identities/sundarban-wetland.webp", "Sambhar Salt Lake": "assets/identities/sambhar-salt-lake.webp", "Asian Openbill": "assets/identities/asian-openbill.webp", "Black-necked Crane": "assets/identities/black-necked-crane.webp", "Gangetic River Dolphin": "assets/identities/gangetic-river-dolphin.webp", "Mugger Crocodile": "assets/identities/mugger-crocodile.webp", "Black-tailed Godwit": "assets/identities/black-tailed-godwit.webp", "Little Cormorant": "assets/identities/little-cormorant.webp", "Spoonbill": "assets/identities/spoonbill.webp", "Black-winged Stilt": "assets/identities/black-winged-stilt.webp", "Black-headed Ibis": "assets/identities/black-headed-ibis.webp", "Phumdi": "assets/identities/phumdi.webp", "Irrawaddy Dolphin": "assets/identities/irrawaddy-dolphin.webp", "Oriental Darter": "assets/identities/oriental-darter.webp", "Lesser Whistling Duck": "assets/identities/lesser-whistling-duck.webp", "Marsh Harrier": "assets/identities/marsh-harrier.webp", "Small Pratincole": "assets/identities/small-pratincole.webp", "Purple Heron": "assets/identities/purple-heron.webp", "Makhana (Foxnut)": "assets/identities/makhana-foxnut.webp", "Deepor Beel": "assets/identities/deepor-beel.webp", "Vembanad Lake": "assets/identities/vembanad-lake.webp", "River Tern": "assets/identities/river-tern.webp"};
+function identityImage(name){return IDENTITY_IMAGES[name]||''}
+function symbolMarkup(name,category){
+  const src=identityImage(name);
+  if(src)return `<img class="identity-local-art" src="${src}" alt="${escapeHtmlCore(name)} illustration" loading="lazy">`;
+  return `<span class="identity-fallback">${escapeHtmlCore((name||'?').slice(0,2).toUpperCase())}</span>`;
+}
+function glyphSocial(name){return symbolMarkup(name,'')}
+</script><script id="ecotone-postcard-final">
+async function buildShareCardBlob(){
+  const saved=savedQuizResult?.()||{};
+  const name=(rank4&&rank4[0]?rank4[0][0]:saved.identity)||'Wetland';
+  const hit=ids.find(x=>x[0]===name),category=hit?hit[1]:(saved.category||'Wetland identity');
+  const ep=ECO_PROFILES[name]||{traits:['wetland','water','life']};
+  const edu=wetlandEducation(name,category);
+  const hook=(PILOT_IDENTITY_CONTENT?.[name]?.hook)||identityHook(name);
+
+  const c=document.createElement('canvas');c.width=1080;c.height=1350;
+  const ctx=c.getContext('2d');
+  ctx.fillStyle='#070b0b';ctx.fillRect(0,0,1080,1350);
+
+  let g=ctx.createRadialGradient(840,110,0,840,110,480);
+  g.addColorStop(0,'rgba(195,135,70,.20)');g.addColorStop(1,'rgba(7,11,11,0)');
+  ctx.fillStyle=g;ctx.fillRect(0,0,1080,620);
+
+  ctx.textAlign='left';ctx.fillStyle='#efe1c3';ctx.font='800 27px Arial';ctx.fillText('E C O T O N E',72,82);
+  ctx.fillStyle='#8da19b';ctx.font='600 16px Arial';ctx.fillText('WETLANDS, MADE PERSONAL.',72,116);
+
+  const src=identityImage(name);
+  if(src){
+    try{
+      const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=src});
+      ctx.save();
+      const x=70,y=160,w=940,h=555,r=42;
+      ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.clip();ctx.drawImage(img,x,y,w,h);ctx.restore();
+      ctx.strokeStyle='rgba(230,205,163,.28)';ctx.lineWidth=2;ctx.roundRect(x,y,w,h,r);ctx.stroke();
+    }catch(e){}
+  }
+
+  ctx.textAlign='center';ctx.fillStyle='#f2e4c7';
+  fitCanvasFont(ctx,name.toUpperCase(),900,74,38,'700','Georgia');
+  canvasWrap(ctx,name.toUpperCase(),540,805,900,80,2);
+  ctx.fillStyle='#93aaa4';ctx.font='800 17px Arial';ctx.fillText(String(category).toUpperCase(),540,925);
+
+  ctx.fillStyle='#dfc69f';ctx.font='italic 30px Georgia';canvasWrap(ctx,hook,540,982,860,39,2);
+
+  const traits=(ep.traits||[]).slice(0,3);
+  ctx.font='800 15px Arial';
+  let widths=traits.map(t=>ctx.measureText(t.toUpperCase()).width+40);
+  let total=widths.reduce((a,b)=>a+b,0)+(traits.length-1)*12,xx=(1080-total)/2;
+  traits.forEach((t,i)=>{
+    ctx.fillStyle='#15201e';ctx.strokeStyle='rgba(224,196,151,.35)';ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.roundRect(xx,1060,widths[i],42,21);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#d9c3a0';ctx.textAlign='center';ctx.fillText(t.toUpperCase(),xx+widths[i]/2,1087);xx+=widths[i]+12;
+  });
+
+  ctx.textAlign='center';ctx.fillStyle='#dcd5c8';ctx.font='500 19px Arial';
+  const fact=(edu.remember||edu.why||'Wetlands are shaped by water, timing and life.').replace(/^Remember:\s*/i,'');
+  canvasWrap(ctx,fact,540,1160,870,27,2);
+
+  ctx.strokeStyle='rgba(226,202,165,.24)';ctx.beginPath();ctx.moveTo(110,1245);ctx.lineTo(970,1245);ctx.stroke();
+  ctx.fillStyle='#9aa9a4';ctx.font='700 14px Arial';
+  ctx.fillText('ecotone03.github.io/ecotone  ·  @it.starts.from.me',540,1294);
+  return await new Promise(res=>c.toBlob(res,'image/png',0.95));
+}
+</script></body></html>
