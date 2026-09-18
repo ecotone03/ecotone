@@ -1248,7 +1248,32 @@ body:after{
   #result .body{padding:20px 15px 30px!important}
 }
 </style>
-</head><body>
+
+<style id="ecotone-v8-background-art">
+.identity-bg-art{
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  border-radius:inherit!important;
+}
+.orb.wetland-symbol .identity-bg-art{
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+}
+.symbol-mini .identity-bg-art,
+.social-avatar .identity-bg-art,
+.match-icon .identity-bg-art{
+  width:100%!important;
+  height:100%!important;
+  border-radius:50%!important;
+}
+.identity-local-art{display:none!important}
+</style>
+</head><body data-ecotone-build="V8-BACKGROUND-ART">
 <main>
 <div class="brand">ECOTONE · WETLAND IDENTITY EXPERIENCE</div>
 <section id="intro" class="card ecotone-intro">
@@ -2249,7 +2274,83 @@ function collectProfileForm(){
   const missing=[];if(!p.nickname)missing.push('nickname');if(!p.age||p.age<18)missing.push('age 18+');if(!p.city)missing.push('city');if(!p.gender)missing.push('gender');if(!p.interested)missing.push('who you want to meet');if(!p.intents.length)missing.push('what you are here for');if(!el('pConsent').checked)missing.push('18+ Social consent');return {p,missing}
 }
 function normalizeInstagram(v){v=String(v||'').trim();if(!v)return'';return v.startsWith('@')?v:'@'+v}
-function fromDbProfile(row,instagram=''){if(!row)return null;return {id:row.user_id,nickname:row.nickname,age:row.age,city:row.city||'',org:row.organisation||'',gender:row.gender||'',interested:row.interested_in||'',intents:row.intents||[],bio:row.bio||'',identity:row.wetland_identity||'',constellation:row.constellation||[],vec:Array.isArray(row.trait_vector)?row.trait_vector:[],visible:row.visible!==false,instagram:instagram||''}}
+function normalizeLegacyIdentity(rawName,vec,constellation){
+  const raw=String(rawName||'').trim();
+
+  // Already current and valid.
+  if(isValidIdentityName(raw))return raw;
+
+  // Map identities that were renamed during ECOTONE development.
+  const directLegacy={
+    "Wet Meadow":"Fen",
+    "Water Filter":"Wild Water Buffalo",
+    "Nursery":"Cotton Pygmy Goose",
+    "Flood Buffer":"Pied Avocet",
+    "Seed Disperser":"Water Hyacinth",
+    "Monsoon":"Little Cormorant",
+    "Low Tide":"Spoonbill",
+    "High Tide":"Black-winged Stilt",
+    "River Current":"Black-headed Ibis",
+    "Wetland Mist":"Phumdi",
+    "Mud":"Irrawaddy Dolphin",
+    "Rainwater":"Oriental Darter",
+    "Sediment":"Lesser Whistling Duck",
+    "Fallen Log":"Marsh Harrier",
+    "Mangrove Root":"Small Pratincole",
+    "Floating Leaf":"Purple Heron",
+    "Bird Flock":"Makhana (Foxnut)",
+    "Fish School":"Deepor Beel",
+    "Frog Chorus":"Vembanad Lake",
+    "Water Ripple":"River Tern",
+    "Mangrove Seedling":"Night Heron"
+  };
+  if(directLegacy[raw] && isValidIdentityName(directLegacy[raw]))return directLegacy[raw];
+
+  // Older profiles often kept the original result constellation.
+  if(Array.isArray(constellation)){
+    for(const item of constellation){
+      const n=typeof item==='string'?item:(item?.name||item?.identity||'');
+      if(isValidIdentityName(n))return n;
+      if(directLegacy[n] && isValidIdentityName(directLegacy[n]))return directLegacy[n];
+    }
+  }
+
+  // Last reliable recovery route: the old 10-dimensional quiz vector.
+  // This restores the closest CURRENT ECOTONE identity rather than showing "WETLAND".
+  if(Array.isArray(vec) && vec.length>=10 && vec.some(v=>Number.isFinite(Number(v)))){
+    try{
+      const cleaned=vec.slice(0,10).map(v=>Number.isFinite(Number(v))?Number(v):50);
+      const best=ranked(cleaned)?.[0]?.[0];
+      if(isValidIdentityName(best))return best;
+    }catch(e){}
+  }
+
+  return '';
+}
+
+function fromDbProfile(row,instagram=''){
+  if(!row)return null;
+  const vec=Array.isArray(row.trait_vector)?row.trait_vector:[];
+  const constellation=Array.isArray(row.constellation)?row.constellation:[];
+  const restoredIdentity=normalizeLegacyIdentity(row.wetland_identity,vec,constellation);
+  return {
+    id:row.user_id,
+    nickname:row.nickname,
+    age:row.age,
+    city:row.city||'',
+    org:row.organisation||'',
+    gender:row.gender||'',
+    interested:row.interested_in||'',
+    intents:row.intents||[],
+    bio:row.bio||'',
+    identity:restoredIdentity,
+    originalIdentity:row.wetland_identity||'',
+    constellation,
+    vec,
+    visible:row.visible!==false,
+    instagram:instagram||''
+  };
+}
 async function loadOwnProfile(){
   if(!authSession?.user?.id)return null;const uid=authSession.user.id;
   const {data:pr,error:pe}=await sb.from('profiles').select('*').eq('user_id',uid).maybeSingle();if(pe)throw pe;
@@ -2311,7 +2412,7 @@ function compatibilityFinal(a,b){if(!Array.isArray(a)||!Array.isArray(b)||!a.len
 function compatibilityReasonFinal(a,b){const names=(typeof dim!=='undefined'?dim:['Social','Bonding','Adaptability','Novelty','Expression','Care','Boundaries','Observation','Groundedness','Intensity']);if(!Array.isArray(a)||!Array.isArray(b))return'Your wetland-personality patterns sit relatively close overall.';const ds=a.map((v,i)=>({i,d:Math.abs(Number(v)-Number(b[i]||50))})).sort((x,y)=>x.d-y.d),close=ds.slice(0,2).map(x=>names[x.i].toLowerCase());return `You are especially similar on ${close[0]} and ${close[1]}.`}
 function glyphSocial(n){n=(n||'').toLowerCase();if(n.includes('lotus')||n.includes('lily'))return'🪷';if(n.includes('mangrove'))return'🌿';if(n.includes('pelican')||n.includes('crane')||n.includes('heron')||n.includes('kingfisher')||n.includes('godwit')||n.includes('openbill'))return'🐦';if(n.includes('dolphin'))return'🐬';if(n.includes('frog'))return'🐸';if(n.includes('gharial')||n.includes('crocodile'))return'🐊';if(n.includes('tide')||n.includes('estuary')||n.includes('lagoon')||n.includes('lake'))return'🌊';if(n.includes('mud'))return'🟤';return'🌱'}
 function personCardFinal(p){const id=p.id,code=p.publicCode||publicCode(p);return `<div class="person-card"><div class="person-id">${escapeFinal(code)}</div><div style="position:absolute;right:16px;top:12px;font-size:34px;opacity:.55">${glyphSocial(p.identity)}</div><div class="person-name">${escapeFinal(p.identity)}</div><div class="person-nick">${escapeFinal(p.nickname||'')}</div><div class="person-meta">${escapeFinal(p.city||'')} · ${escapeFinal(String(p.age||''))}${p.org?' · '+escapeFinal(p.org):''}</div><div class="person-bio">“${escapeFinal(p.bio||'')}”</div><div class="compat"><div class="compat-bar"><span style="width:${Number(p.score||50)}%"></span></div><div class="compat-num">${Number(p.score||50)}%</div></div><div class="compat-reason">${escapeFinal(p.reason||'')}</div><div class="person-meta">Here for: ${escapeFinal((p.intents||[]).join(' + '))}</div><div class="card-actions" style="margin-top:12px"><button type="button" onclick="sendWinkFinal('${jsFinal(id)}')">💧 Send Wink</button></div><div class="card-menu"><button class="linkish" type="button" onclick="hideProfileFinal('${jsFinal(id)}')">Hide</button><button class="linkish" type="button" onclick="reportProfileFinal('${jsFinal(id)}')">Report</button></div></div>`}
-function renderFloorFinal(){const grid=el('floorGrid');if(!grid)return;if(!agencyProfile){grid.innerHTML='<div class="empty-state">Create your ECOTONE Social profile first.</div>';return}const people=liveState.floor||[];grid.innerHTML=people.length?people.map(personCardFinal).join(''):'<div class="empty-state"><h3>No profiles to show yet</h3><p class="mut">As more people join ECOTONE Social, compatible wetland personalities will appear here.</p></div>'}
+function renderFloorFinal(){const grid=el('floorGrid');if(!grid)return;if(!agencyProfile){grid.innerHTML='<div class="empty-state">Create your ECOTONE Social profile first.</div>';return}const people=liveState.floor||[];grid.innerHTML=people.length?people.map(personCardFinal).join(''):'<div class="empty-state"><h3>No other visible profiles yet</h3><p class="mut">ECOTONE checked the shared Social database, including recoverable older identities. This will stay empty only if there is no other visible registered profile available to your account.</p></div>'}
 async function sendWinkFinal(id){try{const uid=authSession?.user?.id;if(!uid)throw new Error('Please sign in first.');const {error}=await sb.from('winks').insert({sender_id:uid,receiver_id:id,status:'pending'});if(error){if(String(error.message||'').toLowerCase().includes('duplicate'))throw new Error('You already sent this person a Wink.');throw error}showNotice('Wink sent 💧');await refreshLiveState(true)}catch(e){showNotice(e.message||'Could not send Wink.')}}
 function renderReceivedFinal(){const grid=el('receivedGrid');if(!grid)return;const rows=liveState.received||[];grid.innerHTML=rows.length?rows.map(w=>receivedCardFinal(w.id,w.other,w.score,w.reason)).join(''):'<div class="empty-state"><p>No new Winks right now.</p></div>'}
 function receivedCardFinal(winkId,p,score,reason){if(!p)return'';return `<div class="person-card"><div class="wink-source">Wink received 💧</div><div style="position:absolute;right:16px;top:12px;font-size:34px;opacity:.55">${glyphSocial(p.identity)}</div><div class="person-name">${escapeFinal(p.identity)}</div><div class="person-nick">${escapeFinal(p.nickname||'')}</div><div class="person-meta">${escapeFinal(p.city||'')} · ${escapeFinal(String(p.age||''))}${p.org?' · '+escapeFinal(p.org):''}</div><div class="person-bio">“${escapeFinal(p.bio||'')}”</div><div class="compat"><div class="compat-bar"><span style="width:${Number(score||50)}%"></span></div><div class="compat-num">${Number(score||50)}%</div></div><div class="compat-reason">${escapeFinal(reason||'')}</div><div class="action-row"><button type="button" onclick="respondWinkFinal('${jsFinal(winkId)}','accept')">🌿 Wink Back</button><button type="button" onclick="respondWinkFinal('${jsFinal(winkId)}','pass')">Pass</button></div></div>`}
@@ -2800,7 +2901,14 @@ async function initAuth(){
 }
 async function loadOwnProfile(){
   if(!authSession?.user?.id)return null;const uid=authSession.user.id;const {data:pr,error:pe}=await sb.from('profiles').select('*').eq('user_id',uid).maybeSingle();if(pe)throw pe;let instagram='';const {data:ct,error:ce}=await sb.from('contacts').select('instagram_handle').eq('user_id',uid).maybeSingle();if(!ce&&ct)instagram=ct.instagram_handle||'';agencyProfile=pr?fromDbProfile(pr,instagram):null;
-  /* Repair a legacy WETLAND profile only when this browser still has the real quiz result. */
+  /* Persist this member's recoverable legacy identity when possible. */
+  if(pr&&agencyProfile&&isValidIdentityName(agencyProfile.identity)&&pr.wetland_identity!==agencyProfile.identity){
+    const {error:legacyFixError}=await sb.from('profiles').update({
+      wetland_identity:agencyProfile.identity,
+      updated_at:new Date().toISOString()
+    }).eq('user_id',uid);
+  }
+  /* Repair a legacy WETLAND profile when this browser still has the real quiz result. */
   const snap=savedQuizResult();if(agencyProfile&&!isValidIdentityName(agencyProfile.identity)&&isValidIdentityName(snap?.identity)){const row={user_id:uid,wetland_identity:snap.identity,constellation:snap.constellation||[],trait_vector:snap.vec||agencyProfile.vec,updated_at:new Date().toISOString()};const {error}=await sb.from('profiles').update(row).eq('user_id',uid);if(!error){agencyProfile.identity=snap.identity;agencyProfile.constellation=snap.constellation||[];agencyProfile.vec=snap.vec||agencyProfile.vec}}
   return agencyProfile
 }
@@ -2990,7 +3098,10 @@ const IDENTITY_IMAGES={"Estuary": "data:image/webp;base64,UklGRg43AABXRUJQVlA4IA
 function identityImage(name){return IDENTITY_IMAGES[name]||''}
 function symbolMarkup(name,category){
   const src=identityImage(name);
-  if(src)return `<img class="identity-local-art" src="${src}" alt="${escapeHtmlCore(name)} illustration" loading="lazy">`;
+  if(src){
+    const safe=String(src).replace(/'/g,"%27");
+    return `<span class="identity-bg-art" role="img" aria-label="${escapeHtmlCore(name)} illustration" style="background-image:url('${safe}')"></span>`;
+  }
   return `<span class="identity-fallback">${escapeHtmlCore((name||'?').slice(0,2).toUpperCase())}</span>`;
 }
 function glyphSocial(name){return symbolMarkup(name,'')}
@@ -3066,4 +3177,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(rn)new MutationObserver(refreshIdentityHero).observe(rn,{childList:true,characterData:true,subtree:true});
   refreshIdentityHero();
 });
-</script></body></html>
+</script><script>console.info('ECOTONE build: V8-BACKGROUND-ART');</script></body></html>
