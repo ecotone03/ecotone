@@ -1354,7 +1354,28 @@ body #termsPrivacySafety{
   margin-top:12px!important;
 }
 </style>
-</head><body data-ecotone-build="V11-CLEANUP-AND-IMAGE-FIX">
+
+<style id="ecotone-v12-dedup-polish">
+/* Exactly one Social entry point on the landing page. */
+#returnSocialBtn{display:none!important}
+
+/* Exactly one Terms entry point on the landing page. */
+.ecotone-footer button[onclick*="openTerms"]{display:none!important}
+
+.ecotone-footer{
+  margin-top:28px!important;
+  padding:15px 8px!important;
+  font-size:10px!important;
+  line-height:1.45!important;
+  background:transparent!important;
+}
+
+.intro-curator-note{
+  display:block!important;
+  margin:11px auto 2px!important;
+}
+</style>
+</head><body data-ecotone-build="V12-NO-DUPLICATES">
 <main>
 <div class="brand">ECOTONE · WETLAND IDENTITY EXPERIENCE</div>
 <section id="intro" class="card ecotone-intro">
@@ -1373,7 +1394,6 @@ body #termsPrivacySafety{
 
 <button id="reviewUniverseBtn" class="review-universe-btn hidden" type="button" onclick="openIdentityUniverse()">Review all 100 identities</button>
 <button id="existingSocialBtn" class="member-login-btn" type="button" onclick="openSocialLogin()">Already in ECOTONE Social? Log in</button>
-<button id="returnSocialBtn" class="hidden return-social-btn" type="button" onclick="returnToSocial()">Open ECOTONE Social</button>
 <p class="fine intro-fine">16 quick questions · different paths for different people · <button class="classic-terms-link" type="button" onclick="openTerms()">terms & safety</button></p>
 </section>
 <section id="quiz" class="hidden">
@@ -2311,15 +2331,14 @@ function setBackendMode(){
   const badge=el('backendBadge'),floorLabel=el('floorModeLabel');
   if(badge){badge.className='mode-badge live';badge.textContent=authSession?'Live · shared profiles':'Live · sign in required'}
   if(floorLabel)floorLabel.textContent='LIVE SOCIAL SPACE';
-  const rbtn=el('returnSocialBtn');if(rbtn)rbtn.classList.toggle('hidden',!authSession)
 }
 
 async function initAuth(){
   if(!sb){const s=el('authStatus');if(s)s.textContent='Could not load login service. Check your internet connection.';return}
   const {data,error}=await sb.auth.getSession();if(!error)authSession=data.session||null;
   setBackendMode();updateAuthGate();
-  if(authSession){await loadOwnProfile().catch(()=>{});el('returnSocialBtn')?.classList.remove('hidden')}
-  sb.auth.onAuthStateChange(async(event,session)=>{authSession=session||null;setBackendMode();updateAuthGate();if(authSession){await loadOwnProfile().catch(()=>{});el('returnSocialBtn')?.classList.remove('hidden')}else{agencyProfile=null;stopPolling()}})
+  if(authSession){await loadOwnProfile().catch(()=>{})}
+  sb.auth.onAuthStateChange(async(event,session)=>{authSession=session||null;setBackendMode();updateAuthGate();if(authSession){await loadOwnProfile().catch(()=>{})}else{agencyProfile=null;stopPolling()}})
 }
 function updateAuthGate(){
   const gate=el('authGate'),fields=el('profileFields'),who=el('signedInAs');if(!gate||!fields)return;
@@ -3277,9 +3296,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
 });
 </script>
-<footer class="ecotone-curator-credit">
-  <span>Curated by <b>Nikita Mishra</b></span>
-  <span class="curator-dot">·</span>
-  <a href="https://www.instagram.com/it.starts.from.me/" target="_blank" rel="noopener noreferrer">@it.starts.from.me</a>
-</footer>
 </body></html>
