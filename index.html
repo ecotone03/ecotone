@@ -1273,7 +1273,7 @@ body:after{
 }
 .identity-local-art{display:none!important}
 </style>
-</head><body data-ecotone-build="V8-BACKGROUND-ART">
+</head><body data-ecotone-build="V9-QUIZ-BOOT-FIX">
 <main>
 <div class="brand">ECOTONE · WETLAND IDENTITY EXPERIENCE</div>
 <section id="intro" class="card ecotone-intro">
@@ -1490,16 +1490,6 @@ Object.assign(ECO_PROFILES,{
 });
 Object.assign(defs,{
   "Night Heron":"A compact wetland heron that often rests by day and becomes more active around dusk and at night"
-});
-Object.assign(EDU_INFO,{
-  "Night Heron":{
-    where:"Marshes, lakes, rivers, mangroves and wooded wetland edges",
-    what:"A compact wetland heron that often rests by day and becomes more active around dusk and at night.",
-    why:"Night herons feed on fish, amphibians and other aquatic prey and depend on productive waterside habitat.",
-    remember:"Its shorter neck and stockier shape make it look very different from the tall, slender herons people often picture.",
-    source:"",
-    sourceLabel:""
-  }
 });
 
 const $=id=>document.getElementById(id);
@@ -1770,6 +1760,17 @@ const EDU_WHY_BY_CATEGORY={
 
 
 Object.assign(EDU_INFO,{"Fen": {"where": "Groundwater-fed wetlands in cool and temperate regions", "why": "Fens support specialised plants, store carbon in wet soils and can hold unusually high biodiversity.", "remember": "A fen is not the same as a bog: it receives mineral-rich water from outside the wetland."}, "Wild Water Buffalo": {"where": "Floodplains, marshes and wet grasslands of South and Southeast Asia", "why": "Large grazers influence wetland vegetation and depend on extensive connected wet habitats.", "remember": "Wild Water Buffalo are not simply feral domestic buffalo; they are a distinct wild species."}, "Cotton Pygmy Goose": {"where": "Ponds, lakes and marshes with floating vegetation across South and Southeast Asia", "why": "It uses vegetated freshwater wetlands for feeding, nesting and shelter.", "remember": "Despite its name, it is one of the smallest ducks, not a true goose."}, "Pied Avocet": {"where": "Shallow saline and freshwater wetlands, mudflats and lagoons", "why": "Its specialised feeding method depends on shallow water and productive wetland edges.", "remember": "The bill curves upward and is swept side-to-side through the water."}, "Water Hyacinth": {"where": "Slow freshwater, ponds, lakes and canals in many tropical regions", "why": "It is a strong example of how an attractive aquatic plant can become invasive and alter oxygen, light and access to water.", "remember": "Beautiful flowers do not mean harmless ecology; Water Hyacinth can form dense floating mats."}, "Little Cormorant": {"where": "Lakes, ponds, reservoirs, rivers and marshes across South Asia", "why": "It is a fish-eating wetland bird and a familiar part of many inland waterbird communities.", "remember": "Cormorants often spread their wings after diving."}, "Spoonbill": {"where": "Shallow marshes, lakes, floodplains and coastal wetlands", "why": "It depends on shallow productive water where its specialised bill can sweep for aquatic prey.", "remember": "A spoonbill feeds by sweeping its open bill from side to side."}, "Black-winged Stilt": {"where": "Shallow lakes, marshes, saltpans and flooded fields", "why": "Its very long legs let it forage in shallow water that many smaller waders cannot use in the same way.", "remember": "Its pink legs can be longer than the depth of much of the water it feeds in."}, "Black-headed Ibis": {"where": "Marshes, floodplains, lakes, flooded fields and other shallow wetlands", "why": "It links wetland food webs by feeding on aquatic and soil-dwelling animals.", "remember": "Adults have a bare dark head and neck rather than black feathers on the head."}, "Phumdi": {"where": "Loktak Lake, Manipur, India", "why": "Phumdis create floating habitat and support distinctive ecological and livelihood systems.", "remember": "A phumdi contains vegetation, soil and decomposing organic matter, not just floating plants."}, "Irrawaddy Dolphin": {"where": "Estuaries, coastal waters and a few major rivers in South and Southeast Asia", "why": "Its presence highlights the need for connected, productive aquatic habitats and safer fisheries.", "remember": "Irrawaddy Dolphins have a rounded forehead and no prominent beak."}, "Oriental Darter": {"where": "Freshwater lakes, rivers, reservoirs and marshes across South and Southeast Asia", "why": "It depends on fish-rich waters and suitable places for resting and breeding.", "remember": "Its submerged body and long visible neck give it the 'snakebird' look."}, "Lesser Whistling Duck": {"where": "Vegetated ponds, marshes, lakes and rice-growing landscapes", "why": "It uses both natural and human-shaped freshwater habitats.", "remember": "Its soft whistling calls often reveal a flock before you notice the birds."}, "Marsh Harrier": {"where": "Large marshes, reedbeds, lakeshores and wet grasslands", "why": "As a wetland raptor, it depends on open marsh habitat and the prey supported there.", "remember": "Marsh harriers often hunt by flying low and slowly over vegetation."}, "Small Pratincole": {"where": "Open sandy and gravelly riverbanks, islands and large river channels", "why": "Its nesting depends on exposed river surfaces that are sensitive to changing flows and disturbance.", "remember": "It looks like a shorebird on the ground but catches many insects in flight."}, "Purple Heron": {"where": "Freshwater marshes, reedbeds, lakes and slow waterways", "why": "Dense wetland vegetation gives it feeding cover and nesting habitat.", "remember": "Its long striped neck helps it blend surprisingly well into reeds."}, "Makhana (Foxnut)": {"where": "Shallow ponds and wetlands, especially in eastern and northern India", "why": "Euryale ferox links wetland ecology with food, farming and local livelihoods.", "remember": "Makhana is the processed seed of a large aquatic plant with prickly leaves."}, "Deepor Beel": {"where": "Guwahati, Assam, India", "why": "It supports waterbirds, fisheries and flood storage while facing intense pressure from a growing city.", "remember": "Deepor Beel is part of the wider Brahmaputra floodplain landscape."}, "Vembanad Lake": {"where": "Kerala, south-west India", "why": "The lake-backwater system supports fisheries, transport, farming, tourism and wetland biodiversity.", "remember": "Vembanad is influenced by both freshwater inflow and coastal processes."}, "River Tern": {"where": "Large rivers, freshwater lakes and reservoirs across South Asia", "why": "It needs fish-rich water and safe exposed sandbars or islands for breeding.", "remember": "River Terns are inland terns; many nest directly on sandy river islands."}});
+Object.assign(EDU_INFO,{
+  "Night Heron":{
+    where:"Marshes, lakes, rivers, mangroves and wooded wetland edges",
+    what:"A compact wetland heron that often rests by day and becomes more active around dusk and at night.",
+    why:"Night herons feed on fish, amphibians and other aquatic prey and depend on productive waterside habitat.",
+    remember:"Its shorter neck and stockier shape make it look very different from the tall, slender herons people often picture.",
+    source:"",
+    sourceLabel:""
+  }
+});
+
 const ROLE_EDU_INFO={
   "Water Filter":{
     why:"Wetland plants, soils and microbes can trap sediment and remove some excess nutrients as water passes through.",
@@ -3177,4 +3178,17 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(rn)new MutationObserver(refreshIdentityHero).observe(rn,{childList:true,characterData:true,subtree:true});
   refreshIdentityHero();
 });
-</script><script>console.info('ECOTONE build: V8-BACKGROUND-ART');</script></body></html>
+</script><script>console.info('ECOTONE build: V8-BACKGROUND-ART');</script><script id="ecotone-start-button-fallback">
+document.addEventListener('DOMContentLoaded',()=>{
+  const btn=[...document.querySelectorAll('button')].find(
+    b=>b.textContent.trim()==='Find my wild type'
+  );
+  if(btn){
+    btn.addEventListener('click',e=>{
+      e.preventDefault();
+      if(typeof window.startQuiz==='function') window.startQuiz();
+      else if(typeof startQuiz==='function') startQuiz();
+    });
+  }
+});
+</script></body></html>
