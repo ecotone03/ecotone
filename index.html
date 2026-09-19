@@ -1375,7 +1375,31 @@ body #termsPrivacySafety{
   margin:11px auto 2px!important;
 }
 </style>
-</head><body data-ecotone-build="V12-NO-DUPLICATES">
+
+<style id="ecotone-v13-single-social">
+/* Exactly one ECOTONE Social entry point on the landing card */
+#existingSocialBtn{
+  display:block!important;
+  width:min(390px,100%)!important;
+  min-height:50px!important;
+  margin:14px auto 8px!important;
+  padding:13px 22px!important;
+  border:1px solid #d8c8b6!important;
+  border-radius:999px!important;
+  background:rgba(255,252,247,.74)!important;
+  color:#344247!important;
+  box-shadow:none!important;
+  text-decoration:none!important;
+  text-align:center!important;
+  font:800 13px/1.2 Arial,sans-serif!important;
+}
+#existingSocialBtn:hover{
+  background:#fffaf3!important;
+  border-color:#bfa98f!important;
+}
+#returnSocialBtn{display:none!important}
+</style>
+</head><body data-ecotone-build="V13-SINGLE-SOCIAL-CTA">
 <main>
 <div class="brand">ECOTONE · WETLAND IDENTITY EXPERIENCE</div>
 <section id="intro" class="card ecotone-intro">
@@ -3296,4 +3320,23 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
 });
 </script>
-</body></html>
+<script id="ecotone-single-social-cta">
+function enforceSingleLandingSocialCTA(){
+  const intro=document.getElementById('intro');
+  const keep=document.getElementById('existingSocialBtn');
+  if(!intro||!keep)return;
+
+  [...intro.querySelectorAll('a,button')].forEach(el=>{
+    if(el===keep)return;
+    const txt=(el.textContent||'').trim().replace(/\s+/g,' ');
+    if(txt==='Open ECOTONE Social' || txt==='Already in ECOTONE Social? Log in'){
+      el.remove();
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  enforceSingleLandingSocialCTA();
+  setTimeout(enforceSingleLandingSocialCTA,100);
+  setTimeout(enforceSingleLandingSocialCTA,800);
+});
+</script></body></html>
